@@ -1,0 +1,41 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+######################################################################
+
+# PACKAGE MAINTAINER NAME
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# PACKAGE NAME
+pkgname='cifs_utils'
+
+# SOFTWARE VERSION
+version='6.8'
+
+# BUILD NUMBER
+build='1'
+
+# LICENSE OF SOFTWARE
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="The cifs-utils provides a means for mounting SMB/CIFS shares on a
+Linux system."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://www.linuxfromscratch.org/blfs/view/8.3-systemd/basicnet/cifsutils.html'
+
+# What packages do your package need to run?
+dep=('talloc-2.1.14')
+
+
+#####################################################
+# !!! Banana Infos, DONT EDIT!!!
+#####################################################
+
+BANANAVERSION="2.2.4.4_littlewitchbrown"
+
