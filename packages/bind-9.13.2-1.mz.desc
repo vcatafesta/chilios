@@ -1,0 +1,38 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+#
+# !!!! USE SIMPLE QUOTES '' ONLY. !!!!
+######################################################################
+
+# Package Maintainer Name
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# Package Name
+pkgname='bind'
+
+# Software Version
+version='9.13.2'
+
+# Build number
+build='1'
+
+# License
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="The BIND package includes the client side programs nslookup, dig and host. 
+If you install BIND server, these programs will be installed automatically. 
+This section is for those users who don't need the complete BIND server,
+but need these client side applications."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://www.linuxfromscratch.org/blfs/view/8.3-systemd/basicnet/bind-utils.html'
+
+# What packages do your package need to run?
+# This array is optional.
+dep=('')

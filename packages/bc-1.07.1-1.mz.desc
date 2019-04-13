@@ -1,0 +1,48 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+######################################################################
+
+# PACKAGE MAINTAINER NAME
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# PACKAGE NAME
+pkgname='bc'
+
+# SOFTWARE VERSION
+version='1.07.1'
+
+# BUILD NUMBER
+build='1'
+
+# LICENSE OF SOFTWARE
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="The Bc package contains an arbitrary precision numeric processing 
+language."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://www.linuxfromscratch.org/lfs/view/8.3-systemd/chapter06/bc.html'
+
+# What packages do your package need to run?
+dep=('')
+
+# flags
+flags="
+/configure --prefix=/usr           \
+            --with-readline         \
+            --mandir=/usr/share/man \
+            --infodir=/usr/share/info
+"
+
+#####################################################
+# !!! Banana Infos, DONT EDIT!!!
+#####################################################
+
+BANANAVERSION="2.2.4.5_littlewitchbrown"
+

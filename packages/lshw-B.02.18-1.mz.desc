@@ -1,0 +1,41 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+#
+# !!!! USE SIMPLE QUOTES '' ONLY. !!!!
+######################################################################
+
+# Package Maintainer Name
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# Package Name
+pkgname='lshw'
+
+# Software Version
+version='B.02.18'
+
+# Build number
+build='1'
+
+# License
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="lshw (Hardware Lister) is a small tool to provide detailed informa-
+tion on the hardware configuration of a Linux machine."
+#=======================================================================|
+
+# URL SOFTWARE
+url='https://fossies.org/linux/privat/lshw-B.02.18.tar.gz/'
+
+# What packages do your package need to run?
+# This array is optional.
+dep=('')
+
+# Banana Infos, dont edit!!!
+#####################################################
+BANANAVERSION="2.2"
+

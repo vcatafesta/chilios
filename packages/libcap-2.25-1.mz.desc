@@ -1,0 +1,41 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+######################################################################
+
+# PACKAGE MAINTAINER NAME
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# PACKAGE NAME
+pkgname='libcap'
+
+# SOFTWARE VERSION
+version='2.25'
+
+# BUILD NUMBER
+build='1'
+
+# LICENSE OF SOFTWARE
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="The libcap package was installed in LFS, but if Linux-PAM support 
+is desired, the PAM module must be built (after installation of Linux-PAM)."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://www.linuxfromscratch.org/blfs/view/8.3-systemd/postlfs/libcap.html'
+
+# What packages do your package need to run?
+dep=('')
+
+
+#####################################################
+# !!! Banana Infos, DONT EDIT!!!
+#####################################################
+
+BANANAVERSION="2.2.4.5_littlewitchbrown"
+

@@ -1,0 +1,38 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+#
+# !!!! USE SIMPLE QUOTES '' ONLY. !!!!
+######################################################################
+
+# Package Maintainer Name
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# Package Name
+pkgname='lm_sensors'
+
+# Software Version
+version='3.4.0'
+
+# Build number
+build='1'
+
+# License
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="The lm_sensors package provides user-space support for the hardware
+monitoring drivers in the Linux kernel. This is useful for monitoring the
+temperature of the CPU and adjusting the performance of some hardware 
+(such as cooling fans)."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://www.linuxfromscratch.org/blfs/view/8.3/general/lm_sensors.html'
+
+# What packages do your package need to run?
+# This array is optional.
+dep=('')

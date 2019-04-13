@@ -1,0 +1,46 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+######################################################################
+
+# PACKAGE MAINTAINER NAME
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# PACKAGE NAME
+pkgname='screen'
+
+# SOFTWARE VERSION
+version='4.6.2'
+
+# BUILD NUMBER
+build='1'
+
+# LICENSE OF SOFTWARE
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="Screen is a terminal multiplexor that runs several separate processes, 
+typically interactive shells, on a single physical character-based terminal. 
+Each virtual terminal emulates a DEC VT100 plus several ANSI X3.64 and ISO 
+2022 functions and also provides configurable input and output translation, 
+serial port support, configurable logging, multi-user support, and many 
+character encodings, including UTF-8. Screen sessions can be detached and 
+resumed later on a different terminal."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://www.linuxfromscratch.org/blfs/view/8.3-systemd/general/screen.html'
+
+# What packages do your package need to run?
+dep=('')
+
+
+#####################################################
+# !!! Banana Infos, DONT EDIT!!!
+#####################################################
+
+BANANAVERSION="2.2.4.5_littlewitchbrown"
+

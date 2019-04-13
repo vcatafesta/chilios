@@ -1,0 +1,43 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+######################################################################
+
+# PACKAGE MAINTAINER NAME
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# PACKAGE NAME
+pkgname='htop'
+
+# SOFTWARE VERSION
+version='3.0.0beta5'
+
+# BUILD NUMBER
+build='1'
+
+# LICENSE OF SOFTWARE
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="This is htop, an interactive process viewer. It requires ncurses.
+It is developed primarily on Linux, but we also have code for running
+under FreeBSD and Mac OS X (help and testing are wanted for these platforms
+"
+#=======================================================================|
+
+# URL SOFTWARE
+url='https://github.com/hishamhm/htop/releases/tag/3.0.0beta5'
+
+# What packages do your package need to run?
+dep=('')
+
+
+#####################################################
+# !!! Banana Infos, DONT EDIT!!!
+#####################################################
+
+BANANAVERSION="2.2.4.5_littlewitchbrown"
+

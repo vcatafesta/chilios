@@ -1,0 +1,45 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+######################################################################
+
+# PACKAGE MAINTAINER NAME
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# PACKAGE NAME
+pkgname='smalltalk'
+
+# SOFTWARE VERSION
+version='3.2'
+
+# BUILD NUMBER
+build='1'
+
+# LICENSE OF SOFTWARE
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="GNU Smalltalk is a free implementation of the Smalltalk-80 language
+which runs on most versions on Unix and, in general, everywhere you can 
+find a POSIX-compliance library. An uncommon feature of it is that it is 
+well-versed to scripting tasks and headless processing. 
+See http://www.gnu.org/software/smalltalk/manual/html_node/Overview.html 
+for a more detailed explanation of GNU Smalltalk."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://smalltalk.gnu.org/'
+
+# What packages do your package need to run?
+dep=('')
+
+
+#####################################################
+# !!! Banana Infos, DONT EDIT!!!
+#####################################################
+
+BANANAVERSION="2.2.4.5_littlewitchbrown"
+

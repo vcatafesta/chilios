@@ -1,0 +1,40 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+#
+# !!!! USE SIMPLE QUOTES '' ONLY. !!!!
+######################################################################
+
+# Package Maintainer Name
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# Package Name
+pkgname='make_ca'
+
+# Software Version
+version='0.8'
+
+# Build number
+build='1'
+
+# License
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="The make-ca script will download and process the certificates included 
+in the certdata.txt file for use in multiple certificate stores (if the
+associated applications are present on the system). Additionally, any local
+certificates stored in /etc/ssl/local will be imported to the certificate 
+stores. Certificates in this directory should be stored as PEM encoded 
+OpenSSL trusted certificates."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://www.linuxfromscratch.org/blfs/view/8.3-systemd/postlfs/make-ca.html'
+
+# What packages do your package need to run?
+# This array is optional.
+dep=('')
