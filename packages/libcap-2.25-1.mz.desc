@@ -22,12 +22,14 @@ license='MIT'
 
 # SMALL Description of Software, NO Trespassing |
 #=============RULER=====================================================|
-desc="The libcap package was installed in LFS, but if Linux-PAM support 
-is desired, the PAM module must be built (after installation of Linux-PAM)."
+desc="The Libcap package implements the user-space interfaces to the POSIX 
+1003.1e capabilities available in Linux kernels. These capabilities are a 
+partitioning of the all powerful root privilege into a set of distinct 
+privileges."
 #=======================================================================|
 
 # URL SOFTWARE
-url='http://www.linuxfromscratch.org/blfs/view/8.3-systemd/postlfs/libcap.html'
+url='http://www.linuxfromscratch.org/lfs/view/8.3-systemd/chapter06/libcap.html'
 
 # What packages do your package need to run?
 dep=('')

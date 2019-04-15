@@ -26,7 +26,7 @@ desc="The Shadow package contains programs for handling passwords in a secure wa
 #=======================================================================|
 
 # URL SOFTWARE
-url='http://www.linuxfromscratch.org/lfs/view/8.3-systemd/chapter06/shadow.html'
+url='http://www.linuxfromscratch.org/lfs/view/development/chapter06/shadow.html'
 
 # What packages do your package need to run?
 dep=('')

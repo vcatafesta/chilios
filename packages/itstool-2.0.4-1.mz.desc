@@ -1,0 +1,43 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+######################################################################
+
+# PACKAGE MAINTAINER NAME
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# PACKAGE NAME
+pkgname='itstool'
+
+# SOFTWARE VERSION
+version='2.0.4'
+
+# BUILD NUMBER
+build='1'
+
+# LICENSE OF SOFTWARE
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="Itstool extracts messages from XML files and outputs PO template files, 
+then merges translations from MO files to create translated XML files. It 
+determines what to translate and how to chunk it into messages using the 
+W3C Internationalization Tag Set (ITS)."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://www.linuxfromscratch.org/blfs/view/8.3-systemd/pst/itstool.html'
+
+# What packages do your package need to run?
+dep=('')
+
+
+#####################################################
+# !!! Banana Infos, DONT EDIT!!!
+#####################################################
+
+BANANAVERSION="2.2.4.5_littlewitchbrown"
+

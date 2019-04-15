@@ -3,37 +3,42 @@
 # conferences, so it is important you add the information correctly.
 # All variables are required! The array of dependencies *dep* does
 # not, but it's interesting you add for future reference.
-#
-# !!!! USE SIMPLE QUOTES '' ONLY. !!!!
 ######################################################################
 
-# Package Maintainer Name
+# PACKAGE MAINTAINER NAME
 maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
 
-# Package Name
+# PACKAGE NAME
 pkgname='curl'
 
-# Software Version
+# SOFTWARE VERSION
 version='7.61.0'
 
-# Build number
+# BUILD NUMBER
 build='1'
 
-# License
+# LICENSE OF SOFTWARE
 license='MIT'
 
 # SMALL Description of Software, NO Trespassing |
 #=============RULER=====================================================|
 desc="The cURL package contains an utility and a library used for transferring 
-files with URL syntax to any of the following protocols: FTP, FTPS, HTTP,
-HTTPS, SCP, SFTP, TFTP, TELNET, DICT, LDAP, LDAPS and FILE. Its ability to 
-both download and upload files can be incorporated into other programs to 
-support functions like streaming media."
+files with URL syntax to any of the following protocols: FTP, FTPS, HTTP, 
+HTTPS, SCP, SFTP, TFTP, TELNET, DICT, LDAP, LDAPS and FILE. Its ability 
+to both download and upload files can be incorporated into other programs 
+to support functions like streaming media."
 #=======================================================================|
 
 # URL SOFTWARE
 url='http://www.linuxfromscratch.org/blfs/view/8.3-systemd/basicnet/curl.html'
 
 # What packages do your package need to run?
-# This array is optional.
-dep=('make-ca-0.8')
+dep=('')
+
+
+#####################################################
+# !!! Banana Infos, DONT EDIT!!!
+#####################################################
+
+BANANAVERSION="2.2.4.5_littlewitchbrown"
+

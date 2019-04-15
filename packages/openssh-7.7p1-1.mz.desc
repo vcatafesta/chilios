@@ -1,0 +1,44 @@
+######################################################################
+# This file is the heart of the package, it is necessary to do
+# conferences, so it is important you add the information correctly.
+# All variables are required! The array of dependencies *dep* does
+# not, but it's interesting you add for future reference.
+######################################################################
+
+# PACKAGE MAINTAINER NAME
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+
+# PACKAGE NAME
+pkgname='openssh'
+
+# SOFTWARE VERSION
+version='7.7p1'
+
+# BUILD NUMBER
+build='1'
+
+# LICENSE OF SOFTWARE
+license='MIT'
+
+# SMALL Description of Software, NO Trespassing |
+#=============RULER=====================================================|
+desc="The OpenSSL-1.0.2p package contains libraries relating to cryptography. 
+These are useful for providing cryptographic functions to other packages, 
+such as email applications and web browsers (for accessing HTTPS sites). 
+This package provides only the libraries and headers for packages that 
+have not yet been ported to openssl-1.1.x or later."
+#=======================================================================|
+
+# URL SOFTWARE
+url='http://www.linuxfromscratch.org/blfs/view/8.3-systemd/postlfs/openssl10.html'
+
+# What packages do your package need to run?
+dep=('')
+
+
+#####################################################
+# !!! Banana Infos, DONT EDIT!!!
+#####################################################
+
+BANANAVERSION="2.2.4.5_littlewitchbrown"
+
