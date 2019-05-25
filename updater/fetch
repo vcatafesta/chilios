@@ -3,7 +3,7 @@
  # FETCH - Search an Install packages LFS
  #
  # Created: 2019/04/05
- # Altered: 2019/04/27
+ # Altered: 2019/05/25
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.5.20190525"
+version="2.10.9.20190525"
 
 #hex code
 barra=$'\x5c'
@@ -198,12 +198,11 @@ sh_touchconf(){
 ######################################################################
 
 # extensao dos pacotes: chilios=chi, mazon=mz
-PKG_EXT='mz'
+PKG_EXT='chi'
 
 # site de hospedagem da distro
 #PKG_SITE='http://10.0.0.66'
 #PKG_SITE='http://201.7.66.107'
-PKG_SITE='http://mazonos.com'
 _EOF_
 }
 
@@ -212,9 +211,9 @@ test -e "$fc" || sh_touchconf
 source /etc/apt/apt.conf &> /dev/null
 
 # default
-APP="apt"
+APP="fetch"
 PRG="${PKG_EXT:=chi}"
-SITE="${PKG_SITE:=http://mazonos.com}"
+SITE="${PKG_SITE:=http://201.7.66.107}"
 VARCACHE="/var/cache/${APP}"
 VARCACHE_ARCHIVES="/var/cache/${APP}/archives"
 VARCACHE_REMOVED="/var/cache/${APP}/removed"
@@ -409,7 +408,7 @@ sh_updateself()
 	fi
 
 	if [ $LAUTO = $true ]; then
-	    local link='https://raw.githubusercontent.com/vcatafesta/mz/master/src/apt'
+	    local link='https://raw.githubusercontent.com/vcatafesta/ChiliOS/master/updater/fetch'
 	    local tmp_dir_full="/tmp/${APP}"
 	    local tmp_dir="/tmp/${APP}/src"
 	    local m
@@ -430,9 +429,8 @@ sh_updateself()
         evaluate_retval
 
         log_info_msg "${cyan}Copying file ${yellow}apt ${red}to ${yellow}/sbin/$m"
-        cp -f ${tmp_dir}/apt /sbin/apt
-        rm -f /sbin/mz
-        ln -sf /sbin/apt /sbin/mz
+        cp -f ${tmp_dir}/fetch /sbin/fetch
+        ln -sf /sbin/fetch /sbin/apt
         evaluate_retval
 
         log_info_msg "${cyan}Removing temporary files"
