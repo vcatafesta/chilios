@@ -1,2 +1,2 @@
-# chilios
+# ChiliOS
 GNU/Linux Chili Systemd
