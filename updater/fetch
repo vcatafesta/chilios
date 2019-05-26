@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.9.20190525"
+version="2.10.11.20190525"
 
 #hex code
 barra=$'\x5c'
@@ -201,7 +201,7 @@ sh_touchconf(){
 PKG_EXT='chi'
 
 # site de hospedagem da distro
-#PKG_SITE='http://10.0.0.66'
+PKG_SITE='http://10.0.0.66'
 #PKG_SITE='http://201.7.66.107'
 _EOF_
 }
@@ -213,7 +213,7 @@ source /etc/fetch/fetch.conf &> /dev/null
 # default
 APP="fetch"
 PRG="${PKG_EXT:=chi}"
-SITE="${PKG_SITE:=http://201.7.66.107}"
+SITE="${PKG_SITE:=http://10.0.0.66}"
 VARCACHE="/var/cache/${APP}"
 VARCACHE_ARCHIVES="/var/cache/${APP}/archives"
 VARCACHE_REMOVED="/var/cache/${APP}/removed"
@@ -642,7 +642,7 @@ sh_update()
 		[[ ${count} != 0 ]] || log_failure_msg2 "  Updating... (${blue}${cstrvalue}${reset}) packages in ${Folders}"
 	done
 	{ kill $pid; wait $pid 2>/dev/null; echo ;}
-    #sh_updateinstalled
+    sh_updateinstalled
     echo
 	nfilesInReposit=$(cat $VARCACHE_SEARCH/folders_packages | wc -l)
 	nfilesInstalled=$(cat $VARCACHE_SEARCH/packages-installed | wc -l)
