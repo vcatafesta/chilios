@@ -39,7 +39,7 @@ version="2.10.9.20190525"
 barra=$'\x5c'
 check=$'\0xfb'
 reg=$'\0x2a'
-SYSCONFDIR='/etc/apt'
+SYSCONFDIR='/etc/fetch'
 NORMAL="\\033[0;39m"         # Standard console grey
 SUCCESS="\\033[1;32m"        # Success is green
 WARNING="\\033[1;33m"        # Warnings are yellow
@@ -184,15 +184,15 @@ info()
 {
     dialog 				\
     --beep				\
-    --title     "APT"	\
-    --backtitle "APT"	\
+    --title     "FETCH"	\
+    --backtitle "fetch"	\
     --msgbox    "$*"	\
     15 70
 }
 
 sh_touchconf(){
     mkdir -p $SYSCONFDIR &> /dev/null
-    cat > $SYSCONFDIR/apt.conf << '_EOF_'
+    cat > $SYSCONFDIR/fetch.conf << '_EOF_'
 ######################################################################
 # Arquivo de configuracao
 ######################################################################
@@ -206,9 +206,9 @@ PKG_EXT='chi'
 _EOF_
 }
 
-fc=$SYSCONFDIR/apt.conf
+fc=$SYSCONFDIR/fetch.conf
 test -e "$fc" || sh_touchconf
-source /etc/apt/apt.conf &> /dev/null
+source /etc/fetch/fetch.conf &> /dev/null
 
 # default
 APP="fetch"
@@ -425,10 +425,10 @@ sh_updateself()
         evaluate_retval
 
         log_info_msg "${cyan}Permission and Copy archives"
-        chmod +x ${tmp_dir}/apt
+        chmod +x ${tmp_dir}/fetch
         evaluate_retval
 
-        log_info_msg "${cyan}Copying file ${yellow}apt ${red}to ${yellow}/sbin/$m"
+        log_info_msg "${cyan}Copying file ${yellow}fetch ${red}to ${yellow}/sbin/$m"
         cp -f ${tmp_dir}/fetch /sbin/fetch
         ln -sf /sbin/fetch /sbin/apt
         evaluate_retval
@@ -491,7 +491,7 @@ help()
 	echo -e "${pink}  -v, --version,        version        ${reset}- output version information and exit"
 	echo
 	echo -e "${cyan}ex:"
-	echo -e "${yellow}  fetch update self - Update self apt via internet"
+	echo -e "${yellow}  fetch update self - Update self fetch via internet"
 	echo -e "  fetch update"
 	echo -e "  fetch install <package> [...] [-y]"
 	echo -e "  fetch remove <package> [...] [-y]"
