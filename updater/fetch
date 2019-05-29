@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.29.20190528"
+version="2.10.49.20190529"
 
 #hex code
 barra=$'\x5c'
@@ -343,9 +343,10 @@ sh_msgdoevangelho()
 
 sh_list()
 {
-	local LLIST=$true
 	local param=$@
     local s
+	LLIST=$true
+    LFORCE=$false
 
 	sh_checkdir "OFF"
 	log_wait_msg "${blue}Reading package lists in the repository..."
@@ -355,8 +356,10 @@ sh_list()
 	else
         for s in ${param[@]}
         do
-	        if [[ $(toupper "${s}") = "-Y" ]] || [[ $(toupper "${s}") = "-F" ]]; then
+	        if   [[ $(toupper "${s}") = "-Y" ]]; then
                LAUTO=$true
+	        elif [[ $(toupper "${s}") = "-F" ]]; then
+               LFORCE=$true
 	        elif [[ $(toupper "${s}") = "OFF" ]]; then
                LLIST=$false
             else
@@ -520,7 +523,7 @@ init()
 {
 	case "${1}" in
 		-u|--update|update) 					shift;sh_update "$@";;
-		-m|--meta|meta)	                        sh_meta   $2 $3;;
+		-m|--meta|meta)	                        shift;sh_meta   "$@";;
 		-s|--search|search)	                    shift;sh_search "$@";;
 		-i|--install|install) 					shift;sh_search "$@";;
 		-r|--remove|remove) 					shift;sh_remove "$@";;
@@ -920,9 +923,9 @@ sh_search()
 {
     local param=$@
 	LAUTO=$false
+    LFORCE=$false
 
     sh_list $param
-
 	if [[ $pkg != "" ]]; then
         if (( $LAUTO )); then
             echo
@@ -950,7 +953,7 @@ sh_search()
                     ((index++))
                 done
             }
-            if [[ $LINSTALLED = $true ]]; then
+            if !(( $LINSTALLED )) && (( $LFORCE )); then
 				log_success_msg2 "${orange}${cpacote} ${reset}package is already installed...Done"
                 continue
             fi
@@ -969,8 +972,11 @@ sh_search()
 					exit 1
 				fi
 			fi
-
-			log_info_msg "Installing package ${orange}$cpacote..."
+            if (( $LINSTALLED )) && !(( $LFORCE )); then
+        	    log_info_msg "Installing package ${orange}$cpacote..."
+            else
+        	    log_info_msg "Reinstalling package ${orange}$cpacote..."
+            fi
 			ERROR=$(banana -i $cpacote 2>&1>/dev/null)
 		    evaluate_retval
 
@@ -989,11 +995,12 @@ sh_search()
 
 sh_listmeta()
 {
+	local LLIST=$true
+    local Cont=0
+
 	sh_checkdir "OFF"
 	log_wait_msg "${blue}Reading meta package lists in the repository..."
 	param=$1
-	local LLIST=$true
-    local Cont=0
 
 	if [ "$param" == "" ]; then
 		param=".*."
@@ -1026,25 +1033,33 @@ sh_listmeta()
 
 sh_meta()
 {
-	local LAUTO=$false
-	local PAUTO=$2
-    sh_listmeta $1
+    local param=$@
+    local s
+    local LAUTO=$false
+    local LFORCE=$false
 
-	[[ $(toupper "${PAUTO}") = "-Y" ]] || [[ $(toupper "${PAUTO}") = "-F" ]] && LAUTO=$true || LAUTO=$false
+    for s in ${param[@]}
+    do
+    if   [[ $(toupper "${s}") = "-Y" ]]; then
+        LAUTO=$true
+    elif [[ $(toupper "${s}") = "-F" ]]; then
+        LFORCE=$true
+    elif [[ $(toupper "${s}") = "OFF" ]]; then
+        LLIST=$false
+    fi
+    done
 
+    sh_listmeta $param
 	if [[ $metapkg != "" ]]; then
-        if [ $LAUTO = $false ]; then
+        if (( $LAUTO )); then
             echo
             read -p "Install meta package(s)? [Y/n]" LDOWNLOAD
-        fi
-
-        if [[ $(toupper "${LDOWNLOAD}") = "Y" ]] || [[ "${LDOWNLOAD}" = "" ]]; then
+            if [[ $(toupper "${LDOWNLOAD}") = "N" ]]; then
+                return
+            fi
             LAUTO=$true
-        else
-            return
         fi
-
-		cd $VARCACHE_ARCHIVES/
+        cd $VARCACHE_ARCHIVES/
         for x in $metapkg; do
 			local cmetafile=$i
 			local cmetabase=$(echo $cmetafile | cut -d/ -f1)
@@ -1070,7 +1085,8 @@ sh_meta()
                         ((index++))
                     done
                 }
-                if [[ $LINSTALLED = $true ]]; then
+
+                if !(( $LINSTALLED )) && (( $LFORCE )); then
                     log_success_msg2 "${orange}${cpacote} ${reset}package is already installed...Done"
                     continue
                 fi
@@ -1090,8 +1106,12 @@ sh_meta()
     				fi
     			fi
 
-    			log_info_msg "Installing package ${orange}$cpacote..."
-    			ERROR=$(banana -i $cpacote 2>&1>/dev/null)
+                if (( $LINSTALLED )) && !(( $LFORCE )); then
+        			log_info_msg "Installing package ${orange}$cpacote..."
+                else
+        			log_info_msg "Reinstalling package ${orange}$cpacote..."
+                fi
+			    ERROR=$(banana -i $cpacote 2>&1>/dev/null)
     		    evaluate_retval
 
     		    local error_value="${?}"
