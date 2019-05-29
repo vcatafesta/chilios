@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.11.20190525"
+version="2.10.29.20190528"
 
 #hex code
 barra=$'\x5c'
@@ -257,6 +257,9 @@ function maxcol()
        COLUMNS=${COLUMNS##* }
     fi
     return $COLUMNS
+}
+function inkey(){
+    read -t "$1" -n1 -r -p "" lastkey
 }
 
 # Modulo para emular o comando cat
@@ -644,9 +647,10 @@ sh_update()
 	{ kill $pid; wait $pid 2>/dev/null; echo ;}
     sh_updateinstalled
     echo
-	nfilesInReposit=$(cat $VARCACHE_SEARCH/folders_packages | wc -l)
-	nfilesInstalled=$(cat $VARCACHE_SEARCH/packages-installed | wc -l)
-	nfilesRemoved=$(cat $VARCACHE_SEARCH/packages-removed | wc -l)
+	local nfilesInReposit=$(cat $VARCACHE_SEARCH/folders_packages | wc -l)
+	local nfilesInstalled=$(cat $VARCACHE_SEARCH/packages-installed | wc -l)
+    local nfilesRemoved=0
+    test -e $VARCACHE_SEARCH/packages-removed && nfilesRemoved=$(cat $VARCACHE_SEARCH/packages-removed | wc -l)
 
 	echo -e "${cyan}All list packages updated!${reset}"
     #maxcol; replicate "=" $?
@@ -927,14 +931,29 @@ sh_search()
                 return
             fi
         fi
-
+        pushd $VARCACHE_INSTALLED/ &>/dev/null
+        local pkginstalled=$(echo *.${PRG})
+        popd &>/dev/null
 		cd $VARCACHE_ARCHIVES/
         for i in $pkg; do
 		    declare -g ee=$i
 			local cfile=$i
 			local cbase=$(echo $cfile | cut -d/ -f1)
 			local cpacote=$(echo $cfile | cut -d/ -f2)
+            local LINSTALLED=$false
 
+            {   local item
+                index=0
+                for item in ${pkginstalled[*]}
+                do
+                    [ $item = $cpacote ] && { LINSTALLED=$true; break; }
+                    ((index++))
+                done
+            }
+            if [[ $LINSTALLED = $true ]]; then
+				log_success_msg2 "${orange}${cpacote} ${reset}package is already installed...Done"
+                continue
+            fi
 			test -e $VARCACHE_ARCHIVES/$cpacote || sh_wgetfull
 			#sh_checksha256sum
 
@@ -961,7 +980,7 @@ sh_search()
 		    else
 				test -e $VARCACHE_REMOVED/${cpacote}   && rm -f $VARCACHE_REMOVED/${cpacote}
 				test -e $VARCACHE_INSTALLED/${cpacote} || touch $VARCACHE_INSTALLED/${cpacote}
-				log_success_msg2 "${orange}${cpacote} ${reset}package installation done successfully...Done"
+				#log_success_msg2 "${orange}${cpacote} ${reset}package installation done successfully...Done"
 			fi
     	done
 	fi
@@ -995,10 +1014,10 @@ sh_listmeta()
 			[[ $LLIST = $true ]] && log_success_msg2 "${blue}FOUND ${orange}$i"
 			((Cont++))
 		done
-		 [[ $LLIST = $true ]] && log_success_msg2 "($Cont) package(s) found."
+		 [[ $LLIST = $true ]] && log_success_msg2 "($Cont) meta package(s) found."
 	else
 		 log_failure_msg2 "${red}$param NOT FOUND ${reset} ${orange}$i${reset}"
-		 log_failure_msg2 "($Cont) package(s) found."
+		 log_failure_msg2 "($Cont) meta package(s) found."
 		 echo
 		 echo -e "${reset}Use: # $0 update - to update with the repository${reset}"
 	fi
@@ -1033,15 +1052,30 @@ sh_meta()
 
             curl --silent -k -O "${SITE}/packages/$x"
             pkg=$(cat $cmetapacote)
-
+            pushd $VARCACHE_INSTALLED/ &>/dev/null
+            local pkginstalled=$(echo *.${PRG})
+            popd &>/dev/null
             for i in $pkg; do
     		    declare -g ee=$i
     			local cfile=$i
     			local cbase=$(echo $cfile | cut -d/ -f1)
     			local cpacote=$(echo $cfile | cut -d/ -f2)
+                local LINSTALLED=$false
 
+                {   local item
+                    index=0
+                    for item in ${pkginstalled[*]}
+                    do
+                        [ $item = $cpacote ] && { LINSTALLED=$true; break; }
+                        ((index++))
+                    done
+                }
+                if [[ $LINSTALLED = $true ]]; then
+                    log_success_msg2 "${orange}${cpacote} ${reset}package is already installed...Done"
+                    continue
+                fi
     			test -e $VARCACHE_ARCHIVES/$cpacote || sh_wgetfull
-    			sh_checksha256sum
+    			#sh_checksha256sum
 
     		    local error_value="${?}"
     			if [ ${error_value} -ne 0 ]; then
@@ -1066,7 +1100,7 @@ sh_meta()
     		    else
     				test -e $VARCACHE_REMOVED/${cpacote}   && rm -f $VARCACHE_REMOVED/${cpacote}
     				test -e $VARCACHE_INSTALLED/${cpacote} || touch $VARCACHE_INSTALLED/${cpacote}
-    				log_success_msg2 "${orange}${cpacote} ${reset}package installation done successfully...Done"
+    				#log_success_msg2 "${orange}${cpacote} ${reset}package installation done successfully...Done"
     			fi
         	done
     	done
