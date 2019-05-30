@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.49.20190529"
+version="2.10.55.20190530"
 
 #hex code
 barra=$'\x5c'
@@ -499,13 +499,13 @@ help()
 	echo -e "${cyan}ex:"
 	echo -e "${yellow}  fetch update self - Update self fetch via internet"
 	echo -e "  fetch update"
-	echo -e "  fetch install <package> [...] [-y]"
-	echo -e "  fetch remove <package> [...] [-y]"
-	echo -e "  fetch <package> [...] [-y]"
-	echo -e "  fetch search <package> [...]"
+	echo -e "  fetch install <package> [...] [-y] [-f]"
+	echo -e "  fetch remove <package> [...] [-y] [-f]"
+	echo -e "  fetch <package> [...] [-y] [-f]"
+	echo -e "  fetch search <package> [...] [-y] [-f]"
 	echo -e "  fetch list [<package>] [<...>]"
-	echo -e "  fetch download [<package>] [...] [ALL]"
-	echo -e "  fetch --meta [xorg]"
+	echo -e "  fetch download [<package>] [...] [ALL] [-y] [-f]"
+	echo -e "  fetch --meta [xorg] [-y] [-f]"
 	exit
 }
 
@@ -559,19 +559,20 @@ sh_clean()
 
 	[[ $(toupper "${1}") = "-Y" ]] && LAUTO=$true || LAUTO=$false
 
-	if [ ${LAUTO} = $false ]; then
+    if (( $LAUTO )); then
+        echo
 		conf "Clear cache packages?"
 		LAUTO=$?
-	fi
+    fi
 
-	if [ $LAUTO = $true ]; then
+    if !(( $LAUTO )); then
 		log_info_msg "Deleting downloaded package files"
 		test -d $VARCACHE_ARCHIVES || mkdir -p $VARCACHE_ARCHIVES
 		cd $VARCACHE_ARCHIVES/
-#		local nfiles=$(ls|wc -l)
 		local nfiles=$(ls -la|grep -e "^-"|wc -l)
 		rm -f $VARCACHE_ARCHIVES/*
 		evaluate_retval
+        rm -f $VARCACHE_SEARCH/packages-in-cache && touch $VARCACHE_SEARCH/packages-in-cache
 		log_success_msg2 "${yellow}($nfiles) ${cyan}files deleted"
 		lReturn=$true
 		return $lReturn
@@ -815,19 +816,20 @@ sh_remove()
 			declare -g ee=$i
 			local cfile=$i
 			local cbase=$(echo $cfile | cut -d/ -f1)
-			local cpacote=$(echo $cfile | cut -d/ -f2)
+			local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.chi//g')
 
 			if [[ $LAUTO = $true ]] || [[ $(toupper "${LREMOVE}") = "Y" ]]; then
 		        log_wait_msg "Parsing..."
 		        log_info_msg "Removing package ${orange}${i}..."
-		        ERROR=$(banana -r -y $i 2>&1)
+		        ERROR=$(banana -r -y $cpacote 2>&1)
 		        evaluate_retval
 		        local error_value="${?}"
 		        if [ ${error_value} != 0 ]; then
 		            log_failure_msg2 "$ERROR"
 		        else
-					test -e $VARCACHE_REMOVED/${i}.${PRG}   || touch $VARCACHE_REMOVED/${i}.${PRG}
-					test -e $VARCACHE_INSTALLED/${i}.${PRG} && rm -f $VARCACHE_INSTALLED/${i}.${PRG}
+					test -e $VARCACHE_REMOVED/${i}    || touch $VARCACHE_REMOVED/${i}
+					test -e $VARCACHE_INSTALLED/${i}  && rm -f $VARCACHE_INSTALLED/${i}
+					test -e $VARCACHE_SEARCH/packages-installed && sed -i  '/${i}/d' $VARCACHE_SEARCH/packages-installed
 		            log_success_msg2 "Removal of the package (${orange}${i}${reset}) successfully completed"
 		        fi
 			fi
@@ -984,8 +986,9 @@ sh_search()
 			if [ ${error_value} -ne 0 ]; then
 				log_failure_msg2 "ERROR: installing package ${orange}${cpacote}... FAIL"
 		    else
-				test -e $VARCACHE_REMOVED/${cpacote}   && rm -f $VARCACHE_REMOVED/${cpacote}
-				test -e $VARCACHE_INSTALLED/${cpacote} || touch $VARCACHE_INSTALLED/${cpacote}
+				test -e $VARCACHE_REMOVED/${cpacote}        && rm -f $VARCACHE_REMOVED/${cpacote}
+				test -e $VARCACHE_INSTALLED/${cpacote}      || touch $VARCACHE_INSTALLED/${cpacote}
+				test -e $VARCACHE_SEARCH/packages-installed && echo ${cpacote} >> $VARCACHE_SEARCH/packages-installed
 				#log_success_msg2 "${orange}${cpacote} ${reset}package installation done successfully...Done"
 			fi
     	done
@@ -1118,8 +1121,9 @@ sh_meta()
     			if [ ${error_value} -ne 0 ]; then
     				log_failure_msg2 "ERROR: installing package ${orange}${cpacote}... FAIL"
     		    else
-    				test -e $VARCACHE_REMOVED/${cpacote}   && rm -f $VARCACHE_REMOVED/${cpacote}
-    				test -e $VARCACHE_INSTALLED/${cpacote} || touch $VARCACHE_INSTALLED/${cpacote}
+    				test -e $VARCACHE_REMOVED/${cpacote}        && rm -f $VARCACHE_REMOVED/${cpacote}
+    				test -e $VARCACHE_INSTALLED/${cpacote}      || touch $VARCACHE_INSTALLED/${cpacote}
+    				test -e $VARCACHE_SEARCH/packages-installed && echo ${cpacote} >> $VARCACHE_SEARCH/packages-installed
     				#log_success_msg2 "${orange}${cpacote} ${reset}package installation done successfully...Done"
     			fi
         	done
@@ -1326,10 +1330,11 @@ sh_removed()
 #figlet
 logo(){
 	_CAT << 'EOF'
-/ _| ___| |_ ___| |__  
-| |_ / _ \ __/ __| '_ \ 
-|  _|  __/ || (__| | | |
-|_|  \___|\__\___|_| |_|
+ _____ _____ _____ ____ _   _
+|  ___| ____|_   _/ ___| | | |
+| |_  |  _|   | || |   | |_| |
+|  _| | |___  | || |___|  _  |
+|_|   |_____| |_| \____|_| |_|
 EOF
 	sh_version
 }
