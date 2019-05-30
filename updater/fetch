@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.55.20190530"
+version="2.10.56.20190530"
 
 #hex code
 barra=$'\x5c'
@@ -816,7 +816,7 @@ sh_remove()
 			declare -g ee=$i
 			local cfile=$i
 			local cbase=$(echo $cfile | cut -d/ -f1)
-			local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.chi//g')
+			local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
 
 			if [[ $LAUTO = $true ]] || [[ $(toupper "${LREMOVE}") = "Y" ]]; then
 		        log_wait_msg "Parsing..."
