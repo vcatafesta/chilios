@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.56.20190530"
+version="2.10.85.20190531"
 
 #hex code
 barra=$'\x5c'
@@ -77,10 +77,12 @@ SET_WCOL="\\033[${WCOL}G"    # at the $WCOL char
 CURS_UP="\\033[1A\\033[0G"   # Up one line, at the 0'th char
 CURS_ZERO="\\033[0G"
 
-true=0
-TRUE=0
-false=1
-FALSE=1
+OK=1
+NOK=0
+true=1
+TRUE=1
+false=0
+FALSE=0
 LINSTALLED=2
 LREMOVED=3
 
@@ -393,10 +395,9 @@ sh_cdroot()
 
 sh_checknet()
 {
-	 # have internet?
+    # have internet?
 	log_info_msg "${cyan}Testing internet"
 #   ping -c3 -q $(echo $SITE | sed 's/http:\/\///g') >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
-#   curl -k "www.google.com" >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
     curl -k $SITE >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
     evaluate_retval
 	return $?
@@ -405,22 +406,35 @@ sh_checknet()
 sh_updateself()
 {
 	local LAUTO=$false
+	local LFORCE=$false
+	local param=$@
+    local s
 
-	[[ $(toupper "${1}") = "-Y" ]] && LAUTO=$true || LAUTO=$false
+    for s in ${param[@]}
+    do
+        if   [[ $(toupper "${s}") = "-Y" ]]; then
+            LAUTO=$true
+            LFORCE=$true
+        elif [[ $(toupper "${s}") = "-F" ]]; then
+            LAUTO=$true
+            LFORCE=$true
+        fi
+    done
 
-	if [ ${LAUTO} = $false ]; then
+	if !(( $LAUTO )) || !(( $LFORCE)); then
+        echo
 		conf "Update $0 from internet?"
 		LAUTO=$?
 	fi
 
-	if [ $LAUTO = $true ]; then
+	if (( $LAUTO )) || (( $LFORCE )); then
 	    local link='https://raw.githubusercontent.com/vcatafesta/ChiliOS/master/updater/fetch'
 	    local tmp_dir_full="/tmp/${APP}"
 	    local tmp_dir="/tmp/${APP}/src"
 	    local m
 
 		#internet?
-        sh_checknet; [[ $? = $true ]] || { return 1;}
+        sh_checknet; [[ $? = $false ]] || { return 1;}
         log_wait_msg "Ok, let's do it..."
         # Ok, Puxe o arquivo do repositorio agora!
         [[ -d "${tmp_dir_full}" ]] && rm -r "${tmp_dir_full}"
@@ -547,9 +561,9 @@ conf()
 	local lconf="n"
 	read -p "$1 [Y/n]" lconf
 	if [[ $lconf = "" ]] || [ $lconf = 'y' ] || [ $lconf = 'Y' ]; then
-		return 0
+		return $true
 	fi
-	return 1
+	return $false
 }
 
 sh_clean()
@@ -559,13 +573,13 @@ sh_clean()
 
 	[[ $(toupper "${1}") = "-Y" ]] && LAUTO=$true || LAUTO=$false
 
-    if (( $LAUTO )); then
+    if !(( $LAUTO )); then
         echo
 		conf "Clear cache packages?"
 		LAUTO=$?
     fi
 
-    if !(( $LAUTO )); then
+    if (( $LAUTO )); then
 		log_info_msg "Deleting downloaded package files"
 		test -d $VARCACHE_ARCHIVES || mkdir -p $VARCACHE_ARCHIVES
 		cd $VARCACHE_ARCHIVES/
@@ -599,10 +613,10 @@ sh_checkdir(){
 
 sh_update()
 {
-    [[ $(toupper "${1}") = "SELF" ]] || [[ $(toupper "${1}") = "MZ" ]] && { sh_updateself $2; return $?;}
+    [[ $(toupper "${1}") = "SELF" ]] && { shift; sh_updateself "$@"; return $?;}
 
 	#internet?
-	sh_checknet; [[ $? = $true ]] || { return 1;}
+	sh_checknet; [[ $? = $false ]] || { return 1;}
 	sh_checkdir "OFF"
 
 	cd $VARCACHE_SEARCH/
@@ -767,7 +781,7 @@ sh_show()
 
     		cd $VARCACHE_ARCHIVES/
 
-    		log_info_msg "${green}Downloading... $cpacote${reset}"
+    		log_info_msg "${green}Fetching... $cpacote${reset}"
     		if [ $LFORCE = $true ]; then
     			curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
     		else
@@ -804,41 +818,39 @@ sh_remove()
 	[ $lExist -eq 0 ] && return 1
 
 	if [[ $pkginstalled != "" ]]; then
-        if [[ $LAUTO = $false ]]; then
+        if !(( $LAUTO )); then
 		    echo
 			read -p "Remove package(s)? [y/N]" LREMOVE
 		fi
 
-		test -d $VARCACHE_ARCHIVES || mkdir -p $VARCACHE_ARCHIVES
-    	cd $VARCACHE_ARCHIVES/
+        if (( $LAUTO )) || [[ $(toupper "${LREMOVE}") = "Y" ]]; then
+    		test -d $VARCACHE_ARCHIVES || mkdir -p $VARCACHE_ARCHIVES
+        	cd $VARCACHE_ARCHIVES/
 
-		for i in $pkginstalled; do
-			declare -g ee=$i
-			local cfile=$i
-			local cbase=$(echo $cfile | cut -d/ -f1)
-			local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
+    		for i in $pkginstalled; do
+    			declare -g ee=$i
+    			local cfile=$i
+    			local cbase=$(echo $cfile | cut -d/ -f1)
+    			local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
 
-			if [[ $LAUTO = $true ]] || [[ $(toupper "${LREMOVE}") = "Y" ]]; then
-		        log_wait_msg "Parsing..."
-		        log_info_msg "Removing package ${orange}${i}..."
-		        ERROR=$(banana -r -y $cpacote 2>&1)
-		        evaluate_retval
-		        local error_value="${?}"
-		        if [ ${error_value} != 0 ]; then
-		            log_failure_msg2 "$ERROR"
-		        else
-					test -e $VARCACHE_REMOVED/${i}    || touch $VARCACHE_REMOVED/${i}
-					test -e $VARCACHE_INSTALLED/${i}  && rm -f $VARCACHE_INSTALLED/${i}
-					test -e $VARCACHE_SEARCH/packages-installed && sed -i  '/${i}/d' $VARCACHE_SEARCH/packages-installed
-		            log_success_msg2 "Removal of the package (${orange}${i}${reset}) successfully completed"
-		        fi
-			fi
-		done
-		sh_cdroot
-		return 0
-	fi
-	#echo -e "Choose one package for remove"
+    	        log_wait_msg "Parsing..."
+    	        log_info_msg "Removing package ${orange}${i}..."
+    	        ERROR=$(banana -r -y $cpacote 2>&1)
+    	        evaluate_retval
+    	        local error_value="${?}"
+    	        if [ ${error_value} != 0 ]; then
+    	            log_failure_msg2 "$ERROR"
+    	        else
+    				test -e $VARCACHE_REMOVED/${i}    || touch $VARCACHE_REMOVED/${i}
+    				test -e $VARCACHE_INSTALLED/${i}  && rm -f $VARCACHE_INSTALLED/${i}
+    				sed -i  '/'${cpacote}'/d' $VARCACHE_SEARCH/packages-installed
+    	            log_success_msg2 "Removal of the package (${orange}${i}${reset}) successfully completed"
+    	        fi
+    		done
+        fi
+    fi
 	sh_cdroot
+	return 0
 }
 
 sh_download()
@@ -860,7 +872,7 @@ sh_download()
 		fi
 
 		#internet?
-		#sh_checknet; [[ $? = $true ]] || { return 1;}
+		#sh_checknet; [[ $? = $false ]] || { return 1;}
 		spinner & pid=$!
 		for i in $pkg; do
 			declare -g ee=$i
@@ -874,11 +886,11 @@ sh_download()
 			cd $VARCACHE_ARCHIVES/
 			log_wait_msg "File ${red}#${nFilesDownloaded} of ${nTotalFiles}${reset}|Checking package ${orange}${cpacote} ${cspace}"
 
-			if [ ${LFORCE} = $true ]; then
-				curl -k --silent -O "${SITE}/packages/$i"       ;log_info_msg "[$nFilesDownloaded]${orange}${cpacote}${reset} downloading now!" ; evaluate_retval;
-				curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc downloading now!"   ; evaluate_retval;
-				curl -k --silent -O "${SITE}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 downloading now!" ; evaluate_retval;
-				curl -k --silent -O "${SITE}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig downloading now" ; evaluate_retval;
+			if (( $LFORCE )); then
+				curl -k --silent -O "${SITE}/packages/$i"       ;log_info_msg "[$nFilesDownloaded]${orange}${cpacote}${reset} fetching now!" ; evaluate_retval;
+				curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc fetching now!"   ; evaluate_retval;
+				curl -k --silent -O "${SITE}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 fetching now!" ; evaluate_retval;
+				curl -k --silent -O "${SITE}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig fetching now" ; evaluate_retval;
 			else
 				test -e $VARCACHE_ARCHIVES/$cpacote        && log_success_msg2 "[$nFilesDownloaded]${orange}${i}${reset} already downloaded!" || { curl -k --silent -O "${SITE}/packages/$i" ;log_info_msg "[$nFilesDownloaded]${orange}$cpacote${reset} downloading now!" ; evaluate_retval;}
 				test -e $VARCACHE_ARCHIVES/$cpacote.desc   && log_success_msg2 "   ${i}.desc already downloaded!"   || { curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc downloading now!"   ; evaluate_retval;}
@@ -899,18 +911,18 @@ sh_download()
 
 sh_wgetfull()
 {
-	log_info_msg "${cyan}Downloading ${cpacote}"       ; evaluate_retval; curl -k -O "${SITE}/packages/$i"
-	log_info_msg "${cyan}Downloading ${cpacote}.sha256"; evaluate_retval; curl -k -O "${SITE}/packages/$i.sha256"
-	log_info_msg "${cyan}Downloading ${cpacote}.desc"  ; evaluate_retval; curl -k -O "${SITE}/packages/$i.desc"
-	log_info_msg "${cyan}Downloading ${cpacote}.sig"   ; evaluate_retval; curl -k -O "${SITE}/packages/$i.sig"
+	log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O "${SITE}/packages/$i"
+	log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O "${SITE}/packages/$i.sha256"
+	log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O "${SITE}/packages/$i.desc"
+	log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O "${SITE}/packages/$i.sig"
 }
 
 sh_wgetpartial()
 {
-	test -e $VARCACHE_ARCHIVES/$cpacote       || log_info_msg "${cyan}Downloading ${cpacote}"       ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i"
-	test -e $VARCACHE_ARCHIVES/$cpacote.sha26 || log_info_msg "${cyan}Downloading ${cpacote}.sha256"; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.sha256"
-	test -e $VARCACHE_ARCHIVES/$cpacote.desc  || log_info_msg "${cyan}Downloading ${cpacote}.desc"  ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.desc"
-	test -e $VARCACHE_ARCHIVES/$cpacote.sig   || log_info_msg "${cyan}Downloading ${cpacote}.sig"   ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.sig"
+	test -e $VARCACHE_ARCHIVES/$cpacote       || log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i"
+	test -e $VARCACHE_ARCHIVES/$cpacote.sha26 || log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.sha256"
+	test -e $VARCACHE_ARCHIVES/$cpacote.desc  || log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.desc"
+	test -e $VARCACHE_ARCHIVES/$cpacote.sig   || log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.sig"
 }
 
 sh_checksha256sum()
@@ -929,7 +941,7 @@ sh_search()
 
     sh_list $param
 	if [[ $pkg != "" ]]; then
-        if (( $LAUTO )); then
+        if !(( $LAUTO )); then
             echo
             read -p "Install Pakages(s)? [Y/n]" LDOWNLOAD
             if [[ $(toupper "${LDOWNLOAD}") = "N" ]]; then
@@ -945,17 +957,17 @@ sh_search()
 			local cfile=$i
 			local cbase=$(echo $cfile | cut -d/ -f1)
 			local cpacote=$(echo $cfile | cut -d/ -f2)
-            local LINSTALLED=$false
+            local LINSTALLED=$NOK
 
             {   local item
                 index=0
                 for item in ${pkginstalled[*]}
                 do
-                    [ $item = $cpacote ] && { LINSTALLED=$true; break; }
+                    [ $item = $cpacote ] && { LINSTALLED=$OK; break; }
                     ((index++))
                 done
             }
-            if !(( $LINSTALLED )) && (( $LFORCE )); then
+            if (( $LINSTALLED )) && !(( $LFORCE )); then
 				log_success_msg2 "${orange}${cpacote} ${reset}package is already installed...Done"
                 continue
             fi
@@ -974,7 +986,7 @@ sh_search()
 					exit 1
 				fi
 			fi
-            if (( $LINSTALLED )) && !(( $LFORCE )); then
+            if !(( $LINSTALLED )); then
         	    log_info_msg "Installing package ${orange}$cpacote..."
             else
         	    log_info_msg "Reinstalling package ${orange}$cpacote..."
@@ -988,7 +1000,9 @@ sh_search()
 		    else
 				test -e $VARCACHE_REMOVED/${cpacote}        && rm -f $VARCACHE_REMOVED/${cpacote}
 				test -e $VARCACHE_INSTALLED/${cpacote}      || touch $VARCACHE_INSTALLED/${cpacote}
-				test -e $VARCACHE_SEARCH/packages-installed && echo ${cpacote} >> $VARCACHE_SEARCH/packages-installed
+                if !(( $LINSTALLED )); then
+    				echo ${cpacote} >> $VARCACHE_SEARCH/packages-installed
+                fi
 				#log_success_msg2 "${orange}${cpacote} ${reset}package installation done successfully...Done"
 			fi
     	done
@@ -1054,7 +1068,7 @@ sh_meta()
 
     sh_listmeta $param
 	if [[ $metapkg != "" ]]; then
-        if (( $LAUTO )); then
+        if !(( $LAUTO )); then
             echo
             read -p "Install meta package(s)? [Y/n]" LDOWNLOAD
             if [[ $(toupper "${LDOWNLOAD}") = "N" ]]; then
@@ -1089,7 +1103,7 @@ sh_meta()
                     done
                 }
 
-                if !(( $LINSTALLED )) && (( $LFORCE )); then
+                if (( $LINSTALLED )) && !(( $LFORCE )); then
                     log_success_msg2 "${orange}${cpacote} ${reset}package is already installed...Done"
                     continue
                 fi
@@ -1109,7 +1123,7 @@ sh_meta()
     				fi
     			fi
 
-                if (( $LINSTALLED )) && !(( $LFORCE )); then
+                if !(( $LINSTALLED )); then
         			log_info_msg "Installing package ${orange}$cpacote..."
                 else
         			log_info_msg "Reinstalling package ${orange}$cpacote..."
@@ -1257,6 +1271,7 @@ sh_listremoved()
 	sh_checkdir "OFF"
 	log_wait_msg "Reading lists of removed packages..."
 	param=$1
+
 	if [ "$param" == "" ]; then
 		param=".*."
 	fi
