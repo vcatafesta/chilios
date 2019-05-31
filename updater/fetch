@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.85.20190531"
+version="2.10.86.20190531"
 
 #hex code
 barra=$'\x5c'
