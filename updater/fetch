@@ -871,7 +871,6 @@ sh_download()
 			fi
 		fi
 
-		#internet?
 		#sh_checknet; [[ $? = $false ]] || { return 1;}
 		spinner & pid=$!
 		for i in $pkg; do
