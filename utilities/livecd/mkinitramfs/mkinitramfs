@@ -18,7 +18,7 @@ copy()
 	local file
 
 	if [ "$2" == "lib" ]; then
-		file=$(PATH=/lib:/usr/lib type -p $1)
+		file=$(PATH=/lib:/usr/lib:/lib/systemd type -p $1)
 	else
 		file=$(PATH=/bin:/usr/bin:/sbin:/usr/sbin type -p $1)
 	fi

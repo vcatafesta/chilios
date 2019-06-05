@@ -110,7 +110,7 @@ for param in $cmdline ; do
 done
 
 msg "Starting eudev..."
-udevd --daemon --resolve-names=never
+/lib/systemd/systemd-udevd --daemon --resolve-names=never
 udevadm trigger --action=add    --type=subsystems
 udevadm trigger --action=add    --type=devices
 udevadm trigger --action=change --type=devices
