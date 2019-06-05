@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.91.20190701"
+version="2.11.9.20190605"
 
 #hex code
 barra=$'\x5c'
@@ -349,6 +349,7 @@ sh_list()
     local s
 	LLIST=$true
     LFORCE=$false
+    pkg=
 
 	sh_checkdir "OFF"
 	log_wait_msg "${blue}Reading package lists in the repository..."
@@ -371,20 +372,22 @@ sh_list()
         done
 	fi
 
-	log_wait_msg "${blue}Listing..."
-	pkgCheckNumber=0
-	if [[ $pkg != "" ]]; then
-		for i in $pkg; do
-			[[ $LLIST = $true ]] && log_success_msg2 "${blue}FOUND ${orange}$i"
-			((pkgCheckNumber++))
-		done
-		 [[ $LLIST = $true ]] && log_success_msg2 "($pkgCheckNumber) package(s) found."
-	else
-		 log_failure_msg2 "${red}$param NOT FOUND ${reset} ${orange}$i${reset}"
-		 log_failure_msg2 "($pkgCheckNumber) package(s) found."
-		 echo
-		 echo -e "${reset}Use: # $0 update - to update with the repository${reset}"
-	fi
+    if (( $LLIST )); then
+    	log_wait_msg "${blue}Listing..."
+	    pkgCheckNumber=0
+    	if [[ $pkg != "" ]]; then
+	    	for i in $pkg; do
+    			[[ $LLIST = $true ]] && log_success_msg2 "${blue}FOUND ${orange}$i"
+    			((pkgCheckNumber++))
+    		done
+    		 [[ $LLIST = $true ]] && log_success_msg2 "($pkgCheckNumber) package(s) found."
+    	else
+	    	 log_failure_msg2 "${red}$param NOT FOUND ${reset} ${orange}$i${reset}"
+    		 log_failure_msg2 "($pkgCheckNumber) package(s) found."
+    		 echo
+	    	 echo -e "${reset}Use: # $0 update - to update with the repository${reset}"
+    	fi
+    fi
 	sh_cdroot
 }
 
@@ -523,14 +526,6 @@ help()
 	exit
 }
 
-sh_upgrade()
-{
-	echo
-	echo -ne "${cyan}Sorry, not implemented yet"
-	echo
-	exit
-}
-
 init()
 {
 	case "${1}" in
@@ -548,7 +543,7 @@ init()
 		-li|--list-installed|list-installed)	shift;sh_listinstalled "$@";;
 		-c|--clean|clean)  						sh_clean $2;;
 		-w|--show|show) 						shift;sh_show "$@";;
-		-U|--upgrade|upgrade) 					sh_upgrade;;
+		-U|--upgrade|upgrade) 					shift;sh_upgrade "$@";;
 		-v|--version|version) 					exit;;
 		*) 										sh_search "$@";;
 	esac
@@ -805,13 +800,46 @@ sh_show()
 	sh_cdroot
 }
 
+sh_doremove()
+{
+    local LAUTO=$false
+    local LFORCE=$false
+    local LLIST=$true
+	local param=$@
+    local s
+
+    for s in ${param[@]}
+    do
+    	[[ $(toupper "${s}") = "-Y" ]] && LAUTO=$true
+    	[[ $(toupper "${s}") = "-F" ]] && LFORCE=$true
+    	[[ $(toupper "${s}") = "OFF" ]] && LLIST=$false
+    done
+    if (( $LLIST )); then
+        log_wait_msg "Parsing..."
+    fi
+    log_info_msg "Removing package ${orange}${i}..."
+    ERROR=$(banana -r -y $1 2>&1)
+    evaluate_retval
+    local error_value="${?}"
+    if [ ${error_value} != 0 ]; then
+        log_failure_msg2 "$ERROR"
+    else
+        test -e $VARCACHE_REMOVED/${2}    || touch $VARCACHE_REMOVED/${2}
+        test -e $VARCACHE_INSTALLED/${2}  && rm -f $VARCACHE_INSTALLED/${2}
+        sed -i  '/'${2}'/d' $VARCACHE_SEARCH/packages-installed
+        if (( $LLIST )); then
+            log_success_msg2 "Removal of the package (${orange}${2}${reset}) successfully completed"
+        fi
+    fi
+    return $error_value
+}
+
 sh_remove()
 {
 	LAUTO=$false
     local param=$@
 
 	sh_listinstalled ${param}
-
 	local lExist=$?
 	[ $lExist -eq 0 ] && return 1
 
@@ -830,20 +858,21 @@ sh_remove()
     			local cfile=$i
     			local cbase=$(echo $cfile | cut -d/ -f1)
     			local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
+                sh_doremove $cpacote $i
 
-    	        log_wait_msg "Parsing..."
-    	        log_info_msg "Removing package ${orange}${i}..."
-    	        ERROR=$(banana -r -y $cpacote 2>&1)
-    	        evaluate_retval
-    	        local error_value="${?}"
-    	        if [ ${error_value} != 0 ]; then
-    	            log_failure_msg2 "$ERROR"
-    	        else
-    				test -e $VARCACHE_REMOVED/${i}    || touch $VARCACHE_REMOVED/${i}
-    				test -e $VARCACHE_INSTALLED/${i}  && rm -f $VARCACHE_INSTALLED/${i}
-    				sed -i  '/'${cpacote}'/d' $VARCACHE_SEARCH/packages-installed
-    	            log_success_msg2 "Removal of the package (${orange}${i}${reset}) successfully completed"
-    	        fi
+#    	        log_wait_msg "Parsing..."
+#    	        log_info_msg "Removing package ${orange}${i}..."
+#    	        ERROR=$(banana -r -y $cpacote 2>&1)
+#    	        evaluate_retval
+#    	        local error_value="${?}"
+#    	        if [ ${error_value} != 0 ]; then
+#    	            log_failure_msg2 "$ERROR"
+#    	        else
+#    				test -e $VARCACHE_REMOVED/${i}    || touch $VARCACHE_REMOVED/${i}
+#    				test -e $VARCACHE_INSTALLED/${i}  && rm -f $VARCACHE_INSTALLED/${i}
+#    				sed -i  '/'${cpacote}'/d' $VARCACHE_SEARCH/packages-installed
+#    	            log_success_msg2 "Removal of the package (${orange}${i}${reset}) successfully completed"
+#    	        fi
     		done
         fi
     fi
@@ -1186,14 +1215,20 @@ sh_listinstalled()
 	local pkgNumber=0
     local s
     local param=$@
+    local LLIST=$true
+    pkginstalled=
 
-#   sh_updateinstalled
+    #sh_updateinstalled
 
 	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]]; then
 		pkginstalled=$(cat $VARCACHE_SEARCH/packages-installed)
 	else
         for s in ${param[@]}
         do
+	        if [[ $(toupper "${s}") = "OFF" ]]; then
+               LLIST=$false
+#              continue
+            fi
 	        if [[ $(toupper "${s}") = "-Y" ]] || [[ $(toupper "${s}") = "-F" ]]; then
                LAUTO=$true
             else
@@ -1203,19 +1238,21 @@ sh_listinstalled()
         done
 	fi
 
-	log_wait_msg "${green}Listing..."
-	if [[ $pkginstalled != "" ]]; then
-		for i in $pkginstalled; do
-			log_success_msg2 "${green}FOUND ${orange}$i${reset}"
-			((pkgNumber++))
-		done
-		log_success_msg2 "($pkgNumber) package(s) installed."
-	else
-		log_failure_msg2 "${red}$param NOT INSTALLED with $0${reset}"
-		log_failure_msg2 "($pkgNumber) package(s) found."
-		echo
-		echo -e "${reset}Use: # $0 update - to update with the repository${reset}"
-	fi
+    if (( $LLIST )); then
+    	log_wait_msg "${green}Listing..."
+    	if [[ $pkginstalled != "" ]]; then
+    		for i in $pkginstalled; do
+    			log_success_msg2 "${green}FOUND ${orange}$i${reset}"
+    			((pkgNumber++))
+    		done
+    		log_success_msg2 "($pkgNumber) package(s) installed."
+    	else
+    		log_failure_msg2 "${red}$param NOT INSTALLED with $0${reset}"
+    		log_failure_msg2 "($pkgNumber) package(s) found."
+    		echo
+    		echo -e "${reset}Use: # $0 update - to update with the repository${reset}"
+    	fi
+    fi
 	sh_cdroot
 	return $pkgNumber
 }
@@ -1238,7 +1275,7 @@ sh_installed()
             options=("Reinstall" "Remove" "Quit")
             select opt in "${options[@]}"
             do
-                case $opt in
+            case $opt in
                     "Reinstall")
     				    sh_search "-R" "$cpacote" "-Y"
                         return 2
@@ -1254,12 +1291,9 @@ sh_installed()
                     *) exit 0
                        break
                        echo "invalid option $REPLY";;
-                    esac
-                done
-			done
-#		fi
-#		echo
-#		echo "Choose one package for remove"
+                esac
+            done
+        done
 	fi
 	sh_cdroot
 }
@@ -1336,6 +1370,51 @@ sh_removed()
 		fi
 		echo
 		echo "Choose one package for install"
+	fi
+	sh_cdroot
+}
+
+sh_upgrade()
+{
+    local param="$@"
+    #sh_updateinstalled
+    sh_list ${param} "OFF"
+    sh_listinstalled ${param} "OFF"
+
+	if [[ $pkginstalled != "" ]]; then
+		for i in $pkginstalled; do
+			local cfileInstalled=$i
+			local cbaseInstalled=$(echo $cfileInstalled | cut -d/ -f1)
+			local cpacoteInstalled=$(echo $cfileInstalled | cut -d/ -f2)
+            local cPacoteSplitInstalled=$( echo $cfileInstalled | awk '{print $NF}'|sed 's/-/ /g')
+            local cPacoteNameInstalled=$( echo $cPacoteSplitInstalled | awk '{print $1}')
+            local cPacoteVersionInstalled=$( echo $cPacoteSplitInstalled | awk '{print $2}')
+            local cPacoteReleaseInstalled=$( echo $cPacoteSplitInstalled | awk '{print $3}')
+
+            if [[ $pkg != "" ]]; then
+        		for x in $pkg; do
+        			local cfile=$x
+		        	local cbase=$(echo $cfile | cut -d/ -f1)
+        			local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
+                    local cPacoteSplit=$( echo $cpacote | awk '{print $NF}'|sed 's/-/ /g')
+                    local cPacoteName=$( echo $cPacoteSplit | awk '{print $1}')
+                    local cPacoteVersion=$( echo $cPacoteSplit | awk '{print $2}')
+                    local cPacoteRelease=$( echo $cPacoteSplit | awk '{print $3}')
+
+                    if [[ $cPacoteNameInstalled == $cPacoteName ]]; then
+                        if [[ "$cPacoteVersionInstalled" < "$cPacoteVersion" ]] || [[ "$cPacoteVersionInstalled$cPacoteReleaseInstalled" < "$cPacoteVersion$cPacoteRelease" ]]; then
+                            sh_doremove $cpacoteInstalled $i "OFF"
+                            sh_search "$cpacote" "-y" "OFF"
+                            break
+                        else
+            				log_success_msg2 "${orange}${cPacoteName} ${reset}is already the newest version ($cPacoteVersion)."
+                            break
+                        fi
+                    fi
+                done
+            fi
+
+        done
 	fi
 	sh_cdroot
 }
