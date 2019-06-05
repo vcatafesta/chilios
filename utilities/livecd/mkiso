@@ -14,11 +14,14 @@ TEMPDIR=/chili/lfsiso
 ISOLINUXDIR=$LOCALDIR/livecd/isolinux
 DISTRONAME="CHILIOS"
 LABEL="ChiliOSLiveCD"
-LFS=/mnt/lfs
+LFS=/mnt/full
 DIAHORA=`date +"%d%m%Y-%T" | sed 's/://g'`
 OUTPUT=chilios-$LFSVERSION-livecd-$DIAHORA.iso
 
-isolinux_files="chain.c32 isolinux.bin ldlinux.c32 libutil.c32 reboot.c32 menu.c32 isohdpfx.bin isolinux.cfg libcom32.c32 poweroff.c32"
+#isolinux_files="libmenu.c32 chain.c32 isolinux.bin ldlinux.c32 libutil.c32 reboot.c32 menu.c32 isohdpfx.bin isolinux.cfg libcom32.c32 poweroff.c32 hdt.c32"
+pushd /chili/livecd/isolinux
+isolinux_files=$(echo *)
+popd
 
 log_wait_msg "Criando diretorio temporario..."
 rm -fr $TEMPDIR
@@ -71,7 +74,22 @@ xorriso -as mkisofs                                 \
 		-boot-load-size 4                           \
 		-boot-info-table                            \
 		-o $OUTPUT                                  \
-		$TEMPDIR
+       	$TEMPDIR
 
-rm -fr $TEMPDIR
+#UFI
+#xorriso -as mkisofs \
+#  -o output.iso \
+#  -isohybrid-mbr /usr/lib/syslinux/isohdpfx.bin \
+#  -c isolinux/boot.cat \
+#  -b isolinux/isolinux.bin \
+#  -no-emul-boot -boot-load-size 4 -boot-info-table \
+#  -eltorito-alt-boot \
+#  -e isolinux/efiboot.img \
+#  -no-emul-boot \
+#  -isohybrid-gpt-basdat \
+#  $TEMPDIR
+
 log_success_msg2 "Arquivo iso $OUTPUT criado com sucesso!"
+log_wait_msg "Aguarde, transferindo arquivo via SCP!"
+scp $OUTPUT 10.0.0.68:/home/vcatafesta/Downloads/live.iso
+evaluate_retval
