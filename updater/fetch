@@ -3,7 +3,7 @@
  # FETCH - Search an Install packages LFS
  #
  # Created: 2019/04/05
- # Altered: 2019/05/25
+ # Altered: 2019/05/31
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.10.87.20190531"
+version="2.10.91.20190701"
 
 #hex code
 barra=$'\x5c'
@@ -525,10 +525,8 @@ help()
 
 sh_upgrade()
 {
-	echo -e "$0 $version"
 	echo
 	echo -ne "${cyan}Sorry, not implemented yet"
-	echo
 	echo
 	exit
 }
@@ -956,6 +954,7 @@ sh_search()
 			local cfile=$i
 			local cbase=$(echo $cfile | cut -d/ -f1)
 			local cpacote=$(echo $cfile | cut -d/ -f2)
+   			local cpacoteSemExt=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
             local LINSTALLED=$NOK
 
             {   local item
@@ -999,8 +998,8 @@ sh_search()
 		    else
 				test -e $VARCACHE_REMOVED/${cpacote}        && rm -f $VARCACHE_REMOVED/${cpacote}
 				test -e $VARCACHE_INSTALLED/${cpacote}      || touch $VARCACHE_INSTALLED/${cpacote}
-                if !(( $LINSTALLED )); then
-    				echo ${cpacote} >> $VARCACHE_SEARCH/packages-installed
+   				if !(( $LINSTALLED )); then
+       				echo ${cpacoteSemExt} >> $VARCACHE_SEARCH/packages-installed
                 fi
 				#log_success_msg2 "${orange}${cpacote} ${reset}package installation done successfully...Done"
 			fi
