@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.11.9.20190605"
+version="2.11.30.20190606"
 
 #hex code
 barra=$'\x5c'
@@ -49,7 +49,7 @@ BRACKET="\\033[1;34m"        # Brackets are blue
 BMPREFIX="     "
 SUCCESS_PREFIX="${SUCCESS}  *  ${NORMAL}"
 FAILURE_PREFIX="${FAILURE}*****${NORMAL}"
-WARNING_PREFIX="${WARNING} *** ${NORMAL}"
+WARNING_PREFIX="${WARNING}WARN ${NORMAL}"
 SKIP_PREFIX="${INFO}  S  ${NORMAL}"
 SUCCESS_SUFFIX="${BRACKET}[${SUCCESS}  OK  ${BRACKET}]${NORMAL}"
 FAILURE_SUFFIX="${BRACKET}[${FAILURE} FAIL ${BRACKET}]${NORMAL}"
@@ -145,6 +145,19 @@ log_info_msg()
     /bin/echo -n -e "${STAMP} ${logmessage}" >> ${BOOTLOG}
     return 0
 }
+
+log_warning_msg()
+{
+    echo -n -e "${BMPREFIX}${@}"
+    echo -e "${CURS_ZERO}${WARNING_PREFIX}${SET_COL}${WARNING_SUFFIX}"
+
+    # Strip non-printable characters from log file
+    logmessage=`echo "${@}" | sed 's/\\\033[^a-zA-Z]*.//g'`
+    timespec
+    echo -e "${STAMP} ${logmessage} WARN" >> ${BOOTLOG}
+    return 0
+}
+
 
 log_failure_msg2()
 {
@@ -352,21 +365,27 @@ sh_list()
     pkg=
 
 	sh_checkdir "OFF"
-	log_wait_msg "${blue}Reading package lists in the repository..."
+    for s in ${param[@]}; do
+        [[ $(toupper "${s}") = "-Y" ]] && LAUTO=$true
+        [[ $(toupper "${s}") = "-F" ]] && LFORCE=$true
+        [[ $(toupper "${s}") = "OFF" ]] && LLIST=$false
+    done
+
+    if (( $LLIST )); then
+        log_wait_msg "${blue}Reading package lists in the repository..."
+    fi
 
 	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "ALL OFF" ]]; then
 		pkg=$(cat $VARCACHE_SEARCH/folders_packages)
 	else
-        for s in ${param[@]}
-        do
-	        if   [[ $(toupper "${s}") = "-Y" ]]; then
-               LAUTO=$true
-	        elif [[ $(toupper "${s}") = "-F" ]]; then
-               LFORCE=$true
-	        elif [[ $(toupper "${s}") = "OFF" ]]; then
-               LLIST=$false
+        for s in ${param[@]}; do
+            if [[ $(toupper "${s}") = "-Y" ]]; then
+                LAUTO=$true
+            elif [[ $(toupper "${s}") = "-F" ]]; then
+                LFORCE=$true
+            elif [[ $(toupper "${s}") = "OFF" ]]; then
+                LLIST=$false
             else
-                #a=$(cat $VARCACHE_SEARCH/folders_packages | sed '/'$s'/!d')
                 pkg="$pkg $(grep $s $VARCACHE_SEARCH/folders_packages)"
             fi
         done
@@ -1183,21 +1202,13 @@ sh_updateinstalled()
 	param=$@
 
 	log_info_msg "${green}Checking packages"
-	pushd $VARCACHE_INSTALLED/ &>/dev/null
-	aCache=($(echo *.${PRG}))
-
+	rm -f $VARCACHE_INSTALLED/*
 	rm -f $VARCACHE_SEARCH/packages-installed
-	for item in ${aCache[*]}; do
-    	echo $item|sed 's/.'${PRG}'//g' >> $VARCACHE_SEARCH/packages-installed
-	done
-	popd  &>/dev/null
-
 	pushd $VARLIBBANANA_DESC/ &>/dev/null
 	aCachedesc=($(echo *.desc))
-
-	#rm -f $VARCACHE_SEARCH/packages-installed
 	for item in ${aCachedesc[*]}; do
-    	echo $item|sed 's/.desc//g' >> $VARCACHE_SEARCH/packages-installed
+    	echo  $item|sed 's/.desc//g' >> $VARCACHE_SEARCH/packages-installed
+    	touch $VARCACHE_INSTALLED/$(echo $item|sed 's/.desc/.'${PRG}'/g')
 	done
 	popd  &>/dev/null
 
@@ -1218,19 +1229,18 @@ sh_listinstalled()
     local LLIST=$true
     pkginstalled=
 
-    #sh_updateinstalled
-
-	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]]; then
+	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "OFF" ]]; then
 		pkginstalled=$(cat $VARCACHE_SEARCH/packages-installed)
 	else
         for s in ${param[@]}
         do
 	        if [[ $(toupper "${s}") = "OFF" ]]; then
                LLIST=$false
-#              continue
+               continue
             fi
 	        if [[ $(toupper "${s}") = "-Y" ]] || [[ $(toupper "${s}") = "-F" ]]; then
                LAUTO=$true
+               continue
             else
                 #a=$(cat $VARCACHE_SEARCH/folders_packages | sed '/'$s'/!d')
                 pkginstalled="$pkginstalled $(grep $s $VARCACHE_SEARCH/packages-installed)"
@@ -1377,12 +1387,29 @@ sh_removed()
 sh_upgrade()
 {
     local param="$@"
-    #sh_updateinstalled
-    sh_list ${param} "OFF"
+    local count=0
+    local s
+	local atemp=()
+    local item
+
+    for s in ${param[@]}; do
+        [[ $(toupper "${s}") = "-Y" ]] && LAUTO=$true
+        [[ $(toupper "${s}") = "-F" ]] && LFORCE=$true
+        [[ $(toupper "${s}") = "OFF" ]] && LLIST=$false
+    done
+#   sh_updateinstalled
     sh_listinstalled ${param} "OFF"
+
+#	if [[ $pkginstalled != "" ]]; then
+#    	for item in ${pkginstalled[*]};do
+#			atemp="$atemp $(echo $item|sed 's/-/ /g'| awk '{print $1}')"
+#        done
+#        sh_list ${atemp} "OFF"
+#    fi
 
 	if [[ $pkginstalled != "" ]]; then
 		for i in $pkginstalled; do
+            pkg=
 			local cfileInstalled=$i
 			local cbaseInstalled=$(echo $cfileInstalled | cut -d/ -f1)
 			local cpacoteInstalled=$(echo $cfileInstalled | cut -d/ -f2)
@@ -1391,7 +1418,9 @@ sh_upgrade()
             local cPacoteVersionInstalled=$( echo $cPacoteSplitInstalled | awk '{print $2}')
             local cPacoteReleaseInstalled=$( echo $cPacoteSplitInstalled | awk '{print $3}')
 
+            pkg="$pkg $(grep $cPacoteNameInstalled $VARCACHE_SEARCH/folders_packages)"
             if [[ $pkg != "" ]]; then
+                count=0
         		for x in $pkg; do
         			local cfile=$x
 		        	local cbase=$(echo $cfile | cut -d/ -f1)
@@ -1402,13 +1431,15 @@ sh_upgrade()
                     local cPacoteRelease=$( echo $cPacoteSplit | awk '{print $3}')
 
                     if [[ $cPacoteNameInstalled == $cPacoteName ]]; then
-                        if [[ "$cPacoteVersionInstalled" < "$cPacoteVersion" ]] || [[ "$cPacoteVersionInstalled$cPacoteReleaseInstalled" < "$cPacoteVersion$cPacoteRelease" ]]; then
+                        ((count++))
+                        if [[ "$cPacoteVersionInstalled-$cPacoteReleaseInstalled" < "$cPacoteVersion-$cPacoteRelease" ]]; then
                             sh_doremove $cpacoteInstalled $i "OFF"
-                            sh_search "$cpacote" "-y" "OFF"
-                            break
+                            sh_search "$cpacote" "-y" "-f" "OFF"
                         else
-            				log_success_msg2 "${orange}${cPacoteName} ${reset}is already the newest version ($cPacoteVersion)."
-                            break
+                            log_success_msg2 "${orange}${cPacoteName} ${reset}is already the newest version ($cPacoteVersion)."
+                            if [ $count -gt 1 ]; then
+                                log_warning_msg "${red}${cPacoteName} there is more than one release of the package in the repo!"
+                            fi
                         fi
                     fi
                 done
