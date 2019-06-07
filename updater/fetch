@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-version="2.11.30.20190606"
+version="2.11.90.20190607"
 
 #hex code
 barra=$'\x5c'
@@ -49,7 +49,7 @@ BRACKET="\\033[1;34m"        # Brackets are blue
 BMPREFIX="     "
 SUCCESS_PREFIX="${SUCCESS}  *  ${NORMAL}"
 FAILURE_PREFIX="${FAILURE}*****${NORMAL}"
-WARNING_PREFIX="${WARNING}WARN ${NORMAL}"
+WARNING_PREFIX="${WARNING}  W  ${NORMAL}"
 SKIP_PREFIX="${INFO}  S  ${NORMAL}"
 SUCCESS_SUFFIX="${BRACKET}[${SUCCESS}  OK  ${BRACKET}]${NORMAL}"
 FAILURE_SUFFIX="${BRACKET}[${FAILURE} FAIL ${BRACKET}]${NORMAL}"
@@ -509,6 +509,7 @@ sh_checkroot()
 sh_version()
 {
 	echo -e "$0 $version"
+	echo
 }
 
 help()
@@ -1229,12 +1230,12 @@ sh_listinstalled()
     local LLIST=$true
     pkginstalled=
 
-	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "OFF" ]]; then
+	if  [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "OFF" ]]; then
 		pkginstalled=$(cat $VARCACHE_SEARCH/packages-installed)
 	else
-        for s in ${param[@]}
-        do
-	        if [[ $(toupper "${s}") = "OFF" ]]; then
+		for s in ${param[@]}
+		do
+			if [[ $(toupper "${s}") = "OFF" ]]; then
                LLIST=$false
                continue
             fi
@@ -1387,17 +1388,25 @@ sh_removed()
 sh_upgrade()
 {
     local param="$@"
+	local LAUTO=$false
+	local LFORCE=$false
+	local LLIST=$false
     local count=0
     local s
 	local atemp=()
     local item
+	local cfileInstalled cbaseInstalled cpacoteInstalled cPacoteSplitInstalled cPacoteNameInstalled cPacoteVersionInstalled cPacoteReleaseInstalled
+	local cfile cbase cpacote cPacoteSplit cPacoteName cPacoteVersion cPacoteRelease
 
-    for s in ${param[@]}; do
-        [[ $(toupper "${s}") = "-Y" ]] && LAUTO=$true
-        [[ $(toupper "${s}") = "-F" ]] && LFORCE=$true
-        [[ $(toupper "${s}") = "OFF" ]] && LLIST=$false
-    done
 #   sh_updateinstalled
+
+	for s in ${param[@]}; do
+        [[ $(toupper "${s}") = "-Y" ]]  && { LAUTO=$true;  param[$count]=;}
+	    [[ $(toupper "${s}") = "-F" ]]  && { LFORCE=$true; param[$count]=;}
+        [[ $(toupper "${s}") = "OFF" ]] && { LLIST=$false; param[$count]=;}
+		((count++))
+    done
+
     sh_listinstalled ${param} "OFF"
 
 #	if [[ $pkginstalled != "" ]]; then
@@ -1407,45 +1416,59 @@ sh_upgrade()
 #        sh_list ${atemp} "OFF"
 #    fi
 
-	if [[ $pkginstalled != "" ]]; then
-		for i in $pkginstalled; do
-            pkg=
-			local cfileInstalled=$i
-			local cbaseInstalled=$(echo $cfileInstalled | cut -d/ -f1)
-			local cpacoteInstalled=$(echo $cfileInstalled | cut -d/ -f2)
-            local cPacoteSplitInstalled=$( echo $cfileInstalled | awk '{print $NF}'|sed 's/-/ /g')
-            local cPacoteNameInstalled=$( echo $cPacoteSplitInstalled | awk '{print $1}')
-            local cPacoteVersionInstalled=$( echo $cPacoteSplitInstalled | awk '{print $2}')
-            local cPacoteReleaseInstalled=$( echo $cPacoteSplitInstalled | awk '{print $3}')
+	for i in $pkginstalled; do
+		cfileInstalled=$i &&
+		cbaseInstalled=$(echo $cfileInstalled | cut -d/ -f1) &&
+		cpacoteInstalled=$(echo $cfileInstalled | cut -d/ -f2) &&
+		cPacoteSplitInstalled=$( echo $cfileInstalled | awk '{print $NF}'|sed 's/-/ /g') &&
+		cPacoteNameInstalled=$( echo $cPacoteSplitInstalled | awk '{print $1}') &&
+		cPacoteVersionInstalled=$( echo $cPacoteSplitInstalled | awk '{print $2}') &&
+		cPacoteReleaseInstalled=$( echo $cPacoteSplitInstalled | awk '{print $3}')
+		pkg=
+		pkg="$pkg $(grep $cPacoteNameInstalled $VARCACHE_SEARCH/folders_packages)"
 
-            pkg="$pkg $(grep $cPacoteNameInstalled $VARCACHE_SEARCH/folders_packages)"
-            if [[ $pkg != "" ]]; then
-                count=0
-        		for x in $pkg; do
-        			local cfile=$x
-		        	local cbase=$(echo $cfile | cut -d/ -f1)
-        			local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
-                    local cPacoteSplit=$( echo $cpacote | awk '{print $NF}'|sed 's/-/ /g')
-                    local cPacoteName=$( echo $cPacoteSplit | awk '{print $1}')
-                    local cPacoteVersion=$( echo $cPacoteSplit | awk '{print $2}')
-                    local cPacoteRelease=$( echo $cPacoteSplit | awk '{print $3}')
+		count=0
+		for x in $pkg; do
+       		cfile=$x &&
+	       	cbase=$(echo $cfile | cut -d/ -f1) &&
+       		cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g') &&
+			cPacoteSplit=$( echo $cpacote | awk '{print $NF}'|sed 's/-/ /g') &&
+			cPacoteName=$( echo $cPacoteSplit | awk '{print $1}') &&
+			cPacoteVersion=$( echo $cPacoteSplit | awk '{print $2}') &&
+			cPacoteRelease=$( echo $cPacoteSplit | awk '{print $3}')
 
-                    if [[ $cPacoteNameInstalled == $cPacoteName ]]; then
-                        ((count++))
-                        if [[ "$cPacoteVersionInstalled-$cPacoteReleaseInstalled" < "$cPacoteVersion-$cPacoteRelease" ]]; then
-                            sh_doremove $cpacoteInstalled $i "OFF"
-                            sh_search "$cpacote" "-y" "-f" "OFF"
-                        else
-                            log_success_msg2 "${orange}${cPacoteName} ${reset}is already the newest version ($cPacoteVersion)."
-                            if [ $count -gt 1 ]; then
-                                log_warning_msg "${red}${cPacoteName} there is more than one release of the package in the repo!"
-                            fi
-                        fi
-                    fi
-                done
-            fi
+			case $cPacoteName in
+				Python) continue;;
+				gtk+)   continue;;
+			esac
 
-        done
+			if [[ $cPacoteNameInstalled == $cPacoteName ]]; then
+				((count++))
+				if [[ "$cPacoteVersionInstalled-$cPacoteReleaseInstalled" < "$cPacoteVersion-$cPacoteRelease" ]]; then
+					sh_doremove $cpacoteInstalled $i "OFF"
+					sh_search "$cpacote" "-y" "-f" "OFF"
+				else
+					if (( $LFORCE )); then
+						sh_search "$cpacote" "-y" "-f" "OFF"
+					else
+						log_success_msg2 "${orange}${cPacoteName} ${reset}is already the newest version ($cPacoteVersion-$cPacoteRelease)."
+					fi
+					if [ $count -gt 1 ]; then
+						log_warning_msg "${red}${cPacoteName} there is more than one release of the package in the repo!"
+					fi
+				fi
+			fi
+		done
+	done
+
+	if [[ ${#pkginstalled} -le 1 ]]; then # nenhum pacote?
+		log_warning_msg "${orange}${@}${cyan} package not installed"
+		echo
+		conf "Install Pakages(s)?"
+		LAUTO=$?
+		if (( $LAUTO )); then
+			sh_search $param -y -f
+		fi
 	fi
 	sh_cdroot
 }
@@ -1453,11 +1476,11 @@ sh_upgrade()
 #figlet
 logo(){
 	_CAT << 'EOF'
- _____ _____ _____ ____ _   _
-|  ___| ____|_   _/ ___| | | |
-| |_  |  _|   | || |   | |_| |
-|  _| | |___  | || |___|  _  |
-|_|   |_____| |_| \____|_| |_|
+  __      _       _
+ / _| ___| |_ ___| |__
+| |_ / _ \ __/ __| '_ \
+|  _|  __/ || (__| | | |
+|_|  \___|\__\___|_| |_|
 EOF
 	sh_version
 }
