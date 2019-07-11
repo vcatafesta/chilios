@@ -1,14 +1,13 @@
 #!/bin/bash
-declare -r version="v2.0.0-20190427"
+declare -r version="v2.0.10-20190710"
 #################################################################
 #       install dialog Mazon OS - $version                      #
 #								                                #
-#      @utor: Diego Sarzi	    <diegosarzi@gmail.com>          #
 #             Vilmar Catafesta 	<vcatafesta@gmail.com>	    	#
+#             Diego Sarzi	    <diegosarzi@gmail.com>          #
 #      created: 2019/02/15	    licence: MIT		            #
-#      altered: 2019/02/17-25	licence: MIT			        #
+#      altered: 2019/06/03	    licence: MIT			        #
 #################################################################
-
 #. /lib/lsb/init-functions
 
 # flag dialog exit status codes
@@ -20,9 +19,9 @@ declare -r version="v2.0.0-20190427"
 : ${D_ESC=255}
 
 #SQFS
-ROOTSQFS=/lib/initramfs/medium/filesystem/root.sfs
-MEDIUM=/lib/initramfs/system
-LIVE=/lib/initramfs/medium/isolinux/venomlive
+export ROOTSQFS=/lib/initramfs/medium/filesystem/root.sfs
+export MEDIUM=/lib/initramfs/system
+export LIVE=/lib/initramfs/medium/isolinux/venomlive
 #mount -t squashfs -o ro,loop $MEDIUM/filesystem/root.sfs /mnt
 
 #Downloader
@@ -72,7 +71,7 @@ FAILURE_SUFFIX="${BRACKET}[${FAILURE} FAIL ${BRACKET}]${NORMAL}"
 WARNING_SUFFIX="${BRACKET}[${WARNING} WARN ${BRACKET}]${NORMAL}"
 SKIP_SUFFIX="${BRACKET}[${INFO} SKIP ${BRACKET}]${NORMAL}"
 
-BOOTLOG=/run/bootlog
+BOOTLOG=$HOME/bootlog
 KILLDELAY=3
 SCRIPT_STAT="0"
 
@@ -119,19 +118,19 @@ else
     chost="201.7.66.107"
     ptcom=""
     oldspkg="/"
-    calias="chilios"
+    calias="chili"
     cnick="chili"
     xemail="vcatafesta@gmail.com"
 fi
 
 # variavel comuns
 site="$chost$ptcom"
-chostname=$alias
+chostname=$calias
 grafico=$true
 ccabec="$cdistro Linux installer $version"
 ctitle="$cdistro Linux"
 welcome="Welcome to the $ccabec"
-dir_install="/mnt/lfs"
+export dir_install="/mnt/lfs"
 url_release="http://$site/releases"
 url_distro="http://$site/releases/"
 pwd=$PWD
@@ -163,7 +162,7 @@ cfstab=$dir_install"/etc/fstab"
 # usuario/senha/hostmame/group
 : ${cuser=""}
 : ${cpass=""}
-: ${cgroups="audio,video,netdev"}
+: ${cgroups="audio,video"}
 
 wiki=$(cat << _WIKI
 Wiki
@@ -288,9 +287,7 @@ function log_success_msg2()
 {
     /bin/echo -n -e "${BMPREFIX}${@}"
     /bin/echo -e "${CURS_ZERO}${SUCCESS_PREFIX}${SET_COL}${SUCCESS_SUFFIX}"
-
     echo " OK" >> ${BOOTLOG}
-
     return 0
 }
 
@@ -312,9 +309,7 @@ function log_failure_msg2()
 {
     /bin/echo -n -e "${BMPREFIX}${@}"
     /bin/echo -e "${CURS_ZERO}${FAILURE_PREFIX}${SET_COL}${FAILURE_SUFFIX}"
-
     echo "FAIL" >> ${BOOTLOG}
-
     return 0
 }
 
@@ -381,6 +376,11 @@ function evaluate_retval()
 function is_true()
 {
    [ "$1" = "1" ] || [ "$1" = "yes" ] || [ "$1" = "true" ] ||  [ "$1" = "y" ] || [ "$1" = "t" ]
+}
+
+
+function sh_trapErro(){
+    dialog --msgbox "Voce pressionou ctrl-c" 7 60
 }
 
 
@@ -575,13 +575,18 @@ function sh_confhost(){
 	cinfo=`log_info_msg "$cmsgaddhost"`
     msg "INFO" "$cinfo"
 	if [ "$chostname" != "$calias" ]; then
-		echo $chost > $dir_install/etc/hostname
+		rm -f $dir_install/etc/hostname
+		echo ${chostname} > $dir_install/etc/hostname
 		echo "127.0.0.1   $chostname" >> $dir_install/etc/hosts
 	    return $?
 	fi
 }
 
 function sh_adduser(){
+    cuser=$(cat /tmp/root-cuser)
+    cpass=$(cat /tmp/root-cpass)
+    chostname=$(cat /tmp/root-chostname)
+
 	if [ "$cuser" != " " ]; then
 		if [ $FULLINST = $false ]; then
 			cgroups="audio,video"
@@ -602,7 +607,7 @@ function sh_adduser(){
 		sh_initbind
 		cinfo=`log_info_msg "$cmsgadduser"`
 	    msg "INFO" "$cinfo"
-	    chroot . /bin/bash -c "useradd -m -G $cgroups $cuser -p $cpass > /dev/null 2>&1"
+	    chroot . /bin/bash -c "useradd -m -G ${cgroups} ${cuser} -p ${cpass} > /dev/null 2>&1"
 	    chroot . /bin/bash -c "(echo $cuser:$cpass) | chpasswd -m > /dev/null 2>&1"
 	    evaluate_retval
 		sh_confhost
@@ -627,7 +632,11 @@ function sh_confadduser(){
 		read -r cpass
 		read -r chostname
 
-		sh_adduser
+        rm -f /tmp/root-cuser     ; echo $cuser > /tmp/root-cuser
+        rm -f /tmp/root-cpass     ; echo $cpass > /tmp/root-cpass
+        rm -f /tmp/root-chostname ; echo $chostname > /tmp/root-chostname
+
+		#sh_adduser
 	}
 
 	# close fd
@@ -656,6 +665,92 @@ function sh_tailexectar(){
     return $nret
 }
 
+function sh_execcopiaold(){
+	ORIGEM=$MEDIUM/
+	DESTINO=$dir_install/
+
+	sizeof()    { du -s "$1" | cut -f1; }
+	running()   { ps $1 | grep $1 >/dev/null; }
+
+	TITLE="Copiando..."
+	MSG="Copiando o diretorio $ORIGEM para $DESTINO"
+	INTERVALO=0.07
+	PORCENTO=0
+	DIR_DESTINO="$DESTINO/${ORIGEM##*/}"
+
+	MSG=$(eval echo $MSG)
+	TOTAL=$(sizeof $ORIGEM)
+
+	cp -rap $ORIGEM/* $DESTINO &
+	CPPID=$!
+
+	trap "kill $CPPID" 2 15
+
+	(
+    	while running $CPPID; do
+	        COPIADO=$(sizeof $DIR_DESTINO)
+	        PORCENTAGEM=$((COPIADO*100/TOTAL))
+    	    [ $PORCENTAGEM -gt 100 ] && PORCENTAGEM=100
+        	echo $PORCENTAGEM
+	        #sleep $INTERVALO
+	    done
+	    echo 100
+	) | dialog --title "** COPIANDO **" --backtitle "$cabec" --gauge "$MSG" 7 60 0
+}
+
+
+function sh_execcopia(){
+	ORIGEM=$MEDIUM/
+	DESTINO=$dir_install/
+    DEST=$dir_install
+
+    sizeof()    { du -s "$1" | cut -f1; }
+    running()   { ps $1 | grep $1 >/dev/null; }
+
+    TITLE="Copiando..."
+    MSG="Copiando o diretorio $ORIGEM para $DESTINO"
+    INTERVALO=1
+    PORCENTO=0
+    DIR_DESTINO="$DESTINO/${ORIGEM##*/}"
+
+    MSG=$(eval echo $MSG)
+    TOTAL=$(sizeof $ORIGEM)
+    TOTALGB=$((TOTAL/1024))
+    DISPONIVEL=$(df | grep "${DEST}" | awk '{print $4}')
+    DISPONIVEL=$((DISPONIVEL/1024))
+
+    log=/tmp/install-chili.log
+
+    #cp -rap $ORIGEM/* $DESTINO >$log &
+    #CPPID=$!
+
+    rsync -crav $ORIGEM $DESTINO 1>&2>$log &
+    CPPID=$!
+
+    #rsync -cra $ORIGEM $DESTINO &
+    #CPPID=$!
+
+#   trap sh_trapErro 2 15
+    trap "kill $CPPID" 2 15
+
+    (
+        while running $CPPID; do
+            COPIADO=$(sizeof $DIR_DESTINO)
+            PORCENTAGEM=$((COPIADO*100/TOTAL))
+            COPIADOMB=$((COPIADO/1024))
+            LASTFILE=$(tail -n1 $log)
+            [ $PORCENTAGEM -gt 100 ] && PORCENTAGEM=100
+#           echo "$PORCENTAGEM% - $ORIGEM - $COPIADO - $DIR_DESTINO" >> $log
+#           dialog --infobox "Percentual completo: $PORCENTAGEM\nBytes copiado: $COPIADO" 21 80
+            dialog --title "$TITLE" --gauge "\n$MSG\n\nDisponivel : ${DISPONIVEL}MB\nTotal      : ${TOTALGB}MB\nCopiado    : ${COPIADOMB}MB\nArquivo    : ${LASTFILE}\n\n\n" 13 120 0 <<< $PORCENTAGEM
+            sleep $INTERVALO
+        done
+        #echo 100
+#   )| dialog --title "$TITLE" --tailbox "$log" 8 70
+    )
+}
+
+
 function sh_pvexectar(){
     (pv -n $pwd/$tarball_default			            \
     |tar xJpf - -C $dir_install ) 2>&1 		            \
@@ -664,6 +759,7 @@ function sh_pvexectar(){
             --gauge "\n$cmsg_extracting: $dir_install" 	\
     7 60
 }
+
 
 function sh_exectar(){
 	local nret
@@ -1019,9 +1115,16 @@ function sh_fstab(){
 }
 
 function sh_finish(){
-	alerta "*** INSTALL ***" "$cfinish"
-    clear
-	exit 0
+	#alerta "*** INSTALL ***" "$cfinish"
+	confmulti "*** INSTALL ***"                                     \
+            	"\n$cfinish"	                                    \
+        		"\nDeseja Rebootar agorar?"
+	if [ $? = $true ]; then
+        reboot
+    else
+        clear
+    	exit 0
+    fi
 }
 
 function sh_wgettarball(){
@@ -2305,11 +2408,23 @@ function sh_automated_install(){
     zeravar
 }
 
-function sh_pvexecrsync(){
-    NUMFILES=$(ls -R $MEDIUM | wc -l)
-    rsync -ravp --info=progress2 $MEDIUM/ $dir_install/ | grep -o "[0-9]*%" | tr -d '%' \
+function sh_pvexecrsyncold(){
+    #NUMFILES=$(ls -R $MEDIUM | wc -l)
+    rsync -ravp --info=progress2 $MEDIUM/ $dir_install/ \
+	| grep -o "[0-9]*%" \
+	| tr -d '%' \
+	| echo -e "$q \n#""${MSG[10]}"" : $q %" \
     |dialog --title "** RSYNC **" --backtitle "$ccabec" --gauge "\n$cmsg_extracting:$dir_install" 7 60
 }
+
+function sh_pvexecrsync(){
+    #NUMFILES=$(ls -R $MEDIUM | wc -l)
+    rsync -ravp --info=progress2 $MEDIUM/ $dir_install/ \
+    | grep -o "[0-9]*%"     \
+    | tr -d '%'     \
+    |dialog --title "** RSYNC **" --backtitle "$ccabec" --gauge "\n$cmsg_extracting:$dir_install" 7 60
+}
+
 
 function sh_pvexecrunsquashfs(){
 	unsquashfs -f -d $dir_install $ROOTSQFS | grep -o "[0-9]*%" | tr -d '%' \
@@ -2337,7 +2452,9 @@ function sh_tailexecrsync(){
 function sh_wgetsqfs(){
     sh_check_install
   	cd $dir_install
-    sh_tailexecrsync
+#   sh_tailexecrsync
+#   sh_pvexecrsync
+    sh_execcopia
 	#sh_pvexecrunsquashfs
 }
 
@@ -2351,6 +2468,8 @@ function sh_liveinstall(){
         LAUTOMATICA=$false
         scrmain
     fi
+	FULLINST=$true
+	LADDUSER=$false
     LAUTOMATICA=$true
     choosedisk
     nChoice=$?
@@ -2380,6 +2499,12 @@ function sh_liveinstall(){
     esac
     LGRUB=$mbr
 
+   	conf "*** ADDUSER ***" "\n$cconfusernow?"
+   	if [ $? = $true ]; then
+		LADDUSER=$true
+   		sh_confadduser
+   	fi
+
     conf "$cmsgInstalacao_Automatica" "\nTudo pronto para iniciar a instalação. Continuar?"
     nChoice=$?
     if [ $nChoice = $false ]; then
@@ -2405,10 +2530,9 @@ function sh_liveinstall(){
     sh_wgetsqfs
     sh_fstab
 	sh_initbind
-   	conf "*** ADDUSER ***" "\n$cconfusernow?"
-   	if [ $? = $true ]; then
-   		sh_confadduser
-   	fi
+    if [ $LADDUSER = $true ]; then
+		sh_adduser
+	fi
 	grubinstall
     sh_stopbind
     sh_stopbind
