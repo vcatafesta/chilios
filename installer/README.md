@@ -1,2 +1,2 @@
 # installer
-Instalador Mazon OS
+Instalador Chili OS
