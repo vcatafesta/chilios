@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.16.27.20200607"
+_VERSION_="2.16.30.20200607"
 
 #fatorial
 #seq -s* 6 | bc
@@ -777,8 +777,13 @@ function sh_update()
 	spinner & pid=$!
 	local Folders
 	for Folders in ${FoldersInRepo}; do
-		PackagesInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | grep ".${PRG}$" | awk '{print $1}')
-		MetaPkgInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | grep ".meta$" | awk '{print $1}')
+        # site normal
+        #PackagesInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | grep ".${PRG}$" | awk '{print $1}')
+		#MetaPkgInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | grep ".meta$" | awk '{print $1}')
+
+        # github
+        PackagesInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | sed 's/\// /g' | grep ".${PRG}$"| awk '{print $NF}')
+		MetaPkgInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/" |sed 's/^.*href="//' | sed 's/".*$//' | sed 's/\// /g' | grep ".meta$" | awk '{print $NF}')
 
 		local count=0
 		for pkgInFolder in $PackagesInFolders; do
@@ -1132,7 +1137,7 @@ function sh_search()
                 index=0
                 for item in ${pkginstalled[*]}
                 do
-                    [ $item = $cpacote ] && { LINSTALLED=$OK; break; }
+                    [[ $item = $cpacote ]] && { LINSTALLED=$OK; break; }
                     ((index++))
                 done
             }
