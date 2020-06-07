@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='nano'
+version='syntax'
+build='highlighting'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Nano editor syntax highlighting enhancements'
+size='148901'
+url='https://github.com/scopatz/nanorc'
+dep=('')
