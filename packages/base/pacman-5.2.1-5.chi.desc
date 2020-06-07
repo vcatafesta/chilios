@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer="Vilmar Catafesta <vcatafesta@gmail.com>"
+pkgname='pacman'
+version='5.2.1'
+build='5'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc="A library-based package manager with dependency support"
+size='4623080'
+url='https://www.archlinux.org/pacman/'
+dep=('')
