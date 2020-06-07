@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/05/01
+ # Altered: 2020/06/07
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.16.23.20200501"
+_VERSION_="2.16.27.20200607"
 
 #fatorial
 #seq -s* 6 | bc
@@ -251,8 +251,9 @@ function sh_touchconf()
 PKG_EXT='chi'
 
 # site de hospedagem da distro
-PKG_SITE='http://10.0.0.68'
+#PKG_SITE='http://10.0.0.68'
 #PKG_SITE='http://201.7.66.107'
+PKG_SITE='https://github.com/vcatafesta/ChiliOS/tree/master'
 AUTO_YES='1'
 MAINTAINER='Vilmar Catafesta <vcatafesta@gmail.com>'
 GPG_SIGN='0'
@@ -515,7 +516,7 @@ function sh_checknet()
 {
     # have internet?
 	log_info_msg "${cyan}Testing internet"
-#   ping -c3 -q $(echo $SITE | sed 's/http:\/\///g') >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
+    #ping -c3 -q $(echo $SITE | sed 's/http:\/\///g') >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
     curl -k $SITE >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
     evaluate_retval
 	return $?
@@ -612,7 +613,8 @@ function help()
 	echo -e "${pink}  -c, --clean,          clean          ${reset}- erase downloaded packages files"
 	echo -e "${pink}  -s, --search,         search         ${reset}- search for packages"
 	echo -e "${pink}  -l, --list,           list           ${reset}- list avaiable packages based on package names"
-	echo -e "${pink}  -ll,--list-avaiable,  list-avaiable  ${reset}- list avaiable packages based on package names"
+	echo -e "${pink}  -la,--list-avaiable,  list-avaiable  ${reset}- list avaiable packages based on package names"
+	echo -e "${pink}  -lc,--list-cache,     list-cache     ${reset}- list downloaded packages in cache"
 	echo -e "${pink}  -li,--list-installed, list-installed ${reset}- list installed packages"
 	echo -e "${pink}  -lr,--list-removed,   list-removed   ${reset}- list packages removed by $0"
 	echo -e "${pink}  -w, --show,           show           ${reset}- show package details"
@@ -651,7 +653,7 @@ function init()
 		-d|--download|download) 				shift;sh_download "$@";;
 		-l|--list|list)    	 					shift;sh_list "$@";;
 		-la|--list-avaiable|list-avaiable) 		shift;sh_list "$@";;
-		-ll|--list-avaiable|list-avaiable) 		shift;sh_list "$@";;
+		-lc|--list-cache|list-cache) 	        shift;sh_FilesInCache "$@";;
 		-lr|--list-removed|list-removed)		sh_removed $2 $3;;
 		-li|--list-installed|list-installed)	shift;sh_listinstalled "$@";;
 		-pi|--in-cache|in-cache)	            shift;sh_FilesInCache "$@";;
@@ -751,10 +753,16 @@ function sh_update()
 	> $VARCACHE_SEARCH/metapackages
 	evaluate_retval
 
-	log_info_msg "Updating Folders..."
+	log_info_msg "Updating Folders at ${SITE}"
 #	curl -k --silent --url "${SITE}/packages/"| grep "/</a" | grep '[a-z]' | sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
 #	curl -k --silent --url "${SITE}/packages/"|sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
-	curl -k --silent --url "${SITE}/packages/"|grep href|sed 's/[*<>]//g'|sed 's/[*=/"]/:/g'|cut -d: -sf3 > ${VARCACHE_SEARCH}/folders
+
+#   sites com gninx/apache/etc
+#	curl -k --silent --url "${SITE}/packages/"|grep href|sed 's/[*<>]//g'|sed 's/[*=/"]/:/g'|cut -d: -sf3 > ${VARCACHE_SEARCH}/folders
+
+#   github
+    curl -k --silent --url "${SITE}/packages/"|grep /packages/ | sed 's/<[^>]*>//g' | sed 's/ //g' > ${VARCACHE_SEARCH}/folders
+
 #	FoldersInRepo='arch base dev extra games lib meta net sec theme x xapp'
 #	echo "${FoldersInRepo[@]}" > ${VARCACHE_SEARCH}/folders
 
@@ -1751,7 +1759,7 @@ function _GENERATE_DESC()
 # Generated with fetch
 # Generated with alienpkg
 ######################################################################
-maintainer="$MAINTAINER"
+maintainer='$MAINTAINER'
 pkgname='$DESC_PACKNAME'
 version='$DESC_VERSION'
 build='$DESC_BUILD'
@@ -1760,7 +1768,7 @@ lfs_version='$LFS_VERSION'
 lfs_init='$LFS_INIT'
 arch='$ARCH'
 distro='$DISTRO'
-desc="$DESC"
+desc='$DESC'
 size='$SIZE'
 url='$URL'
 dep=('')
@@ -2210,12 +2218,12 @@ function sh_createpkg()
 	_VERIFY_ON "$pkg"
 	_CREATE_PKG "$pkg" || exit 1
     log_info_msg "Generating package $pkg"
-    evaluate_retval
     unset check_var
 }
 
 function sh_alienpkg_init(){
-	source /chili/core.sh
+    log_wait_msg "Carregando /usr/libexec/fetch/core.sh"
+	source /usr/libexec/fetch/core.sh
 	unset BUILDDIR
 	unset size
 }
@@ -2249,7 +2257,7 @@ function sh_alienpkg_exec(){
                 LLIST=$false
             else
 				#files=$(ls -1 $ALIEN_CACHE_DIR/*.xz | grep $s )
-				files=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz} | grep $s )
+				files=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz} | grep $s)
                 pkg="$pkg $(echo $files| grep $s)"
             fi
         done
@@ -2258,7 +2266,7 @@ function sh_alienpkg_exec(){
 	for package in $pkg
 #	for package in $ALIEN_CACHE_DIR/$*
 	do
-		echo
+#		echo
 #		packagedir=${package%$EXT}
 		packagedir=${package}
 		FULLDIR=$BUILDDIR/$packagedir
@@ -2320,6 +2328,10 @@ function sh_alienpkg_exec(){
 		export       DESC_VERSION=$( echo $pkgver|cut -d '-' -f1)
 		export   ALIEN_DESC_BUILD=$( echo $pkgver|cut -d '-' -f2)
 		export         DESC_BUILD=$( echo $pkgver|cut -d '-' -f2)
+#		export ALIEN_DESC_VERSION="$pkgver"
+#		export       DESC_VERSION="$pkgver"
+#		export   ALIEN_DESC_BUILD="$pkgrel"
+#		export         DESC_BUILD="$pkgrel"
 
 #	    log_info_msg "Gerando DESC pacote $destdir"
 		pushd $destdir	>/dev/null 2>&1
