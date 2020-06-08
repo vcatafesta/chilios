@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/06/07
+ # Altered: 2020/06/08
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.16.30.20200607"
+_VERSION_="2.50.01.20200608"
 
 #fatorial
 #seq -s* 6 | bc
@@ -254,6 +254,8 @@ PKG_EXT='chi'
 #PKG_SITE='http://10.0.0.68'
 #PKG_SITE='http://201.7.66.107'
 PKG_SITE='https://github.com/vcatafesta/ChiliOS/tree/master'
+#PKG_RAW='https://raw.githubusercontent.com/vcatafesta/ChiliOS/master/packages/base/tree-1.8.0-2.chi'
+PKG_RAW='https://raw.githubusercontent.com/vcatafesta/ChiliOS/master'
 AUTO_YES='1'
 MAINTAINER='Vilmar Catafesta <vcatafesta@gmail.com>'
 GPG_SIGN='0'
@@ -277,6 +279,7 @@ source /etc/fetch/fetch.conf &> /dev/null
 APP="fetch"
 PRG="${PKG_EXT:=chi}"
 SITE="${PKG_SITE:=http://10.0.0.66}"
+RAW="${PKG_RAW:=http://10.0.0.66}"
 AUTO_YES="${AUTO_YES:=1}"
 VARCACHE="/var/cache/${APP}"
 VARCACHE_ARCHIVES="/var/cache/${APP}/archives"
@@ -940,9 +943,16 @@ function sh_show()
 
     		log_info_msg "${green}Fetching... $cpacote${reset}"
     		if [ $LFORCE = $true ]; then
-    			curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
+                # site normal
+                #curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
+
+                # github
+                curl -s -k -O "${RAW}/packages/$cbase/$cpacote"
     		else
-    			test -e $VARCACHE_ARCHIVES/$cpacote || curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
+                # site normal
+    			#test -e $VARCACHE_ARCHIVES/$cpacote || curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
+                # github
+    			test -e $VARCACHE_ARCHIVES/$cpacote || curl -s -k -O "${RAW}/packages/$cbase/$cpacote"
     		fi
     		evaluate_retval
     		local error_value="${?}"
@@ -1060,16 +1070,31 @@ function sh_download()
 			log_wait_msg "File ${red}#${nFilesDownloaded} of ${nTotalFiles}${reset}|Checking package ${orange}${cpacote} ${cspace}"
 
 			if (( $LFORCE )); then
-				curl -k --silent -O "${SITE}/packages/$i"       ;log_info_msg "[$nFilesDownloaded]${orange}${cpacote}${reset} fetching now!" ; evaluate_retval;
-				curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc fetching now!"   ; evaluate_retval;
-				curl -k --silent -O "${SITE}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 fetching now!" ; evaluate_retval;
-				curl -k --silent -O "${SITE}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig fetching now" ; evaluate_retval;
+                # site normal
+				#curl -k --silent -O "${SITE}/packages/$i"       ;log_info_msg "[$nFilesDownloaded]${orange}${cpacote}${reset} fetching now!" ; evaluate_retval;
+				#curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc fetching now!"   ; evaluate_retval;
+				#curl -k --silent -O "${SITE}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 fetching now!" ; evaluate_retval;
+				#curl -k --silent -O "${SITE}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig fetching now" ; evaluate_retval;
+
+                # github
+				curl -k --silent -O "${RAW}/packages/$i"       ;log_info_msg "[$nFilesDownloaded]${orange}${cpacote}${reset} fetching now!" ; evaluate_retval;
+				curl -k --silent -O "${RAW}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc fetching now!"   ; evaluate_retval;
+				curl -k --silent -O "${RAW}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 fetching now!" ; evaluate_retval;
+				curl -k --silent -O "${RAW}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig fetching now" ; evaluate_retval;
 			else
-				test -e $VARCACHE_ARCHIVES/$cpacote        && log_success_msg2 "[$nFilesDownloaded]${orange}${i}${reset} already downloaded!" || { curl -k --silent -O "${SITE}/packages/$i" ;log_info_msg "[$nFilesDownloaded]${orange}$cpacote${reset} downloading now!" ; evaluate_retval;}
-				test -e $VARCACHE_ARCHIVES/$cpacote.desc   && log_success_msg2 "   ${i}.desc already downloaded!"   || { curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc downloading now!"   ; evaluate_retval;}
-				test -e $VARCACHE_ARCHIVES/$cpacote.sha256 && log_success_msg2 "   ${i}.sha256 already downloaded!" || { curl -k --silent -O "${SITE}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 downloading now!" ; evaluate_retval;}
-				test -e $VARCACHE_ARCHIVES/$cpacote.sig    && log_success_msg2 "   ${i}.sig already downloaded!"    || { curl -k --silent -O "${SITE}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig downloading now!"    ; evaluate_retval;}
+                # site normal
+    			#test -e $VARCACHE_ARCHIVES/$cpacote        && log_success_msg2 "[$nFilesDownloaded]${orange}${i}${reset} already downloaded!" || { curl -k --silent -O "${SITE}/packages/$i" ;log_info_msg "[$nFilesDownloaded]${orange}$cpacote${reset} downloading now!" ; evaluate_retval;}
+				#test -e $VARCACHE_ARCHIVES/$cpacote.desc   && log_success_msg2 "   ${i}.desc already downloaded!"   || { curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc downloading now!"   ; evaluate_retval;}
+				#test -e $VARCACHE_ARCHIVES/$cpacote.sha256 && log_success_msg2 "   ${i}.sha256 already downloaded!" || { curl -k --silent -O "${SITE}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 downloading now!" ; evaluate_retval;}
+				#test -e $VARCACHE_ARCHIVES/$cpacote.sig    && log_success_msg2 "   ${i}.sig already downloaded!"    || { curl -k --silent -O "${SITE}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig downloading now!"    ; evaluate_retval;}
+
+                #github
+    			test -e $VARCACHE_ARCHIVES/$cpacote        && log_success_msg2 "[$nFilesDownloaded]${orange}${i}${reset} already downloaded!" || { curl -k --silent -O "${RAW}/packages/$i" ;log_info_msg "[$nFilesDownloaded]${orange}$cpacote${reset} downloading now!" ; evaluate_retval;}
+				test -e $VARCACHE_ARCHIVES/$cpacote.desc   && log_success_msg2 "   ${i}.desc already downloaded!"   || { curl -k --silent -O "${RAW}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc downloading now!"   ; evaluate_retval;}
+				test -e $VARCACHE_ARCHIVES/$cpacote.sha256 && log_success_msg2 "   ${i}.sha256 already downloaded!" || { curl -k --silent -O "${RAW}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 downloading now!" ; evaluate_retval;}
+				test -e $VARCACHE_ARCHIVES/$cpacote.sig    && log_success_msg2 "   ${i}.sig already downloaded!"    || { curl -k --silent -O "${RAW}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig downloading now!"    ; evaluate_retval;}
 			fi
+
 
 		done
 		{ kill $pid; wait $pid 2>/dev/null; echo ;}
@@ -1084,18 +1109,32 @@ function sh_download()
 
 function sh_wgetfull()
 {
-	log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O "${SITE}/packages/$i"
-	log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O "${SITE}/packages/$i.sha256"
-	log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O "${SITE}/packages/$i.desc"
-	log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O "${SITE}/packages/$i.sig"
+    #site normal
+	#log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O "${SITE}/packages/$i"
+	#log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O "${SITE}/packages/$i.sha256"
+	#log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O "${SITE}/packages/$i.desc"
+	#log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O "${SITE}/packages/$i.sig"
+
+    # github
+	log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O "${RAW}/packages/$i"
+	log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O "${RAW}/packages/$i.sha256"
+	log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O "${RAW}/packages/$i.desc"
+	log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O "${RAW}/packages/$i.sig"
 }
 
 function sh_wgetpartial()
 {
-	test -e $VARCACHE_ARCHIVES/$cpacote       || log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i"
-	test -e $VARCACHE_ARCHIVES/$cpacote.sha26 || log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.sha256"
-	test -e $VARCACHE_ARCHIVES/$cpacote.desc  || log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.desc"
-	test -e $VARCACHE_ARCHIVES/$cpacote.sig   || log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.sig"
+    #site normal
+	#test -e $VARCACHE_ARCHIVES/$cpacote       || log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i"
+	#test -e $VARCACHE_ARCHIVES/$cpacote.sha26 || log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.sha256"
+	#test -e $VARCACHE_ARCHIVES/$cpacote.desc  || log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.desc"
+	#test -e $VARCACHE_ARCHIVES/$cpacote.sig   || log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.sig"
+
+    #github
+	test -e $VARCACHE_ARCHIVES/$cpacote       || log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O -C - "${RAW}/packages/$i"
+	test -e $VARCACHE_ARCHIVES/$cpacote.sha26 || log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O -C - "${RAW}/packages/$i.sha256"
+	test -e $VARCACHE_ARCHIVES/$cpacote.desc  || log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O -C - "${RAW}/packages/$i.desc"
+	test -e $VARCACHE_ARCHIVES/$cpacote.sig   || log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O -C - "${RAW}/packages/$i.sig"
 }
 
 function sh_checksha256sum()
@@ -1239,7 +1278,11 @@ function sh_meta()
 			local cmetabase=$(echo $cmetafile | cut -d/ -f1)
 			local cmetapacote=$(echo $cmetafile | cut -d/ -f2)
 
-            curl --silent -k -O "${SITE}/packages/$x"
+            # site normal
+            #curl --silent -k -O "${SITE}/packages/$x"
+
+            # github
+            curl --silent -k -O "${RAW}/packages/$x"
             pkg=$(cat $cmetapacote)
             pushd $VARCACHE_INSTALLED/ &>/dev/null
             local pkginstalled=$(echo *.${PRG})
