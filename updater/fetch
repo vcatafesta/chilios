@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.50.01.20200608"
+_VERSION_="3.00.00.20200609"
 
 #fatorial
 #seq -s* 6 | bc
@@ -247,8 +247,8 @@ function sh_touchconf()
 # Arquivo de configuracao
 ######################################################################
 
-# extensao dos pacotes: chilios=chi, mazon=mz
-PKG_EXT='chi'
+# extensao dos pacotes: chilios=chi.zst, mazon=mz
+PKG_EXT='chi.zst'
 
 # site de hospedagem da distro
 #PKG_SITE='http://10.0.0.68'
@@ -2171,7 +2171,7 @@ function _CREATE_PKG()
     local package="${1/%.${PKG_EXT}/}"
     local ext_desc='desc'
 
-    if tar cf ../${package}.${PKG_EXT} .; then
+    if tar --use-compress-program zstd --create --file ../${package}.${PKG_EXT} .; then
         cp "$descme" ../${package}.${PKG_EXT}.${ext_desc} &>/dev/null
         pushd .. &>/dev/null
         sha256sum ${package}.${PKG_EXT} > ${package}.${PKG_EXT}.sha256
@@ -2333,7 +2333,7 @@ function sh_alienpkg_exec(){
 		evaluate_retval
 
 		log_info_msg "Descompactando pacote $package at $destdir"
-		tar -xf $package -C $destdir >/dev/null 2>&1
+		tar --extract --file $package -C $destdir >/dev/null 2>&1
 		evaluate_retval
 
 		case $packagedir in
