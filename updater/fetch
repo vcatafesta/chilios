@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="3.00.00.20200609"
+_VERSION_="3.00.10.20200610"
 
 #fatorial
 #seq -s* 6 | bc
@@ -254,7 +254,7 @@ PKG_EXT='chi.zst'
 #PKG_SITE='http://10.0.0.68'
 #PKG_SITE='http://201.7.66.107'
 PKG_SITE='https://github.com/vcatafesta/ChiliOS/tree/master'
-#PKG_RAW='https://raw.githubusercontent.com/vcatafesta/ChiliOS/master/packages/base/tree-1.8.0-2.chi'
+#PKG_RAW='https://raw.githubusercontent.com/vcatafesta/ChiliOS/master/packages/base/tree-1.8.0-2.chi.zst'
 PKG_RAW='https://raw.githubusercontent.com/vcatafesta/ChiliOS/master'
 AUTO_YES='1'
 MAINTAINER='Vilmar Catafesta <vcatafesta@gmail.com>'
@@ -277,7 +277,7 @@ source /etc/fetch/fetch.conf &> /dev/null
 
 # default
 APP="fetch"
-PRG="${PKG_EXT:=chi}"
+PRG="${PKG_EXT:=chi.zst}"
 SITE="${PKG_SITE:=http://10.0.0.66}"
 RAW="${PKG_RAW:=http://10.0.0.66}"
 AUTO_YES="${AUTO_YES:=1}"
@@ -291,9 +291,9 @@ LIBRARY=${LIBRARY:-'/usr/share/${APP}'}
 export descme='info/desc'
 export PKG_EXT="${PKG_EXT:='chi'}"
 export LFS_VARCACHE="${LFS_VARCACHE:='fetch'}"
-export VARLIB_LIST='/var/cache/fetch/list'
-export VARLIB_DESC='/var/cache/fetch/desc'
-export VARLIB_REMO='/var/cache/fetch/remove'
+export VARLIB_LIST="/var/cache/${APP}/list"
+export VARLIB_DESC="/var/cache/${APP}/desc"
+export VARLIB_REMO="/var/cache/${APP}/remove"
 
 declare -l BAIXA=${MENSAGEM}
 declare -u ALTA=${MENSAGEM}
@@ -1374,7 +1374,7 @@ function sh_recreatefilepackagesinstalled()
 	evaluate_retval
 }
 
-sh_listinstalled()
+function sh_listinstalled()
 {
 	local pkgNumber=0
     local s
@@ -2228,7 +2228,7 @@ function sh_removepkg()
 	while [[ -n "$1" ]]; do
 		_PRE_REMOVE "$1" || return 1
 		retval=${?}
-		_pkginstalled=($(echo $VARCACHE_INSTALLED/${1}*| sed 's|/| |g'|awk '{print $5}'|sed 's/.chi//g'))
+		_pkginstalled=($(echo $VARCACHE_INSTALLED/${1}*| sed 's|/| |g'|awk '{print $5}'|sed "s/.'${PRG}'//g"))
 		[[ $retval = 0 ]] && _pkg=($(echo $VARCACHE_INSTALLED/${1}*| sed 's|/| |g'|awk '{print $5}'))
 		[[ $retval = 0 ]] && rm -f $VARCACHE_INSTALLED/${_pkg}
 		[[ $retval = 0 ]] && > $VARCACHE_REMOVED/${_pkg}
