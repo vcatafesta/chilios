@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="3.00.21.20200611"
+_VERSION_="3.00.30.20200611"
 
 #fatorial
 #seq -s* 6 | bc
@@ -289,7 +289,7 @@ VARCACHE_SEARCH="/var/cache/${APP}/search"
 LIBRARY=${LIBRARY:-'/usr/share/${APP}'}
 #
 export descme='info/desc'
-export PKG_EXT="${PKG_EXT:='chi'}"
+export PKG_EXT="${PKG_EXT:='chi.zst'}"
 export LFS_VARCACHE="${LFS_VARCACHE:='fetch'}"
 export VARLIB_LIST="/var/cache/${APP}/list"
 export VARLIB_DESC="/var/cache/${APP}/desc"
@@ -1152,6 +1152,7 @@ function sh_search()
     LFORCE=$false
 
     sh_list $param
+
 	if [[ $pkg != " " ]]; then
         if !(( $LAUTO )); then
             echo
@@ -1160,9 +1161,10 @@ function sh_search()
                 return
             fi
         fi
-        pushd $VARCACHE_INSTALLED/ &>/dev/null
-        local pkginstalled=$(echo *.${PRG})
-        popd &>/dev/null
+#       pushd $VARCACHE_INSTALLED/ &>/dev/null
+#       local pkginstalled=$(echo *.${PRG})
+        local pkginstalled=$(cat ${VARCACHE_SEARCH}/packages-installed)
+#       popd &>/dev/null
 		cd $VARCACHE_ARCHIVES/
         for i in $pkg; do
 		    declare -g ee=$i
@@ -1176,12 +1178,13 @@ function sh_search()
                 index=0
                 for item in ${pkginstalled[*]}
                 do
-                    [[ $item = $cpacote ]] && { LINSTALLED=$OK; break; }
+                    item=$(echo $item | cut -d/ -f2 | sed 's/.'${PRG}'//g')
+                    [[ $item = $cpacoteSemExt ]] && { LINSTALLED=$OK; break; }
                     ((index++))
                 done
             }
             if (( $LINSTALLED )) && !(( $LFORCE )); then
-				log_success_msg2 "${orange}${cpacote} ${reset}package is already installed. Done"
+				log_success_msg2 "${orange}${cpacote} ${reset}Done. Package is already installed."
                 continue
             fi
 			test -e $VARCACHE_ARCHIVES/$cpacote || sh_wgetfull
@@ -1212,7 +1215,7 @@ function sh_search()
 			if [ ${error_value} -ne 0 ]; then
 				log_failure_msg2 "ERROR: installing package ${orange}${cpacote} **FAIL**"
 		    else
-				log_success_msg2 "${orange}${cpacote} ${reset}package installation done successfully. Done"
+				log_success_msg2 "${orange}${cpacote} ${reset}Done. package installation successfully."
 			fi
     	done
 	fi
