@@ -1172,8 +1172,6 @@ function sh_search()
             local cpacoteSemExt=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
             local LINSTALLED=$NOK
 
-info $cpacoteSemExt
-
             {   local item
                 index=0
                 for item in ${pkginstalled[*]}
