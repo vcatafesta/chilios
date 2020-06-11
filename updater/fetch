@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="3.00.10.20200610"
+_VERSION_="3.00.20.20200610"
 
 #fatorial
 #seq -s* 6 | bc
@@ -1169,8 +1169,10 @@ function sh_search()
 			local cfile=$i
 			local cbase=$(echo $cfile | cut -d/ -f1)
 			local cpacote=$(echo $cfile | cut -d/ -f2)
-   			local cpacoteSemExt=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
+            local cpacoteSemExt=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
             local LINSTALLED=$NOK
+
+info $cpacoteSemExt
 
             {   local item
                 index=0
