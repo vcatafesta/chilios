@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="3.00.20.20200610"
+_VERSION_="3.00.21.20200611"
 
 #fatorial
 #seq -s* 6 | bc
@@ -2228,7 +2228,7 @@ function sh_removepkg()
 	while [[ -n "$1" ]]; do
 		_PRE_REMOVE "$1" || return 1
 		retval=${?}
-		_pkginstalled=($(echo $VARCACHE_INSTALLED/${1}*| sed 's|/| |g'|awk '{print $5}'|sed "s/.'${PRG}'//g"))
+		_pkginstalled=($(echo $VARCACHE_INSTALLED/${1}*| sed 's|/| |g'|awk '{print $5}'|sed 's/.'${PRG}'//g'))
 		[[ $retval = 0 ]] && _pkg=($(echo $VARCACHE_INSTALLED/${1}*| sed 's|/| |g'|awk '{print $5}'))
 		[[ $retval = 0 ]] && rm -f $VARCACHE_INSTALLED/${_pkg}
 		[[ $retval = 0 ]] && > $VARCACHE_REMOVED/${_pkg}
