@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='cifs'
+version='utils'
+build='6.10'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='CIFS filesystem user-space tools'
+size='247088'
+url='https://wiki.samba.org/index.php/LinuxCIFS_utils'
+dep=('')
