@@ -1184,7 +1184,7 @@ function sh_search()
                 done
             }
             if (( $LINSTALLED )) && !(( $LFORCE )); then
-				log_success_msg2 "${orange}${cpacote} ${reset}Done. Package is already installed."
+				log_failure_msg2 "${orange}${cpacote} ${reset}Package is already installed. Use the -f option to force reinstallation."
                 continue
             fi
 			test -e $VARCACHE_ARCHIVES/$cpacote || sh_wgetfull
