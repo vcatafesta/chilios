@@ -3,7 +3,7 @@
 # Generated with alienpkg
 ######################################################################
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
-pkgname='d'
+pkgname='zstd'
 version='1.4.5'
 build='1'
 license='GPL2'
