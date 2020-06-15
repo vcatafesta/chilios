@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='js60'
+version='60.9.0'
+build='2'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='JavaScript interpreter and libraries - Version 60'
+size='58074340'
+url='https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey'
+dep=('')

@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/06/14
+ # Altered: 2020/06/15
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="3.00.50.20200614"
+_VERSION_="2.00.51.20200615"
 
 #fatorial
 #seq -s* 6 | bc
@@ -268,7 +268,7 @@ LFS_INIT='SYSTEMD'
 ARCH='x86_64'
 DISTRO='chili'
 LFS_VARCACHE='fetch'
-PKGDIR='/lfs/arch'
+PKGDIR='/var/cache/fetch/archives'
 ALIEN_CACHE_DIR='/var/cache/pacman/pkg'
 _EOF_
 }
@@ -2287,10 +2287,9 @@ function sh_createpkg()
 
 	log_wait_msg "Building package $pkg"
 	#sh_generatepkg $pkg $pkg $LAUTO $LFORCE
-	sh_generatepkg $pkg $pkg -Y -F
+	sh_generatepkg $pkg $pkg -Y -F 
 	_NAME_FORMAT_PKG "$pkg.${PKG_EXT}" || exit 1
-	_VERIFY_ON "$pkg"
-	_CREATE_PKG "$pkg" || exit 1
+	_VERIFY_ON "$pkg" _CREATE_PKG "$pkg" || exit 1
 	log_info_msg "Generating package $pkg"
 	unset check_var
 }
@@ -2298,7 +2297,7 @@ function sh_createpkg()
 function sh_alienpkg_init()
 {
 	log_wait_msg "Loading /usr/libexec/fetch/core.sh"
-	source /usr/libexec/fetch/core.sh
+	#source /usr/libexec/fetch/core.sh
 	unset BUILDDIR
 	unset size
 }
