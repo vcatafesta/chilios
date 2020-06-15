@@ -2287,9 +2287,10 @@ function sh_createpkg()
 
 	log_wait_msg "Building package $pkg"
 	#sh_generatepkg $pkg $pkg $LAUTO $LFORCE
-	sh_generatepkg $pkg $pkg -Y -F 
+	sh_generatepkg $pkg $pkg -Y -F
 	_NAME_FORMAT_PKG "$pkg.${PKG_EXT}" || exit 1
-	_VERIFY_ON "$pkg" _CREATE_PKG "$pkg" || exit 1
+	_VERIFY_ON "$pkg"
+	_CREATE_PKG "$pkg" || exit 1
 	log_info_msg "Generating package $pkg"
 	unset check_var
 }
