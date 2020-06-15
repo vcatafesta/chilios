@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfsprogs'
+version='5.6.0'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='XFS filesystem utilities'
+size='5525270'
+url='https://xfs.org'
+dep=('')

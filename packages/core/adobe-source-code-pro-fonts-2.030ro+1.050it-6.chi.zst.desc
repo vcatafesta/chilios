@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='adobe'
+version='source'
+build='code'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Monospaced font family for user interface and coding environments'
+size='2243650'
+url='https://adobe-fonts.github.io/source-code-pro/'
+dep=('')

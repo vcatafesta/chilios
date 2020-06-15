@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='patch'
+version='2.7.6'
+build='8'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A utility to apply patch files to original sources'
+size='202498'
+url='https://www.gnu.org/software/patch/'
+dep=('')

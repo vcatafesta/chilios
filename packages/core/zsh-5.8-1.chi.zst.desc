@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='zsh'
+version='5.8'
+build='1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A very advanced and programmable command interpreter (shell) for UNIX'
+size='6521270'
+url='https://www.zsh.org/'
+dep=('')

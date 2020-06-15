@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='procps'
+version='ng'
+build='3.3.16'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Utilities for monitoring your system and its processes'
+size='1413615'
+url='https://gitlab.com/procps-ng/procps'
+dep=('')

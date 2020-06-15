@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='texinfo'
+version='6.7'
+build='3'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GNU documentation system for on-line information and printed output'
+size='8938183'
+url='https://www.gnu.org/software/texinfo/'
+dep=('')

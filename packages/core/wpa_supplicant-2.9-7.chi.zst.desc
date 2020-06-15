@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='wpa_supplicant'
+version='2.9'
+build='7'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A utility providing key negotiation for WPA wireless networks'
+size='5823357'
+url='http://hostap.epitest.fi/wpa_supplicant'
+dep=('')
