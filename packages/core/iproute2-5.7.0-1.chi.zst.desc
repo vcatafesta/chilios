@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='iproute2'
+version='5.7.0'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='IP Routing Utilities'
+size='2810928'
+url='https://git.kernel.org/pub/scm/network/iproute2/iproute2.git'
+dep=('')
