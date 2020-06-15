@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='glib'
+version='networking'
+build='2.64.3'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Network extensions for GLib'
+size='485438'
+url='https://gitlab.gnome.org/GNOME/glib-networking'
+dep=('')

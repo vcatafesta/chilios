@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='acpid'
+version='2.0.32'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A daemon for delivering ACPI power management events with netlink support'
+size='157696'
+url='https://sourceforge.net/projects/acpid2/'
+dep=('')

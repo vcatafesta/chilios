@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='cryptsetup'
+version='2.3.3'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Userspace setup tool for transparent encryption of block devices using dm-crypt'
+size='2467296'
+url='https://gitlab.com/cryptsetup/cryptsetup/'
+dep=('')

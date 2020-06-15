@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='autoconf'
+version='2.69'
+build='7'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A GNU tool for automatically configuring source code'
+size='2096177'
+url='https://www.gnu.org/software/autoconf'
+dep=('')

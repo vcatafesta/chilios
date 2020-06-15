@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gptfdisk'
+version='1.0.5'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A text-mode partitioning tool that works on GUID Partition Table (GPT) disks'
+size='788668'
+url='https://www.rodsbooks.com/gdisk/'
+dep=('')

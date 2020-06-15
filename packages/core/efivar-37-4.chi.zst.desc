@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='efivar'
+version='37'
+build='4'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Tools and libraries to work with EFI variables'
+size='373633'
+url='https://github.com/rhboot/efivar'
+dep=('')

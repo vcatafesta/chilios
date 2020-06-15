@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='bc'
+version='1.07.1'
+build='4'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An arbitrary precision calculator language'
+size='179607'
+url='https://www.gnu.org/software/bc/'
+dep=('')

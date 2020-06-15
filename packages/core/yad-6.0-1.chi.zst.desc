@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='yad'
+version='6.0'
+build='1'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A fork of zenity - display graphical dialogs from shell scripts or command line'
+size='584105'
+url='https://github.com/v1cont/yad'
+dep=('')
