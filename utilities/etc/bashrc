@@ -1,6 +1,7 @@
 #!/bin/bash
-ulimit=32767
+ulimit -n 32767
 source /lib/lsb/init-functions
+#source /etc/banana/banana.conf
 
 #export PS1='\u@\h:\w\$\[\033[01;31m\]\u@\h[\033[01;34m\]\w \[\e[1;31m\]\$ \[\033[00m\]'
 #export PS1='${debian_chroot:+($debian_chroot)}\u@\h:\$\[\033[01;34m\]\w\[\e[1;31m\]\$ \[\033[00m\]'
@@ -24,10 +25,7 @@ export ROOTDIR=${PWD#/} ROOTDIR=/${ROOTDIR%%/*}
 #export LFS_TGT=$(uname -m)-lfs-linux-gnu
 export MAKEFLAGS='-j 4'
 export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin:/usr/local/bin:/usr/local/sbin"
-export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib
-
-
-
+#export LD_LIBRARY_PATH=/lib:/usr/lib
 
 # unlias -remove alias 
 # unalias alias_name
@@ -51,13 +49,12 @@ alias tmm="tail -f /var/log/mail.log | grep ."
 #alias win="sudo service lightdm start"
 alias win="lightdm"
 alias DIR=dir
-alias mostra="lpq"
 alias github="cd /home/vcatafesta/github ; ls"
 alias v="ssh -l vcatafesta -t balcao '/home/vcatafesta/SYS/sci/sci'"
 alias backuptheme="rsync --progress -Cravzp --rsh='ssh -l root' root@10.0.0.80:/mnt/usr/share/grub/themes/ /usr/share/grub/themes/"
 alias dude="wine /root/.wine/drive_c/'Program Files'/Dude/dude &"
 alias rmake="hbmk2 -info"
-alias sci="cd /home/sci/; rm /home/sci/txt/*.txt; rm /home/sci/COM*; rm /home/sci/emp0008/LPT*; rm /home/sci/emp0008/COM* rm /home/sci/LPT*; ./sci"
+alias sci="cd /mnt/c/sci/linux/; ./sci"
 alias sl="cd /home/vcatafesta/sci/src.linux ; ls"
 
 #alias ouvindo="netstat -anp | grep :69"
@@ -345,14 +342,28 @@ criartemp() {
 	done
 }
 
-function impressoraadd()
+function printeradd()
 {
-#    sudo lpadmin -p LPT1 -E -v ipp://10.0.0.99/p1 -m everywhere -u allow:all -o printer-is-shared=true
-#    sudo lpadmin -p LPT2 -E -v ipp://10.0.0.99/p2 -m everywhere -u allow:all -o printer-is-shared=true
-#    sudo lpadmin -p LPT3 -E -v ipp://10.0.0.99/p3 -m everywhere -u allow:all -o printer-is-shared=true
-    sudo lpadmin -p LX300 -E -v parallel:/dev/lp0 -m everywhere -u allow:all -o printer-is-shared=true
-    sudo lpadmin -p DotMatrix -E -v serial:/dev/ttyS0?baud=9600+size=8+parity=none+flow=soft -m everywhere -u allow:all -o printer-is-shared=true
-    sudo lpadmin -p prnsamba -E -v smb://AIO-LG/EPSON -m everywhere -u allow:all -o printer-is-shared=true
+    addprinter
+}
+
+function addprinter()
+{
+    sudo lpadmin -p LPT1    -E -v ipp://10.0.0.99/p1        -m everywhere -o print-is-shared=true -u allow:all
+    sudo lpadmin -p LPT2    -E -v ipp://10.0.0.99/p2        -m everywhere -o print-is-shared=true -u allow:all
+    sudo lpadmin -p LPT3    -E -v ipp://10.0.0.99/p3        -m everywhere -o print-is-shared=true -u allow:all
+    sudo lpadmin -p SAMSUNG -E -v ipp://10.0.0.77/ipp/print -m everywhere -o print-is-shared=true -u allow:all
+    sudo lpadmin -d LPT1
+    sudo lpadmin -p DeskJet -E -v parallel:/dev/lp0 -m drv:///sample.drv/deskjet.ppd -u allow:all
+    sudo lpadmin -p DotMatrix -E -m epson9.ppd -v serial:/dev/ttyS0?baud=9600+size=8+parity=none+flow=soft -u allow:all
+    sudo lpadmin -p PRINTERNAME -E -v smb://10.0.0.68/P1 -L "LOCATION" -o auth-info-required=negotiate -u allow:all
+}
+
+function mostra()
+{
+    sudo lpstat -s
+    sudo lpq
+
 }
 
 function cancela()
@@ -365,12 +376,6 @@ function cancela()
     sudo systemctl start lprng
     sudo lprm
     sudo systemctl status lprng
-}
-
-function navevapkg()
-{
-    sudo pacman -S fzf --noconfirm
-    pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'
 }
 
 newtemp() {
@@ -1102,6 +1107,8 @@ function ex()
             *.tar.xz)    tar Jxvf $1     ;;
             *.lz)        lzip -d -v $1   ;;
             *.chi)       tar Jxvf $1     ;;
+            *.chi.zst)   tar -xvf $1      ;;
+            *.tar.zst)   tar -xvf $1      ;;
             *.mz)        tar Jxvf $1     ;;
             *.cxz)       tar Jxvf $1     ;;
             *.chi)       tar Jxvf $1     ;;
@@ -1121,6 +1128,14 @@ function ex()
     fi
 }
 
+
+function dw()
+{
+	pacman -Sw $*
+	fetch -a $*
+}
+
+
 function swap()
 { # Swap 2 filenames around, if they exist (from Uzi's bashrc).
     local TMPFILE=tmp.$$
@@ -1134,7 +1149,6 @@ function swap()
     mv $TMPFILE "$2"
 }
 
-
 # Creates an archive (*.tar.gz) from given directory.
 function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 
@@ -1143,6 +1157,7 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 
 # Make your directories and files access rights sane.
 function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
+
 
 function cat2()
 {
@@ -1205,4 +1220,3 @@ export CHOST CFLAGS CXXFLAGS
 #unset CXXFLAGS
 export PATH="$PATH:/src/depot_tools"
 #PS1="\e[32;1m\u \e[33;1m→ \e[36;1m\h \e[37;0m\w\n\e[35;1m⚡\e[m"
-
