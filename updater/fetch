@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/06/08
+ # Altered: 2020/06/14
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="3.00.30.20200611"
+_VERSION_="3.00.50.20200614"
 
 #fatorial
 #seq -s* 6 | bc
@@ -268,6 +268,8 @@ LFS_INIT='SYSTEMD'
 ARCH='x86_64'
 DISTRO='chili'
 LFS_VARCACHE='fetch'
+PKGDIR='/lfs/arch'
+ALIEN_CACHE_DIR='/var/cache/pacman/pkg'
 _EOF_
 }
 
@@ -527,46 +529,46 @@ function sh_checknet()
 
 function sh_updateself()
 {
-    local param=$@
+	local param=$@
 	sh_checkparametros ${param}
 	if !(( $LAUTO )) || !(( $LFORCE)); then
-        echo
+		echo
 		conf "Update $0 from internet?"
 		LAUTO=$?
 	fi
 
 	if (( $LAUTO )) || (( $LFORCE )); then
-	    local link='https://raw.githubusercontent.com/vcatafesta/ChiliOS/master/updater/fetch'
-	    local tmp_dir_full="/tmp/${APP}"
-	    local tmp_dir="/tmp/${APP}/src"
-	    local m
+		local link='https://raw.githubusercontent.com/vcatafesta/ChiliOS/master/updater/fetch'
+		local tmp_dir_full="/tmp/${APP}"
+		local tmp_dir="/tmp/${APP}/src"
+		local m
 
 		#internet?
-        sh_checknet; [[ $? = $false ]] || { return 1;}
-        log_wait_msg "Ok, let's do it..."
-        # Ok, Puxe o arquivo do repositorio agora!
-        [[ -d "${tmp_dir_full}" ]] && rm -r "${tmp_dir_full}"
-        [[ -d "${tmp_dir}" ]] || mkdir -p "${tmp_dir}"
-        pushd "${tmp_dir}" &>/dev/null
-        log_info_msg "${cyan}Clonando $link"
-        curl -k --silent -O "${link}"
-        evaluate_retval
+		sh_checknet; [[ $? = $false ]] || { return 1;}
+		log_wait_msg "Ok, let's do it..."
+		#Ok, Puxe o arquivo do repositorio agora!
+		[[ -d "${tmp_dir_full}" ]] && rm -r "${tmp_dir_full}"
+		[[ -d "${tmp_dir}" ]] || mkdir -p "${tmp_dir}"
+		pushd "${tmp_dir}" &>/dev/null
+		log_info_msg "${cyan}Clonando $link"
+		curl -k --silent -O "${link}"
+		evaluate_retval
 
-        log_info_msg "${cyan}Permission and Copy archives"
-        chmod +x ${tmp_dir}/fetch
-        evaluate_retval
+		log_info_msg "${cyan}Permission and Copy archives"
+		chmod +x ${tmp_dir}/fetch
+		evaluate_retval
 
-        log_info_msg "${cyan}Copying file ${yellow}fetch ${red}to ${yellow}/sbin/$m"
-        cp -f ${tmp_dir}/fetch /sbin/fetch
-        ln -sf /sbin/fetch /sbin/apt
-        evaluate_retval
+		log_info_msg "${cyan}Copying file ${yellow}fetch ${red}to ${yellow}/sbin/$m"
+		cp -f ${tmp_dir}/fetch /sbin/fetch
+		ln -sf /sbin/fetch /sbin/apt
+		evaluate_retval
 
-        log_info_msg "${cyan}Removing temporary files"
-        [[ -d "${tmp_dir_full}" ]] && rm -r "${tmp_dir_full}"
-        evaluate_retval
-        log_info_msg "${violet}$0 updated successfully, enjoy!"
-        evaluate_retval
-        exit 0
+		log_info_msg "${cyan}Removing temporary files"
+		[[ -d "${tmp_dir_full}" ]] && rm -r "${tmp_dir_full}"
+		evaluate_retval
+		log_info_msg "${violet}$0 updated successfully, enjoy!"
+		evaluate_retval
+		exit 0
 	fi
 	return 1
 	sh_cdroot
@@ -692,28 +694,29 @@ function confno()
 
 function sh_clean()
 {
-    local param=$@
+	local param=$@
 	local lRetval=$false
 	sh_checkparametros ${param}
 
-    if !(( $LAUTO )); then
+	if !(( $LAUTO )); then
 		conf "Clear cache packages?"
 		LAUTO=$?
-    fi
+	fi
 
-    if (( $LAUTO )); then
+	if (( $LAUTO )); then
 		log_info_msg "Deleting downloaded package files"
 		[[ -d $VARCACHE_ARCHIVES ]] || mkdir -p $VARCACHE_ARCHIVES
 		local nfiles=$(ls -la $VARCACHE_ARCHIVES/|grep -e "^-"|wc -l)
 		rm -f $VARCACHE_ARCHIVES/*
 		evaluate_retval
 		lRetval=$true
-        > $VARCACHE_SEARCH/packages-in-cache
+		> $VARCACHE_SEARCH/packages-in-cache
 		log_success_msg2 "${yellow}($nfiles) ${cyan}files deleted"
 	fi
 	sh_cdroot
 	return $lRetval
 }
+
 
 function sh_checkdir()
 {
@@ -1147,11 +1150,11 @@ function sh_checksha256sum()
 
 function sh_search()
 {
-    local param=$@
+	local param=$@
 	LAUTO=$false
-    LFORCE=$false
+   LFORCE=$false
 
-    sh_list $param
+   sh_list $param
 
 	if [[ $pkg != " " ]]; then
         if !(( $LAUTO )); then
@@ -1800,11 +1803,12 @@ function _CREATE_LIST()
 
 function _GENERATE_DESC()
 {
-    local DESC_PACKNAME="$1"
-    local DESC_VERSION="$2"
-    local DESC_BUILD="$3"
 
-    [[ ! -d "info" ]] && mkdir info
+	local DESC_PACKNAME="$1"
+	local DESC_VERSION="$2"
+	local DESC_BUILD="$3"
+
+	[[ ! -d "info" ]] && mkdir info
     _CAT > "info/desc" << EOF
 ######################################################################
 # Generated with fetch
@@ -1827,7 +1831,9 @@ EOF
     return 0
 }
 
-function _INPUT_NULL_PARAMETER(){
+
+function _INPUT_NULL_PARAMETER()
+{
 	pkg=$1
 
 	local arr
@@ -1852,28 +1858,31 @@ function _NAME_FORMAT_PKG(){
     return 0
 }
 
-function sh_generatepkg(){
-    shift
-    local param=$@
+function sh_generatepkg()
+{
 
-    for s in ${param[@]}; do
-        if [[ $(toupper "${s}") = "-Y" ]]; then
-            LAUTO=$true
-        elif [[ $(toupper "${s}") = "-F" ]]; then
-            LFORCE=$true
-        elif [[ $(toupper "${s}") = "OFF" ]]; then
-            LLIST=$false
-        else
-            pkg="$s"
-            break
-        fi
-    done
+	shift
+	local param=$@
+	local inc=0
 
-    log_info_msg "Generating info for package $pkg"
-    if [[ ! -e "info/desc" ]]; then
-        LFORCE=$true
-    fi
-    if (( $LAUTO )) || (( $LFORCE )); then
+	for s in ${param[@]}; do
+		if [[ $(toupper "${s}") = "-Y" ]]; then
+			LAUTO=$true
+		elif [[ $(toupper "${s}") = "-F" ]]; then
+			LFORCE=$true
+		elif [[ $(toupper "${s}") = "OFF" ]]; then
+			LLIST=$false
+		else
+			pkg="$s"
+			continue
+		fi
+	done
+
+	log_info_msg "Generating info for package $pkg"
+	if [[ ! -e "info/desc" ]]; then
+		LFORCE=$true
+	fi
+	if (( $LAUTO )) || (( $LFORCE )); then
 		for take in 'field_one' 'field_two' 'field_three'; do
 			let inc++
 			eval $take="$(echo "$pkg" | cut -d '-' -f ${inc})" # Expanda e pegue o seu devido valor
@@ -1882,9 +1891,9 @@ function sh_generatepkg(){
 		[[ -z "$DESC"        ]] && DESC="$field_one-$field_two-$field_three"
 		_GENERATE_DESC "$field_one" "$field_two" "$field_three" || return 1
 	fi
-    evaluate_retval
-    unset check_var
-    return 0
+	evaluate_retval
+	unset check_var
+	return 0
 }
 
 function sh_doinstallpkg()
@@ -2060,35 +2069,37 @@ function _REMOVE_NOW()
 
 function _GPG_SIGN()
 {
-    local package="$1"
-    local sig='sig'
+	local package="$1"
+	local sig='sig'
 
-    # Pacote existe?
-    if [[ ! -e "${package}.${PKG_EXT}" ]]; then
-        echo "${red}[ERRO]${end} Unable to sign package. ${package}.${PKG_EXT}"
-        echo "Reason: Package not found."
-        echo "For security reasons, do not pass the package on to third parties."
-        return 1
-    fi
+	#Pacote existe?
+	if [[ ! -e "${package}.${PKG_EXT}" ]]; then
+		echo "${red}[ERRO]${end} Unable to sign package. ${package}.${PKG_EXT}"
+		echo "Reason: Package not found."
+		echo "For security reasons, do not pass the package on to third parties."
+		return 1
+	fi
 
-    [ "$REWRITE_SIG" = "1" ] && rm -f ../${package}.${PKG_EXT}.${sig}
-    [ "$REWRITE_SIG" = "1" ] && rm -f ${package}.${PKG_EXT}.${sig}
+	[ "$REWRITE_SIG" = "1" ] && rm -f ../${package}.${PKG_EXT}.${sig}
+	[ "$REWRITE_SIG" = "1" ] && rm -f ${package}.${PKG_EXT}.${sig}
 
-    which gpg &> /dev/null
-    if [ $? = 0 ]; then
-        # Gerando Assinatura no pacote
-        gpg --detach-sign --pinentry-mode loopback "${package}.${PKG_EXT}" &>/dev/null || \
-        gpg --detach-sign "${package}.${PKG_EXT}" || return 1
-        echo -e "${blue}[Create]${end} Your ${sig} on:   ../${package}.${PKG_EXT}.${sig}"
-    fi
-    return 0
+	which gpg &> /dev/null
+	if [ $? = 0 ]; then
+		#Gerando Assinatura no pacote
+		gpg --detach-sign --pinentry-mode loopback "${package}.${PKG_EXT}" &>/dev/null || \
+		gpg --detach-sign "${package}.${PKG_EXT}" || return 1
+		echo -e "${blue}[Create]${end} Your ${sig} on:   ../${package}.${PKG_EXT}.${sig}"
+	fi
+	return 0
 }
+
 
 function _VERIFY_ON()
 {
 	local package="$1"
 
-#	sh_generatepkg "$1"
+	#sh_generatepkg "$1"
+
 	(
 	local dir_info='info'  # Diretorio info que contem informações como (desc)
 	local info_desc='desc' # Descrição do pacote
@@ -2110,8 +2121,16 @@ function _VERIFY_ON()
 		# Se alguma variavel estiver nula não podemos continuar.
 		source ${dir_info}/${info_desc} # Carregando arquivo.
 
+#info \
+#	  maintainer $maintainer 	"\n" \
+#	  pkgname    $pkgname 		"\n" \
+#	  version    $version 		"\n" \
+#	  build      $build   		"\n" \
+#	  desc       $desc    		"\n" \
+#	  url        $url
+
 		if [[ -z "$maintainer" ]]; then
-			echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}maintainer${end} null"
+			echo -e "Check ${pink}${info_desc}${end}, sh_VARIABLE ${blue}maintainer${end} null"
 			echo "Enter the name of the package maintainer into variable maintainer."
 			exit 1
 		elif [[ -z "$pkgname" ]]; then
@@ -2123,18 +2142,18 @@ function _VERIFY_ON()
 			echo "Enter a version of software into variable version."
 			exit 1
 		elif [[ -z "$build" ]]; then
-            echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}build${end} null"
-            echo "Enter the build number of package."
-            exit 1
-        elif [[ -z "$desc" ]]; then
-            echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}desc${end} null"
-            echo "Detail a small description into variable desc."
-            exit 1
-        elif [[ -z "$url" ]]; then
-            echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}url${end} null"
-            echo "Enter a url of project/software into variable url."
-            exit 1
-        fi
+			echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}build${end} null"
+			echo "Enter the build number of package."
+			exit 1
+		elif [[ -z "$desc" ]]; then
+			echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}desc${end} null"
+			echo "Detail a small description into variable desc."
+			exit 1
+		elif [[ -z "$url" ]]; then
+			echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}url${end} null"
+			echo "Enter a url of project/software into variable url."
+			exit 1
+		fi
 
         # Conferindo se o nome do pacote e versão batem com o que
         # o usuario passou em linha, se não bater não devemos continuar.
@@ -2192,7 +2211,7 @@ function _PRE_REMOVE()
 {
 	(
 	local packname="$1"
-    local ntam=${#packname}
+   local ntam=${#packname}
 	local pkgsearch="${packname:0:$((ntam-2))}"
 	local re="\b${pkgsearch}\b"
 	local inc=0
@@ -2200,7 +2219,7 @@ function _PRE_REMOVE()
 	local search_pack
 
 	pushd $VARLIB_DESC 1>/dev/null
-    local alldesc=$(echo *.desc | grep $pkgsearch)
+   local alldesc=$(echo *.desc | grep $pkgsearch)
 
 	for search_pack in $alldesc; do
 		if [[ "$search_pack" =~ ^${re}.* ]]; then
@@ -2243,79 +2262,86 @@ function sh_removepkg()
 
 function sh_createpkg()
 {
-    shift
-    local param=$@
+	shift
+	local param=$@
+	local s
 
-    for s in ${param[@]}; do
-        if [[ $(toupper "${s}") = "-Y" ]]; then
-            LAUTO=$true
-        elif [[ $(toupper "${s}") = "-F" ]]; then
-            LFORCE=$true
-        elif [[ $(toupper "${s}") = "OFF" ]]; then
-            LLIST=$false
-        else
-            pkg="$s"
-            break
-        fi
-    done
+	for s in ${param[@]}
+	do
+		if [[ $(toupper "${s}") = "-Y" ]]; then
+			LAUTO=$true
+		elif [[ $(toupper "${s}") = "-F" ]]; then
+			LFORCE=$true
+		elif [[ $(toupper "${s}") = "OFF" ]]; then
+			LLIST=$false
+		else
+			pkg="$s"
+			#break
+			continue
+		fi
+	done
 
-    if [[ -z "$pkg" ]] ; then
-        local pkg=$(echo $PWD |sed 's/\// /g'|awk '{print $NF}')
-    fi
+	if [[ -z "$pkg" ]] ; then
+		local pkg=$(echo $PWD |sed 's/\// /g'|awk '{print $NF}')
+	fi
 
-    log_wait_msg "Construindo pacote $pkg"
-    sh_generatepkg $pkg $pkg $LAUTO $LFORCE
-    _NAME_FORMAT_PKG "$pkg.${PKG_EXT}" || exit 1
+	log_wait_msg "Building package $pkg"
+	#sh_generatepkg $pkg $pkg $LAUTO $LFORCE
+	sh_generatepkg $pkg $pkg -Y -F
+	_NAME_FORMAT_PKG "$pkg.${PKG_EXT}" || exit 1
 	_VERIFY_ON "$pkg"
 	_CREATE_PKG "$pkg" || exit 1
-    log_info_msg "Generating package $pkg"
-    unset check_var
+	log_info_msg "Generating package $pkg"
+	unset check_var
 }
 
-function sh_alienpkg_init(){
-    log_wait_msg "Carregando /usr/libexec/fetch/core.sh"
+function sh_alienpkg_init()
+{
+	log_wait_msg "Loading /usr/libexec/fetch/core.sh"
 	source /usr/libexec/fetch/core.sh
 	unset BUILDDIR
 	unset size
 }
 
-function sh_alienpkg_pkgsize(){
+function sh_alienpkg_pkgsize()
+{
 	size="$(/usr/bin/du -sk --apparent-size)"
-    size="$(( ${size%%[^0-9]*} * 1024 ))"
+   size="$(( ${size%%[^0-9]*} * 1024 ))"
 }
 
-function sh_alienpkg_initvars(){
-	ALIEN_CACHE_DIR=/var/cache/pacman/pkg
+function sh_alienpkg_initvars()
+{
+	ALIEN_CACHE_DIR="${ALIEN_CACHE_DIR:=/var/cache/pacman/pkg}"
 	PKGS=$@
 #	EXT="${EXT:-.pkg.tar.xz}"
 	BUILDDIR="${PKGDIR:-/lfs/arch}"
 }
 
-function sh_alienpkg_exec(){
+function sh_alienpkg_exec()
+{
 	local pkg
 	local param=$@
 	local package
 
  	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "ALL OFF" ]]; then
 		pkg=$(ls -1 $ALIEN_CACHE_DIR/*)
-    else
-        for s in ${param[@]}; do
-            if [[ $(toupper "${s}") = "-Y" ]]; then
-                LAUTO=$true
-            elif [[ $(toupper "${s}") = "-F" ]]; then
-                LFORCE=$true
-            elif [[ $(toupper "${s}") = "OFF" ]]; then
-                LLIST=$false
-            else
-				#files=$(ls -1 $ALIEN_CACHE_DIR/*.xz | grep $s )
+	else
+   	for s in ${param[@]}; do
+      	if [[ $(toupper "${s}") = "-Y" ]]; then
+         	LAUTO=$true
+			elif [[ $(toupper "${s}") = "-F" ]]; then
+				LFORCE=$true
+			elif [[ $(toupper "${s}") = "OFF" ]]; then
+				LLIST=$false
+			else
 				files=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz} | grep $s)
-                pkg="$pkg $(echo $files| grep $s)"
-            fi
-        done
-    fi
+            pkg="$pkg $(echo $files| grep $s)"
+			fi
+		done
+	fi
 
-	for package in $pkg
 #	for package in $ALIEN_CACHE_DIR/$*
+	for package in $pkg
 	do
 #		echo
 #		packagedir=${package%$EXT}
@@ -2324,18 +2350,18 @@ function sh_alienpkg_exec(){
 
 		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.\|zst\|xz//g'|sed 's/-any.pkg.tar.\|zst\|xz//g'|sed 's/1://g'|sed 's/2://g')
 
-#	    pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/1://g'|sed 's/2://g')
+#	   pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/1://g'|sed 's/2://g')
 #		pkgtar=$(echo $FULLDIR |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/\(.*\)_/\1 /'|sed 's/1://g'|sed 's/2://g')
 #		pkgtar=$(echo $FULLDIR | sed 's/\// /g' | awk '{print $NF}'|sed 's/-/_/g'| sed 's/\(.*\)_/\1 /')
 #		arr=($pkg)
-#	    pkgtar="${arr[0]}-${arr[1]} ${arr[2]}"
+#	   pkgtar="${arr[0]}-${arr[1]} ${arr[2]}"
 
 		destdir=$BUILDDIR/$pkgtar
-		log_info_msg "Criando diretorio $destdir"
+		log_info_msg "Creating directory $destdir"
 		mkdir -p $destdir
 		evaluate_retval
 
-		log_info_msg "Descompactando pacote $package at $destdir"
+		log_info_msg "Unpacking package $package at $destdir"
 		tar --extract --file $package -C $destdir >/dev/null 2>&1
 		evaluate_retval
 
@@ -2379,18 +2405,12 @@ function sh_alienpkg_exec(){
 		export       DESC_VERSION=$( echo $pkgver|cut -d '-' -f1)
 		export   ALIEN_DESC_BUILD=$( echo $pkgver|cut -d '-' -f2)
 		export         DESC_BUILD=$( echo $pkgver|cut -d '-' -f2)
-#		export ALIEN_DESC_VERSION="$pkgver"
-#		export       DESC_VERSION="$pkgver"
-#		export   ALIEN_DESC_BUILD="$pkgrel"
-#		export         DESC_BUILD="$pkgrel"
 
-#	    log_info_msg "Gerando DESC pacote $destdir"
+#	 	log_info_msg "Generating DESC for package at $destdir"
 		pushd $destdir	>/dev/null 2>&1
 
 #		as_root genalien $pkg >/dev/null 2>&1
-
 #		sh_generatepkg $pkg $pkg
-
 #		mv $destdir/.BUILDINFO $destdir/info/ >/dev/null 2>&1
 #		mv $destdir/.MTREE     $destdir/info/ >/dev/null 2>&1
 #		mv $destdir/.PKGINFO   $destdir/info/ >/dev/null 2>&1
@@ -2400,15 +2420,16 @@ function sh_alienpkg_exec(){
 		rm -f $destdir/.MTREE     >/dev/null 2>&1
 		rm -f $destdir/.PKGINFO   >/dev/null 2>&1
 
-#		log_info_msg "Construindo pacote $destdir"
+#		log_info_msg "Building $destdir package"
 #		as_root bcpalien  >/dev/null 2>&1
 
-		sh_createpkg $pkgtar $pkgtar -y -f
+		sh_createpkg $pkgtar $pkgtar -Y -F
 		evaluate_retval
 
 		sh_alienpkg_pkgsize
 		popd >/dev/null 2>&1
 		unset size
+		echo
 	done
 }
 
@@ -2468,3 +2489,4 @@ fi
 
 sh_checkroot
 init $*
+
