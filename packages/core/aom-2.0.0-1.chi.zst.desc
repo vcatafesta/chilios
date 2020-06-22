@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='aom'
+version='2.0.0'
+build='1'
+license='custom:PATENTS'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Alliance for Open Media video codec'
+size='12281019'
+url='https://aomedia.org/'
+dep=('')
