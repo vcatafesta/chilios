@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.00.51.20200615"
+_VERSION_="2.00.55.20200615"
 
 #fatorial
 #seq -s* 6 | bc
@@ -65,7 +65,7 @@ SKIP_SUFFIX="${BRACKET}[${INFO} SKIP ${BRACKET}]${NORMAL}"
 WAIT_PREFIX="${WARNING}  R  ${NORMAL}"
 WAIT_SUFFIX="${BRACKET}[${WARNING} WAIT ${BRACKET}]${NORMAL}"
 FAILURE_PREFIX="${FAILURE}  X  ${NORMAL}"
-BOOTLOG=/tmp/bootlog-$USER
+BOOTLOG=/tmp/fetchlog-$USER
 KILLDELAY=3
 SCRIPT_STAT="0"
 
@@ -645,31 +645,32 @@ function help()
 function init()
 {
 	case "${1}" in
-		   --local|local)  						shift;sh_initinstallpkg "$@";;
-		-a|--alienpkg|alienpkg)					shift;sh_alienpkg_main "$@";;
-		-u|--update|update) 					shift;sh_update "$@";;
-		-g|--generate|generate)					sh_generatepkg "$@";;
-		   --create|create)					    sh_createpkg "$@";;
-		-m|--meta|meta)	                        shift;sh_meta   "$@";;
-		-s|--search|search)	                    shift;sh_search "$@";;
-		-i|--install|install) 					shift;sh_search "$@";;
-		-r|--remove|remove) 					shift;sh_remove "$@";;
-		-R|--reinstall|reinstall) 				shift;sh_search "$@";;
-		-d|--download|download) 				shift;sh_download "$@";;
-		-l|--list|list)    	 					shift;sh_list "$@";;
+		--local|local)  								shift;sh_initinstallpkg "$@";;
+		-a|--alienpkg|alienpkg)						shift;sh_alienpkg_main "$@";;
+		-u|--update|update) 							shift;sh_update "$@";;
+		-g|--generate|generate)						sh_generatepkg "$@";;
+		   --create|create)					    	sh_createpkg "$@";;
+		-m|--meta|meta)	                     shift;sh_meta   "$@";;
+		-s|--search|search)	                  shift;sh_search "$@";;
+		-i|--install|install) 						shift;sh_search "$@";;
+		-r|--remove|remove) 							shift;sh_remove "$@";;
+		-R|--reinstall|reinstall) 					shift;sh_search "$@";;
+		-d|--download|download) 					shift;sh_download "$@";;
+		-l|--list|list)    	 						shift;sh_list "$@";;
 		-la|--list-avaiable|list-avaiable) 		shift;sh_list "$@";;
-		-lc|--list-cache|list-cache) 	        shift;sh_FilesInCache "$@";;
-		-lr|--list-removed|list-removed)		sh_removed $2 $3;;
+		-lc|--list-cache|list-cache) 	        	shift;sh_FilesInCache "$@";;
+		-lr|--list-removed|list-removed)			sh_removed $2 $3;;
 		-li|--list-installed|list-installed)	shift;sh_listinstalled "$@";;
 		-pi|--in-cache|in-cache)	            shift;sh_FilesInCache "$@";;
 		-po|--out-cache|out-cache)	            shift;sh_pkgoutcache "$@";;
-		-c|--clean|clean)  						sh_clean $2;;
-		-w|--show|show) 						shift;sh_show "$@";;
-		-U|--upgrade|upgrade) 					shift;sh_upgrade "$@";;
-		-v|--version|version) 					exit;;
-		*) 										sh_search "$@";;
+		-c|--clean|clean)  							sh_clean $2;;
+		-w|--show|show) 								shift;sh_show "$@";;
+		-U|--upgrade|upgrade) 						shift;sh_upgrade "$@";;
+		-v|--version|version) 						exit;;
+		*) 												sh_search "$@";;
 	esac
 }
+
 
 function conf()
 {
@@ -678,6 +679,7 @@ function conf()
     [[ ${REPLY^} == N ]] && return $false || return $true
 }
 
+
 function confok()
 {
     read -p "$1 [Y/n]"
@@ -685,12 +687,14 @@ function confok()
     [[ ${REPLY^} == N ]] && return $false || return $true
 }
 
+
 function confno()
 {
     read -p "$1 [N/y]"
     [[ ${REPLY^} == "" ]] && return $false
     [[ ${REPLY^} == N  ]] && return $false || return $true
 }
+
 
 function sh_clean()
 {
@@ -741,9 +745,10 @@ function sh_checkdir()
 	return $?
 }
 
+
 function sh_update()
 {
-    [[ $(toupper "${1}") = "SELF" ]] && { shift; sh_updateself "$@"; return $?;}
+	[[ $(toupper "${1}") = "SELF" ]] && { shift; sh_updateself "$@"; return $?;}
 
 	#internet?
 	sh_checknet; [[ $? = $false ]] || { return 1;}
@@ -763,11 +768,11 @@ function sh_update()
 #	curl -k --silent --url "${SITE}/packages/"| grep "/</a" | grep '[a-z]' | sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
 #	curl -k --silent --url "${SITE}/packages/"|sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
 
-#   sites com gninx/apache/etc
+#  sites com gninx/apache/etc
 #	curl -k --silent --url "${SITE}/packages/"|grep href|sed 's/[*<>]//g'|sed 's/[*=/"]/:/g'|cut -d: -sf3 > ${VARCACHE_SEARCH}/folders
 
-#   github
-    curl -k --silent --url "${SITE}/packages/"|grep /packages/ | sed 's/<[^>]*>//g' | sed 's/ //g' > ${VARCACHE_SEARCH}/folders
+#  site github
+	curl -k --silent --url "${SITE}/packages/"|grep /packages/ | sed 's/<[^>]*>//g' | sed 's/ //g' > ${VARCACHE_SEARCH}/folders
 
 #	FoldersInRepo='arch base dev extra games lib meta net sec theme x xapp'
 #	echo "${FoldersInRepo[@]}" > ${VARCACHE_SEARCH}/folders
@@ -833,10 +838,11 @@ function sh_update()
 	exit
 }
 
+
 function sh_FilesInCache()
 {
 	local nfilesincache=0
-    local index=1
+	local index=1
 
 	pushd $VARCACHE_ARCHIVES/ &>/dev/null
 	aCache=($(echo *.${PRG}))
@@ -862,6 +868,7 @@ function sh_FilesInCache()
     fi
 	return $nfilesincache
 }
+
 
 function sh_pkgoutcache()
 {
@@ -905,6 +912,7 @@ function sh_pkgoutcache()
 	echo -e "${yellow}($nfilesoutcache) ${cyan}packages in repository e out cache"
 	return 0
 }
+
 
 function sh_show()
 {
@@ -1334,8 +1342,8 @@ function sh_meta()
                 else
         			log_info_msg "Reinstalling package ${orange}$cpacote..."
                 fi
-#			    ERROR=$(banana -i $cpacote 2>&1>/dev/null)
-			    ERROR=$(sh_installpkg -i $cpacote 2>&1>/dev/null)
+			    #ERROR=$(sh_installpkg -i $cpacote 2>&1>/dev/null)
+			    sh_installpkg -i $cpacote
     		    evaluate_retval
 
     		    local error_value="${?}"
@@ -1545,31 +1553,33 @@ function sh_removed()
 	sh_cdroot
 }
 
+
 function sh_upgrade()
 {
-    local param="$@"
+	local param="$@"
 	local LAUTO=$false
 	local LFORCE=$false
 	local LLIST=$false
-    local count=0
-    local s
+	local count=0
+	local s
 	local atemp=()
-    local item
-	local cfileInstalled cbaseInstalled cpacoteInstalled cPacoteSplitInstalled cPacoteNameInstalled cPacoteVersionInstalled cPacoteBuildInstalled
+	local item
+	local cfileInstalled cbaseInstalled cpacoteInstalled cPacoteSplitInstalled
+	local cPacoteNameInstalled cPacoteVersionInstalled cPacoteBuildInstalled
 	local cfile cbase cpacote cPacoteSplit cPacoteName cPacoteVersion cPacoteBuild
-    local ntotalinstalled
-    local ntotalconfered
+	local ntotalinstalled
+	local ntotalconfered
 
 #   sh_recreatefilepackagesinstalled
 
 	for s in ${param[@]}; do
-        [[ $(toupper "${s}") = "-Y" ]]  && { LAUTO=$true;  param[$count]=;}
-	    [[ $(toupper "${s}") = "-F" ]]  && { LFORCE=$true; param[$count]=;}
-        [[ $(toupper "${s}") = "OFF" ]] && { LLIST=$false; param[$count]=;}
+		[[ $(toupper "${s}") = "-Y" ]]  && { LAUTO=$true;  param[$count]=;}
+		[[ $(toupper "${s}") = "-F" ]]  && { LFORCE=$true; param[$count]=;}
+		[[ $(toupper "${s}") = "OFF" ]] && { LLIST=$false; param[$count]=;}
 		((count++))
-    done
+	done
 
-    sh_listinstalled ${param} "OFF"
+	sh_listinstalled ${param} "OFF"
 
 #	if [[ $pkginstalled != "" ]]; then
 #    	for item in ${pkginstalled[*]};do
@@ -1580,10 +1590,10 @@ function sh_upgrade()
 	local ntotalinstalled=$(grep ^ $VARCACHE_SEARCH/packages-installed | wc -l)
 
 	for i in $pkginstalled; do
-        pkgname=
-        version=
-        build=
-        [[ -e $VARLIB_DESC/$i.desc ]] && source $VARLIB_DESC/$i.desc
+		pkgname=
+		version=
+		build=
+		[[ -e $VARLIB_DESC/$i.desc ]] && source $VARLIB_DESC/$i.desc
 		cfileInstalled=$i &&
 		cbaseInstalled=$(echo $cfileInstalled | cut -d/ -f1) &&
 		cpacoteInstalled=$(echo $cfileInstalled | cut -d/ -f2) &&
@@ -1602,9 +1612,9 @@ function sh_upgrade()
 		count=0
 
 		for x in $pkg; do
-       		cfile=$x &&
-	       	cbase=$(echo $cfile | cut -d/ -f1)
-       		cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
+			cfile=$x &&
+			cbase=$(echo $cfile | cut -d/ -f1)
+			cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
 
 #			cPacoteSplit=$( echo $cpacote | awk '{print $NF}'|sed 's/-/ /g')
 #			cPacoteName=$( echo $cPacoteSplit | awk '{print $1}')
@@ -1612,7 +1622,7 @@ function sh_upgrade()
 #			cPacoteBuild=$( echo $cPacoteSplit | awk '{print $3}')
 
 			cPacoteSplit=$( echo $cpacote | awk '{print $NF}'|sed 's/-/ /g')
-            arr=($cPacoteSplit)
+			arr=($cPacoteSplit)
 
 #um 1.0.0 1
 #um dois 1.0.0 1
@@ -1624,7 +1634,7 @@ function sh_upgrade()
             [[ ${#arr[*]} -eq 6 ]] && cPacoteSplit="${arr[0]}-${arr[1]}-${arr[2]}-${arr[3]} ${arr[4]} ${arr[5]}"
 
 
-            arr=($cPacoteSplit)
+			arr=($cPacoteSplit)
 			cPacoteName="${arr[0]}"
 			cPacoteVersion="${arr[1]}"
 			cPacoteBuild="${arr[2]}"
@@ -1674,6 +1684,7 @@ function sh_upgrade()
 	fi
 	sh_cdroot
 }
+
 
 function _LIST_ARCHIVES_DIRECTORIES()
 {
@@ -1754,6 +1765,7 @@ function _SUBSHELL_STATUS()
     [[ "$?" -ne '0' ]] && return 1 || return 0
 }
 
+
 function _MANAGE_SCRIPTS_AND_ARCHIVES()
 {
 	local packname="${1/%.${PKG_EXT}/}"
@@ -1766,7 +1778,7 @@ function _MANAGE_SCRIPTS_AND_ARCHIVES()
 
 	pushd "/tmp/info/" &>/dev/null
 
-    if ! mv 'desc' "$VARLIB_DESC/${packname}.desc" ; then
+	if ! mv 'desc' "$VARLIB_DESC/${packname}.desc" ; then
 		log_failure_msg2 "ERROR! could not move desc to /${dir_desc}/${packname}.desc"
 		log_failure_msg2 "ABORTING..."
 		return 1
@@ -1774,6 +1786,12 @@ function _MANAGE_SCRIPTS_AND_ARCHIVES()
 
 	if [[ -e "pos.sh" ]]; then
 		bash "pos.sh"
+	fi
+
+	if [[ -e "/tmp/info/.INSTALL" ]]; then
+		source .INSTALL &> /dev/null
+		post_install
+		post_upgrade
 	fi
 
 	if [[ -e "rm.sh" ]]; then
@@ -1790,6 +1808,7 @@ function _MANAGE_SCRIPTS_AND_ARCHIVES()
 	return 0
 }
 
+
 function _CREATE_LIST()
 {
 	local packname="$1"
@@ -1800,6 +1819,7 @@ function _CREATE_LIST()
 	fi
 	return 0
 }
+
 
 function _GENERATE_DESC()
 {
@@ -1896,13 +1916,15 @@ function sh_generatepkg()
 	return 0
 }
 
+
 function sh_doinstallpkg()
 {
 	(
-    local packname="$1"
-    local name_version_build
-    local tmp_pack
-    local PRE_SH='pre.sh'
+	local packname="$1"
+	local name_version_build
+	local tmp_pack
+	local PRE_SH='pre.sh'
+	local INSTALL_SH='.INSTALL'
 
 	if ! tar --extract --preserve-permissions --touch --file "${packname}" -C "/tmp/" "./${descme}"; then
 		log_failure_msg2 "ERROR! I could not unzip the file desc."
@@ -1923,6 +1945,14 @@ function sh_doinstallpkg()
 		fi
 		bash "/tmp/info/$PRE_SH"
 	fi
+
+	if tar --list --file "${packname}" "./info/$INSTALL_SH" &>/dev/null; then
+		if ! tar --extract --preserve-permissions --file "$packname" -C /tmp "./info/$INSTALL_SH" &>/dev/null; then
+			log_failure_msg2 "ERROR! Cannot extract ${INSTALL_SH}, ABORT"
+			return 1
+		fi
+	fi
+
 	tar --extract --preserve-permissions --touch --file "${packname}" -C / | tee -a ${VARLIB_LIST}/"${name_version_build}.list" &>/dev/null || return 1
 	_CREATE_LIST "$1" || return 1
 	_MANAGE_SCRIPTS_AND_ARCHIVES "${name_version_build}" || return 1
@@ -1931,7 +1961,8 @@ function sh_doinstallpkg()
 	_SUBSHELL_STATUS
 }
 
-function sh_initinstallpkg(){
+function sh_initinstallpkg()
+{
 	local pkg
 	local param=$@
 	local package
@@ -2067,6 +2098,7 @@ function _REMOVE_NOW()
 	return 0
 }
 
+
 function _GPG_SIGN()
 {
 	local package="$1"
@@ -2120,14 +2152,6 @@ function _VERIFY_ON()
 		# Se caiu aqui está tudo certo, vamo então conferir as variaveis do 'desc'
 		# Se alguma variavel estiver nula não podemos continuar.
 		source ${dir_info}/${info_desc} # Carregando arquivo.
-
-#info \
-#	  maintainer $maintainer 	"\n" \
-#	  pkgname    $pkgname 		"\n" \
-#	  version    $version 		"\n" \
-#	  build      $build   		"\n" \
-#	  desc       $desc    		"\n" \
-#	  url        $url
 
 		if [[ -z "$maintainer" ]]; then
 			echo -e "Check ${pink}${info_desc}${end}, sh_VARIABLE ${blue}maintainer${end} null"
@@ -2187,6 +2211,7 @@ function _VERIFY_ON()
  	)
 	_SUBSHELL_STATUS
 }
+
 
 function _CREATE_PKG()
 {
@@ -2381,8 +2406,8 @@ function sh_alienpkg_exec()
 #		    export "$var" "$value"
 #		done < $destdir/.PKGINFO
 
-		sed -i 's/ = /="/g' $destdir/.PKGINFO
-		sed -i 's/$/"/g' $destdir/.PKGINFO
+		sed -i 's/ = /="/g' $destdir/.PKGINFO  >/dev/null 2>&1
+		sed -i 's/$/"/g' $destdir/.PKGINFO  >/dev/null 2>&1
 		source "$destdir/.PKGINFO"
 
 		export    ALIEN_DESC_BUILD="${pkgtar: -1}"
@@ -2411,14 +2436,14 @@ function sh_alienpkg_exec()
 
 #		as_root genalien $pkg >/dev/null 2>&1
 #		sh_generatepkg $pkg $pkg
-#		mv $destdir/.BUILDINFO $destdir/info/ >/dev/null 2>&1
-#		mv $destdir/.MTREE     $destdir/info/ >/dev/null 2>&1
-#		mv $destdir/.PKGINFO   $destdir/info/ >/dev/null 2>&1
+		mv $destdir/.BUILDINFO $destdir/info/ >/dev/null 2>&1
+		mv $destdir/.MTREE     $destdir/info/ >/dev/null 2>&1
+		mv $destdir/.PKGINFO   $destdir/info/ >/dev/null 2>&1
 		mv $destdir/.INSTALL   $destdir/info/ >/dev/null 2>&1
 
-		rm -f $destdir/.BUILDINFO >/dev/null 2>&1
-		rm -f $destdir/.MTREE     >/dev/null 2>&1
-		rm -f $destdir/.PKGINFO   >/dev/null 2>&1
+#		rm -f $destdir/.BUILDINFO >/dev/null 2>&1
+#		rm -f $destdir/.MTREE     >/dev/null 2>&1
+#		rm -f $destdir/.PKGINFO   >/dev/null 2>&1
 
 #		log_info_msg "Building $destdir package"
 #		as_root bcpalien  >/dev/null 2>&1
