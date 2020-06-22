@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='numactl'
+version='2.0.13'
+build='3'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Simple NUMA policy support'
+size='227800'
+url='http://oss.sgi.com/projects/libnuma/'
+dep=('')
