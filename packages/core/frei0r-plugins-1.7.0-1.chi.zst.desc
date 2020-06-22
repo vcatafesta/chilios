@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='frei0r'
+version='plugins'
+build='1.7.0'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Minimalistic plugin API for video effects'
+size='5793622'
+url='https://frei0r.dyne.org/'
+dep=('')
