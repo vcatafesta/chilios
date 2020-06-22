@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='cheese'
+version='3.34.0+23+gcac6d3a1'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Take photos and videos with your webcam, with fun graphical effects'
+size='3285540'
+url='https://wiki.gnome.org/Apps/Cheese'
+dep=('')
