@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dav1d'
+version='0.7.0'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='AV1 cross-platform decoder focused on speed and correctness'
+size='1028611'
+url='https://code.videolan.org/videolan/dav1d/'
+dep=('')

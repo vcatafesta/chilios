@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='docbook'
+version='xml'
+build='4.5'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A widely used XML scheme for writing documentation and help'
+size='2058639'
+url='https://www.oasis-open.org/docbook/'
+dep=('')

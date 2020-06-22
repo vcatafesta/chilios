@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='double'
+version='conversion'
+build='3.1.5'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Binary-decimal and decimal-binary routines for IEEE doubles'
+size='172637'
+url='https://github.com/google/double-conversion'
+dep=('')

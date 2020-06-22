@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='debootstrap'
+version='1.0.123'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Bootstrap a basic Debian system'
+size='189944'
+url='https://tracker.debian.org/pkg/debootstrap'
+dep=('')

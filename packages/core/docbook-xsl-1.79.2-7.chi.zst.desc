@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='docbook'
+version='xsl'
+build='1.79.2'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='XML stylesheets for Docbook-xml transformations'
+size='27602025'
+url='https://docbook.org/'
+dep=('')
