@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gavl'
+version='1.4.0'
+build='4'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Low level library, upon which multimedia APIs can be built'
+size='9815277'
+url='http://gmerlin.sourceforge.net/'
+dep=('')

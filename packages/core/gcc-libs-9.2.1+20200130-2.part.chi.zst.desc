@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gcc'
+version='libs'
+build='9.2.1+20200130'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Runtime libraries shipped by GCC'
+size='156870042'
+url='https://gcc.gnu.org'
+dep=('')
