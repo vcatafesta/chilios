@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ijs'
+version='0.35'
+build='3'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='a library which implements a protocol for transmission of raster page images'
+size='123395'
+url='https://www.openprinting.org/download/ijs/'
+dep=('')
