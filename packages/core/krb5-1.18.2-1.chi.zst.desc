@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='krb5'
+version='1.18.2'
+build='1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The Kerberos network authentication system'
+size='4714960'
+url='https://web.mit.edu/kerberos/'
+dep=('')
