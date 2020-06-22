@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libasyncns'
+version='0.8+3+g68cd5af'
+build='3'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A C library for executing name service queries asynchronously'
+size='48763'
+url='http://0pointer.de/lennart/projects/libasyncns'
+dep=('')

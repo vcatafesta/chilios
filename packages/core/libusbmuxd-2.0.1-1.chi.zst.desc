@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libusbmuxd'
+version='2.0.1'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='USB Multiplex Daemon'
+size='93464'
+url='https://marcansoft.com/blog/iphonelinux/usbmuxd/'
+dep=('')

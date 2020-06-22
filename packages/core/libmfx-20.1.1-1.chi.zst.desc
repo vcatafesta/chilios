@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libmfx'
+version='20.1.1'
+build='1'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Intel Media SDK dispatcher library'
+size='273796'
+url='https://software.intel.com/en-us/media-sdk/'
+dep=('')

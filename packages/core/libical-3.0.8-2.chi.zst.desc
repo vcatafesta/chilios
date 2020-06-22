@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libical'
+version='3.0.8'
+build='2'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An open source reference implementation of the icalendar data type and serialization format'
+size='7278990'
+url='https://github.com/libical/libical'
+dep=('')

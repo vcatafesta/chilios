@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='licenses'
+version='20200427'
+build='1'
+license='custom:none'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Standard licenses distribution package'
+size='425851'
+url='https://www.archlinux.org/'
+dep=('')

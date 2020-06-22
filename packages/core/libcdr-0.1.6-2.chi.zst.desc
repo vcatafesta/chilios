@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libcdr'
+version='0.1.6'
+build='2'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='CorelDraw file format importer library for LibreOffice'
+size='8065458'
+url='https://wiki.documentfoundation.org/DLP/Libraries/libcdr'
+dep=('')

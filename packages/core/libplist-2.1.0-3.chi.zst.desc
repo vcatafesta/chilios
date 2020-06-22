@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libplist'
+version='2.1.0'
+build='3'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library to handle Apple Property List format whereas it's binary or XML'
+size='443722'
+url='https://libimobiledevice.org/'
+dep=('')

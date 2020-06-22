@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libwpg'
+version='0.3.3'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for importing and converting Corel WordPerfect(tm) Graphics images.'
+size='1458044'
+url='https://libwpg.sourceforge.net/'
+dep=('')
