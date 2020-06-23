@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='wxgtk3'
+version='3.0.5.1'
+build='1'
+license='custom:wxWindows'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GTK+3 implementation of wxWidgets API for GUI'
+size='17742512'
+url='https://wxwidgets.org'
+dep=('')

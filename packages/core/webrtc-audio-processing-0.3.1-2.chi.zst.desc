@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='webrtc'
+version='audio'
+build='processing'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='AudioProcessing library based on Google's implementation of WebRTC'
+size='837525'
+url='https://freedesktop.org/software/pulseaudio/webrtc-audio-processing/'
+dep=('')
