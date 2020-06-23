@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='vamp'
+version='plugin'
+build='sdk'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The Vamp audio analysis plug-in system'
+size='1071468'
+url='https://www.vamp-plugins.org/'
+dep=('')

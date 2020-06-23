@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='vi'
+version='070224'
+build='4'
+license='custom:ex'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The original ex/vi text editor'
+size='314637'
+url='http://ex-vi.sourceforge.net/'
+dep=('')

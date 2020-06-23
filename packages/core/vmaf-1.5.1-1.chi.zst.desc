@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='vmaf'
+version='1.5.1'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Perceptual video quality assessment algorithm based on multi-method fusion'
+size='4333685'
+url='https://github.com/Netflix/vmaf/'
+dep=('')
