@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='chardet'
+build='3.0.4'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python3 module for character encoding auto-detection'
+size='1171267'
+url='https://github.com/chardet/chardet'
+dep=('')

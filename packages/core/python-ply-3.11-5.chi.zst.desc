@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='ply'
+build='3.11'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Implementation of lex and yacc parsing tools'
+size='321626'
+url='https://www.dabeaz.com/ply/'
+dep=('')

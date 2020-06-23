@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='pcre2'
+version='10.35'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library that implements Perl 5-style regular expressions. 2nd version'
+size='4085881'
+url='https://www.pcre.org/'
+dep=('')

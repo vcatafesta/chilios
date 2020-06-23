@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='cmd2'
+build='1.1.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A tool for building interactive command line apps'
+size='1041817'
+url='https://github.com/python-cmd2/cmd2'
+dep=('')

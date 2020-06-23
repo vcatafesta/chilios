@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='babel'
+build='2.8.0'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A collection of tools for internationalizing Python applications'
+size='27698352'
+url='http://babel.pocoo.org/'
+dep=('')

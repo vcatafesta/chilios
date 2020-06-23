@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='sphinx'
+build='alabaster'
+license='custom:BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Sphinx default theme'
+size='41288'
+url='https://github.com/bitprophet/alabaster'
+dep=('')

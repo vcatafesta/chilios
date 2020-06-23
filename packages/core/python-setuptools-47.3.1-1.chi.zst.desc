@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='setuptools'
+build='47.3.1'
+license='PSF'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Easily download, build, install, upgrade, and uninstall Python packages'
+size='1613946'
+url='https://pypi.org/project/setuptools/'
+dep=('')

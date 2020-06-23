@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='markupsafe'
+build='1.1.1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Implements a XML/HTML/XHTML Markup safe string for Python'
+size='83636'
+url='https://pypi.python.org/pypi/MarkupSafe'
+dep=('')
