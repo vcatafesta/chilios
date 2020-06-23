@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='osinfo'
+version='db'
+build='20200515'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Osinfo database of information about operating systems for virtualization provisioning tools'
+size='2023219'
+url='https://libosinfo.org/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='openal'
+version='1.20.1'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Cross-platform 3D audio library, software implementation'
+size='1904663'
+url='https://github.com/kcat/openal-soft'
+dep=('')

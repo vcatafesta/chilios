@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='openjpeg2'
+version='2.3.1'
+build='2'
+license='custom: BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An open source JPEG 2000 codec, version 2.3.1'
+size='14291208'
+url='https://github.com/uclouvain/openjpeg'
+dep=('')

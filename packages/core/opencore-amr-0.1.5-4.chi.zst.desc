@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='opencore'
+version='amr'
+build='0.1.5'
+license='APACHE'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Open source implementation of the Adaptive Multi Rate (AMR) speech codec'
+size='304558'
+url='http://opencore-amr.sourceforge.net/'
+dep=('')
