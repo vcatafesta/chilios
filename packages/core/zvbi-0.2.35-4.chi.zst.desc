@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='zvbi'
+version='0.2.35'
+build='4'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='VBI capture and decoding library'
+size='1292404'
+url='http://zapping.sourceforge.net/cgi-bin/view/ZVBI/WebHome'
+dep=('')
