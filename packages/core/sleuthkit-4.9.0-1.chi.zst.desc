@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='sleuthkit'
+version='4.9.0'
+build='1'
+license='CPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='File system and media management forensic analysis tools'
+size='17533409'
+url='https://www.sleuthkit.org/sleuthkit'
+dep=('')
