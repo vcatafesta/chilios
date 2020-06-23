@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='yara'
+version='4.0.1'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Tool aimed at helping malware researchers to identify and classify malware samples'
+size='766056'
+url='https://github.com/VirusTotal/yara'
+dep=('')
