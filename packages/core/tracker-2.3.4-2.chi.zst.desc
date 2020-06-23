@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='tracker'
+version='2.3.4'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Desktop-neutral user information store, search tool and indexer'
+size='7207935'
+url='https://wiki.gnome.org/Projects/Tracker'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='tdb'
+version='1.4.3'
+build='2'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Trivial Database similar to GDBM but allows simultaneous commits'
+size='240532'
+url='https://tdb.samba.org/'
+dep=('')
