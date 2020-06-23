@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ruby'
+version='reline'
+build='0.1.4'
+license='BSD-2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Alternative GNU Readline or Editline implementation by pure Ruby.'
+size='193332'
+url='https://github.com/ruby/reline'
+dep=('')
