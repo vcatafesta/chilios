@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gtksourceview4'
+version='4.6.0'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A text widget adding syntax highlighting and more to GNOME'
+size='7870461'
+url='https://wiki.gnome.org/Projects/GtkSourceView'
+dep=('')

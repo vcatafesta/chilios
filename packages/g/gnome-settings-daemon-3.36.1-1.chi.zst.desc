@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnome'
+version='settings'
+build='daemon'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GNOME Settings Daemon'
+size='5312354'
+url='https://gitlab.gnome.org/GNOME/gnome-settings-daemon'
+dep=('')

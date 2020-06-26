@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gvfs'
+version='goa'
+build='1.44.1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Virtual filesystem implementation for GIO (Gnome Online Accounts backend; cloud storage)'
+size='100593'
+url='https://wiki.gnome.org/Projects/gvfs'
+dep=('')

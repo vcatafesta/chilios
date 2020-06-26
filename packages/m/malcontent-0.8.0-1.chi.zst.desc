@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='malcontent'
+version='0.8.0'
+build='1'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Parental control support for applications'
+size='1095648'
+url='https://gitlab.freedesktop.org/pwithnall/malcontent'
+dep=('')

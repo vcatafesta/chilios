@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='orca'
+version='3.36.3'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Screen reader for individuals who are blind or visually impaired'
+size='15935621'
+url='https://wiki.gnome.org/Projects/Orca'
+dep=('')

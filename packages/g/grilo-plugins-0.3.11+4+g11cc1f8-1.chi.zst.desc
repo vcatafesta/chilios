@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='grilo'
+version='plugins'
+build='0.3.11+4+g11cc1f8'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A collection of plugins for the Grilo framework'
+size='2407076'
+url='https://gitlab.gnome.org/GNOME/grilo-plugins'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='upower'
+version='0.99.11'
+build='3'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Abstraction for enumerating power devices, listening to device events and querying history and statistics'
+size='1004560'
+url='https://upower.freedesktop.org'
+dep=('')

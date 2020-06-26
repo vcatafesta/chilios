@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='jasper'
+version='2.0.16'
+build='2'
+license='custom:JasPer2.0'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Software-based implementation of the codec specified in the emerging JPEG-2000 Part-1 standard'
+size='1406101'
+url='https://www.ece.uvic.ca/~mdadams/jasper/'
+dep=('')

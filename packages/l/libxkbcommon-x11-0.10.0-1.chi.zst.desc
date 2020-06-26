@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libxkbcommon'
+version='x11'
+build='0.10.0'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Keyboard handling library using XKB data for X11 XCB clients'
+size='44039'
+url='https://xkbcommon.org/'
+dep=('')

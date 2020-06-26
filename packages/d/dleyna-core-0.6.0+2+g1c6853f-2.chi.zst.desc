@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dleyna'
+version='core'
+build='0.6.0+2+g1c6853f'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library of utility functions that are used by the higher level dLeyna'
+size='59560'
+url='https://01.org/dleyna'
+dep=('')

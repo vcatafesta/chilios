@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnome'
+version='books'
+build='3.34.0+21+g4d34d109'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Access and organize your e-books on GNOME'
+size='1655974'
+url='https://wiki.gnome.org/Apps/Books'
+dep=('')
