@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='cfn'
+build='lint'
+license='custom:MIT No Attribution'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='CloudFormation Linter'
+size='60497280'
+url='https://github.com/aws-cloudformation/cfn-python-lint'
+dep=('')

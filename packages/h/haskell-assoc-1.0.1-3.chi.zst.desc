@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='assoc'
+build='1.0.1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='swap and assoc: Symmetric and Semigroupy Bifunctors'
+size='55499'
+url='https://github.com/phadej/assoc'
+dep=('')
