@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='arduino'
+version='ctags'
+build='5.8_arduino11'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A mix of ctags and anjuta-tags for the perfect C++ ctags'
+size='296960'
+url='https://github.com/arduino/ctags'
+dep=('')

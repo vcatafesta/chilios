@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='arduino'
+version='docs'
+build='1.6.6'
+license='CCPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Arduino IDE reference documentation'
+size='30028800'
+url='https://www.arduino.cc/'
+dep=('')
