@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/06/15
+ # Altered: 2020/06/28
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.00.55.20200615"
+_VERSION_="2.00.66.20200628"
 
 #fatorial
 #seq -s* 6 | bc
@@ -269,6 +269,7 @@ ARCH='x86_64'
 DISTRO='chili'
 LFS_VARCACHE='fetch'
 PKGDIR='/var/cache/fetch/archives'
+GITDIR='/github/ChiliOS'
 ALIEN_CACHE_DIR='/var/cache/pacman/pkg'
 _EOF_
 }
@@ -764,7 +765,7 @@ function sh_update()
 	> $VARCACHE_SEARCH/metapackages
 	evaluate_retval
 
-	log_info_msg "Updating Folders at ${SITE}"
+	log_info_msg "Updating Folders from ${SITE}"
 #	curl -k --silent --url "${SITE}/packages/"| grep "/</a" | grep '[a-z]' | sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
 #	curl -k --silent --url "${SITE}/packages/"|sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
 
@@ -778,7 +779,7 @@ function sh_update()
 #	echo "${FoldersInRepo[@]}" > ${VARCACHE_SEARCH}/folders
 
 	evaluate_retval
-	log_wait_msg "${pink}Updating packages lists...${reset}"
+	log_wait_msg "${pink}Updating packages lists from ${SITE}...${reset}"
 	FoldersInRepo=$(cat $VARCACHE_SEARCH/folders)
 
 #	> folders_packages
@@ -788,12 +789,12 @@ function sh_update()
 	spinner & pid=$!
 	local Folders
 	for Folders in ${FoldersInRepo}; do
-        # site normal
-        #PackagesInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | grep ".${PRG}$" | awk '{print $1}')
-		#MetaPkgInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | grep ".meta$" | awk '{print $1}')
+# 		site normal
+#		PackagesInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | grep ".${PRG}$" | awk '{print $1}')
+#		MetaPkgInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | grep ".meta$" | awk '{print $1}')
 
-        # github
-        PackagesInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | sed 's/\// /g' | grep ".${PRG}$"| awk '{print $NF}')
+#		site github
+		PackagesInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | sed 's/\// /g' | grep ".${PRG}$"| awk '{print $NF}')
 		MetaPkgInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/" |sed 's/^.*href="//' | sed 's/".*$//' | sed 's/\// /g' | grep ".meta$" | awk '{print $NF}')
 
 		local count=0
@@ -808,29 +809,29 @@ function sh_update()
 			((count++))
 		done
 
-        cstrvalue=$(strzero ${count} 5)
-		#[[ ${count} =  0 ]] || log_success_msg2 "  Updating... (${blue}${cstrvalue}${reset}) packages in ${Folders}"
-		#[[ ${count} != 0 ]] || log_failure_msg2 "  Updating... (${blue}${cstrvalue}${reset}) packages in ${Folders}"
+		cstrvalue=$(strzero ${count} 5)
+#		[[ ${count} =  0 ]] || log_success_msg2 "  Updating... (${blue}${cstrvalue}${reset}) packages in ${Folders}"
+#		[[ ${count} != 0 ]] || log_failure_msg2 "  Updating... (${blue}${cstrvalue}${reset}) packages in ${Folders}"
 		log_success_msg2 "  Updating... (${blue}${cstrvalue}${reset}) packages in ${Folders}"
 	done
 	{ kill $pid; wait $pid 2>/dev/null; echo ;}
-    sh_recreatefilepackagesinstalled
-    echo
+	sh_recreatefilepackagesinstalled
+	echo
 	local nfilesInReposit=$(cat $VARCACHE_SEARCH/folders_packages | wc -l)
 	local nfilesInstalled=$(cat $VARCACHE_SEARCH/packages-installed | wc -l)
-    local nfilesRemoved=0
-    [[ -e $VARCACHE_SEARCH/packages-removed ]] && nfilesRemoved=$(cat $VARCACHE_SEARCH/packages-removed | wc -l)
+	local nfilesRemoved=0
+	[[ -e $VARCACHE_SEARCH/packages-removed ]] && nfilesRemoved=$(cat $VARCACHE_SEARCH/packages-removed | wc -l)
 
 	echo -e "${cyan}All list packages updated!${reset}"
-    #maxcol; replicate "=" $?
+#	maxcol; replicate "=" $?
 	echo -e "${blue}($nfilesInReposit) packages in repository${reset}"
 	echo -e "${green}($nfilesInstalled) packages installed${reset}"
 	echo -e "${red}($nfilesRemoved) packages removed by $0${reset}"
-    #maxcol; replicate "=" $?
+#	maxcol; replicate "=" $?
 	echo -e ${reset}
 
-	#conf "List out-of-cache packages?"
-	#[[ $? = $true ]] && sh_pkgoutcache
+#	conf "List out-of-cache packages?"
+#	[[ $? = $true ]] && sh_pkgoutcache
 
 	echo -e "${reset}Use: # $0 --help for helping${reset}"
 	echo
@@ -1162,6 +1163,7 @@ function sh_search()
 	LAUTO=$false
    LFORCE=$false
 
+   sh_checkdir "OFF"
    sh_list $param
 
 	if [[ $pkg != " " ]]; then
@@ -1785,7 +1787,7 @@ function _MANAGE_SCRIPTS_AND_ARCHIVES()
 	fi
 
 	if [[ -e "pos.sh" ]]; then
-		bash "pos.sh"
+	bash "pos.sh"
 	fi
 
 	if [[ -e "/tmp/info/.INSTALL" ]]; then
@@ -2269,6 +2271,7 @@ function _PRE_REMOVE()
     _SUBSHELL_STATUS
 }
 
+
 function sh_removepkg()
 {
 	shift
@@ -2320,6 +2323,7 @@ function sh_createpkg()
 	unset check_var
 }
 
+
 function sh_alienpkg_init()
 {
 	log_wait_msg "Loading /usr/libexec/fetch/core.sh"
@@ -2340,6 +2344,7 @@ function sh_alienpkg_initvars()
 	PKGS=$@
 #	EXT="${EXT:-.pkg.tar.xz}"
 	BUILDDIR="${PKGDIR:-/lfs/arch}"
+	GITDIR="${GITDIR:-/github/ChiliOS}"
 }
 
 function sh_alienpkg_exec()
@@ -2374,12 +2379,28 @@ function sh_alienpkg_exec()
 		FULLDIR=$BUILDDIR/$packagedir
 
 		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.\|zst\|xz//g'|sed 's/-any.pkg.tar.\|zst\|xz//g'|sed 's/1://g'|sed 's/2://g')
-
 #	   pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/1://g'|sed 's/2://g')
 #		pkgtar=$(echo $FULLDIR |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/\(.*\)_/\1 /'|sed 's/1://g'|sed 's/2://g')
 #		pkgtar=$(echo $FULLDIR | sed 's/\// /g' | awk '{print $NF}'|sed 's/-/_/g'| sed 's/\(.*\)_/\1 /')
 #		arr=($pkg)
 #	   pkgtar="${arr[0]}-${arr[1]} ${arr[2]}"
+
+		if !(( $LFORCE )); then
+			local pkgdir=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}')
+			local firstletter=${pkgdir::1}
+			local FilteredPackage=$(echo $pkgdir | sed 's/\(.*\)-/\1*/'|cut -d* -f1).chi.zst
+			local destpkgGIT="${GITDIR}/packages/${firstletter}/${FilteredPackage}"
+			local destpkgCORE="${GITDIR}/packages/core/${FilteredPackage}"
+
+			if [[ -e ${destpkgGIT} ]]; then
+				log_failure_msg2 "${orange}${pkgdir} ${reset}Package already exist in ${green}${GITDIR}/${firstletter/}${reset} Use the -f option to force rebuild."
+				continue
+			fi
+			if [[ -e ${destpkgCORE} ]]; then
+				log_failure_msg2 "${orange}${pkgdir} ${reset}Package already exist in ${green}${GITDIR}/core/${reset} Use the -f option to force rebuild."
+				continue
+			fi
+		fi
 
 		destdir=$BUILDDIR/$pkgtar
 		log_info_msg "Creating directory $destdir"
@@ -2470,6 +2491,26 @@ function sh_alienpkg_logo()
 EOF
     sh_version
 }
+
+
+function sh_aliencheck()
+{
+	allfiles=$(ls -1 *.zst)
+
+	for pkg in $allfiles
+	do
+		firstletter=${pkg::1}
+	#	echo $firstletter
+	#	FilteredPackage=$(echo $pkg | sed 's/\(.*\)-\(.*-\)/\1*\2/' |cut -d* -f1)
+		FilteredPackage=$(echo $pkg | sed 's/\(.*\)-/\1*/'|cut -d* -f1).chi.zst
+
+		destpkg="/github/ChiliOS/packages/${firstletter}/${FilteredPackage}"
+		if [[ -e ${destpkg} ]]; then
+			echo "file exist: ${destpkg}"
+		fi
+	done
+}
+
 
 function sh_alienpkg_main(){
 	sh_alienpkg_init
