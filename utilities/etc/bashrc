@@ -213,6 +213,19 @@ LREMOVED=3
 
 # SUBROUTINES
 
+
+function firstletter()
+{
+	word=$1
+#	firstletter="$(echo $word | head -c 1)"
+#	firstletter=$(echo "$word" | sed -e "{ s/^\(.\).*/\1/ ; q }")
+#	firstletter="${word%"${word#?}"}"
+#	firstletter=${word:0:1}
+	firstletter=${word::1}
+	echo $firstletter
+}
+
+
 function colorize()
 {
     if tput setaf 0 &>/dev/null; then
@@ -1592,7 +1605,8 @@ function removeoldpkg()
 
 		for pkgInAll in $AllFilesPackages
 		do
-			FilteredPackages=$(echo $pkgInAll | sed 's/\(.*\)-\(.*-\)/\1*\2/' |cut -d* -f1)
+			pkgtar=$(echo $pkgInAll |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.\|zst\|xz//g'|sed 's/-any.pkg.tar.\|zst\|xz//g'|sed 's/.chi.zst//g'|sed 's/1://g'|sed 's/2://g')
+			FilteredPackages=$(echo $pkgtar | sed 's/\(.*\)-\(.*-\)/\1*\2/' |cut -d* -f1)
 			AllFilteredPackages=$(ls -1 $FilteredPackages*.zst)
 			nfiles=0
 
@@ -1622,7 +1636,7 @@ function removeoldpkg()
 
 function removeoldpackages()
 {
-
+	cd /github/ChiliOS/packages/
 	for cdir in {a..z}
 	do
 		pushd $cdir >/dev/null 2>&1
@@ -1631,7 +1645,8 @@ function removeoldpackages()
 
 		for pkgInAll in $AllFilesPackages
 		do
-			FilteredPackages=$(echo $pkgInAll | sed 's/\(.*\)-\(.*-\)/\1*\2/' |cut -d* -f1)
+			pkgtar=$(echo $pkgInAll |sed 's/\// /g'|awk '{print $NF}'|sed 's/.chi.zst//g'|sed 's/1://g'|sed 's/2://g')
+			FilteredPackages=$(echo $pkgtar | sed 's/\(.*\)-\(.*-\)/\1*\2/' |cut -d* -f1)
 			AllFilteredPackages=$(ls -1 $FilteredPackages*.zst)
 			nfiles=0
 
@@ -1640,12 +1655,15 @@ function removeoldpackages()
 				((nfiles++))
 			done
 
-			log_info_msg "Verifying package $pkgInAll"
+			echo -e "${white}Verifying package ${purple}($nfiles) ${green}$pkgInAll"
 			if [[ $nfiles > 1 ]]; then
 				for pkg in $AllFilteredPackages
 				do
 					if [[ "$(vercmp $pkgInAll $pkg)" -lt 0 ]]; then
+						maxcol; replicate "=" $?
+						log_wait_msg "Removing package $pkgInAll"
 						rm $pkgInAll*
+						maxcol; replicate "=" $?
 					elif [[ "$(vercmp $pkgInAll $pkg)" -gt 0 ]]; then
 						continue
 					elif [[ "$(vercmp $pkgInAll $pkg)" -eq 0 ]]; then
@@ -1653,7 +1671,6 @@ function removeoldpackages()
 					fi
 				done
 			fi
-			evaluate_retval
 		done
 		popd >/dev/null 2>&1
 	done

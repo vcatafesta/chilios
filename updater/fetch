@@ -2381,23 +2381,23 @@ function sh_alienpkg_exec()
 		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.\|zst\|xz//g'|sed 's/-any.pkg.tar.\|zst\|xz//g'|sed 's/1://g'|sed 's/2://g')
 #	   pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/1://g'|sed 's/2://g')
 #		pkgtar=$(echo $FULLDIR |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/\(.*\)_/\1 /'|sed 's/1://g'|sed 's/2://g')
-#		pkgtar=$(echo $FULLDIR | sed 's/\// /g' | awk '{print $NF}'|sed 's/-/_/g'| sed 's/\(.*\)_/\1 /')
+#		pkgtar=$(echo $FULLDIR |sed 's/\// /g' | awk '{print $NF}'|sed 's/-/_/g'| sed 's/\(.*\)_/\1 /')
 #		arr=($pkg)
 #	   pkgtar="${arr[0]}-${arr[1]} ${arr[2]}"
 
 		if !(( $LFORCE )); then
-			local pkgdir=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}')
-			local firstletter=${pkgdir::1}
-			local FilteredPackage=$(echo $pkgdir | sed 's/\(.*\)-/\1*/'|cut -d* -f1).chi.zst
+			local firstletter=${pkgtar::1}
+#			local FilteredPackage=$(echo $pkgtar | sed 's/\(.*\)-/\1*/'|cut -d* -f1).chi.zst
+			local FilteredPackage=$pkgtar.chi.zst
 			local destpkgGIT="${GITDIR}/packages/${firstletter}/${FilteredPackage}"
 			local destpkgCORE="${GITDIR}/packages/core/${FilteredPackage}"
 
 			if [[ -e ${destpkgGIT} ]]; then
-				log_failure_msg2 "${orange}${pkgdir} ${reset}Package already exist in ${green}${GITDIR}/${firstletter/}${reset} Use the -f option to force rebuild."
+				log_failure_msg2 "${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/${firstletter/}${reset} Use the -f option to force rebuild."
 				continue
 			fi
 			if [[ -e ${destpkgCORE} ]]; then
-				log_failure_msg2 "${orange}${pkgdir} ${reset}Package already exist in ${green}${GITDIR}/core/${reset} Use the -f option to force rebuild."
+				log_failure_msg2 "${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/core/${reset} Use the -f option to force rebuild."
 				continue
 			fi
 		fi
