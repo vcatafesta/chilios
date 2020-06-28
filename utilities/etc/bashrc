@@ -1601,13 +1601,14 @@ function _cat()
 function removeoldpkg()
 {
 		local nfiles=0
-		AllFilesPackages=$(ls -1 *.zst)
-
+		AllFilesPackages=$(ls -1 *.{zst,xz})
 		for pkgInAll in $AllFilesPackages
 		do
 			pkgtar=$(echo $pkgInAll |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.\|zst\|xz//g'|sed 's/-any.pkg.tar.\|zst\|xz//g'|sed 's/.chi.zst//g'|sed 's/1://g'|sed 's/2://g')
 			FilteredPackages=$(echo $pkgtar | sed 's/\(.*\)-\(.*-\)/\1*\2/' |cut -d* -f1)
-			AllFilteredPackages=$(ls -1 $FilteredPackages*.zst)
+			AllFilteredPackages=$(ls -1 $FilteredPackages*.{zst,xz} 2> /dev/null)
+#			AllFilteredPackages=$(ls -1 $FilteredPackages*.zst 2> /dev/null)
+#			AllFilteredPackages="$AllFilteredPackages $(ls -1 $FilteredPackages*.xz 2> /dev/null)"
 			nfiles=0
 
 			for y in ${AllFilteredPackages[*]}
@@ -1622,7 +1623,7 @@ function removeoldpkg()
 					if [[ "$(vercmp $pkgInAll $pkg)" -lt 0 ]]; then
 						maxcol; replicate "=" $?
 						log_wait_msg "Removing package $pkgInAll"
-						rm $pkgInAll*
+						rm $pkgInAll*  >/dev/null 2>&1
 						maxcol; replicate "=" $?
 					elif [[ "$(vercmp $pkgInAll $pkg)" -gt 0 ]]; then
 						continue
