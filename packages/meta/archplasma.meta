@@ -1,0 +1,103 @@
+pacman -S plasma
+:: Há 42 membros no grupo plasma:
+:: Repositório extra
+   1) bluedevil  2) breeze  3) breeze-gtk  4) discover  5) drkonqi  6) kactivitymanagerd  7) kde-cli-tools
+   8) kde-gtk-config  9) kdecoration  10) kdeplasma-addons  11) kgamma5  12) khotkeys  13) kinfocenter
+   14) kmenuedit  15) knetattach  16) kscreen  17) kscreenlocker  18) ksshaskpass  19) ksysguard
+   20) kwallet-pam  21) kwayland-integration  22) kwin  23) kwrited  24) libkscreen  25) libksysguard  26) milou
+   27) oxygen  28) plasma-browser-integration  29) plasma-desktop  30) plasma-integration  31) plasma-nm
+   32) plasma-pa  33) plasma-sdk  34) plasma-vault  35) plasma-workspace  36) plasma-workspace-wallpapers
+   37) polkit-kde-agent  38) powerdevil  39) sddm-kcm  40) systemsettings  41) user-manager
+   42) xdg-desktop-portal-kde
+
+Digite uma seleção (padrão=todos): 
+resolvendo dependências...
+:: Há 2 provedores disponíveis para phonon-qt5-backend:
+:: Repositório extra
+   1) phonon-qt5-gstreamer  2) phonon-qt5-vlc
+
+Digite um número (padrão=1): 
+procurando por pacotes conflitantes...
+atenção: dependência cíclica detectada:
+atenção: usbmuxd será instalado antes de sua dependência libimobiledevice
+atenção: dependência cíclica detectada:
+atenção: phonon-qt5-gstreamer será instalado antes de sua dependência phonon-qt5
+atenção: dependência cíclica detectada:
+atenção: x264 será instalado antes de sua dependência ffmpeg
+
+Pacotes (300) accountsservice-0.6.55-1  adobe-source-code-pro-fonts-2.030ro+1.050it-5
+              adwaita-icon-theme-3.32.0-1  alsa-lib-1.1.9-1  aom-1.0.0-1  appstream-0.12.6-1
+              appstream-qt-0.12.6-1  archlinux-appstream-data-20190424-1  at-spi2-atk-2.32.0-1
+              at-spi2-core-2.32.1-1  atk-2.32-1  attica-5.58.0-1  avahi-0.7+18+g1b5f401-2  baloo-5.58.0-1
+              bc-1.07.1-3  bluez-5.50-6  bluez-libs-5.50-6  bluez-qt-5.58.0-1  breeze-icons-5.58.0-1
+              btrfs-progs-5.1-1  cantarell-fonts-1:0.111-1  cdparanoia-10.2-7  colord-1.4.4-2  convertlit-1.8-8
+              dbus-glib-0.110-1  dconf-0.32.0-3  desktop-file-utils-0.23+4+g92af410-1  dmraid-1.0.0.rc16.3-11
+              dosfstools-4.1-2  double-conversion-3.1.5-1  ebook-tools-0.2.2-6  editorconfig-core-c-0.12.3-1
+              exiv2-0.27.1-1  ffmpeg-1:4.1.3-1  flac-1.3.2-2  frameworkintegration-5.58.2-1  gdb-8.3-1
+              gdb-common-8.3-1  glib-networking-2.60.2-1  glu-9.0.0-5  gpm-1.20.7.r27.g1fd1941-1
+              gptfdisk-1.0.4-1  graphene-1.8.6-1  gsettings-desktop-schemas-3.32.0-2  gsm-1.0.18-1
+              gst-plugins-base-1.16.0-3  gst-plugins-base-libs-1.16.0-3  gstreamer-1.16.0-2
+              gtk-update-icon-cache-1:3.24.8-1  gtk3-1:3.24.8-1  guile2.0-2.0.14-3  hicolor-icon-theme-0.17-1
+              iso-codes-4.2-1  jack-0.125.0-7  jansson-2.12-1  js60-60.7.0-1  json-glib-1.4.4-1
+              kactivities-5.58.0-1  kactivities-stats-5.58.0-1  karchive-5.58.0-1  kauth-5.58.0-1
+              kbookmarks-5.58.0-1  kcmutils-5.58.0-1  kcodecs-5.58.0-1  kcompletion-5.58.0-1  kconfig-5.58.0-1
+              kconfigwidgets-5.58.0-1  kcoreaddons-5.58.0-1  kcrash-5.58.0-1  kdbusaddons-5.58.0-1
+              kdeclarative-5.58.0-1  kded-5.58.0-1  kdelibs4support-5.58.0-1  kdesu-5.58.0-1
+              kemoticons-5.58.0-1  kfilemetadata-5.58.0-3  kglobalaccel-5.58.0-1  kguiaddons-5.58.0-1
+              kholidays-1:5.58.0-1  ki18n-5.58.0-1  kiconthemes-5.58.0-1  kidletime-5.58.0-1  kinit-5.58.0-1
+              kio-5.58.0-1  kirigami2-5.58.0-1  kitemmodels-5.58.0-1  kitemviews-5.58.0-1  kjobwidgets-5.58.0-1
+              kjs-5.58.0-1  kjsembed-5.58.0-1  knewstuff-5.58.0-1  knotifications-5.58.0-1
+              knotifyconfig-5.58.0-1  kpackage-5.58.0-1  kparts-5.58.0-1  kpeople-5.58.0-1  kpty-5.58.0-1
+              krunner-5.58.0-1  kservice-5.58.0-1  ktexteditor-5.58.0-1  ktextwidgets-5.58.0-1
+              kunitconversion-5.58.0-1  kwallet-5.58.0-1  kwayland-5.58.0-1  kwidgetsaddons-5.58.0-1
+              kwindowsystem-5.58.0-1  kxmlgui-5.58.0-1  kxmlrpcclient-5.58.0-1  l-smash-2.14.5-1  lame-3.100-2
+              lcms2-2.9-1  libass-0.14.0-1  libasyncns-0.8+3+g68cd5af-2  libatasmart-0.19-4  libavc1394-0.5.4-3
+              libblockdev-2.21-1  libbluray-1.1.1-1  libbytesize-2.0-1  libcanberra-0.30+2+gc0620e4-2
+              libcanberra-pulse-0.30+2+gc0620e4-2  libcups-2.2.11-2  libdaemon-0.14-4
+              libdbusmenu-qt5-0.9.3+16.04.20160218-4  libdmtx-0.7.5-1  libevent-2.1.8-2  libgit2-1:0.27.8-1
+              libgusb-0.3.0-1  libibus-1.5.20-2  libical-3.0.4-3  libiec61883-1.2.0-5
+              libimobiledevice-1.2.0+87+g92c5462-1  libmbim-1.18.2-1  libmm-glib-1.10.0-1  libmodplug-0.8.9.0-2
+              libndp-1.7-1  libnewt-0.52.21-1  libnm-1.18.0-1  libnm-glib-1.18.0-1  libnsl-1.2.0-1
+              libogg-1.3.3-3  libpgm-5.2.122-3  libplist-2.0.0+11+gec9ba8b-2  libproxy-0.4.15-8  libpulse-12.2-2
+              libpwquality-1.4.0-2  libqalculate-3.2.0-1  libqmi-1.22.4-1  libraw1394-2.1.2-2
+              libsamplerate-0.1.9-2  libsndfile-1.0.28-2  libsodium-1.0.18-1  libsoup-2.66.2+4+g716acf96-1
+              libsoxr-0.1.3-1  libssh-0.8.7-1  libstemmer-0+337-3  libteam-1.28-2  libtheora-1.1.1-4
+              libusbmuxd-1.0.10+29+g9db5747-1  libutempter-1.1.6-3  libva-2.4.1-1  libvdpau-1.2-1
+              libvisual-0.4.0-7  libvorbis-1.3.6-1  libvpx-1.8.0-1  libwebp-1.0.2-1  libxkbcommon-0.8.4-1
+              libxkbcommon-x11-0.8.4-1  libxres-1.2.0-1  libxslt-1.1.33-1  libxss-1.2.3-1  libyaml-0.2.1-1
+              libzip-1.5.2-1  lmdb-0.9.23-1  media-player-info-24-1  minizip-1:1.2.11-3
+              mobile-broadband-provider-info-20190116-1  modemmanager-1.10.0-1  modemmanager-qt-5.58.0-1
+              ndctl-65-1  networkmanager-1.18.0-1  networkmanager-qt-5.58.0-1  noto-fonts-20190111-1
+              nspr-4.21-1  nss-3.44-1  openal-1.19.1-2  opencore-amr-0.1.5-2  openjpeg2-2.3.1-1  opus-1.3.1-1
+              orc-0.4.29-1  parted-3.2-9  phonon-qt5-4.10.2-1  phonon-qt5-gstreamer-4.9.0-5  pipewire-0.2.6-1
+              plasma-framework-5.58.0-1  polkit-0.116-1  polkit-qt5-0.112.0+git20180107-2  poppler-0.76.1-1
+              poppler-qt5-0.76.1-1  ppp-2.4.7-5  prison-5.58.0-1  pulseaudio-12.2-2  python-3.7.3-1  qca-2.2.1-1
+              qqc2-desktop-style-5.58.0-1  qrencode-4.0.2-1  qt5-base-5.12.3-2  qt5-declarative-5.12.3-2
+              qt5-graphicaleffects-5.12.3-1  qt5-location-5.12.3-1  qt5-multimedia-5.12.3-1
+              qt5-quickcontrols-5.12.3-1  qt5-quickcontrols2-5.12.3-1  qt5-script-5.12.3-1  qt5-sensors-5.12.3-1
+              qt5-speech-5.12.3-1  qt5-svg-5.12.3-1  qt5-tools-5.12.3-1  qt5-webchannel-5.12.3-1
+              qt5-webengine-5.12.3-2  qt5-x11extras-5.12.3-1  re2-20190401-1  rest-0.8.1-1  rtkit-0.12-1
+              sbc-1.4-1  sddm-0.18.1-1  sdl2-2.0.9-1  slang-2.3.2-1  snappy-1.1.7-1  socat-1.7.3.3-1
+              solid-5.58.0-1  sonnet-5.58.0-1  sound-theme-freedesktop-0.8-3  speex-1.2.0-2  speexdsp-1.2rc3-4
+              syntax-highlighting-5.58.0-1  taglib-1.11.1-3  tdb-1.3.18-2  threadweaver-5.58.0-1  tslib-1.20-1
+              ttf-hack-3.003-1  udisks2-2.8.2-1  upower-0.99.10-1  usbmuxd-1.1.0+48+g1cc8b34-3
+              v4l-utils-1.16.6-1  vid.stab-1.1-2  volume_key-0.3.11-2  wayland-protocols-1.17-1
+              webrtc-audio-processing-0.3.1-1  wpa_supplicant-2:2.8-1  x264-2:157.r72db4377-1  x265-3.0-1
+              xcb-util-cursor-0.1.3-2  xdg-utils-1.1.3-3  xorg-xmessage-1.0.5-1  xvidcore-1.3.5-1
+              zeromq-4.3.1-2  zita-alsa-pcmi-0.3.2-1  zita-resampler-1.6.2-1  bluedevil-1:5.15.5-1
+              breeze-5.15.5-1  breeze-gtk-5.15.5-1  discover-5.15.5-1  drkonqi-5.15.5-1
+              kactivitymanagerd-5.15.5-1  kde-cli-tools-5.15.5-1  kde-gtk-config-5.15.5-1  kdecoration-5.15.5-1
+              kdeplasma-addons-5.15.5-1  kgamma5-5.15.5-1  khotkeys-5.15.5-1  kinfocenter-5.15.5-2
+              kmenuedit-5.15.5-1  knetattach-5.15.5-1  kscreen-5.15.5-1  kscreenlocker-5.15.5-1
+              ksshaskpass-5.15.5-1  ksysguard-5.15.5-1  kwallet-pam-5.15.5-1  kwayland-integration-5.15.5-1
+              kwin-5.15.5-1  kwrited-5.15.5-1  libkscreen-5.15.5-1  libksysguard-5.15.5-1  milou-5.15.5-1
+              oxygen-5.15.5-1  plasma-browser-integration-5.15.5-1  plasma-desktop-5.15.5-1
+              plasma-integration-5.15.5-1  plasma-nm-5.15.5-1  plasma-pa-5.15.5-1  plasma-sdk-5.15.5-1
+              plasma-vault-5.15.5-1  plasma-workspace-5.15.5-1  plasma-workspace-wallpapers-5.15.5-1
+              polkit-kde-agent-5.15.5-1  powerdevil-5.15.5-1  sddm-kcm-5.15.5-1  systemsettings-5.15.5-1
+              user-manager-5.15.5-1  xdg-desktop-portal-kde-5.15.5-1
+
+Tamanho total download:    405,89 MiB
+Tamanho total instalado:  1611,36 MiB
+
+:: Continuar a instalação? [S/n] 

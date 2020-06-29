@@ -1,0 +1,28 @@
+fontconfig-2:2.13.1+12+g5f5ec56-1  freetype2-2.10.0-2  graphite-1:1.3.13-1  harfbuzz-2.5.1-1
+              libdmx-1.1.4-1  libdrm-2.4.98-1  libepoxy-1.5.3-1  libevdev-1.6.0-1  libfontenc-1.1.4-1
+              libglvnd-1.1.1-1  libgudev-232-1  libice-1.0.9-2  libinput-1.13.2-1  libomxil-bellagio-0.9.3-2
+              libpciaccess-0.14-1  libpng-1.6.37-1  libsm-1.2.3-1  libunwind-1.3.1-1  libwacom-0.33-1
+              libx11-1.6.7-1  libxau-1.0.9-1  libxaw-1.0.13-2  libxcb-1.13.1-1  libxcomposite-0.4.5-1
+              libxcursor-1.2.0-1  libxdamage-1.1.5-1  libxdmcp-1.1.3-1  libxext-1.3.4-1  libxfixes-5.0.3-2
+              libxfont2-2.0.3-1  libxft-2.3.3-1  libxi-1.7.9-2  libxinerama-1.1.4-1  libxkbfile-1.1.0-1
+              libxmu-1.1.3-1  libxpm-3.5.12-2  libxrandr-1.5.2-1  libxrender-0.9.10-2  libxshmfence-1.3-1
+              libxt-1.1.5-2  libxtst-1.2.3-2  libxv-1.0.11-2  libxxf86dga-1.1.5-1  libxxf86vm-1.1.4-2
+              llvm-libs-8.0.0-2  lm_sensors-3.5.0-1  mesa-19.0.5-1  mtdev-1.1.5-2  pixman-0.38.4-1
+              wayland-1.17.0-1  xcb-proto-1.13-2  xcb-util-0.4.0-2  xcb-util-image-0.4.0-2
+              xcb-util-keysyms-0.4.0-2  xcb-util-renderutil-0.3.9-2  xcb-util-wm-0.4.1-2
+              xf86-input-libinput-0.28.2-1  xkeyboard-config-2.27-1  xorg-font-utils-7.6-5
+              xorg-fonts-alias-1.0.3-2  xorg-util-macros-1.19.2-1  xorgproto-2018.4-1  xf86-video-vesa-2.4.0-2
+              xorg-bdftopcf-1.1-1  xorg-docs-1.7.1-2  xorg-font-util-1.3.1-2  xorg-fonts-100dpi-1.0.3-4
+              xorg-fonts-75dpi-1.0.3-4  xorg-fonts-encodings-1.0.4-5  xorg-iceauth-1.0.8-1  xorg-luit-1.1.1-3
+              xorg-mkfontscale-1.2.1-1  xorg-server-1.20.5-1  xorg-server-common-1.20.5-1
+              xorg-server-devel-1.20.5-1  xorg-server-xdmx-1.20.5-1  xorg-server-xephyr-1.20.5-1
+              xorg-server-xnest-1.20.5-1  xorg-server-xvfb-1.20.5-1  xorg-server-xwayland-1.20.5-1
+              xorg-sessreg-1.1.1-2  xorg-setxkbmap-1.3.1-2  xorg-smproxy-1.0.6-2  xorg-x11perf-1.6.1-1
+              xorg-xauth-1.0.10-2  xorg-xbacklight-1.2.2-1  xorg-xcmsdb-1.0.5-2  xorg-xcursorgen-1.0.7-1
+              xorg-xdpyinfo-1.3.2-2  xorg-xdriinfo-1.0.6-1  xorg-xev-1.2.3-1  xorg-xgamma-1.0.6-2
+              xorg-xhost-1.0.8-1  xorg-xinput-1.6.2-2  xorg-xkbcomp-1.4.2-1  xorg-xkbevd-1.1.4-2
+              xorg-xkbutils-1.0.4-3  xorg-xkill-1.0.5-1  xorg-xlsatoms-1.1.3-1  xorg-xlsclients-1.1.4-1
+              xorg-xmodmap-1.0.10-1  xorg-xpr-1.0.5-1  xorg-xprop-1.2.4-1  xorg-xrandr-1.5.0-2
+              xorg-xrdb-1.2.0-1  xorg-xrefresh-1.0.6-1  xorg-xset-1.2.4-1  xorg-xsetroot-1.1.2-1
+              xorg-xvinfo-1.1.4-1  xorg-xwd-1.0.7-1  xorg-xwininfo-1.1.4-1  xorg-xwud-1.0.5-1
+
