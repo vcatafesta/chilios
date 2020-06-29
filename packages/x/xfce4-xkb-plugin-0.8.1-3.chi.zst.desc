@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfce4'
+version='xkb'
+build='plugin'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Plugin to switch keyboard layouts for the Xfce4 panel'
+size='1919380'
+url='https://docs.xfce.org/panel-plugins/xfce4-xkb-plugin'
+dep=('')

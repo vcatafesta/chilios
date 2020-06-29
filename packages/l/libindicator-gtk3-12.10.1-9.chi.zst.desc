@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libindicator'
+version='gtk3'
+build='12.10.1'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Set of symbols and convenience functions for Ayatana indicators (GTK+ 3 library)'
+size='99461'
+url='https://launchpad.net/libindicator'
+dep=('')

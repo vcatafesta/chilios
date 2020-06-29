@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='astroid'
+build='2.4.2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Useful miscellaneous modules used by Logilab projects'
+size='1945998'
+url='https://github.com/PyCQA/astroid'
+dep=('')

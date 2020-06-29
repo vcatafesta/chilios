@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='rpmextract'
+version='1.0'
+build='9'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Script to convert or extract RPM archives (contains rpm2cpio)'
+size='825'
+url='http://www.archlinux.org'
+dep=('')

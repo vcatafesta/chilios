@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='mccabe'
+build='0.6.1'
+license='custom:Expat'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='McCabe complexity checker for Python'
+size='40321'
+url='https://github.com/flintwork/mccabe'
+dep=('')

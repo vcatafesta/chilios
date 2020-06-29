@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfce4'
+version='screenshooter'
+build='1.9.7'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Plugin that makes screenshots for the Xfce panel'
+size='686908'
+url='https://docs.xfce.org/apps/screenshooter/start'
+dep=('')

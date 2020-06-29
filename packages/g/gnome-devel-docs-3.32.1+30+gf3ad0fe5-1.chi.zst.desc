@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnome'
+version='devel'
+build='docs'
+license='FDL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Developer documentation for GNOME'
+size='36974979'
+url='https://gitlab.gnome.org/GNOME/gnome-devel-docs'
+dep=('')

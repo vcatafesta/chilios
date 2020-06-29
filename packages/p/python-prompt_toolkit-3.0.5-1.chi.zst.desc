@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='prompt_toolkit'
+build='3.0.5'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Library for building powerful interactive command lines in Python'
+size='3317967'
+url='https://github.com/jonathanslenders/python-prompt-toolkit'
+dep=('')

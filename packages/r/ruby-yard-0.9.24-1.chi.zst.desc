@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ruby'
+version='yard'
+build='0.9.24'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='YARD is a Ruby Documentation tool. The Y stands for Yay!'
+size='4773055'
+url='https://yardoc.org/'
+dep=('')

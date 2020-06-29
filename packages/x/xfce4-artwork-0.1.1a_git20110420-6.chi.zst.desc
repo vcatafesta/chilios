@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfce4'
+version='artwork'
+build='0.1.1a_git20110420'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Backdrops for the Xfce4 desktop'
+size='10299465'
+url='https://goodies.xfce.org/projects/artwork/xfce4-artwork'
+dep=('')

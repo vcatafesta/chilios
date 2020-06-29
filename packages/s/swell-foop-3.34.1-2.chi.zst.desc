@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='swell'
+version='foop'
+build='3.34.1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Clear the screen by removing groups of colored and shaped tiles'
+size='1497963'
+url='https://wiki.gnome.org/Apps/Swell%20Foop'
+dep=('')

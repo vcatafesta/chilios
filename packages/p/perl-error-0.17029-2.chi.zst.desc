@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='error'
+build='0.17029'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Perl/CPAN Error module - Error/exception handling in an OO-ish way'
+size='44127'
+url='https://search.cpan.org/dist/Error/'
+dep=('')

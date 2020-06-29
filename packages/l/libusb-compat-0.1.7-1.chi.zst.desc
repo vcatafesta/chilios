@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libusb'
+version='compat'
+build='0.1.7'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library to enable user space application programs to communicate with USB devices'
+size='32824'
+url='http://libusb.sourceforge.net/'
+dep=('')

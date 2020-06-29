@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnome'
+version='nettool'
+build='3.8.1+205+g8550eef'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Graphical interface for various networking tools'
+size='1936231'
+url='https://git.gnome.org/browse/gnome-nettool'
+dep=('')
