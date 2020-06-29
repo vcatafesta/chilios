@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.00.68.20200629"
+_VERSION_="2.00.69.20200629"
 
 #fatorial
 #seq -s* 6 | bc
@@ -1824,7 +1824,9 @@ function _LIST_ARCHIVES_DIRECTORIES()
 
 function _SUBSHELL_STATUS()
 {
-	[[ "$?" -ne '0' ]] && return 1 || return 0
+	ret=$?
+#	[[ "$?" -ne '0' ]] && return 1 || return 0
+	[[ $ret -eq 0 ]] && return $true || return $false
 }
 
 
@@ -2271,7 +2273,7 @@ function _VERIFY_ON()
 #			if _GREP 'rm[[:space:]]+\-(rf|fr)' "${dir_info}/${check_script}" 1>&4 2>&3; then
 			if _GREP 'rm[[:space:]]+\-(rf|fr)' "${dir_info}/${check_script}" &>/dev/null; then
 				log_failure_msg2 "${red}[CRAZY!]${end} ${PWD}/${dir_info}/$check_script contain command rm -rf. ABORTED NOW."
-				return 1
+				return $false
 			fi
 		fi
    	done
@@ -2358,6 +2360,7 @@ function sh_createpkg()
 	shift
 	local param=$@
 	local s
+	local ret
 
 	for s in ${param[@]}
 	do
@@ -2384,7 +2387,7 @@ function sh_createpkg()
 	_NAME_FORMAT_PKG "$pkg.${PKG_EXT}" || exit 1
 	_VERIFY_ON "$pkg"
 	ret=$?
-	if [ $ret <> $true ]; then
+	if [ $ret -ne $true ]; then
 		exit 1
 	fi
 	_CREATE_PKG "$pkg" || exit 1
