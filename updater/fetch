@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/06/28
+ # Altered: 2020/06/29
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.00.66.20200628"
+_VERSION_="2.00.67.20200629"
 
 #fatorial
 #seq -s* 6 | bc
@@ -1807,6 +1807,10 @@ function _MANAGE_SCRIPTS_AND_ARCHIVES()
 	popd &>/dev/null
 	[[ -d "/info/"     ]] && rm -r "/info/"
 	[[ -d '/tmp/info/' ]] && rm -r "/tmp/info/"
+	[[ -e '/.BUILDINFO' ]] && rm "/.BUILDINFO"
+	[[ -e '/.MTREE' ]] && rm "/.MTREE"
+	[[ -e '/.PKGINFO' ]] && rm "/.PKGINFO"
+	[[ -e '/.INSTALL' ]] && rm "/.INSTALL"
 	return 0
 }
 
@@ -2352,6 +2356,7 @@ function sh_alienpkg_exec()
 	local pkg
 	local param=$@
 	local package
+	local LFORCELOCAL=
 
  	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "ALL OFF" ]]; then
 		pkg=$(ls -1 $ALIEN_CACHE_DIR/*)
@@ -2370,6 +2375,7 @@ function sh_alienpkg_exec()
 		done
 	fi
 
+	LFORCELOCAL=$LFORCE
 #	for package in $ALIEN_CACHE_DIR/$*
 	for package in $pkg
 	do
@@ -2385,7 +2391,7 @@ function sh_alienpkg_exec()
 #		arr=($pkg)
 #	   pkgtar="${arr[0]}-${arr[1]} ${arr[2]}"
 
-		if !(( $LFORCE )); then
+		if !(( $LFORCELOCAL )); then
 			local firstletter=${pkgtar::1}
 #			local FilteredPackage=$(echo $pkgtar | sed 's/\(.*\)-/\1*/'|cut -d* -f1).chi.zst
 			local FilteredPackage=$pkgtar.chi.zst
