@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='b'
+build='hooks'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Execute code after a scope finished compilation'
+size='20149'
+url='https://search.cpan.org/~bobtfish/B-Hooks-EndOfScope-0.24/'
+dep=('')

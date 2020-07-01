@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libnsl'
+version='1.2.0'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='libnsl-1.2.0-1'
+size=''
+url='http://www.linuxfromscratch.org/lfs/view/systemd/'
+dep=('')

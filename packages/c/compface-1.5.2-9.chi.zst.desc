@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='compface'
+version='1.5.2'
+build='9'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Utils & libs to convert from/to X-Face format.'
+size='69581'
+url='http://ftp.xemacs.org/pub/xemacs/aux/'
+dep=('')

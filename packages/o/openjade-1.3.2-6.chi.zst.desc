@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='openjade'
+version='1.3.2'
+build='6'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Implementation of the DSSSL language'
+size='3833331'
+url='http://openjade.sourceforge.net/'
+dep=('')

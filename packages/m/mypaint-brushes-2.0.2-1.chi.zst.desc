@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mypaint'
+version='brushes'
+build='2.0.2'
+license='custom:CC0'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Brushes used by MyPaint and other software using libmypaint'
+size='2988217'
+url='https://github.com/mypaint/mypaint-brushes'
+dep=('')

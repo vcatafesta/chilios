@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='ansi'
+build='wl'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The Wadler/Leijen Pretty Printer for colored ANSI terminal output'
+size='245441'
+url='https://github.com/ekmett/ansi-wl-pprint'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='digest'
+build='hmac'
+license='PerlArtistic'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Perl Module: Keyed-Hashing for Message Authentication.'
+size='9751'
+url='https://search.cpan.org/dist/Digest-HMAC/'
+dep=('')

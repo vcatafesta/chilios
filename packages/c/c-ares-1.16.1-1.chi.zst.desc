@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='c'
+version='ares'
+build='1.16.1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='C library that performs DNS requests and name resolves asynchronously'
+size='196950'
+url='https://c-ares.haxx.se/'
+dep=('')

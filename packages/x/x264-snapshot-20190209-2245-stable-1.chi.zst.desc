@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='x264'
+version='snapshot'
+build='20190209'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='x264-snapshot-20190209'
+size=''
+url='http://www.linuxfromscratch.org/lfs/view/systemd/'
+dep=('')

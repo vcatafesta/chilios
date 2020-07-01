@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='cyrus'
+version='sasl'
+build='2.1.27'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='cyrus-sasl-2.1.27'
+size=''
+url='http://www.linuxfromscratch.org/lfs/view/systemd/'
+dep=('')

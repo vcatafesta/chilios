@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='sendmail'
+version='8.15.2'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='sendmail-8.15.2-1'
+size=''
+url='http://www.linuxfromscratch.org/lfs/view/systemd/'
+dep=('')

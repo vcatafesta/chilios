@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='prettyping'
+version='1.0.1'
+build='2'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A ping wrapper making the output prettier, more colorful, more compact, and easier to read.'
+size='25600'
+url='https://github.com/denilsonsa/prettyping'
+dep=('')
