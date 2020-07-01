@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/06/29
+ # Altered: 2020/06/30
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.00.69.20200629"
+_VERSION_="2.00.70.20200630"
 
 #fatorial
 #seq -s* 6 | bc
@@ -2607,10 +2607,10 @@ function logo()
 {
 	_CAT << 'EOF'
   __      _       _
- / _| ___| |_ ___| |__
+ / _| ___| |_ ___| |__           Copyright (C) 2019-2020 Vilmar Catafesta <vcatafesta@gmail.com>
 | |_ / _ \ __/ __| '_ \
-|  _|  __/ || (__| | | |
-|_|  \___|\__\___|_| |_|
+|  _|  __/ || (__| | | |         Este programa pode ser redistribuído livremente
+|_|  \___|\__\___|_| |_|         sob os termos da Licença Pública Geral GNU.
 EOF
 	sh_version
 }
@@ -2629,4 +2629,3 @@ fi
 
 sh_checkroot
 init $*
-
