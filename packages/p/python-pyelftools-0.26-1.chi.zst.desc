@@ -3,15 +3,15 @@
 # Generated with alienpkg
 ######################################################################
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
-pkgname='pacman'
-version='5.2.1'
-build='6'
-license='GPL'
+pkgname='python'
+version='pyelftools'
+build='0.26'
+license='custom:Public Domain'
 lfs_version='8.4'
 lfs_init='SYSTEMD'
-arch='x86_64'
+arch='any'
 distro='chili'
-desc='A library-based package manager with dependency support'
-size='4623040'
-url='https://www.archlinux.org/pacman/'
+desc='Python library for analyzing ELF files and DWARF debugging information'
+size='1282447'
+url='https://github.com/eliben/pyelftools'
 dep=('')
