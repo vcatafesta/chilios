@@ -173,6 +173,15 @@ function log_warning_msg()
 }
 
 
+function log_failure_msg()
+{
+    echo -n -e "${BMPREFIX}${@}"
+    echo -e "${CURS_ZERO}${FAILURE_PREFIX}${SET_COL}${FAILURE_SUFFIX}"
+    echo "FAIL" >> ${BOOTLOG}
+    return 0
+}
+
+
 function log_failure_msg2()
 {
     echo -n -e "${BMPREFIX}${@}"
@@ -204,11 +213,11 @@ function evaluate_retval()
 {
    local error_value="${?}"
 
-   if [ ${error_value} = 0 ]; then
+	if [ ${error_value} = 0 ]; then
 		log_success_msg2
-   else
-      	log_failure_msg2
-   fi
+	else
+		log_failure_msg2
+	fi
 	return ${error_value}
 }
 
@@ -228,6 +237,7 @@ function sh_checkparametros()
         [[ $(toupper "${s}") = "OFF" ]] && LLIST=$false
     done
 }
+
 
 function info()
 {
@@ -401,17 +411,17 @@ function replicate()
 
 function maxcol()
 {
-    if [ -z "${COLUMNS}" ]; then
-       COLUMNS=$(stty size)
-       COLUMNS=${COLUMNS##* }
-    fi
-    return $COLUMNS
+	if [ -z "${COLUMNS}" ]; then
+		COLUMNS=$(stty size)
+		COLUMNS=${COLUMNS##* }
+	fi
+	return $COLUMNS
 }
 
 
 function inkey()
 {
-    read -t "$1" -n1 -r -p "" lastkey
+	read -t "$1" -n1 -r -p "" lastkey
 }
 
 
@@ -423,78 +433,40 @@ function _cat()
 }
 
 
-# Modulo para emular o comando cat
-# Agradecimentos a SlackJeff
-# https://github.com/slackjeff/bananapkg
-function _CAT()
-{
-    # Tag para sinalizar que precisa parar.
-    local end_of_file='EOF'
-
-    INPUT=( "${@:-"%"}" )
-    for i in "${INPUT[@]}"; do
-        if [[ "$i" != "%" ]]; then
-            exec 3< "$i" || return 1
-        else
-            exec 3<&0
-        fi
-        while read -ru 3; do
-            # END OF FILE. Para identificar que precisa parar.
-            [[ "$REPLY" = "$end_of_file" ]] && break
-            echo -E "$REPLY"
-        done
-    done
-}
-
-# Módulo para emular o comando wc
-# Está funcionando por enquanto somente para linhas.
-# Agradecimentos a SlackJeff
-# https://github.com/slackjeff/bananapkg
-function _WC()
-{
-    local check="$@" # Recebendo args
-    local inc='0'    # Var incremento
-
-    for x in $check; do
-        let inc++
-    done
-    echo "$inc"
-    return 0
-}
-
 function setvarcolors()
 {
-    if tput setaf 1 &> /dev/null; then
-        tput sgr0; # reset colors
-        bold=$(tput bold);
-        reset=$(tput sgr0);
-        black=$(tput setaf 0);
-        blue=$(tput setaf 33);
-        cyan=$(tput setaf 37);
-        green=$(tput setaf 64);
-        orange=$(tput setaf 166);
-        purple=$(tput setaf 125);
-        red=$(tput setaf 124);
-        violet=$(tput setaf 61);
-        white=$(tput setaf 15);
-        yellow=$(tput setaf 136);
+	if tput setaf 1 &> /dev/null; then
+		tput sgr0; # reset colors
+		bold=$(tput bold);
+		reset=$(tput sgr0);
+		black=$(tput setaf 0);
+		blue=$(tput setaf 33);
+		cyan=$(tput setaf 37);
+		green=$(tput setaf 64);
+		orange=$(tput setaf 166);
+		purple=$(tput setaf 125);
+		red=$(tput setaf 124);
+		violet=$(tput setaf 61);
+		white=$(tput setaf 15);
+		yellow=$(tput setaf 136);
 		pink="\033[35;1m";
-    else
-        bold='';
-        reset="\e[0m";
-        black="\e[1;30m";
-        blue="\e[1;34m";
-        cyan="\e[1;36m";
-        green="\e[1;32m";
-        orange="\e[1;33m";
-        purple="\e[1;35m";
-        red="\e[1;31m";
-        violet="\e[1;35m";
-        white="\e[1;37m";
-        yellow="\e[1;33m";
+	else
+		bold='';
+		reset="\e[0m";
+		black="\e[1;30m";
+		blue="\e[1;34m";
+		cyan="\e[1;36m";
+		green="\e[1;32m";
+		orange="\e[1;33m";
+		purple="\e[1;35m";
+		red="\e[1;31m";
+		violet="\e[1;35m";
+		white="\e[1;37m";
+		yellow="\e[1;33m";
 		pink="\033[35;1m";
-    fi
+	fi
 }
+
 
 function sh_msgdoevangelho()
 {
@@ -521,54 +493,54 @@ function sh_msgdoevangelho()
 function sh_list()
 {
 	local param=$@
-    local s
+	local s
 	LLIST=$true
-    LFORCE=$false
-    pkg=
+	LFORCE=$false
+	pkg=
 
 	sh_checkdir "OFF"
-    for s in ${param[@]}; do
-        [[ $(toupper "${s}") = "-Y" ]] && LAUTO=$true
-        [[ $(toupper "${s}") = "-F" ]] && LFORCE=$true
-        [[ $(toupper "${s}") = "OFF" ]] && LLIST=$false
-    done
+	for s in ${param[@]}; do
+		[[ $(toupper "${s}") = "-Y" ]] && LAUTO=$true
+		[[ $(toupper "${s}") = "-F" ]] && LFORCE=$true
+		[[ $(toupper "${s}") = "OFF" ]] && LLIST=$false
+	done
 
-    if (( $LLIST )); then
-        log_wait_msg "${blue}Reading package lists in the repository..."
-    fi
+	if (( $LLIST )); then
+		log_wait_msg "${blue}Reading package lists in the repository..."
+	fi
 
 	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "ALL OFF" ]]; then
 		pkg=$(cat $VARCACHE_SEARCH/folders_packages)
 	else
-        for s in ${param[@]}; do
-            if [[ $(toupper "${s}") = "-Y" ]]; then
-                LAUTO=$true
-            elif [[ $(toupper "${s}") = "-F" ]]; then
-                LFORCE=$true
-            elif [[ $(toupper "${s}") = "OFF" ]]; then
-                LLIST=$false
-            else
-                pkg="$pkg $(grep $s $VARCACHE_SEARCH/folders_packages)"
-            fi
-        done
+		for s in ${param[@]}; do
+			if [[ $(toupper "${s}") = "-Y" ]]; then
+				LAUTO=$true
+			elif [[ $(toupper "${s}") = "-F" ]]; then
+				LFORCE=$true
+			elif [[ $(toupper "${s}") = "OFF" ]]; then
+				LLIST=$false
+			else
+				pkg="$pkg $(grep $s $VARCACHE_SEARCH/folders_packages)"
+			fi
+		done
 	fi
 
-    if (( $LLIST )); then
-    	log_wait_msg "${blue}Listing..."
-	    pkgCheckNumber=0
-    	if [[ $pkg != "" ]]; then
-	    	for i in $pkg; do
-    			[[ $LLIST = $true ]] && log_success_msg2 "${blue}FOUND ${orange}$i"
-    			((pkgCheckNumber++))
-    		done
-    		 [[ $LLIST = $true ]] && log_success_msg2 "($pkgCheckNumber) package(s) found."
-    	else
-	    	 log_failure_msg2 "${red}$param NOT FOUND ${reset} ${orange}$i${reset}"
-    		 log_failure_msg2 "($pkgCheckNumber) package(s) found."
-    		 echo
-	    	 echo -e "${reset}Use: # $0 update - to update with the repository${reset}"
-    	fi
-    fi
+	if (( $LLIST )); then
+		log_wait_msg "${blue}Listing..."
+		pkgCheckNumber=0
+		if [[ $pkg != "" ]]; then
+			for i in $pkg; do
+				[[ $LLIST = $true ]] && log_success_msg2 "${blue}FOUND ${orange}$i"
+				((pkgCheckNumber++))
+			done
+			[[ $LLIST = $true ]] && log_success_msg2 "($pkgCheckNumber) package(s) found."
+		else
+			log_failure_msg2 "${red}$param NOT FOUND ${reset} ${orange}$i${reset}"
+			log_failure_msg2 "($pkgCheckNumber) package(s) found."
+			echo
+			echo -e "${reset}Use: # $0 update - to update with the repository${reset}"
+		fi
+	fi
 	sh_cdroot
 }
 
@@ -579,13 +551,14 @@ function sh_cdroot()
 
 function sh_checknet()
 {
-    # have internet?
+	# have internet?
 	log_info_msg "${cyan}Testing internet"
-    #ping -c3 -q $(echo $SITE | sed 's/http:\/\///g') >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
-    curl -k $SITE >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
-    evaluate_retval
+	#ping -c3 -q $(echo $SITE | sed 's/http:\/\///g') >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
+	curl -k $SITE >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
+	evaluate_retval
 	return $?
 }
+
 
 function sh_updateself()
 {
@@ -655,6 +628,7 @@ function sh_checkroot()
 		exit
 	fi
 }
+
 
 function sh_version()
 {
@@ -1222,74 +1196,82 @@ function sh_search()
 	LAUTO=$false
    LFORCE=$false
 
-   sh_checkdir "OFF"
-   sh_list $param
+	sh_list $param
 
 	if [[ $pkg != " " ]]; then
-        if !(( $LAUTO )); then
-            echo
-            read -p "Install Pakages(s)? [Y/n]" LDOWNLOAD
-            if [[ $(toupper "${LDOWNLOAD}") = "N" ]]; then
-                return
-            fi
-        fi
-#       pushd $VARCACHE_INSTALLED/ &>/dev/null
-#       local pkginstalled=$(echo *.${PRG})
-        local pkginstalled=$(cat ${VARCACHE_SEARCH}/packages-installed)
-#       popd &>/dev/null
+		if !(( $LAUTO )); then
+			echo
+			read -p "${blue}:: ${reset}Continue installation? [Y/n]" LDOWNLOAD
+			if [[ $(toupper "${LDOWNLOAD}") = "N" ]]; then
+				return
+			fi
+		fi
+#		pushd $VARCACHE_INSTALLED/ &>/dev/null
+#		local pkginstalled=$(echo *.${PRG})
+		local pkginstalled=$(cat ${VARCACHE_SEARCH}/packages-installed)
+#		popd &>/dev/null
+
+
+		[[ -d $VARCACHE_ARCHIVES/ ]] || mkdir -p $VARCACHE_ARCHIVES/
 		cd $VARCACHE_ARCHIVES/
-        for i in $pkg; do
-		    declare -g ee=$i
+
+		for i in $pkg; do
+			declare -g ee=$i
 			local cfile=$i
 			local cbase=$(echo $cfile | cut -d/ -f1)
 			local cpacote=$(echo $cfile | cut -d/ -f2)
-            local cpacoteSemExt=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
-            local LINSTALLED=$NOK
+			local cpacoteSemExt=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
+			local LINSTALLED=$NOK
 
-            {   local item
-                index=0
-                for item in ${pkginstalled[*]}
-                do
-                    item=$(echo $item | cut -d/ -f2 | sed 's/.'${PRG}'//g')
-                    [[ $item = $cpacoteSemExt ]] && { LINSTALLED=$OK; break; }
-                    ((index++))
-                done
-            }
-            if (( $LINSTALLED )) && !(( $LFORCE )); then
+			{
+				local item
+				index=0
+
+				for item in ${pkginstalled[*]}
+				do
+					item=$(echo $item | cut -d/ -f2 | sed 's/.'${PRG}'//g')
+					[[ $item = $cpacoteSemExt ]] && { LINSTALLED=$OK; break; }
+					((index++))
+				done
+			}
+
+			if (( $LINSTALLED )) && !(( $LFORCE )); then
 				log_failure_msg2 "${orange}${cpacote} ${reset}Package is already installed. Use the -f option to force reinstallation."
-                continue
-            fi
-			test -e $VARCACHE_ARCHIVES/$cpacote || sh_wgetfull
-			#sh_checksha256sum
+				continue
+			fi
 
-		    local error_value="${?}"
+			test -e $VARCACHE_ARCHIVES/$cpacote || sh_wgetfull
+#			sh_checksha256sum
+
+			local error_value="${?}"
 			if [ ${error_value} -ne 0 ]; then
-				log_failure_msg2 "ERROR: Checking sha256sum ${cpacote}.sha256 **FAIL**"
+				log_failure_msg2 "ERROR: Checking sha256sum ${cpacote}.sha256"
 				log_wait_msg "Restarting download ${cpacote}"
 				sh_wgetfull
 				sh_checksha256sum
-			    local error_value="${?}"
+				local error_value="${?}"
 				if [ ${error_value} -ne 0 ]; then
-					log_failure_msg2 "ERROR: Checking sha256sum ${cpacote}.sha256 **FAIL** Aborting..."
+					log_failure_msg2 "ERROR: Checking sha256sum ${cpacote}.sha256. Aborting..."
 					exit 1
 				fi
 			fi
-            if !(( $LINSTALLED )); then
-        	    log_info_msg "Installing package ${orange}$cpacote"
-            else
-        	    log_info_msg "Reinstalling package ${orange}$cpacote"
-            fi
-#			ERROR=$(sh_installpkg -i $cpacote 2>&1>/dev/null)
-			sh_installpkg -i $cpacote
-		    evaluate_retval
 
-		    local error_value="${?}"
+			if !(( $LINSTALLED )); then
+				log_info_msg "Installing package ${orange}$cpacote"
+			else
+				log_info_msg "Reinstalling package ${orange}$cpacote"
+			fi
+#			ERROR=$(sh_installpkg -i $cpacote 2>&1>/dev/null)
+
+			sh_installpkg -i $cpacote
+			evaluate_retval
+			local error_value="${?}"
 			if [ ${error_value} -ne 0 ]; then
-				log_failure_msg2 "ERROR: installing package ${orange}${cpacote} **FAIL**"
-		    else
+				log_failure_msg2 "ERROR: installing package ${orange}${cpacote}"
+			else
 				log_success_msg2 "${orange}${cpacote} ${reset}Done. package installation successfully."
 			fi
-    	done
+		done
 	fi
 	sh_cdroot
 }
@@ -1631,7 +1613,7 @@ function sh_upgrade()
 	local ntotalinstalled
 	local ntotalconfered
 
-#   sh_recreatefilepackagesinstalled
+	#sh_recreatefilepackagesinstalled
 
 	for s in ${param[@]}; do
 		[[ $(toupper "${s}") = "-Y" ]]  && { LAUTO=$true;  param[$count]=;}
@@ -1643,11 +1625,11 @@ function sh_upgrade()
 	sh_listinstalled ${param} "OFF"
 
 #	if [[ $pkginstalled != "" ]]; then
-#    	for item in ${pkginstalled[*]};do
+#		for item in ${pkginstalled[*]};do
 #			atemp="$atemp $(echo $item|sed 's/-/ /g'| awk '{print $1}')"
-#        done
-#        sh_list ${atemp} "OFF"
-#    fi
+#		done
+#		sh_list ${atemp} "OFF"
+#	fi
 	local ntotalinstalled=$(grep ^ $VARCACHE_SEARCH/packages-installed | wc -l)
 
 	for i in $pkginstalled; do
@@ -1690,19 +1672,16 @@ function sh_upgrade()
 #um dois tres 1.0.0 1
 #um dois tres quatro 1.0.0 1
 
-            [[ ${#arr[*]} -eq 4 ]] && cPacoteSplit="${arr[0]}-${arr[1]} ${arr[2]} ${arr[3]}"
-            [[ ${#arr[*]} -eq 5 ]] && cPacoteSplit="${arr[0]}-${arr[1]}-${arr[2]} ${arr[3]} ${arr[4]}"
-            [[ ${#arr[*]} -eq 6 ]] && cPacoteSplit="${arr[0]}-${arr[1]}-${arr[2]}-${arr[3]} ${arr[4]} ${arr[5]}"
-
+			[[ ${#arr[*]} -eq 4 ]] && cPacoteSplit="${arr[0]}-${arr[1]} ${arr[2]} ${arr[3]}"
+			[[ ${#arr[*]} -eq 5 ]] && cPacoteSplit="${arr[0]}-${arr[1]}-${arr[2]} ${arr[3]} ${arr[4]}"
+			[[ ${#arr[*]} -eq 6 ]] && cPacoteSplit="${arr[0]}-${arr[1]}-${arr[2]}-${arr[3]} ${arr[4]} ${arr[5]}"
 
 			arr=($cPacoteSplit)
 			cPacoteName="${arr[0]}"
 			cPacoteVersion="${arr[1]}"
 			cPacoteBuild="${arr[2]}"
 
-#info $cPacoteSplit "\n" $cPacoteName "\n" $cPacoteVersion "\n" $cPacoteBuild
-
-            ((ntotalconfered++))
+			((ntotalconfered++))
 
 			case $cPacoteName in
 				Python) continue;;
@@ -1717,7 +1696,7 @@ function sh_upgrade()
 					sh_search "$cpacote" "-y" "-f" "OFF"
 				elif [[ "$cPacoteVersionInstalled-$cPacoteBuilInstalled" = "$cPacoteVersion-$cPacoteBuild" ]]; then
 					log_success_msg2 "[$ntotalconfered/$ntotalinstalled]${orange}${cPacoteName} ${reset}is already the newest version ($cPacoteVersionInstalled-$cPacoteBuildInstalled)."
-                    continue
+					continue
 				else
 					if (( $LFORCE )); then
 						sh_search "$cpacote" "-y" "-f" "OFF"
@@ -1824,9 +1803,7 @@ function _LIST_ARCHIVES_DIRECTORIES()
 
 function _SUBSHELL_STATUS()
 {
-	ret=$?
-#	[[ "$?" -ne '0' ]] && return 1 || return 0
-	[[ $ret -eq 0 ]] && return $true || return $false
+	[[ "$?" -ne '0' ]] && return 1 || return 0
 }
 
 
@@ -1849,7 +1826,7 @@ function _MANAGE_SCRIPTS_AND_ARCHIVES()
 	fi
 
 	if [[ -e "pos.sh" ]]; then
-	bash "pos.sh"
+		bash "pos.sh"
 	fi
 
 	if [[ -e "/tmp/info/.INSTALL" ]]; then
@@ -1935,15 +1912,16 @@ function _INPUT_NULL_PARAMETER()
 	return 0
 }
 
-function _NAME_FORMAT_PKG(){
-    local packname="$1"
+function _NAME_FORMAT_PKG()
+{
+	local packname="$1"
 
-    re="\b${PKG_EXT}\b"
-    if ! [[ "$packname" =~ .*\.${re}$ ]]; then
-        log_failure_msg2 "ERROR Package need finish .${PKG_EXT}"
-        return 1
-    fi
-    return 0
+	re="\b${PKG_EXT}\b"
+	if ! [[ "$packname" =~ .*\.${re}$ ]]; then
+		log_failure_msg2 "ERROR Package need finish .${PKG_EXT}"
+		return 1
+	fi
+	return 0
 }
 
 function sh_generatepkg()
@@ -2028,6 +2006,7 @@ function sh_doinstallpkg()
 	)
 	_SUBSHELL_STATUS
 }
+
 
 function sh_initinstallpkg()
 {
@@ -2205,16 +2184,16 @@ function _VERIFY_ON()
 	local info_desc='desc' # Descrição do pacote
 
 	if [[ ! -d "$dir_info" ]]; then # Diretório info existe?
-		echo -e "${red}[ERROR!]${end} ${pink}${dir_info}${end} directory\n"
-		echo -e "It's necessary your package have the DIRECTORY ${pink}info${end}."
-		echo -e "${pink}${dir_info}${end} its a directory store important archives."
-		echo "For more information use -h, --help."
+		log_failure_msg2 "${red}[ERROR!]${end} ${pink}${dir_info}${end} directory\n"
+		log_failure_msg2 "It's necessary your package have the DIRECTORY ${pink}info${end}."
+		log_failure_msg2 "${pink}${dir_info}${end} its a directory store important archives."
+		log_failure_msg2 "For more information use -h, --help."
 		exit 77
 	elif [[ ! -e "${dir_info}/${info_desc}" ]]; then
-		echo -e "${red}[ERROR!]${end} ${pink}${info_desc}${end} archive\n"
-		echo -e "It's necessary your package have the ARCHIVE ${pink}desc${end} inside of directory '${dir_info}'."
-		echo -e "${pink}${info_desc}${end} have informations of your package."
-		echo "For more information use -h, --help."
+		log_failure_msg2 "${red}[ERROR!]${end} ${pink}${info_desc}${end} archive\n"
+		log_failure_msg2 "It's necessary your package have the ARCHIVE ${pink}desc${end} inside of directory '${dir_info}'."
+		log_failure_msg2 "${pink}${info_desc}${end} have informations of your package."
+		log_failure_msg2 "For more information use -h, --help."
 		exit 1
 	else
 		# Se caiu aqui está tudo certo, vamo então conferir as variaveis do 'desc'
@@ -2222,29 +2201,29 @@ function _VERIFY_ON()
 		source ${dir_info}/${info_desc} # Carregando arquivo.
 
 		if [[ -z "$maintainer" ]]; then
-			echo -e "Check ${pink}${info_desc}${end}, sh_VARIABLE ${blue}maintainer${end} null"
-			echo "Enter the name of the package maintainer into variable maintainer."
-			exit 1
+			log_failure_msg2 "Check ${pink}${info_desc}${end}, sh_VARIABLE ${blue}maintainer${end} null"
+			log_failure_msg2 "Enter the name of the package maintainer into variable maintainer."
+			#exit 1
 		elif [[ -z "$pkgname" ]]; then
-			echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}pkgname${end} null"
-			echo "Enter the name of the package into variable pkgname."
-			exit 1
+			log_failure_msg2 "Check ${pink}${info_desc}${end}, VARIABLE ${blue}pkgname${end} null"
+			log_failure_msg2 "Enter the name of the package into variable pkgname."
+			#exit 1
 		elif [[ -z "$version" ]]; then
-			echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}version${end} null"
-			echo "Enter a version of software into variable version."
-			exit 1
+			log_failure_msg2 "Check ${pink}${info_desc}${end}, VARIABLE ${blue}version${end} null"
+			log_failure_msg2 "Enter a version of software into variable version."
+			#exit 1
 		elif [[ -z "$build" ]]; then
-			echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}build${end} null"
-			echo "Enter the build number of package."
-			exit 1
+			log_failure_msg2 "Check ${pink}${info_desc}${end}, VARIABLE ${blue}build${end} null"
+			log_failure_msg2 "Enter the build number of package."
+			#exit 1
 		elif [[ -z "$desc" ]]; then
-			echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}desc${end} null"
-			echo "Detail a small description into variable desc."
-			exit 1
+			log_failure_msg2 "Check ${pink}${info_desc}${end}, VARIABLE ${blue}desc${end} null"
+			log_failure_msg2 "Detail a small description into variable desc."
+			#exit 1
 		elif [[ -z "$url" ]]; then
-			echo -e "Check ${pink}${info_desc}${end}, VARIABLE ${blue}url${end} null"
-			echo "Enter a url of project/software into variable url."
-			exit 1
+			log_failure_msg2 "Check ${pink}${info_desc}${end}, VARIABLE ${blue}url${end} null"
+			log_failure_msg2 "Enter a url of project/software into variable url."
+			#exit 1
 		fi
 
         # Conferindo se o nome do pacote e versão batem com o que
@@ -2265,9 +2244,9 @@ function _VERIFY_ON()
 #            echo "of the version you entered as an argument. Check and return ;)"
 #            exit 1
 #        fi
-    fi # if principal
+		fi
 
-   # Verificando se rm -rf está presente em um dos scripts.
+		#Verificando se rm -rf está presente em um dos scripts.
 		for check_script in 'pre.sh' 'pos.sh' 'rm.sh'; do
 			if [[ -e "${dir_info}/${check_script}" ]]; then
 #			if _GREP 'rm[[:space:]]+\-(rf|fr)' "${dir_info}/${check_script}" 1>&4 2>&3; then
@@ -2284,20 +2263,21 @@ function _VERIFY_ON()
 
 function _CREATE_PKG()
 {
-    local package="${1/%.${PKG_EXT}/}"
-    local ext_desc='desc'
+	local package="${1/%.${PKG_EXT}/}"
+	local ext_desc='desc'
 
-    if tar --use-compress-program zstd --create --file ../${package}.${PKG_EXT} .; then
-        cp "$descme" ../${package}.${PKG_EXT}.${ext_desc} &>/dev/null
-        pushd .. &>/dev/null
-        sha256sum ${package}.${PKG_EXT} > ${package}.${PKG_EXT}.sha256
-        if [[ "$GPG_SIGN" = '1' ]]; then
-            _GPG_SIGN "${package}" || return 1
-            popd &>/dev/null
-        else
-            return 0
-        fi
-    fi
+	if tar --use-compress-program zstd --create --file ../${package}.${PKG_EXT} .; then
+		cp "$descme" ../${package}.${PKG_EXT}.${ext_desc} &>/dev/null
+		pushd .. &>/dev/null
+		sha256sum ${package}.${PKG_EXT} > ${package}.${PKG_EXT}.sha256
+
+		if [[ "$GPG_SIGN" = '1' ]]; then
+			_GPG_SIGN "${package}" || return 1
+			popd &>/dev/null
+		else
+			return 0
+		fi
+	fi
 	evaluate_retval
 }
 
@@ -2305,7 +2285,7 @@ function _PRE_REMOVE()
 {
 	(
 	local packname="$1"
-   local ntam=${#packname}
+	local ntam=${#packname}
 	local pkgsearch="${packname:0:$((ntam-2))}"
 	local re="\b${pkgsearch}\b"
 	local inc=0
@@ -2313,29 +2293,30 @@ function _PRE_REMOVE()
 	local search_pack
 
 	pushd $VARLIB_DESC 1>/dev/null
-   local alldesc=$(echo *.desc | grep $pkgsearch)
+	local alldesc=$(echo *.desc | grep $pkgsearch)
 
 	for search_pack in $alldesc; do
 		if [[ "$search_pack" =~ ^${re}.* ]]; then
 			for q in *; do
 				if [[ "$q" =~ ^${re}.* ]]; then
 					((count_occurrences++))
-                fi
-            done
+				fi
+			done
 			source $VARLIB_DESC/${search_pack}
 			local name_version_build="${pkgname}-${version}-${build}"
-            AUTO_YES=$true
-            pushd "${VARLIB_LIST}" 1>/dev/null
-            search_pack="${search_pack/%.desc/.list}" # se terminar com .desc substitua por .list
-            [[ -e "${search_pack}" ]] && { _REMOVE_NOW "$name_version_build"; return 0 ;} || return 1
-            continue
-        else
-            ((inc++))
-        fi
-    done
-    [[ "$inc" -gt '0' ]] && { log_failure_msg2 "NOT FOUND ${packname}"; return 1 ;}
-    )
-    _SUBSHELL_STATUS
+			AUTO_YES=$true
+			pushd "${VARLIB_LIST}" 1>/dev/null
+			search_pack="${search_pack/%.desc/.list}" # se terminar com .desc substitua por .list
+			[[ -e "${search_pack}" ]] && { _REMOVE_NOW "$name_version_build"; return 0 ;} || return 1
+			continue
+		else
+			((inc++))
+		fi
+	done
+
+	[[ "$inc" -gt '0' ]] && { log_failure_msg2 "NOT FOUND ${packname}"; return 1 ;}
+	)
+	_SUBSHELL_STATUS
 }
 
 
@@ -2387,7 +2368,7 @@ function sh_createpkg()
 	_NAME_FORMAT_PKG "$pkg.${PKG_EXT}" || exit 1
 	_VERIFY_ON "$pkg"
 	ret=$?
-	if [ $ret -ne $true ]; then
+	if [ $ret -ne 0 ]; then
 		exit 1
 	fi
 	_CREATE_PKG "$pkg" || exit 1
@@ -2404,11 +2385,13 @@ function sh_alienpkg_init()
 	unset size
 }
 
+
 function sh_alienpkg_pkgsize()
 {
 	size="$(/usr/bin/du -sk --apparent-size)"
    size="$(( ${size%%[^0-9]*} * 1024 ))"
 }
+
 
 function sh_alienpkg_initvars()
 {
@@ -2418,6 +2401,7 @@ function sh_alienpkg_initvars()
 	BUILDDIR="${PKGDIR:-/lfs/arch}"
 	GITDIR="${GITDIR:-/github/ChiliOS}"
 }
+
 
 function sh_alienpkg_exec()
 {
