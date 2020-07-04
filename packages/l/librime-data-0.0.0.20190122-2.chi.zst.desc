@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='librime'
+version='data'
+build='0.0.0.20190122'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Meta package of preset librime data'
+size='0'
+url='https://github.com/rime/rime-prelude'
+dep=('')

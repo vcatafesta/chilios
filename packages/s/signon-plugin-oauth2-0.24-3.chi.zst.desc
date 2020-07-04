@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='signon'
+version='plugin'
+build='oauth2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='OAuth 2 plugin for signon'
+size='230087'
+url='https://gitlab.com/accounts-sso/signon-plugin-oauth2'
+dep=('')

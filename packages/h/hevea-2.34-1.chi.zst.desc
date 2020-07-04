@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='hevea'
+version='2.34'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A quite complete and fast LATEX to HTML translator'
+size='7568921'
+url='http://pauillac.inria.fr/~maranget/hevea/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='protobuf'
+version='3.12.3'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Protocol Buffers - Google's data interchange format'
+size='9656114'
+url='https://developers.google.com/protocol-buffers/'
+dep=('')

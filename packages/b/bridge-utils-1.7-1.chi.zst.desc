@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='bridge'
+version='utils'
+build='1.7'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Utilities for configuring the Linux ethernet bridge'
+size='45616'
+url='https://wiki.linuxfoundation.org/networking/bridge'
+dep=('')

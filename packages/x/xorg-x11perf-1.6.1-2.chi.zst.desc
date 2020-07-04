@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xorg'
+version='x11perf'
+build='1.6.1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Simple X server performance benchmarker'
+size='240029'
+url='https://xorg.freedesktop.org/'
+dep=('')

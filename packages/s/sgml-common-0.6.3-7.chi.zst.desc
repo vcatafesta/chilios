@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='sgml'
+version='common'
+build='0.6.3'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Tools for maintaining centralized SGML catalogs.'
+size='191508'
+url='https://www.docbook.org/xml/'
+dep=('')

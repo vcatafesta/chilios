@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='geos'
+version='3.8.0'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='C++ port of the Java Topology Suite'
+size='4210410'
+url='https://trac.osgeo.org/geos/'
+dep=('')

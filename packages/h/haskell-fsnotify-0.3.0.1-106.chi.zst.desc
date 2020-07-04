@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='fsnotify'
+build='0.3.0.1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Cross platform library for file change notification.'
+size='282349'
+url='https://github.com/haskell-fswatch/hfsnotify'
+dep=('')

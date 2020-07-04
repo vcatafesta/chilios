@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xorg'
+version='luit'
+build='1.1.1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Filter that can be run between an arbitrary application and a UTF-8 terminal emulator'
+size='52729'
+url='https://xorg.freedesktop.org/'
+dep=('')

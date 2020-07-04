@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='fingertree'
+build='0.1.4.2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Generic finger-tree structure, with example instances'
+size='1058482'
+url='https://hackage.haskell.org/package/fingertree'
+dep=('')

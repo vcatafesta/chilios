@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='iso8601'
+build='0.1.12'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Simple module to parse ISO 8601 dates'
+size='49014'
+url='https://pyiso8601.readthedocs.io/en/latest/'
+dep=('')

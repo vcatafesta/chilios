@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='class'
+build='factory'
+license='PerlArtistic'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Provide utility methods for factory classes'
+size='6144'
+url='http://search.cpan.org/dist/Class-Factory-Util/'
+dep=('')

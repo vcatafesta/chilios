@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='cfitsio'
+version='3.48'
+build='1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format'
+size='1997176'
+url='https://heasarc.gsfc.nasa.gov/fitsio/'
+dep=('')

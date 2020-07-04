@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='tagsoup'
+build='0.14.8'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Parsing and extracting information from (possibly malformed) HTML/XML documents'
+size='4866664'
+url='http://community.haskell.org/~ndm/tagsoup/'
+dep=('')

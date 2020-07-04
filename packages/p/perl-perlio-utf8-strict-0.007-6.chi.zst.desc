@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='perlio'
+build='utf8'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Fast and correct UTF-8 PerlIO'
+size='25373'
+url='https://metacpan.org/release/PerlIO-utf8_strict'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='oslo'
+build='config'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='parsing command line arguments and .ini style configuration files'
+size='1635872'
+url='https://pypi.python.org/pypi/oslo.config/8.2.0'
+dep=('')

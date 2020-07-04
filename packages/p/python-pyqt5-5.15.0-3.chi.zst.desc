@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pyqt5'
+build='5.15.0'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A set of Python bindings for the Qt5 toolkit'
+size='27997301'
+url='https://riverbankcomputing.com/software/pyqt/intro'
+dep=('')

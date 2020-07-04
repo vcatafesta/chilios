@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libspatialite'
+version='4.3.0.a'
+build='5'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='SQLite extension to support spatial data types and operations'
+size='12222464'
+url='https://www.gaia-gis.it/fossil/libspatialite'
+dep=('')

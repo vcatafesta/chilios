@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='sip'
+build='4.19.23'
+license='custom:sip'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Python SIP4 bindings for C and C++ libraries'
+size='256070'
+url='https://www.riverbankcomputing.com/software/sip/intro'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='irker'
+version='2.19'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='An IRC client that runs as a daemon accepting notification requests'
+size='104505'
+url='https://gitlab.com/esr/irker'
+dep=('')

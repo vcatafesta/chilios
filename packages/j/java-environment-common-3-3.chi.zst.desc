@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='java'
+version='environment'
+build='common'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Common files for Java Development Kits'
+size='0'
+url='https://www.archlinux.org/packages/extra/any/java-common/'
+dep=('')

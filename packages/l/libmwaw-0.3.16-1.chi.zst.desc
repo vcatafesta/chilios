@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libmwaw'
+version='0.3.16'
+build='1'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Import library for some old mac text documents.'
+size='69599581'
+url='https://sourceforge.net/projects/libmwaw/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='yaml'
+version='cpp'
+build='0.6.3'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='YAML parser and emitter in C++, written around the YAML 1.2 spec'
+size='516703'
+url='https://github.com/jbeder/yaml-cpp'
+dep=('')

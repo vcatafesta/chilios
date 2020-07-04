@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libodfgen'
+version='0.1.7'
+build='2'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for generating documents in Open Document Format'
+size='2065235'
+url='https://sourceforge.net/p/libwpd/wiki/libodfgen/'
+dep=('')

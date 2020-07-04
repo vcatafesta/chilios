@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='qscintilla'
+build='qt5'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Python bindings for QScintilla2'
+size='1782567'
+url='https://www.riverbankcomputing.com/software/qscintilla/intro'
+dep=('')

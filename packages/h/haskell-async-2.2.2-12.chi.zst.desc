@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='async'
+build='2.2.2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Run IO operations asynchronously and wait for their results'
+size='251342'
+url='https://github.com/simonmar/async'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='base'
+build='compat'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='base-compat with extra batteries'
+size='323696'
+url='https://hackage.haskell.org/package/base-compat-batteries'
+dep=('')
