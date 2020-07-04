@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/06/30
+ # Altered: 2020/07/03
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.00.70.20200630"
+_VERSION_="2.00.75.20200703"
 
 #fatorial
 #seq -s* 6 | bc
@@ -1047,10 +1047,11 @@ function sh_doremove()
     return $error_value
 }
 
+
 function sh_remove()
 {
 	LAUTO=$false
-    local param=$@
+	local param=$@
 
 	sh_listinstalled ${param}
 	local lExist=$?
@@ -1059,28 +1060,29 @@ function sh_remove()
 	sh_checkparametros ${param}
 
 	if [[ $pkginstalled != " " ]]; then
-        if !(( $LAUTO )); then
-		    echo
-			confno "Remove package(s)?"
+		if !(( $LAUTO )); then
+			echo
+			confno "${blue}::${reset} Remove package(s)?"
 			LAUTO=$?
 		fi
 
-        if (( $LAUTO )); then
-    		[[ -d $VARCACHE_ARCHIVES ]] || mkdir -p $VARCACHE_ARCHIVES
-        	cd $VARCACHE_ARCHIVES/
+		if (( $LAUTO )); then
+			[[ -d $VARCACHE_ARCHIVES ]] || mkdir -p $VARCACHE_ARCHIVES
+			cd $VARCACHE_ARCHIVES/
 
-    		for i in $pkginstalled; do
-    			declare -g ee=$i
-    			local cfile=$i
-    			local cbase=$(echo $cfile | cut -d/ -f1)
-    			local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
-                sh_doremove $cpacote $i
-    		done
-        fi
-    fi
+			for i in $pkginstalled; do
+				declare -g ee=$i
+				local cfile=$i
+				local cbase=$(echo $cfile | cut -d/ -f1)
+				local cpacote=$(echo $cfile | cut -d/ -f2 | sed 's/.'${PRG}'//g')
+				sh_doremove $cpacote $i
+			done
+		fi
+	fi
 	sh_cdroot
 	return 0
 }
+
 
 function sh_download()
 {
@@ -1716,7 +1718,7 @@ function sh_upgrade()
 	if [[ "${#pkginstalled}" -le 1 ]]; then # nenhum pacote?
 		log_warning_msg "${orange}${@}${cyan} package not installed"
 		echo
-		conf "Install Pakages(s)?"
+		conf "${blue}:: ${reset}Install Pakages(s)?"
 		LAUTO=$?
 		if (( $LAUTO )); then
 			sh_search $param -y -f
@@ -2436,7 +2438,8 @@ function sh_alienpkg_exec()
 		packagedir=${package}
 		FULLDIR=$BUILDDIR/$packagedir
 
-		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.\|zst\|xz//g'|sed 's/-any.pkg.tar.\|zst\|xz//g'|sed 's/1://g'|sed 's/2://g')
+		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/.pkg.tar\|.zst\|.xz//g'|sed 's/.pkg.tar\|.zst\|.xz//g'|sed 's/1://g'|sed 's/2://g')
+#		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar\|.zst\|.xz//g'|sed 's/-any.pkg.tar\|.zst\|.xz//g'|sed 's/1://g'|sed 's/2://g')
 #	   pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/1://g'|sed 's/2://g')
 #		pkgtar=$(echo $FULLDIR |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/\(.*\)_/\1 /'|sed 's/1://g'|sed 's/2://g')
 #		pkgtar=$(echo $FULLDIR |sed 's/\// /g' | awk '{print $NF}'|sed 's/-/_/g'| sed 's/\(.*\)_/\1 /')

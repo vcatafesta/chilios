@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#wget https://raw.githubusercontent.com/trapd00r/LS_COLORS/master/LS_COLORS -O ~/.dircolors
+eval $(dircolors -b $HOME/.dircolors)
+
 ulimit -n 32767
 #source /lib/lsb/init-functions
 #export PS1='\u@\h:\w\$\[\033[01;31m\]\u@\h[\033[01;34m\]\w \[\e[1;31m\]\$ \[\033[00m\]'
@@ -1515,8 +1518,8 @@ function ex()
             *.tar.xz)    tar Jxvf $1     ;;
             *.lz)        lzip -d -v $1   ;;
             *.chi)       tar Jxvf $1     ;;
-            *.chi.zst)   tar -xvf $1      ;;
-            *.tar.zst)   tar -xvf $1      ;;
+            *.chi.zst)   tar -xvf $1     ;;
+            *.tar.zst)   tar -xvf $1     ;;
             *.mz)        tar Jxvf $1     ;;
             *.cxz)       tar Jxvf $1     ;;
             *.chi)       tar Jxvf $1     ;;
@@ -1598,14 +1601,52 @@ function _cat()
 }
 
 
-function removeoldpkg()
+function converteOldChiPkgToNewZst()
+{
+	cfiles=$(ls -1 *.chi)
+	for pkg in $cfiles
+	do
+		echo
+		newpkg=$(echo $pkg|sed 's/_/-/g')
+		log_info_msg "Renomeando $pkg para $newpkg"
+		mv $pkg $newpkg &>/dev/null
+		evaluate_retval
+
+		cnewpkgsemext=$(echo $newpkg|sed 's/.chi//g')
+		log_info_msg "Criando diretorio $cnewpkgsemext"
+		mkdir $cnewpkgsemext &>/dev/null
+		evaluate_retval
+
+		log_info_msg "Extraindo arquivos $newpkg"
+		tar --extract --file $newpkg -C $cnewpkgsemext
+		evaluate_retval
+
+		log_info_msg "Entrando diretorio $cnewpkgsemext"
+		pushd $cnewpkgsemext/ &>/dev/null
+		evaluate_retval
+
+		fetch -g
+		echo -e
+		fetch create
+		echo -e
+		popd &>/dev/null
+	done
+}
+
+
+function removeoldpkgarch()
 {
 		local nfiles=0
+		local cOldDir=$PWD
+		cd /var/cache/pacman/pkg
 		AllFilesPackages=$(ls -1 *.{zst,xz})
+
+		log_wait_msg "Aguarde, trabalhando nisso..."
 		for pkgInAll in $AllFilesPackages
 		do
 			pkgtar=$(echo $pkgInAll |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.\|zst\|xz//g'|sed 's/-any.pkg.tar.\|zst\|xz//g'|sed 's/.chi.zst//g'|sed 's/1://g'|sed 's/2://g')
 			FilteredPackages=$(echo $pkgtar | sed 's/\(.*\)-\(.*-\)/\1*\2/' |cut -d* -f1)
+			FilteredPackages=$FilteredPackages"-"
 			AllFilteredPackages=$(ls -1 $FilteredPackages*.{zst,xz} 2> /dev/null)
 #			AllFilteredPackages=$(ls -1 $FilteredPackages*.zst 2> /dev/null)
 #			AllFilteredPackages="$AllFilteredPackages $(ls -1 $FilteredPackages*.xz 2> /dev/null)"
@@ -1616,14 +1657,16 @@ function removeoldpkg()
 				((nfiles++))
 			done
 
-			echo -e "${white}Verifying package ${purple}($nfiles) ${green}$pkgInAll"
+#			echo -e "${white}Verifying package ${purple}($nfiles) ${green}$pkgInAll"
+			log_wait_msg "${white}Verifying package ${purple}($nfiles) ${green}$pkgInAll"
 			if [[ $nfiles > 1 ]]; then
 				for pkg in $AllFilteredPackages
 				do
 					if [[ "$(vercmp $pkgInAll $pkg)" -lt 0 ]]; then
 						maxcol; replicate "=" $?
-						log_wait_msg "Removing package $pkgInAll"
+						log_info_msg "Removing ${red}OLD ${reset}package ${yellow}$pkgInAll"
 						rm $pkgInAll*  >/dev/null 2>&1
+						evaluate_retval
 						maxcol; replicate "=" $?
 					elif [[ "$(vercmp $pkgInAll $pkg)" -gt 0 ]]; then
 						continue
@@ -1633,22 +1676,30 @@ function removeoldpkg()
 				done
 			fi
 		done
+		cd $cOldDir
 }
 
-function removeoldpackages()
+
+function removeoldpkgchili()
 {
 	cd /github/ChiliOS/packages/
 	for cdir in {a..z}
 	do
+		echo -e "${white}Verifying packages in ${green}$cdir"
 		pushd $cdir >/dev/null 2>&1
 		local nfiles=0
+		local cOldDir=$PWD
 		AllFilesPackages=$(ls -1 *.zst)
 
+		log_wait_msg "Aguarde, trabalhando nisso..."
 		for pkgInAll in $AllFilesPackages
 		do
-			pkgtar=$(echo $pkgInAll |sed 's/\// /g'|awk '{print $NF}'|sed 's/.chi.zst//g'|sed 's/1://g'|sed 's/2://g')
+			pkgtar=$(echo $pkgInAll |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.\|zst\|xz//g'|sed 's/-any.pkg.tar.\|zst\|xz//g'|sed 's/.chi.zst//g'|sed 's/1://g'|sed 's/2://g')
 			FilteredPackages=$(echo $pkgtar | sed 's/\(.*\)-\(.*-\)/\1*\2/' |cut -d* -f1)
-			AllFilteredPackages=$(ls -1 $FilteredPackages*.zst)
+			FilteredPackages=$FilteredPackages"-"
+			AllFilteredPackages=$(ls -1 $FilteredPackages*.{zst,xz} 2> /dev/null)
+#			AllFilteredPackages=$(ls -1 $FilteredPackages*.zst 2> /dev/null)
+#			AllFilteredPackages="$AllFilteredPackages $(ls -1 $FilteredPackages*.xz 2> /dev/null)"
 			nfiles=0
 
 			for y in ${AllFilteredPackages[*]}
@@ -1656,14 +1707,16 @@ function removeoldpackages()
 				((nfiles++))
 			done
 
-			echo -e "${white}Verifying package ${purple}($nfiles) ${green}$pkgInAll"
+#			echo -e "${white}Verifying package ${purple}($nfiles) ${green}$pkgInAll"
+			log_wait_msg "${white}Verifying package ${purple}($nfiles) ${green}$pkgInAll"
 			if [[ $nfiles > 1 ]]; then
 				for pkg in $AllFilteredPackages
 				do
 					if [[ "$(vercmp $pkgInAll $pkg)" -lt 0 ]]; then
 						maxcol; replicate "=" $?
-						log_wait_msg "Removing package $pkgInAll"
-						rm $pkgInAll*
+						log_info_msg "Removing ${red}OLD ${reset}package ${yellow}$pkgInAll"
+						rm $pkgInAll*  >/dev/null 2>&1
+						evaluate_retval
 						maxcol; replicate "=" $?
 					elif [[ "$(vercmp $pkgInAll $pkg)" -gt 0 ]]; then
 						continue
@@ -1677,7 +1730,6 @@ function removeoldpackages()
 	done
 }
 
-
 function limpa_tar_zst()
 {
 	for i in {a..z}
@@ -1687,7 +1739,6 @@ function limpa_tar_zst()
 		cd ../
 	done
 }
-
 
 
 function copiapkg()
@@ -1703,7 +1754,7 @@ function copiapkg()
 
 function dw()
 {
-	pacman -Sw $*
+	pacman -Sw $* --noconfirm --quiet
 	if [ $? == 0 ]; then
 		fetch -a $*
 	fi
