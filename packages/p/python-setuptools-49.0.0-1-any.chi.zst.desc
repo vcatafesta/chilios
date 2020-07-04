@@ -3,15 +3,15 @@
 # Generated with alienpkg
 ######################################################################
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
-pkgname='libuv'
-version='1.38.0'
-build='1'
-license='custom'
+pkgname='python'
+version='setuptools'
+build='49.0.0'
+license='PSF'
 lfs_version='8.4'
 lfs_init='SYSTEMD'
-arch='x86_64'
+arch='any'
 distro='chili'
-desc='Multi-platform support library with a focus on asynchronous I/O'
-size='546336'
-url='https://github.com/libuv/libuv'
+desc='Easily download, build, install, upgrade, and uninstall Python packages'
+size='3134358'
+url='https://pypi.org/project/setuptools/'
 dep=('')
