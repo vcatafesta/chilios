@@ -1949,7 +1949,7 @@ function sh_generatepkg()
 		fi
 	done
 
-	log_info_msg "Generating info for package $pkg"
+	log_info_msg "(${ncount}/${ntotalpkg}) Generating info for package $pkg"
 	if [[ ! -e "info/desc" ]]; then
 		LFORCE=$true
 	fi
@@ -2367,9 +2367,9 @@ function sh_createpkg()
 		local pkg=$(echo $PWD |sed 's/\// /g'|awk '{print $NF}')
 	fi
 
-	log_wait_msg "Building package $pkg"
+	log_wait_msg "(${ncount}/${ntotalpkg}) Building package $pkg"
 	#sh_generatepkg $pkg $pkg $LAUTO $LFORCE
-	sh_generatepkg $pkg $pkg -Y -F
+	sh_generatepkg $pkg $pkg -Y -F $4 $5
 	_NAME_FORMAT_PKG "$pkg.${PKG_EXT}" || exit 1
 	_VERIFY_ON "$pkg"
 	ret=$?
@@ -2377,7 +2377,7 @@ function sh_createpkg()
 		exit 1
 	fi
 	_CREATE_PKG "$pkg" || exit 1
-	log_info_msg "Generating package $pkg"
+	log_info_msg "(${ncount}/${ntotalpkg}) Generating package $pkg"
 	unset check_var
 }
 
@@ -2415,14 +2415,21 @@ function sh_alienpkg_exec()
 	local package
 	local LFORCELOCAL=
 	local LFIND=$false
+	local LALL=$false
 	local mtime=0
 	local string=
+	local ntotalpkg=0
+	local ncount=0
+	local arraypkg=
 
- 	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "ALL OFF" ]]; then
-		pkg=$(ls -1 $ALIEN_CACHE_DIR/*)
-	else
+# 	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "ALL OFF" ]]; then
+#		LALL=$true
+#		pkg=$(ls -1 $ALIEN_CACHE_DIR/*)
+#	else
    	for s in ${param[@]}; do
-      	if [[ $(toupper "${s}") = "-Y" ]]; then
+		 	if [[ "${s}" == "" ]] || [[ $(toupper "${s}") = "ALL" ]] || [[ $(toupper "${s}") = "ALL OFF" ]]; then
+				LALL=$true
+      	elif [[ $(toupper "${s}") = "-Y" ]]; then
          	LAUTO=$true
 			elif [[ $(toupper "${s}") = "-F" ]]; then
 				LFORCE=$true
@@ -2436,18 +2443,30 @@ function sh_alienpkg_exec()
 			fi
 		done
 
-   	for str in ${string[@]}; do
+		if (( $LALL )); then
 			if !(( $LFIND )); then
-				files=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz} | grep $str)
-				pkg="$pkg $(echo $files | grep $str)"
+				pkg=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz})
 			else
-				files=$(find $ALIEN_CACHE_DIR/*.{zst,xz} -type f -ctime $mtime | grep $str)
-				pkg="$pkg $(echo $files | grep $str)"
+				pkg=$(find $ALIEN_CACHE_DIR/ -type f -ctime $mtime)
 			fi
-		done
-	fi
+		else
+   		for str in ${string[@]}; do
+				if !(( $LFIND )); then
+					files=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz} | grep $str)
+					pkg="$pkg $(echo $files | grep $str)"
+				else
+					files=$(find $ALIEN_CACHE_DIR/*.{zst,xz} -type f -ctime $mtime | grep $str)
+					pkg="$pkg $(echo $files | grep $str)"
+				fi
+			done
+		fi
+#	fi
 
+	arraypkg=($pkg)
+	ntotalpkg=${#arraypkg[*]}
+	log_success_msg2 "${red}(${ntotalpkg}) ${green}file(s) found."
 	LFORCELOCAL=$LFORCE
+
 #	for package in $ALIEN_CACHE_DIR/$*
 	for package in $pkg
 	do
@@ -2455,6 +2474,7 @@ function sh_alienpkg_exec()
 #		packagedir=${package%$EXT}
 		packagedir=${package}
 		FULLDIR=$BUILDDIR/$packagedir
+		((ncount++))
 
 		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/.pkg.tar\|.zst\|.xz//g'|sed 's/.pkg.tar\|.zst\|.xz//g'|sed 's/1://g'|sed 's/2://g')
 #		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar\|.zst\|.xz//g'|sed 's/-any.pkg.tar\|.zst\|.xz//g'|sed 's/1://g'|sed 's/2://g')
@@ -2472,21 +2492,21 @@ function sh_alienpkg_exec()
 			local destpkgCORE="${GITDIR}/packages/core/${FilteredPackage}"
 
 			if [[ -e ${destpkgGIT} ]]; then
-				log_failure_msg2 "${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/${firstletter/}${reset} Use the -f option to force rebuild."
+				log_failure_msg2 "(${ncount}/${ntotalpkg}) ${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/${firstletter/}${reset} Use the -f option to force rebuild."
 				continue
 			fi
 			if [[ -e ${destpkgCORE} ]]; then
-				log_failure_msg2 "${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/core/${reset} Use the -f option to force rebuild."
+				log_failure_msg2 "(${ncount}/${ntotalpkg}) ${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/core/${reset} Use the -f option to force rebuild."
 				continue
 			fi
 		fi
 
 		destdir=$BUILDDIR/$pkgtar
-		log_info_msg "Creating directory $destdir"
+		log_info_msg "(${ncount}/${ntotalpkg}) Creating directory $destdir"
 		mkdir -p $destdir
 		evaluate_retval
 
-		log_info_msg "Unpacking package $package at $destdir"
+		log_info_msg "(${ncount}/${ntotalpkg}) Unpacking package $package at $destdir"
 		tar --extract --file $package -C $destdir >/dev/null 2>&1
 		evaluate_retval
 
@@ -2556,6 +2576,8 @@ function sh_alienpkg_exec()
 		unset size
 		echo
 	done
+	unset ncount
+	unset ntotalpkg
 }
 
 function sh_alienpkg_logo()
