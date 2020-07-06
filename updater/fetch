@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.00.75.20200703"
+_VERSION_="2.00.85.20200705"
 
 #fatorial
 #seq -s* 6 | bc
@@ -673,7 +673,10 @@ function help()
 	echo -e "  fetch list [<package>] [<...>]"
 	echo -e "  fetch download [<package>] [...] [ALL] [-y] [-f]"
 	echo -e "  fetch --meta [xorg] [-y] [-f]"
+	echo -e "  fetch -a <package> [...] [-y] [-f] [-ctime=<n>]"
+	echo -e "  fetch -a -ctime=<n>"
 	exit
+
 }
 
 function init()
@@ -2411,6 +2414,9 @@ function sh_alienpkg_exec()
 	local param=$@
 	local package
 	local LFORCELOCAL=
+	local LFIND=$false
+	local mtime=0
+	local string=
 
  	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "ALL OFF" ]]; then
 		pkg=$(ls -1 $ALIEN_CACHE_DIR/*)
@@ -2422,9 +2428,21 @@ function sh_alienpkg_exec()
 				LFORCE=$true
 			elif [[ $(toupper "${s}") = "OFF" ]]; then
 				LLIST=$false
+			elif [[ $(toupper "${s:0:7}") = "-CTIME=" ]]; then
+				LFIND=$true
+				mtime=${s:7}
 			else
-				files=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz} | grep $s)
-            pkg="$pkg $(echo $files| grep $s)"
+				string="$string ${s}"
+			fi
+		done
+
+   	for str in ${string[@]}; do
+			if !(( $LFIND )); then
+				files=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz} | grep $str)
+				pkg="$pkg $(echo $files | grep $str)"
+			else
+				files=$(find $ALIEN_CACHE_DIR/*.{zst,xz} -type f -ctime $mtime | grep $str)
+				pkg="$pkg $(echo $files | grep $str)"
 			fi
 		done
 	fi
