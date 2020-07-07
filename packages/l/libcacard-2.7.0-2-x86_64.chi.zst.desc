@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libcacard'
+version='2.7.0'
+build='2'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='(Common Access Card) library thar provides emulation of smart cards to a virtual card reader running in a guest virtual machine'
+size='112099'
+url='https://www.spice-space.org/page/Libcacard'
+dep=('')

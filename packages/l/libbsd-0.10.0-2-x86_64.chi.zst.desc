@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libbsd'
+version='0.10.0'
+build='2'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Provides useful functions commonly found on BSD systems like strlcpy()'
+size='350613'
+url='https://libbsd.freedesktop.org'
+dep=('')
