@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='mistune'
+build='0.8.4'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='The fastest markdown parser in pure Python with renderer feature.'
+size='87578'
+url='https://github.com/lepture/mistune'
+dep=('')

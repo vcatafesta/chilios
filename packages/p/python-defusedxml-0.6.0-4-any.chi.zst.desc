@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='defusedxml'
+build='0.6.0'
+license='Python'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='XML bomb protection for Python stdlib modules'
+size='131491'
+url='https://bitbucket.org/tiran/defusedxml'
+dep=('')

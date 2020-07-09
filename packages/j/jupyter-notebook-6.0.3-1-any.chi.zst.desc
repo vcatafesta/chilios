@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='jupyter'
+version='notebook'
+build='6.0.3'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='The language-agnostic HTML notebook application for Project Jupyter'
+size='26324882'
+url='https://github.com/jupyter/notebook'
+dep=('')

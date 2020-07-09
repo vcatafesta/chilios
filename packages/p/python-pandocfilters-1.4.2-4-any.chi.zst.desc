@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pandocfilters'
+build='1.4.2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A python module for writing pandoc filters'
+size='26715'
+url='https://pypi.python.org/pypi/pandocfilters'
+dep=('')

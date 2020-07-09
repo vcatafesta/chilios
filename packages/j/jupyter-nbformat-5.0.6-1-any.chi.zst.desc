@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='jupyter'
+version='nbformat'
+build='5.0.6'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='The base implementation of the Jupyter Notebook format and Python APIs for working with notebooks'
+size='621458'
+url='https://pypi.python.org/pypi/nbformat'
+dep=('')

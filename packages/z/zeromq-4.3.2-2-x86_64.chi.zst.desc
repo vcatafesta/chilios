@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='zeromq'
+version='4.3.2'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Fast messaging system built on sockets. C and C++ bindings. aka 0MQ, ZMQ.'
+size='3106260'
+url='http://www.zeromq.org'
+dep=('')

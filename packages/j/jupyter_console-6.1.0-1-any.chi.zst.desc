@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='jupyter_console'
+version='6.1.0'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='An IPython-like terminal frontend for Jupyter kernels in any language.'
+size='100748'
+url='https://pypi.org/project/jupyter_console/'
+dep=('')

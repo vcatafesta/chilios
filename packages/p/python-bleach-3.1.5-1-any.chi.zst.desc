@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='bleach'
+build='3.1.5'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='An easy whitelist-based HTML-sanitizing tool'
+size='1430018'
+url='https://pypi.org/project/bleach/'
+dep=('')

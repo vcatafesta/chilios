@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='ipywidgets'
+build='7.5.1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='IPython widgets for the Jupyter Notebook'
+size='597137'
+url='https://github.com/ipython/ipywidgets'
+dep=('')

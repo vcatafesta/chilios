@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='blessings'
+build='1.7'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A thin, practical wrapper around terminal coloring, styling, and positioning'
+size='82620'
+url='https://github.com/erikrose/blessings'
+dep=('')
