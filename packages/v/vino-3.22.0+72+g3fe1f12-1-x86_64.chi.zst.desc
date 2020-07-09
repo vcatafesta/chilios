@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='vino'
+version='3.22.0+72+g3fe1f12'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A VNC server for the GNOME desktop'
+size='1925523'
+url='https://wiki.gnome.org/Projects/Vino'
+dep=('')

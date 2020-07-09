@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='v2ray'
+version='domain'
+build='list'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A list of domains to be used as geosites for routing purpose in Project V'
+size='310612'
+url='https://github.com/v2ray/domain-list-community'
+dep=('')
