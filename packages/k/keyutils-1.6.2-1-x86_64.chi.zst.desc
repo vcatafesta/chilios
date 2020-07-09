@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='keyutils'
+version='1.6.2'
+build='1'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Linux Key Management Utilities'
+size='202137'
+url='https://www.kernel.org/'
+dep=('')
