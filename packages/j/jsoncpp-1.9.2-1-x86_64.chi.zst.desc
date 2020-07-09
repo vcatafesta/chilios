@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='jsoncpp'
+version='1.9.2'
+build='1'
+license='custom:Public_Domain'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='C++ library for interacting with JSON'
+size='1678503'
+url='https://github.com/open-source-parsers/jsoncpp'
+dep=('')
