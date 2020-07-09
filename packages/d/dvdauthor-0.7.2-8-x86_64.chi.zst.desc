@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dvdauthor'
+version='0.7.2'
+build='8'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='DVD authoring tools'
+size='591189'
+url='http://dvdauthor.sourceforge.net/'
+dep=('')

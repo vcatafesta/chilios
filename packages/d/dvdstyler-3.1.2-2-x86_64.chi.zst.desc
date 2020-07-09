@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dvdstyler'
+version='3.1.2'
+build='2'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='DVD authoring application for the creation of professional-looking DVDs'
+size='15924783'
+url='https://www.dvdstyler.de/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dmraid'
+version='1.0.0.rc16.3'
+build='12'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Device mapper RAID interface'
+size='332734'
+url='https://people.redhat.com/~heinzm/sw/dmraid/'
+dep=('')

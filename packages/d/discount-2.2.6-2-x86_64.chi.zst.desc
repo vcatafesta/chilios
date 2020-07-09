@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='discount'
+version='2.2.6'
+build='2'
+license='custom:BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A Markdown implementation written in C'
+size='194616'
+url='https://www.pell.portland.or.us/~orc/Code/discount/'
+dep=('')

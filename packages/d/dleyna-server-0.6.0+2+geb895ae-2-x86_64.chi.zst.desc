@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dleyna'
+version='server'
+build='0.6.0+2+geb895ae'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library to discover, browse and manipulate Digital Media Servers'
+size='182166'
+url='http://01.org/dleyna'
+dep=('')
