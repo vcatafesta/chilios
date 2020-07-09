@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='zziplib'
+version='0.13.71'
+build='1'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A lightweight library that offers the ability to easily extract data from files archived in a single zip file'
+size='324537'
+url='http://zziplib.sourceforge.net'
+dep=('')

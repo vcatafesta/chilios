@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='zenity'
+version='3.32.0+17+gfb0938f'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Display graphical dialog boxes from shell scripts'
+size='6927756'
+url='https://gitlab.gnome.org/GNOME/zenity'
+dep=('')
