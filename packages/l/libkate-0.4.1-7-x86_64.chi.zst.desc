@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libkate'
+version='0.4.1'
+build='7'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A karaoke and text codec for embedding in ogg'
+size='338416'
+url='https://wiki.xiph.org/OggKate'
+dep=('')

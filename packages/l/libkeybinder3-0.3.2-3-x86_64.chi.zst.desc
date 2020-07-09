@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libkeybinder3'
+version='0.3.2'
+build='3'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library for registering global keyboard shortcuts'
+size='77448'
+url='https://github.com/engla/keybinder/tree/keybinder-3.0'
+dep=('')

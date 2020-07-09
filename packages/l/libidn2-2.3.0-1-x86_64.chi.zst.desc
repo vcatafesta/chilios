@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libidn2'
+version='2.3.0'
+build='1'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Free software implementation of IDNA2008, Punycode and TR46'
+size='408046'
+url='https://www.gnu.org/software/libidn/#libidn2'
+dep=('')

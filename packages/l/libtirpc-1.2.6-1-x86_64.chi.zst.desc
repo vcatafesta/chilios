@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libtirpc'
+version='1.2.6'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Transport Independent RPC library (SunRPC replacement)'
+size='445142'
+url='http://git.linux-nfs.org/?p=steved/libtirpc.git;a=summary'
+dep=('')

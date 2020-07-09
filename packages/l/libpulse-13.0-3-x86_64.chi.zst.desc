@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libpulse'
+version='13.0'
+build='3'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A featureful, general-purpose sound server (client library)'
+size='1479683'
+url='https://www.freedesktop.org/wiki/Software/PulseAudio/'
+dep=('')

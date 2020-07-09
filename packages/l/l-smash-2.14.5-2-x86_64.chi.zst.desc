@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='l'
+version='smash'
+build='2.14.5'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='MP4 muxer and other tools'
+size='1062818'
+url='https://github.com/l-smash/l-smash'
+dep=('')

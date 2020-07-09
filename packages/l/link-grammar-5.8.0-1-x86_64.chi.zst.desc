@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='link'
+version='grammar'
+build='5.8.0'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A Grammar Checking library'
+size='14376517'
+url='https://www.abisource.com/projects/link-grammar/'
+dep=('')

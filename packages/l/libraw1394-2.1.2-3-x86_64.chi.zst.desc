@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libraw1394'
+version='2.1.2'
+build='3'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Provides an API to the Linux IEEE1394 (FireWire) driver'
+size='164764'
+url='https://ieee1394.wiki.kernel.org/index.php/Main_Page'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libpackagekit'
+version='glib'
+build='1.1.13'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GLib library for accessing PackageKit'
+size='4183026'
+url='https://www.freedesktop.org/software/PackageKit/'
+dep=('')

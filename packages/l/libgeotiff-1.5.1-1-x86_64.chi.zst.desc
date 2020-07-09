@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libgeotiff'
+version='1.5.1'
+build='1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A TIFF based interchange format for georeferenced raster imagery'
+size='458752'
+url='https://trac.osgeo.org/geotiff/'
+dep=('')
