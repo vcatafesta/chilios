@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfce4'
+version='genmon'
+build='plugin'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='plugin that monitors customizable programs stdout for the Xfce4 panel'
+size='113520'
+url='https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin'
+dep=('')

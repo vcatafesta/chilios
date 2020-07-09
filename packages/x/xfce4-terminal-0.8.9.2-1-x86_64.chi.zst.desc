@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfce4'
+version='terminal'
+build='0.8.9.2'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A modern terminal emulator primarily for the Xfce desktop environment'
+size='2075338'
+url='https://www.xfce.org/'
+dep=('')

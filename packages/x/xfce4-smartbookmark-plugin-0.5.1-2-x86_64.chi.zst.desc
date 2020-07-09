@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfce4'
+version='smartbookmark'
+build='plugin'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Plugin for the Xfce4 panel that lets you quicksearch from selected websites'
+size='69406'
+url='https://docs.xfce.org/panel-plugins/xfce4-smartbookmark-plugin'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfwm4'
+version='4.14.2'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Xfce's window manager'
+size='2123309'
+url='https://www.xfce.org/'
+dep=('')

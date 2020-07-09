@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xcb'
+version='proto'
+build='1.14'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='XML-XCB protocol descriptions'
+size='865540'
+url='https://xcb.freedesktop.org/'
+dep=('')

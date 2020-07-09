@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xcb'
+version='util'
+build='image'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Utility libraries for XC Binding - Port of Xlib's XImage and XShmImage functions'
+size='54054'
+url='https://xcb.freedesktop.org'
+dep=('')

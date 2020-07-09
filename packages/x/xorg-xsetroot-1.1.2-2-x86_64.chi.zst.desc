@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xorg'
+version='xsetroot'
+build='1.1.2'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Classic X utility to set your root window background to a given pattern or color'
+size='21573'
+url='https://xorg.freedesktop.org/'
+dep=('')

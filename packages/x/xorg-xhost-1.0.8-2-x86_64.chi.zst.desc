@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xorg'
+version='xhost'
+build='1.0.8'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Server access control program for X'
+size='24127'
+url='https://xorg.freedesktop.org/'
+dep=('')

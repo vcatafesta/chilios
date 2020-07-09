@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfce4'
+version='taskmanager'
+build='1.2.3'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Easy to use task manager'
+size='471810'
+url='https://docs.xfce.org/apps/xfce4-taskmanager'
+dep=('')

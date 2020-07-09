@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xfce4'
+version='session'
+build='4.14.2'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A session manager for Xfce'
+size='1406852'
+url='https://www.xfce.org/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xorgproto'
+version='2020.1'
+build='1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='combined X.Org X11 Protocol headers'
+size='1469280'
+url='https://xorg.freedesktop.org/'
+dep=('')

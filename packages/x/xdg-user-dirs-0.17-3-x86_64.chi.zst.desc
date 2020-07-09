@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xdg'
+version='user'
+build='dirs'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Manage user directories like ~/Desktop and ~/Music'
+size='152088'
+url='https://www.freedesktop.org/wiki/Software/xdg-user-dirs'
+dep=('')

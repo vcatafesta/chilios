@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xorg'
+version='xrefresh'
+build='1.0.6'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Refresh all or part of an X screen'
+size='17968'
+url='https://xorg.freedesktop.org/'
+dep=('')
