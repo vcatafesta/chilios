@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='grub'
+version='2.04'
+build='7'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GNU GRand Unified Bootloader (2)'
+size='34412050'
+url='https://www.gnu.org/software/grub/'
+dep=('')

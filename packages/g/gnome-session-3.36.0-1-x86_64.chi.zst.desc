@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnome'
+version='session'
+build='3.36.0'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The GNOME Session Handler'
+size='1420703'
+url='https://gitlab.gnome.org/GNOME/gnome-session'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnome'
+version='multi'
+build='writer'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Write an ISO file to multiple USB devices at once'
+size='433152'
+url='https://wiki.gnome.org/Apps/MultiWriter'
+dep=('')

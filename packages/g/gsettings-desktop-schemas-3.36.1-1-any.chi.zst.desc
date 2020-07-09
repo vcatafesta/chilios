@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gsettings'
+version='desktop'
+build='schemas'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Shared GSettings schemas for the desktop'
+size='4568211'
+url='https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas'
+dep=('')

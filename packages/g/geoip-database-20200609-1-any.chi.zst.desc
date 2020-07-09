@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='geoip'
+version='database'
+build='20200609'
+license='CCPL:by-sa'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='GeoIP legacy country database (based on GeoLite2 data created by MaxMind)'
+size='3726538'
+url='https://mailfud.org/geoip-legacy/'
+dep=('')

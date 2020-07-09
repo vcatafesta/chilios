@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gts'
+version='0.7.6.121130'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Provides useful functions to deal with 3D surfaces meshed with interconnected triangles'
+size='703975'
+url='http://gts.sourceforge.net/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gtksourceview3'
+version='3.24.11+28+g73e57b57'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A text widget adding syntax highlighting and more to GNOME'
+size='6160917'
+url='https://wiki.gnome.org/Projects/GtkSourceView'
+dep=('')

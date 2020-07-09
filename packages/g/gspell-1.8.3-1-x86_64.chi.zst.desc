@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gspell'
+version='1.8.3'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='a flexible API to implement the spell checking in a GTK+ application'
+size='744067'
+url='https://wiki.gnome.org/Projects/gspell'
+dep=('')

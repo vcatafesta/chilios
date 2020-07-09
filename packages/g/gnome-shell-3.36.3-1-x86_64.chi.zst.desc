@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnome'
+version='shell'
+build='3.36.3'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Next generation desktop shell'
+size='10110151'
+url='https://wiki.gnome.org/Projects/GnomeShell'
+dep=('')

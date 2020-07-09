@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnome'
+version='user'
+build='docs'
+license='FDL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='User documentation for GNOME'
+size='45889584'
+url='https://gitlab.gnome.org/GNOME/gnome-user-docs'
+dep=('')

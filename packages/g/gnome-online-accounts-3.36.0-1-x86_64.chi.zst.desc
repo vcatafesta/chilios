@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnome'
+version='online'
+build='accounts'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Single sign-on framework for GNOME'
+size='5809989'
+url='https://wiki.gnome.org/Projects/GnomeOnlineAccounts'
+dep=('')
