@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='tar'
+version='1.32'
+build='3'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Utility used to store, backup, and transport files'
+size='2966652'
+url='https://www.gnu.org/software/tar/'
+dep=('')

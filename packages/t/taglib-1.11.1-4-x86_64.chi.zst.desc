@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='taglib'
+version='1.11.1'
+build='4'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A Library for reading and editing the meta-data of several popular audio formats'
+size='1698206'
+url='https://taglib.github.io/'
+dep=('')

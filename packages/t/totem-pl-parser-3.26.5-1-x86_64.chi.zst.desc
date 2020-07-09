@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='totem'
+version='pl'
+build='parser'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Simple GObject-based library to parse and save a host of playlist formats'
+size='887053'
+url='https://gitlab.gnome.org/GNOME/totem-pl-parser'
+dep=('')

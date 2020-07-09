@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='thunar'
+version='volman'
+build='0.9.5'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Automatic management of removeable devices in Thunar'
+size='689152'
+url='https://docs.xfce.org/xfce/thunar/thunar-volman'
+dep=('')

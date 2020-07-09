@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='telepathy'
+version='idle'
+build='0.2.0'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An IRC connection manager for Telepathy'
+size='176961'
+url='https://telepathy.freedesktop.org'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='template'
+version='glib'
+build='3.34.0'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A templating library for GLib'
+size='456617'
+url='https://gitlab.gnome.org/GNOME/template-glib'
+dep=('')
