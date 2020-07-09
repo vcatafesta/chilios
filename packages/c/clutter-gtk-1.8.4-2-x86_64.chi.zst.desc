@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='clutter'
+version='gtk'
+build='1.8.4'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Clutter integration with GTK+'
+size='262295'
+url='https://gitlab.gnome.org/GNOME/clutter-gtk'
+dep=('')

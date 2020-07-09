@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='clutter'
+version='1.26.4'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A toolkit for creating fast, portable, compelling dynamic UIs'
+size='18093251'
+url='https://blogs.gnome.org/clutter/'
+dep=('')
