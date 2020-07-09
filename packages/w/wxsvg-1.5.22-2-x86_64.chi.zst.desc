@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='wxsvg'
+version='1.5.22'
+build='2'
+license='custom:wxWindows'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='C++ library to create, manipulate and render SVG files'
+size='2090142'
+url='http://wxsvg.sourceforge.net/'
+dep=('')
