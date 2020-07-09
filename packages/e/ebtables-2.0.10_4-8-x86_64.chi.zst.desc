@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ebtables'
+version='2.0.10_4'
+build='8'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Ethernet bridge filtering utilities'
+size='423029'
+url='http://ebtables.sourceforge.net/'
+dep=('')
