@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='qt5'
+version='quickcontrols'
+build='5.15.0'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Reusable Qt Quick based UI controls to create classic desktop-style user interfaces'
+size='4992343'
+url='https://www.qt.io'
+dep=('')

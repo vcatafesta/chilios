@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='qwtpolar'
+version='1.1.1'
+build='5'
+license='custom:qwt'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Qwt library that contains classes for displaying values on a polar coordinate system'
+size='2688381'
+url='http://qwtpolar.sourceforge.net/'
+dep=('')
