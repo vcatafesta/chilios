@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pyelftools'
+build='0.26'
+license='custom:Public Domain'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python library for analyzing ELF files and DWARF debugging information'
+size='1282447'
+url='https://github.com/eliben/pyelftools'
+dep=('')

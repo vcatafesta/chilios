@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='wand'
+build='0.6.2'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Ctypes-based simple MagickWand API binding for Python'
+size='1629131'
+url='https://github.com/emcconville/wand'
+dep=('')

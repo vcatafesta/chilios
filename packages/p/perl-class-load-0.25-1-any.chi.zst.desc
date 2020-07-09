@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='class'
+build='load'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='a working (require 'Class::Name') and more'
+size='54272'
+url='http://search.cpan.org/dist/Class-Load'
+dep=('')

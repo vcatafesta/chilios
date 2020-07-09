@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='zope'
+build='event'
+license='ZPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Provides a simple event system'
+size='19886'
+url='https://github.com/zopefoundation/zope.event'
+dep=('')

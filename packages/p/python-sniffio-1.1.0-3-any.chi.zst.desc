@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='sniffio'
+build='1.1.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Sniff out which async library your code is running under'
+size='18886'
+url='https://github.com/python-trio/sniffio'
+dep=('')

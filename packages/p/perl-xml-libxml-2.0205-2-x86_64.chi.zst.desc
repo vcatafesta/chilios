@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='xml'
+build='libxml'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Interface to the libxml library'
+size='742067'
+url='https://search.cpan.org/dist/XML-LibXML'
+dep=('')

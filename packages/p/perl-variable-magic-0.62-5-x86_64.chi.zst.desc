@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='variable'
+build='magic'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Associate user-defined magic to variables from Perl.'
+size='78855'
+url='https://search.cpan.org/dist/Variable-Magic'
+dep=('')

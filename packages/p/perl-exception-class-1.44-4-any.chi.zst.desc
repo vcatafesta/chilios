@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='exception'
+build='class'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A module that allows you to declare real exception classes in Perl'
+size='43926'
+url='https://metacpan.org/release/Exception-Class'
+dep=('')

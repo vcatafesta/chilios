@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='datetime'
+build='1.51'
+license='PerlArtistic'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A complete, easy to use date and time object'
+size='234765'
+url='https://search.cpan.org/dist/DateTime'
+dep=('')

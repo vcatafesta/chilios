@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='h2'
+build='3.2.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='HTTP/2 State-Machine based protocol implementation'
+size='582916'
+url='https://hyper.rtfd.org'
+dep=('')

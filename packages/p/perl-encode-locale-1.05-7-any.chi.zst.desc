@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='encode'
+build='locale'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Determine the locale encoding'
+size='16550'
+url='https://search.cpan.org/dist/Encode-Locale'
+dep=('')

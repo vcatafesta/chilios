@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='prctl'
+build='1.7'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Python(ic) interface to the linux prctl syscall'
+size='48419'
+url='https://github.com/seveas/python-prctl'
+dep=('')

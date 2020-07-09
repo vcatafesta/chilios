@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='net'
+build='dns'
+license='PerlArtistic'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Perl Module: Interface to the DNS resolver'
+size='806379'
+url='https://search.cpan.org/dist/Net-DNS/'
+dep=('')

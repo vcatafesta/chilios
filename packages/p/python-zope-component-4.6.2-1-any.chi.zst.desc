@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='zope'
+build='component'
+license='ZPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Represents the core of the Zope Component Architecture'
+size='868147'
+url='https://github.com/zopefoundation/zope.component'
+dep=('')

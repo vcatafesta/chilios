@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='eval'
+build='closure'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='safely and cleanly create closures via string eval'
+size='13262'
+url='https://metacpan.org/release/Eval-Closure'
+dep=('')

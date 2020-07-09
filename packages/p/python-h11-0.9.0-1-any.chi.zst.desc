@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='h11'
+build='0.9.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A pure-Python, bring-your-own-I/O implementation of HTTP/1.1'
+size='392844'
+url='https://github.com/njsmith/h11'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='zope'
+build='interface'
+license='ZPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Zope Interfaces for Python 3.x'
+size='2510726'
+url='https://pypi.python.org/pypi/zope.interface'
+dep=('')

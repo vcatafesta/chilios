@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='idna'
+build='2.10'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Internationalized Domain Names in Applications (IDNA)'
+size='703102'
+url='https://github.com/kjd/idna'
+dep=('')

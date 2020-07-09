@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='hypothesis'
+build='5.19.0'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Advanced Quickcheck style testing library for Python'
+size='2223600'
+url='https://hypothesis.readthedocs.org'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='parse'
+build='yapp'
+license='PerlArtistic'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Perl/CPAN Module Parse::Yapp : Generates OO LALR parser modules'
+size='103535'
+url='https://search.cpan.org/dist/Parse-Yapp'
+dep=('')

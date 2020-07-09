@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='oslo'
+build='log'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Oslo Logging Library'
+size='532129'
+url='https://pypi.python.org/pypi/oslo.log/4.3.0'
+dep=('')

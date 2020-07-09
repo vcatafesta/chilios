@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='datetime'
+build='calendar'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Perl module for Dates in the Julian calendar'
+size='7075'
+url='https://metacpan.org/release/DateTime-Calendar-Julian'
+dep=('')

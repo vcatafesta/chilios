@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='lwp'
+build='protocol'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Provide https support for LWP::UserAgent'
+size='8111'
+url='https://metacpan.org/release/LWP-Protocol-https'
+dep=('')

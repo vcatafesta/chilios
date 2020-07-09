@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='atspi'
+build='2.36.0'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python bindings for D-Bus AT-SPI'
+size='509925'
+url='https://wiki.linuxfoundation.org/accessibility/atk/at-spi/at-spi_on_d-bus'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='file'
+build='sharedir'
+license='PerlArtistic'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='File::ShareDir::Install - Install read-only data files from a distribution'
+size='14416'
+url='https://search.cpan.org/dist/File-ShareDir-Install'
+dep=('')

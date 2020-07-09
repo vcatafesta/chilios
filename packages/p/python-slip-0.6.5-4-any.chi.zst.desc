@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='slip'
+build='0.6.5'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Convenience, extension and workaround code for Python and some Python modules'
+size='119624'
+url='https://github.com/nphilipp/python-slip'
+dep=('')

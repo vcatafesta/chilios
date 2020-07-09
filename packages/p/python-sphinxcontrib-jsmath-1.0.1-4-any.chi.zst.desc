@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='sphinxcontrib'
+build='jsmath'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Sphinx extension which renders display math in HTML via JavaScript'
+size='15019'
+url='https://github.com/sphinx-doc/sphinxcontrib-jsmath'
+dep=('')

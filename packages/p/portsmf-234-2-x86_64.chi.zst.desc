@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='portsmf'
+version='234'
+build='2'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Portable library for reading/writing Standard MIDI Files'
+size='213993'
+url='https://sourceforge.net/p/portmedia/wiki/portsmf/'
+dep=('')

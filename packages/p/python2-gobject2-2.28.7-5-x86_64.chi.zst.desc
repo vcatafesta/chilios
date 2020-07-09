@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='gobject2'
+build='2.28.7'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Legacy Python 2 bindings for GObject'
+size='1925894'
+url='https://wiki.gnome.org/Projects/PyGObject'
+dep=('')

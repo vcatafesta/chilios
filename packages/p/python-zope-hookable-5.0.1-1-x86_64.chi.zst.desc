@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='zope'
+build='hookable'
+license='ZPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Represents the core of the Zope hookable Architecture'
+size='58225'
+url='https://github.com/zopefoundation/zope.hookable'
+dep=('')

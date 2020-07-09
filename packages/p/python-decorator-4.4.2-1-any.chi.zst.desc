@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='decorator'
+build='4.4.2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python Decorator module'
+size='49643'
+url='https://pypi.python.org/pypi/decorator'
+dep=('')

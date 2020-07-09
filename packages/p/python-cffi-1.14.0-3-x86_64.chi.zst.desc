@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='cffi'
+build='1.14.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Foreign Function Interface for Python calling C code'
+size='1059602'
+url='https://cffi.readthedocs.org/'
+dep=('')

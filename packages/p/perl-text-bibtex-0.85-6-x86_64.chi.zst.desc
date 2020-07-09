@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='text'
+build='bibtex'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Perl interface to read and parse BibTeX files'
+size='528255'
+url='https://metacpan.org/release/Text-BibTeX'
+dep=('')

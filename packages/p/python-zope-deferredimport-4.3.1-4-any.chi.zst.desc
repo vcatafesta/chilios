@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='zope'
+build='deferredimport'
+license='ZPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Allows you to perform imports names that will only be resolved when used in the code'
+size='41198'
+url='https://github.com/zopefoundation/zope.deferredimport'
+dep=('')

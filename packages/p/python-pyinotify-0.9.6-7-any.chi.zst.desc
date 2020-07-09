@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pyinotify'
+build='0.9.6'
+license='custom:MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python module used for monitoring filesystems events on Linux platforms with inotify.'
+size='245488'
+url='https://github.com/seb-m/pyinotify'
+dep=('')

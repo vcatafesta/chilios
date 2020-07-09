@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='phonon'
+version='qt5'
+build='gstreamer'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Phonon GStreamer backend for Qt5'
+size='434679'
+url='https://community.kde.org/Phonon'
+dep=('')

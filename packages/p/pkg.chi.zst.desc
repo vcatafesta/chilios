@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='pkg'
+version='pkg'
+build='pkg'
+license=''
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch=''
+distro='chili'
+desc='pkg-pkg-pkg'
+size=''
+url=''
+dep=('')

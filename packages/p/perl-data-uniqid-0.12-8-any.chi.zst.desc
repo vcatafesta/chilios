@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='data'
+build='uniqid'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Perl extension for simple generation of unique IDs'
+size='3763'
+url='https://search.cpan.org/dist/Data-Uniqid'
+dep=('')

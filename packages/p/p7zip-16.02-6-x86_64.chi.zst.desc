@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='p7zip'
+version='16.02'
+build='6'
+license='custom:unRAR'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Command-line file archiver with high compression ratio'
+size='6383681'
+url='http://p7zip.sourceforge.net/'
+dep=('')
