@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mythes'
+version='nl'
+build='20140818'
+license='custom:Creative Commons, Attribution 3.0 Unported'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Dutch thesaurus'
+size='6826772'
+url='https://data.opentaal.org/opentaalbank/thesaurus/'
+dep=('')

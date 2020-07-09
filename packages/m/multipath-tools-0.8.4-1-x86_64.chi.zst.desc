@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='multipath'
+version='tools'
+build='0.8.4'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Multipath tools for Linux (including kpartx)'
+size='1120630'
+url='http://christophe.varoqui.free.fr/'
+dep=('')
