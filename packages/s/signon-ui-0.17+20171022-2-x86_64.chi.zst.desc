@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='signon'
+version='ui'
+build='0.17+20171022'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='UI component responsible for handling the user interactions which can happen during the login process of an online account'
+size='359028'
+url='https://launchpad.net/online-accounts-signon-ui'
+dep=('')

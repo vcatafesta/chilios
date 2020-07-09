@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='sqlite'
+version='3.32.3'
+build='1'
+license='custom:Public Domain'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A C library that implements an SQL database engine'
+size='9625527'
+url='https://www.sqlite.org/'
+dep=('')

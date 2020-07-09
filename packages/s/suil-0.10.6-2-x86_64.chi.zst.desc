@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='suil'
+version='0.10.6'
+build='2'
+license='custom:ISC'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A lightweight C library for loading and wrapping LV2 plugin UIs'
+size='172315'
+url='https://drobilla.net/software/suil/'
+dep=('')

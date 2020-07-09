@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='semver'
+version='7.3.2'
+build='1'
+license='ISC'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='The semantic version parser used by npm.'
+size='84850'
+url='https://github.com/npm/node-semver'
+dep=('')

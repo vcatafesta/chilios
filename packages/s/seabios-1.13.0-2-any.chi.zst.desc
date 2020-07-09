@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='seabios'
+version='1.13.0'
+build='2'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A 16-bit x86 bios'
+size='1093676'
+url='https://www.coreboot.org/SeaBIOS'
+dep=('')

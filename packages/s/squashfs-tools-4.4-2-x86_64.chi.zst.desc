@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='squashfs'
+version='tools'
+build='4.4'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Tools for squashfs, a highly compressed read-only filesystem for Linux.'
+size='320800'
+url='https://github.com/plougher/squashfs-tools'
+dep=('')

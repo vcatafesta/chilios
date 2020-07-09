@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='syncthing'
+version='1.7.0'
+build='1'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Open Source Continuous Replication / Cluster Synchronization Thing'
+size='29659758'
+url='https://syncthing.net/'
+dep=('')

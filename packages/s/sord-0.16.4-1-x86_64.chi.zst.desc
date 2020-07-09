@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='sord'
+version='0.16.4'
+build='1'
+license='custom:ISC'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A lightweight C library for storing RDF data in memory'
+size='123292'
+url='https://drobilla.net/software/sord/'
+dep=('')
