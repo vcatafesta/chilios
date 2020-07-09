@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='npm'
+version='6.14.6'
+build='1'
+license='custom:Artistic'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A package manager for javascript'
+size='21480962'
+url='https://www.npmjs.com/'
+dep=('')
