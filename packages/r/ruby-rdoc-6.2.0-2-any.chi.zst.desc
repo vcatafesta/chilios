@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ruby'
+version='rdoc'
+build='6.2.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Command-line documentation generator for Ruby projects'
+size='1892531'
+url='https://ruby.github.io/rdoc/'
+dep=('')
