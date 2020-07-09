@@ -3,15 +3,15 @@
 # Generated with alienpkg
 ######################################################################
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
-pkgname='yaml'
-version='0.2.1'
+pkgname='yelp'
+version='3.36.0'
 build='1'
-license='GPL2'
+license='GPL'
 lfs_version='8.4'
 lfs_init='SYSTEMD'
 arch='x86_64'
 distro='chili'
-desc='yaml-0.2.1-1'
-size=''
-url='http://www.linuxfromscratch.org/lfs/view/systemd/'
+desc='Get help with GNOME'
+size='2721779'
+url='https://wiki.gnome.org/Apps/Yelp'
 dep=('')

@@ -3,15 +3,15 @@
 # Generated with alienpkg
 ######################################################################
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
-pkgname='yaml'
-version='0.2.1'
-build='1'
-license='GPL2'
+pkgname='yasm'
+version='1.3.0'
+build='4'
+license='PerlArtistic'
 lfs_version='8.4'
 lfs_init='SYSTEMD'
 arch='x86_64'
 distro='chili'
-desc='yaml-0.2.1-1'
-size=''
-url='http://www.linuxfromscratch.org/lfs/view/systemd/'
+desc='A rewrite of NASM to allow for multiple syntax supported (NASM, TASM, GAS, etc.)'
+size='4592160'
+url='https://www.tortall.net/projects/yasm/'
 dep=('')
