@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='autofs'
+version='5.1.6'
+build='2'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A kernel-based automounter for Linux'
+size='3502828'
+url='https://www.kernel.org/pub/linux/daemons/autofs/'
+dep=('')

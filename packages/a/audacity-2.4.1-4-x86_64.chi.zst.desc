@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='audacity'
+version='2.4.1'
+build='4'
+license='CCPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A program that lets you manipulate digital audio waveforms'
+size='30888325'
+url='https://audacityteam.org'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='archiso'
+version='45'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Tools for creating Arch Linux live and install iso images'
+size='125308'
+url='https://gitlab.archlinux.org/archlinux/archiso'
+dep=('')

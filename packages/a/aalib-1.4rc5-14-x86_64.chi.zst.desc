@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='aalib'
+version='1.4rc5'
+build='14'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A portable ASCII art graphic library'
+size='293999'
+url='http://aa-project.sourceforge.net/aalib/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='avr'
+version='libc'
+build='2.0.0'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='The C runtime library for the AVR family of microcontrollers'
+size='30135296'
+url='http://savannah.nongnu.org/projects/avr-libc/'
+dep=('')
