@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='old'
+build='locale'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='This package provides the ability to adapt to locale conventions such as date and time formats.'
+size='123475'
+url='https://hackage.haskell.org/package/old-locale'
+dep=('')

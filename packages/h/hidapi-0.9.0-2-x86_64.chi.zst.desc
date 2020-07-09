@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='hidapi'
+version='0.9.0'
+build='2'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Simple library for communicating with USB and Bluetooth HID devices'
+size='89649'
+url='https://github.com/libusb/hidapi'
+dep=('')

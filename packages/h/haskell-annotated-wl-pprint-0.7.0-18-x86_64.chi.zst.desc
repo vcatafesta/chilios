@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='annotated'
+build='wl'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The Wadler/Leijen Pretty Printer, with annotation support'
+size='176747'
+url='https://github.com/david-christiansen/annotated-wl-pprint'
+dep=('')

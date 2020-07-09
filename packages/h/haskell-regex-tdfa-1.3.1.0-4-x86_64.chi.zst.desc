@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='haskell'
+version='regex'
+build='tdfa'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Pure Haskell Tagged DFA Backend for Text.Regex (regex-base)'
+size='2717744'
+url='https://hackage.haskell.org/package/regex-tdfa'
+dep=('')
