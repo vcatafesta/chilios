@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='bind'
+version='tools'
+build='9.16.4'
+license='MPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The ISC DNS tools'
+size='6144837'
+url='https://www.isc.org/software/bind/'
+dep=('')
