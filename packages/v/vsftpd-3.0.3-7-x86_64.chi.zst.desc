@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='vsftpd'
+version='3.0.3'
+build='7'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Very Secure FTP daemon'
+size='286819'
+url='https://security.appspot.com/vsftpd.html'
+dep=('')

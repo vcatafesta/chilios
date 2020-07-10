@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='sdl2_image'
+version='2.0.5'
+build='2'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A simple library to load images of various formats as SDL surfaces (Version 2)'
+size='149255'
+url='http://www.libsdl.org/projects/SDL_image'
+dep=('')

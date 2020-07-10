@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='faudio'
+version='20.07'
+build='1'
+license='custom:zlib'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='XAudio2 reimplementation'
+size='357130'
+url='https://github.com/FNA-XNA/FAudio/'
+dep=('')

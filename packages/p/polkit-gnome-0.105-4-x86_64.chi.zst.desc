@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='polkit'
+version='gnome'
+build='0.105'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Legacy polkit authentication agent for GNOME'
+size='351232'
+url='https://www.freedesktop.org/wiki/Software/polkit/'
+dep=('')

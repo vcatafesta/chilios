@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='cdrtools'
+version='3.02a09'
+build='3'
+license='CDDL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Original cdrtools supporting CD, DVD and BluRay burning'
+size='4293671'
+url='http://cdrecord.org/'
+dep=('')

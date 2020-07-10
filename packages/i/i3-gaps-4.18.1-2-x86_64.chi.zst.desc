@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='i3'
+version='gaps'
+build='4.18.1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A fork of i3wm tiling window manager with more features, including gaps'
+size='1488236'
+url='https://github.com/Airblader/i3'
+dep=('')

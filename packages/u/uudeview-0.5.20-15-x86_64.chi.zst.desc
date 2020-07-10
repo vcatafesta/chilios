@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='uudeview'
+version='0.5.20'
+build='15'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='UUDeview helps transmitting & receiving binary files using mail or newsgroups. Includes library files.'
+size='796136'
+url='http://www.fpx.de/fp/Software/UUDeview/'
+dep=('')

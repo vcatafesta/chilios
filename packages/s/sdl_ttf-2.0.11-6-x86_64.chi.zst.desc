@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='sdl_ttf'
+version='2.0.11'
+build='6'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library that allows you to use TrueType fonts in your SDL applications'
+size='42289'
+url='https://www.libsdl.org/projects/SDL_ttf/'
+dep=('')

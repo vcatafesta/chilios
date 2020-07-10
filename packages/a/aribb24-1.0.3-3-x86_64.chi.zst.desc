@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='aribb24'
+version='1.0.3'
+build='3'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS stream'
+size='122603'
+url='https://github.com/nkoriyama/aribb24'
+dep=('')

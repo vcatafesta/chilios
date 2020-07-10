@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='icu'
+build='67.1'
+license='custom:icu'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='International Components for Unicode library (32 bit)'
+size='33972593'
+url='http://site.icu-project.org/home'
+dep=('')

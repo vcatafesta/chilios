@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ssr'
+version='0.5.0'
+build='3'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A tool for real-time spatial audio reproduction'
+size='12207343'
+url='http://spatialaudio.net/ssr/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='qt5'
+version='webengine'
+build='5.15.0'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Provides support for web applications using the Chromium browser project'
+size='151842191'
+url='https://www.qt.io'
+dep=('')

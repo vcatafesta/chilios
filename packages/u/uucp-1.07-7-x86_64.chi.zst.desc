@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='uucp'
+version='1.07'
+build='7'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Taylor UUCP is a free implementation of UUCP and is the standard UUCP used on the GNU system'
+size='1482021'
+url='https://www.gnu.org/software/uucp/uucp.html'
+dep=('')

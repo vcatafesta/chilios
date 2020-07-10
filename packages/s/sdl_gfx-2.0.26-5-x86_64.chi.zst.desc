@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='sdl_gfx'
+version='2.0.26'
+build='5'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='SDL graphics drawing primitives and other support functions'
+size='181390'
+url='https://www.ferzkopp.net/wordpress/2016/01/02/sdl_gfx-sdl2_gfx/'
+dep=('')

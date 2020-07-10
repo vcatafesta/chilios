@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='i3status'
+version='2.13'
+build='3'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Generates status bar to use with i3bar, dzen2 or xmobar'
+size='113277'
+url='https://i3wm.org/i3status/'
+dep=('')

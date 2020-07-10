@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xcb'
+version='util'
+build='xrm'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='XCB utility functions for the X resource manager'
+size='38311'
+url='https://github.com/Airblader/xcb-util-xrm'
+dep=('')

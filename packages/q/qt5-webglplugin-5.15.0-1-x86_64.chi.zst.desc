@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='qt5'
+version='webglplugin'
+build='5.15.0'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='QPA plugin for running an application via a browser using streamed WebGL commands'
+size='691012'
+url='https://www.qt.io'
+dep=('')
