@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='perl'
+version='image'
+build='exiftool'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Reader and rewriter of EXIF informations that supports raw files'
+size='12995249'
+url='https://search.cpan.org/perldoc?exiftool'
+dep=('')

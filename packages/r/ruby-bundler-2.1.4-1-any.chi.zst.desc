@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ruby'
+version='bundler'
+build='2.1.4'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Manages an application's dependencies through its entire life, across many machines, systematically and repeatably.'
+size='2876784'
+url='http://bundler.io'
+dep=('')

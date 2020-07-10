@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gitlab'
+version='shell'
+build='13.3.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Git management software'
+size='76356237'
+url='https://gitlab.com/gitlab-org/gitlab-shell/'
+dep=('')

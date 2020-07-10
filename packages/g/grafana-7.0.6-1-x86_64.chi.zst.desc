@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='grafana'
+version='7.0.6'
+build='1'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Gorgeous metric viz, dashboards & editors for Graphite, InfluxDB & OpenTSDB'
+size='137276050'
+url='https://grafana.com/'
+dep=('')

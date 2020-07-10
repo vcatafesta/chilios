@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='zsync'
+version='0.6.2'
+build='5'
+license='custom:Artistic'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A file transfer program that's able to connect to rsync servers'
+size='213890'
+url='http://zsync.moria.org.uk/'
+dep=('')
