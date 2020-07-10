@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='deepin'
+version='launcher'
+build='5.2.0.13'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Deepin desktop-environment - Launcher module'
+size='1918394'
+url='https://github.com/linuxdeepin/dde-launcher'
+dep=('')

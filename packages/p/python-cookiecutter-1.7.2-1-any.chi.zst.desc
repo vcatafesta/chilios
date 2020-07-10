@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='cookiecutter'
+build='1.7.2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A command-line utility that creates projects from project templates'
+size='219563'
+url='https://github.com/cookiecutter/cookiecutter'
+dep=('')

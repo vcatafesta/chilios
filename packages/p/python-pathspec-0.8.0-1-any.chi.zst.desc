@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pathspec'
+build='0.8.0'
+license='MPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Utility library for gitignore style pattern matching of file paths'
+size='202976'
+url='https://github.com/cpburnz/python-path-specification'
+dep=('')

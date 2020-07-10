@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gio'
+version='qt'
+build='0.0.9'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Gio wrapper for Qt applications'
+size='429187'
+url='https://github.com/linuxdeepin/gio-qt'
+dep=('')

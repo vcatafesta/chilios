@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='udisks2'
+version='qt5'
+build='5.0.3'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='UDisks2 DBus interfaces binding for Qt5'
+size='631481'
+url='https://github.com/linuxdeepin/udisks2-qt5'
+dep=('')

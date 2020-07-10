@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='molecule'
+version='3.0.5'
+build='1'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Aids in the development and testing of Ansible roles'
+size='1659203'
+url='https://github.com/ansible-community/molecule'
+dep=('')

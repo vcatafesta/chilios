@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='liblrdf'
+version='0.6.1'
+build='4'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library for the manipulation of RDF file in LADSPA plugins'
+size='51220'
+url='https://github.com/swh/LRDF'
+dep=('')

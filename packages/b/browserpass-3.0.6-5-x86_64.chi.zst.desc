@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='browserpass'
+version='3.0.6'
+build='5'
+license='ISC'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Native host app for Browserpass, browser extension for zx2c4's pass (password manager)'
+size='3943324'
+url='https://github.com/browserpass/browserpass-native'
+dep=('')

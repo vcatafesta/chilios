@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='deepin'
+version='account'
+build='faces'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Account faces for Linux Deepin'
+size='1482347'
+url='https://github.com/linuxdeepin/dde-account-faces'
+dep=('')

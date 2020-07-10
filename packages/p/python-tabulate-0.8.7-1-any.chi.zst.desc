@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='tabulate'
+build='0.8.7'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Pretty-print tabular data in Python, a library and a command-line utility.'
+size='203986'
+url='https://bitbucket.org/astanin/python-tabulate'
+dep=('')

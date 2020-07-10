@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='deepin'
+version='gtk'
+build='theme'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Deepin GTK Theme'
+size='3669086'
+url='https://github.com/linuxdeepin/deepin-gtk-theme'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='deepin'
+version='wallpapers'
+build='1.7.7'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Default wallpapers for DDE'
+size='31737492'
+url='https://github.com/linuxdeepin/deepin-wallpapers'
+dep=('')

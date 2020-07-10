@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='selinux'
+build='0.2.1'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Pure-python selinux shim module for use in virtualenvs'
+size='14923'
+url='https://github.com/pycontribs/selinux'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='rime'
+version='cantonese'
+build='0.0.0.20200709'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Cantonese input for rime'
+size='51506382'
+url='https://github.com/rime/rime-cantonese'
+dep=('')

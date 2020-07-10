@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='paramiko'
+build='2.7.1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python module that implements the SSH2 protocol'
+size='1829725'
+url='https://github.com/paramiko/paramiko/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dtkwidget'
+version='5.2.2.2'
+build='1'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Deepin graphical user interface library'
+size='2852331'
+url='https://github.com/linuxdeepin/dtkwidget'
+dep=('')

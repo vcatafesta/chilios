@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='deepin'
+version='sound'
+build='theme'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Deepin sound theme'
+size='4933212'
+url='https://github.com/linuxdeepin/deepin-sound-theme'
+dep=('')

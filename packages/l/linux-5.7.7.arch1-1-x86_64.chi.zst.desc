@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='linux'
+version='5.7.7.arch1'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The Linux kernel and modules'
+size='79476229'
+url='https://git.archlinux.org/linux.git/log/?h=v5.7.7-arch1'
+dep=('')

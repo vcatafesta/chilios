@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='cerberus'
+build='1.3.2'
+license='ISC'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Lightweight, extensible schema and data validation tool for Python dictionaries'
+size='597909'
+url='https://github.com/pyeve/cerberus'
+dep=('')

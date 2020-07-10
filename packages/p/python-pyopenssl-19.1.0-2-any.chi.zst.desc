@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pyopenssl'
+build='19.1.0'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python3 wrapper module around the OpenSSL library'
+size='555858'
+url='https://github.com/pyca/pyopenssl'
+dep=('')

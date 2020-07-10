@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gsettings'
+version='qt'
+build='0.1.20170110'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Qml bindings for GSettings'
+size='91240'
+url='https://launchpad.net/gsettings-qt'
+dep=('')

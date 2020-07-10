@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='deepin'
+version='dock'
+build='5.1.0.11.20200622'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Deepin desktop-environment - dock module'
+size='4756261'
+url='https://github.com/linuxdeepin/dde-dock'
+dep=('')

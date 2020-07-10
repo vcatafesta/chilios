@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='rime'
+version='emoji'
+build='0.0.0.20191102'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Emoji support for rime'
+size='198660'
+url='https://github.com/rime/rime-emoji'
+dep=('')

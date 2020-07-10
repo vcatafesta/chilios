@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libgnome'
+version='keyring'
+build='3.12.0+13+g4f8ab73'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GNOME keyring client library (deprecated)'
+size='1182844'
+url='https://gitlab.gnome.org/GNOME/libgnome-keyring'
+dep=('')

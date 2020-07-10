@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='tldextract'
+build='2.2.2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Accurately separate the TLD from the registered domain and subdomains of a URL, using the Public Suffix List'
+size='181790'
+url='https://github.com/john-kurkowski/tldextract'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='whichcraft'
+build='0.6.1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='This package provides cross-platform cross-python shutil.which functionality'
+size='21101'
+url='https://github.com/cookiecutter/whichcraft'
+dep=('')

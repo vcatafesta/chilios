@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='papirus'
+version='icon'
+build='theme'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Papirus icon theme'
+size='83199874'
+url='https://github.com/PapirusDevelopmentTeam/papirus-icon-theme'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dns'
+version='lexicon'
+build='3.3.27'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Manipulate DNS records on various DNS providers in a standardized/agnostic way'
+size='1958056'
+url='https://github.com/AnalogJ/lexicon'
+dep=('')

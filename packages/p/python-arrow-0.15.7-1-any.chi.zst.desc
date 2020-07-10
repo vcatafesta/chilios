@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='arrow'
+build='0.15.7'
+license='APACHE'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Better dates and times for Python'
+size='477401'
+url='https://arrow.readthedocs.io'
+dep=('')

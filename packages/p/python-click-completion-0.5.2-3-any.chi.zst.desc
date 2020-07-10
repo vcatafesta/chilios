@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='click'
+build='completion'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Add or enhance bash, fish, zsh and powershell completion in Click'
+size='76642'
+url='https://github.com/click-contrib/click-completion'
+dep=('')

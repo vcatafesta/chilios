@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='deepin'
+version='polkit'
+build='agent'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GNOME keyring extension for dde-polkit-agent'
+size='30858'
+url='https://github.com/linuxdeepin/dpa-ext-gnomekeyring'
+dep=('')

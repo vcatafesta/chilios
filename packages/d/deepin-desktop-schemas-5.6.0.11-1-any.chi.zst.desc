@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='deepin'
+version='desktop'
+build='schemas'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='GSettings deepin desktop-wide schemas'
+size='279375'
+url='https://github.com/linuxdeepin/deepin-desktop-schemas'
+dep=('')

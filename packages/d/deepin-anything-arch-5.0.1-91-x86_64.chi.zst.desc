@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='deepin'
+version='anything'
+build='arch'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Deepin Anything file search tool, kernel module for Arch kernel'
+size='9928'
+url='https://github.com/linuxdeepin/deepin-anything'
+dep=('')
