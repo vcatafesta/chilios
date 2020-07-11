@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='libdrm'
+build='2.4.102'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Userspace interface to kernel DRM services (32-bit)'
+size='411496'
+url='https://dri.freedesktop.org/'
+dep=('')

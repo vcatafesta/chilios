@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32d'
+version='1.4.4'
+build='2'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Zstandard - Fast real-time compression algorithm (32-bit)'
+size='683190'
+url='https://www.zstd.net/'
+dep=('')

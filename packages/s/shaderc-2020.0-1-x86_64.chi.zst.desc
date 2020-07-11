@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='shaderc'
+version='2020.0'
+build='1'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Collection of tools, libraries and tests for shader compilation'
+size='670263'
+url='https://github.com/google/shaderc'
+dep=('')

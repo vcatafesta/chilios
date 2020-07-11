@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='aspell'
+version='pt'
+build='20190329'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Portuguese and Brazilian Portuguese dictionary for aspell'
+size='54060441'
+url='http://aspell.net/'
+dep=('')

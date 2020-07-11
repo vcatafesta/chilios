@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='bzip2'
+build='1.0.8'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A high-quality data compression program (32-bit)'
+size='72704'
+url='https://sourceware.org/bzip2/'
+dep=('')

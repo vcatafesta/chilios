@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='libxdamage'
+build='1.1.5'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='X11 damaged region extension library (32-bit)'
+size='14336'
+url='https://xorg.freedesktop.org/'
+dep=('')

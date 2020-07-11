@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xcb'
+version='util'
+build='cursor'
+license='custom:MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='XCB cursor library'
+size='33387'
+url='https://cgit.freedesktop.org/xcb/util-cursor'
+dep=('')
