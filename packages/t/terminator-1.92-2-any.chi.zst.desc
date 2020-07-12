@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='terminator'
+version='1.92'
+build='2'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Terminal emulator that supports tabs and grids'
+size='2579037'
+url='https://github.com/gnome-terminator/terminator'
+dep=('')

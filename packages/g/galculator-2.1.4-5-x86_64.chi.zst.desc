@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='galculator'
+version='2.1.4'
+build='5'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GTK+ based scientific calculator'
+size='1391430'
+url='http://galculator.sourceforge.net/'
+dep=('')

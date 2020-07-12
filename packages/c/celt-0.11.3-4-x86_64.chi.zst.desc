@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='celt'
+version='0.11.3'
+build='4'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Low-latency audio communication codec'
+size='180108'
+url='https://gitlab.xiph.org/xiph/celt'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='glib2'
+version='docs'
+build='2.64.4'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Documentation for GLib'
+size='20827022'
+url='https://wiki.gnome.org/Projects/GLib'
+dep=('')

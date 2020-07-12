@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ppp'
+version='2.4.7'
+build='7'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A daemon which implements the Point-to-Point Protocol for dial-up networking'
+size='891541'
+url='https://www.samba.org/ppp/'
+dep=('')

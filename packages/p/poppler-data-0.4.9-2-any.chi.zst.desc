@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='poppler'
+version='data'
+build='0.4.9'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Encoding data for the poppler PDF rendering library'
+size='12040330'
+url='https://poppler.freedesktop.org/'
+dep=('')

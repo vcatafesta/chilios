@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libunistring'
+version='0.9.10'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for manipulating Unicode strings and C strings'
+size='2356648'
+url='https://www.gnu.org/software/libunistring/'
+dep=('')

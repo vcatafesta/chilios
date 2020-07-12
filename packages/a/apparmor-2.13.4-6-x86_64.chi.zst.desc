@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='apparmor'
+version='2.13.4'
+build='6'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Mandatory Access Control (MAC) using Linux Security Module (LSM)'
+size='3907463'
+url='https://gitlab.com/apparmor/apparmor'
+dep=('')

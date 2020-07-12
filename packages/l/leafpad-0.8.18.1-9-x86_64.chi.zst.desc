@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='leafpad'
+version='0.8.18.1'
+build='9'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A notepad clone for GTK+ 2.0'
+size='308252'
+url='http://tarot.freeshell.org/leafpad/'
+dep=('')

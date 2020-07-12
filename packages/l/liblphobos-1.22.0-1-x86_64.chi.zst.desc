@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='liblphobos'
+version='1.22.0'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A D Compiler based on the LLVM Compiler Infrastructure including D runtime and libphobos2'
+size='71901807'
+url='https://github.com/ldc-developers/ldc'
+dep=('')

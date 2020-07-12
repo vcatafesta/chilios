@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='freeglut'
+version='3.2.1'
+build='2'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Provides functionality for small OpenGL programs'
+size='408712'
+url='http://freeglut.sourceforge.net/'
+dep=('')

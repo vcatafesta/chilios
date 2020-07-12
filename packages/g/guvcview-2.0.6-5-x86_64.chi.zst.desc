@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='guvcview'
+version='2.0.6'
+build='5'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Simple GTK+ interface for capturing and viewing video from v4l2 devices'
+size='166962'
+url='http://guvcview.sourceforge.net/'
+dep=('')

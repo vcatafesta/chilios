@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='usbredir'
+version='0.8.0'
+build='2'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='USB traffic redirection protocol'
+size='141237'
+url='https://spice-space.org/page/UsbRedir'
+dep=('')

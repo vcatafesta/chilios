@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='jack2'
+version='1.9.14'
+build='1'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='C++ version of the JACK low-latency audio server for multi-processor machines'
+size='2754146'
+url='https://github.com/jackaudio/jack2'
+dep=('')

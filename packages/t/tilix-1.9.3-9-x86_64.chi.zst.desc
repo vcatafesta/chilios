@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='tilix'
+version='1.9.3'
+build='9'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A tiling terminal emulator for Linux using GTK+ 3'
+size='4473516'
+url='https://github.com/gnunn1/tilix'
+dep=('')

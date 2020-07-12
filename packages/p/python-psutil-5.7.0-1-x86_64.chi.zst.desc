@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='psutil'
+build='5.7.0'
+license='custom: BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A cross-platform process and system utilities module for Python'
+size='2078245'
+url='https://github.com/giampaolo/psutil'
+dep=('')

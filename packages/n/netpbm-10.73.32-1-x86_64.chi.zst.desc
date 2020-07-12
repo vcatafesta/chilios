@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='netpbm'
+version='10.73.32'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A toolkit for manipulation of graphic images'
+size='7803103'
+url='http://netpbm.sourceforge.net/'
+dep=('')
