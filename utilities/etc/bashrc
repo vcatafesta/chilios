@@ -1507,33 +1507,35 @@ function chrootlfs()
 
 function limpa()
 {
-    #!/bin/bash
-    #source /lib/lsb/init-functions
-    cdir=$(ls -l|awk '/^d/ {print $9}')
-    blue="\e[1;34m"
+	#!/bin/bash
+	#source /lib/lsb/init-functions
+	cdir=$(ls -l|awk '/^d/ {print $9}')
+	blue="\e[1;34m"
 
-    echo -e ${blue}
-    log_success_msg2 "Iniciando limpeza..."
+	echo -e ${blue}
+	log_success_msg2 "Iniciando limpeza..."
 
-    for i in $cdir
-    do
-        log_info_msg "${blue}Removendo diretorio temporario... $i/"
-        rm -rfd $i/
-        evaluate_retval
-    done
-    log_success_msg2 "Finish."
+	for i in $cdir
+	do
+		log_info_msg "${blue}Removendo diretorio temporario... $i/"
+		sudo rm -rfd $i/
+		evaluate_retval
+	done
+	log_success_msg2 "Finish."
 }
+export -f limpa
 
 repairdirvar()
 {
-    log_wait_msg "Iniciando reparo do /var/run..."
-#    exec &> /dev/null
-    mv -f /var/run/* /run/  > /dev/null 2>&1
-    rm -rf /var/run         > /dev/null 2>&1
-    ln -s /run /var/run     > /dev/null 2>&1
-    exec >/dev/tty
-    log_success_msg2 "Feito..."
+	log_wait_msg "Iniciando reparo do /var/run..."
+#	exec &> /dev/null
+	sudo mv -f /var/run/* /run/  > /dev/null 2>&1
+	sudo rm -rf /var/run         > /dev/null 2>&1
+	sudo ln -s /run /var/run     > /dev/null 2>&1
+	exec >/dev/tty
+	log_success_msg2 "Feito..."
 }
+
 
 function ex()
 {
@@ -1724,11 +1726,11 @@ function removeoldpkgchili()
 
 		if [ $# -lt 1 ]; then
 			pushd $cdir >/dev/null 2>&1
-			AllFilesPackages=$(ls -1 *.{zst,xz})
+			AllFilesPackages=$(ls -1 *.{zst,xz} 2> /dev/null)
 		else
 			cdir=${1:0:1}
 			pushd $cdir >/dev/null 2>&1
-			AllFilesPackages=$(ls -1 $1*.{zst,xz} | grep $1)
+			AllFilesPackages=$(ls -1 $1*.{zst,xz} | grep $1 2> /dev/null)
 		fi
 
 		log_wait_msg "wait, working on it..."
@@ -1789,19 +1791,20 @@ function copiapkg()
 	for letra in {a..z}
 	do
 		log_info_msg "Copiando arquivos iniciados com a letra: $letra para diretorio /github/ChiliOS/packages/$letra/"
-		cp $letra* /github/ChiliOS/packages/$letra/ &>/dev/null
+		sudo cp $letra* /github/ChiliOS/packages/$letra/ &>/dev/null
 		evaluate_retval
 	done
 }
-
+export -f copiapkg
 
 function dw()
 {
-	pacman -Sw $* --noconfirm --quiet
+	sudo pacman -Sw $* --noconfirm --quiet
 	if [ $? == 0 ]; then
-		fetch -a $*
+		sudo fetch -a $*
 	fi
 }
+export -f dw
 
 function mput()
 {
