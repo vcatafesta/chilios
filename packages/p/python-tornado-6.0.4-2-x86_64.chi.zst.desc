@@ -3,15 +3,15 @@
 # Generated with alienpkg
 ######################################################################
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
-pkgname='shadow'
-version='4.8.1'
-build='1'
-license='BSD'
+pkgname='python'
+version='tornado'
+build='6.0.4'
+license='Apache'
 lfs_version='8.4'
 lfs_init='SYSTEMD'
 arch='x86_64'
 distro='chili'
-desc='Password and account management tool suite with support for shadow files and PAM'
-size='3925443'
-url='https://github.com/shadow-maint/shadow'
+desc='open source version of the scalable, non-blocking web server and tools'
+size='4212169'
+url='https://www.tornadoweb.org/'
 dep=('')

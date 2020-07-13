@@ -3,15 +3,15 @@
 # Generated with alienpkg
 ######################################################################
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
-pkgname='poppler'
-version='0.90.0'
-build='1'
-license='GPL'
+pkgname='shadow'
+version='4.8.1'
+build='2'
+license='BSD'
 lfs_version='8.4'
 lfs_init='SYSTEMD'
 arch='x86_64'
 distro='chili'
-desc='PDF rendering library based on xpdf 3.0'
-size='5545724'
-url='https://poppler.freedesktop.org/'
+desc='Password and account management tool suite with support for shadow files and PAM'
+size='3929770'
+url='https://github.com/shadow-maint/shadow'
 dep=('')
