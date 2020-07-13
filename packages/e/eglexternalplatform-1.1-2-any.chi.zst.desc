@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='eglexternalplatform'
+version='1.1'
+build='2'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='EGL External Platform interface'
+size='17746'
+url='https://github.com/NVIDIA/eglexternalplatform'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='egl'
+version='wayland'
+build='1.1.5'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='EGLStream-based Wayland external platform'
+size='66486'
+url='https://github.com/NVIDIA/egl-wayland'
+dep=('')

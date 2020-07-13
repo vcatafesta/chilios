@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='nginx'
+version='mainline'
+build='1.19.1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Lightweight HTTP server and IMAP/POP3 proxy server, mainline release'
+size='1652886'
+url='https://nginx.org'
+dep=('')

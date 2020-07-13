@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pg8000'
+build='1.16.0'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Pure-Python PostgreSQL database driver, DB-API compatible'
+size='221899'
+url='https://github.com/tlocke/pg8000'
+dep=('')

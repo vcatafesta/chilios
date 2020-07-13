@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='streamlink'
+version='1.5.0'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='CLI program that launches streams from various streaming services in a custom video player (livestreamer fork)'
+size='3174127'
+url='https://streamlink.github.io/'
+dep=('')

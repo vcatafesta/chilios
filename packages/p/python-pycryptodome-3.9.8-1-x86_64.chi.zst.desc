@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pycryptodome'
+build='3.9.8'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Collection of cryptographic algorithms and protocols, implemented for use from Python 3.'
+size='3665124'
+url='https://www.pycryptodome.org/'
+dep=('')

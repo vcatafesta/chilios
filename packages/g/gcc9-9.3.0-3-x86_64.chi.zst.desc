@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gcc9'
+version='9.3.0'
+build='3'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The GNU Compiler Collection - C and C++ frontends (9.x.x)'
+size='120810814'
+url='https://gcc.gnu.org'
+dep=('')

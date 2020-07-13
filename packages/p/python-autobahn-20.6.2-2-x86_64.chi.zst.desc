@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='autobahn'
+build='20.6.2'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Real-time framework for Web, Mobile & Internet of Things'
+size='17777913'
+url='https://crossbar.io/autobahn/'
+dep=('')

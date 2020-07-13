@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pycountry'
+build='20.7.3'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='ISO country, subdivision, language, currency and script definitions and their translations'
+size='27722368'
+url='https://pypi.org/project/pycountry/'
+dep=('')
