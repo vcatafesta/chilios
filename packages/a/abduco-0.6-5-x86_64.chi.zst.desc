@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='abduco'
+version='0.6'
+build='5'
+license='custom:ISC'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Tool for session {at,de}tach support which allows a process to run independently from its controlling terminal'
+size='37352'
+url='http://www.brain-dump.org/projects/abduco/'
+dep=('')

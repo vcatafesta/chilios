@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='aarch64'
+version='linux'
+build='gnu'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='GNU C Library ARM64 target'
+size='20436033'
+url='https://www.gnu.org/software/libc/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='absl'
+version='py'
+build='0.9.0'
+license='APACHE'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Abseil Python Common Libraries'
+size='1045507'
+url='https://github.com/abseil/abseil-py'
+dep=('')

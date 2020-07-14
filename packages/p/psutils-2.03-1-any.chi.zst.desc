@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='psutils'
+version='2.03'
+build='1'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A set of postscript utilities'
+size='72015'
+url='https://github.com/rrthomas/psutils'
+dep=('')

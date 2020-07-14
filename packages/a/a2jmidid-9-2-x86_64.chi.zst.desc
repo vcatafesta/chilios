@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='a2jmidid'
+version='9'
+build='2'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A daemon for exposing legacy ALSA sequencer applications in JACK MIDI system.'
+size='101688'
+url='https://github.com/linuxaudio/a2jmidid'
+dep=('')

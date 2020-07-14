@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='acme'
+version='2019.08.19'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Assembler for the 6502, 6510, 65c02 and 65816 processors'
+size='244507'
+url='https://github.com/meonwax/acme'
+dep=('')

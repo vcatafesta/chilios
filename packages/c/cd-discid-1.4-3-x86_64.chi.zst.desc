@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='cd'
+version='discid'
+build='1.4'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A backend utility to get CDDB discid information from a CD-ROM disc'
+size='14841'
+url='http://linukz.org/cd-discid.shtml'
+dep=('')

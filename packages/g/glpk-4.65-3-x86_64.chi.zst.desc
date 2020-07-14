@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='glpk'
+version='4.65'
+build='3'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GNU Linear Programming Kit : solve LP, MIP and other problems.'
+size='1806325'
+url='https://www.gnu.org/software/glpk/glpk.html'
+dep=('')

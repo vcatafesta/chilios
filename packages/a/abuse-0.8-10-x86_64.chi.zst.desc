@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='abuse'
+version='0.8'
+build='10'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Side-scroller action game that pits you against ruthless alien killers'
+size='22941422'
+url='http://abuse.zoy.org/'
+dep=('')

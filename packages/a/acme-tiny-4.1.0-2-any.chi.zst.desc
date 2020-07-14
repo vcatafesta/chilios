@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='acme'
+version='tiny'
+build='4.1.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A tiny script to issue and renew TLS certs from Let's Encrypt'
+size='12594'
+url='https://github.com/diafygi/acme-tiny'
+dep=('')

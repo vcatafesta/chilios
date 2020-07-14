@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='guile2.0'
+version='2.0.14'
+build='4'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Portable, embeddable Scheme implementation written in C'
+size='11600384'
+url='https://www.gnu.org/software/guile/'
+dep=('')

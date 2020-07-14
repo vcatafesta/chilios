@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='abook'
+version='0.6.1'
+build='6'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Text-based addressbook designed for use with Mutt'
+size='204176'
+url='http://abook.sourceforge.net/'
+dep=('')

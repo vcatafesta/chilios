@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='acme.sh'
+version='2.8.6'
+build='1'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='An ACME Shell script, an acme client alternative to certbot'
+size='835920'
+url='https://github.com/acmesh-official/acme.sh'
+dep=('')

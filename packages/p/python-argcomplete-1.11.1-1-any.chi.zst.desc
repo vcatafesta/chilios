@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='argcomplete'
+build='1.11.1'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Easy, extensible command line tab completion of arguments for your Python script'
+size='201527'
+url='https://github.com/kislyuk/argcomplete'
+dep=('')
