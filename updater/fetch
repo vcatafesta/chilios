@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/07/03
+ # Altered: 2020/07/15
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.00.85.20200705"
+_VERSION_="2.01.00.20200715"
 
 #fatorial
 #seq -s* 6 | bc
@@ -554,7 +554,7 @@ function sh_checknet()
 	# have internet?
 	log_info_msg "${cyan}Testing internet"
 	#ping -c3 -q $(echo $SITE | sed 's/http:\/\///g') >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
-	curl -k $SITE >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
+	curl --insecure $SITE >/dev/null 2>&1 || { evaluate_retval; log_failure_msg2 "No route to server ($SITE) - ABORTED."; return 1 ;}
 	evaluate_retval
 	return $?
 }
@@ -584,7 +584,7 @@ function sh_updateself()
 		[[ -d "${tmp_dir}" ]] || mkdir -p "${tmp_dir}"
 		pushd "${tmp_dir}" &>/dev/null
 		log_info_msg "${cyan}Clonando $link"
-		curl -k --silent -O "${link}"
+		curl --insecure --silent --remote-name "${link}"
 		evaluate_retval
 
 		log_info_msg "${cyan}Permission and Copy archives"
@@ -802,14 +802,14 @@ function sh_update()
 	evaluate_retval
 
 	log_info_msg "Updating Folders from ${SITE}"
-#	curl -k --silent --url "${SITE}/packages/"| grep "/</a" | grep '[a-z]' | sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
-#	curl -k --silent --url "${SITE}/packages/"|sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
+#	curl --insecure --silent --url "${SITE}/packages/"| grep "/</a" | grep '[a-z]' | sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
+#	curl --insecure --silent --url "${SITE}/packages/"|sed 's/<[^>]*>//g'| cut -d/ -f1|sed 's/^[ \t]*//;s/[ \t]*$//'|sed 's/Index of//g' > ${VARCACHE_SEARCH}/folders
 
 #  sites com gninx/apache/etc
-#	curl -k --silent --url "${SITE}/packages/"|grep href|sed 's/[*<>]//g'|sed 's/[*=/"]/:/g'|cut -d: -sf3 > ${VARCACHE_SEARCH}/folders
+#	curl --insecure --silent --url "${SITE}/packages/"|grep href|sed 's/[*<>]//g'|sed 's/[*=/"]/:/g'|cut -d: -sf3 > ${VARCACHE_SEARCH}/folders
 
 #  site github
-	curl -k --silent --url "${SITE}/packages/"|grep /packages/ | sed 's/<[^>]*>//g' | sed 's/ //g' > ${VARCACHE_SEARCH}/folders
+	curl --insecure --silent --url "${SITE}/packages/"|grep /packages/ | sed 's/<[^>]*>//g' | sed 's/ //g' > ${VARCACHE_SEARCH}/folders
 
 #	FoldersInRepo='arch base dev extra games lib meta net sec theme x xapp'
 #	echo "${FoldersInRepo[@]}" > ${VARCACHE_SEARCH}/folders
@@ -830,8 +830,8 @@ function sh_update()
 #		MetaPkgInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | grep ".meta$" | awk '{print $1}')
 
 #		site github
-		PackagesInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | sed 's/\// /g' | grep ".${PRG}$"| awk '{print $NF}')
-		MetaPkgInFolders=$(curl -k --silent --url "${SITE}/packages/${Folders}/" |sed 's/^.*href="//' | sed 's/".*$//' | sed 's/\// /g' | grep ".meta$" | awk '{print $NF}')
+		PackagesInFolders=$(curl --insecure --silent --url "${SITE}/packages/${Folders}/"|sed 's/^.*href="//' | sed 's/".*$//' | sed 's/\// /g' | grep ".${PRG}$"| awk '{print $NF}')
+		MetaPkgInFolders=$(curl --insecure --silent --url "${SITE}/packages/${Folders}/" |sed 's/^.*href="//' | sed 's/".*$//' | sed 's/\// /g' | grep ".meta$" | awk '{print $NF}')
 
 		local count=0
 		for pkgInFolder in $PackagesInFolders; do
@@ -982,27 +982,26 @@ function sh_show()
 			log_success_msg2 "${green}FOUND ${reset} ${orange}$i${reset}"
 			((pkgCheckNumber++))
 
-       		log_success_msg2 "($pkgCheckNumber) file(s) found."
-    		local cfile=$i
-    		local cbase=$(echo $cfile | cut -d/ -f1)
+			log_success_msg2 "($pkgCheckNumber) file(s) found."
+			local cfile=$i
+			local cbase=$(echo $cfile | cut -d/ -f1)
     		local cpacote=$(echo $cfile | cut -d/ -f2)".desc"
 
     		cd $VARCACHE_ARCHIVES/
 
     		log_info_msg "${green}Fetching... $cpacote${reset}"
     		if [ $LFORCE = $true ]; then
-                # site normal
-                #curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
-
-                # github
-                curl -s -k -O "${RAW}/packages/$cbase/$cpacote"
-    		else
-                # site normal
-    			#test -e $VARCACHE_ARCHIVES/$cpacote || curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
-                # github
-    			test -e $VARCACHE_ARCHIVES/$cpacote || curl -s -k -O "${RAW}/packages/$cbase/$cpacote"
-    		fi
-    		evaluate_retval
+				#site normal
+				#curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
+				#github
+				curl --silent --insecure --remote-name "${RAW}/packages/$cbase/$cpacote"
+			else
+				#site normal
+				#test -e $VARCACHE_ARCHIVES/$cpacote || curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
+				#github
+				test -e $VARCACHE_ARCHIVES/$cpacote || curl -# --silent --insecure --remote-name "${RAW}/packages/$cbase/$cpacote"
+			fi
+			evaluate_retval
     		local error_value="${?}"
 
     		if [ ${error_value} = 0 ]; then
@@ -1120,29 +1119,29 @@ function sh_download()
 			log_wait_msg "File ${red}#${nFilesDownloaded} of ${nTotalFiles}${reset}|Checking package ${orange}${cpacote} ${cspace}"
 
 			if (( $LFORCE )); then
-                # site normal
+				#site normal
 				#curl -k --silent -O "${SITE}/packages/$i"       ;log_info_msg "[$nFilesDownloaded]${orange}${cpacote}${reset} fetching now!" ; evaluate_retval;
 				#curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc fetching now!"   ; evaluate_retval;
 				#curl -k --silent -O "${SITE}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 fetching now!" ; evaluate_retval;
 				#curl -k --silent -O "${SITE}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig fetching now" ; evaluate_retval;
 
-                # github
-				curl -k --silent -O "${RAW}/packages/$i"       ;log_info_msg "[$nFilesDownloaded]${orange}${cpacote}${reset} fetching now!" ; evaluate_retval;
-				curl -k --silent -O "${RAW}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc fetching now!"   ; evaluate_retval;
-				curl -k --silent -O "${RAW}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 fetching now!" ; evaluate_retval;
-				curl -k --silent -O "${RAW}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig fetching now" ; evaluate_retval;
+				#github
+				curl --insecure --silent --remote-name "${RAW}/packages/$i"       ;log_info_msg "[$nFilesDownloaded]${orange}${cpacote}${reset} fetching now!" ; evaluate_retval;
+				curl --insecure --silent --remote-name "${RAW}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc fetching now!"   ; evaluate_retval;
+				curl --insecure --silent --remote-name "${RAW}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 fetching now!" ; evaluate_retval;
+				curl --insecure --silent --remote-name "${RAW}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig fetching now" ; evaluate_retval;
 			else
-                # site normal
+				#site normal
     			#test -e $VARCACHE_ARCHIVES/$cpacote        && log_success_msg2 "[$nFilesDownloaded]${orange}${i}${reset} already downloaded!" || { curl -k --silent -O "${SITE}/packages/$i" ;log_info_msg "[$nFilesDownloaded]${orange}$cpacote${reset} downloading now!" ; evaluate_retval;}
 				#test -e $VARCACHE_ARCHIVES/$cpacote.desc   && log_success_msg2 "   ${i}.desc already downloaded!"   || { curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc downloading now!"   ; evaluate_retval;}
 				#test -e $VARCACHE_ARCHIVES/$cpacote.sha256 && log_success_msg2 "   ${i}.sha256 already downloaded!" || { curl -k --silent -O "${SITE}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 downloading now!" ; evaluate_retval;}
 				#test -e $VARCACHE_ARCHIVES/$cpacote.sig    && log_success_msg2 "   ${i}.sig already downloaded!"    || { curl -k --silent -O "${SITE}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig downloading now!"    ; evaluate_retval;}
 
-                #github
-    			test -e $VARCACHE_ARCHIVES/$cpacote        && log_success_msg2 "[$nFilesDownloaded]${orange}${i}${reset} already downloaded!" || { curl -k --silent -O "${RAW}/packages/$i" ;log_info_msg "[$nFilesDownloaded]${orange}$cpacote${reset} downloading now!" ; evaluate_retval;}
-				test -e $VARCACHE_ARCHIVES/$cpacote.desc   && log_success_msg2 "   ${i}.desc already downloaded!"   || { curl -k --silent -O "${RAW}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc downloading now!"   ; evaluate_retval;}
-				test -e $VARCACHE_ARCHIVES/$cpacote.sha256 && log_success_msg2 "   ${i}.sha256 already downloaded!" || { curl -k --silent -O "${RAW}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 downloading now!" ; evaluate_retval;}
-				test -e $VARCACHE_ARCHIVES/$cpacote.sig    && log_success_msg2 "   ${i}.sig already downloaded!"    || { curl -k --silent -O "${RAW}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig downloading now!"    ; evaluate_retval;}
+				#github
+   			test -e $VARCACHE_ARCHIVES/$cpacote        && log_success_msg2 "[$nFilesDownloaded]${orange}${i}${reset} already downloaded!" || { curl --insecure --silent -O "${RAW}/packages/$i" ;log_info_msg "[$nFilesDownloaded]${orange}$cpacote${reset} downloading now!" ; evaluate_retval;}
+				test -e $VARCACHE_ARCHIVES/$cpacote.desc   && log_success_msg2 "   ${i}.desc already downloaded!"   || { curl --insecure --silent -O "${RAW}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc downloading now!"   ; evaluate_retval;}
+				test -e $VARCACHE_ARCHIVES/$cpacote.sha256 && log_success_msg2 "   ${i}.sha256 already downloaded!" || { curl --insecure --silent -O "${RAW}/packages/$i.sha256";log_info_msg "   ${cpacote}.sha256 downloading now!" ; evaluate_retval;}
+				test -e $VARCACHE_ARCHIVES/$cpacote.sig    && log_success_msg2 "   ${i}.sig already downloaded!"    || { curl --insecure --silent -O "${RAW}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig downloading now!"    ; evaluate_retval;}
 			fi
 
 
@@ -1159,17 +1158,18 @@ function sh_download()
 
 function sh_wgetfull()
 {
-    #site normal
+	#site normal
 	#log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O "${SITE}/packages/$i"
 	#log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O "${SITE}/packages/$i.sha256"
 	#log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O "${SITE}/packages/$i.desc"
 	#log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O "${SITE}/packages/$i.sig"
 
-    # github
-	log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O "${RAW}/packages/$i"
-	log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O "${RAW}/packages/$i.sha256"
-	log_info_msg "${cyan}Fetching ${cpacote}.desc"  ; evaluate_retval; curl -k -O "${RAW}/packages/$i.desc"
-	log_info_msg "${cyan}Fetching ${cpacote}.sig"   ; evaluate_retval; curl -k -O "${RAW}/packages/$i.sig"
+	#github
+	 log_info_msg "${cyan}Fetching package ${orange}${cpacote}"       ; curl -s -k -O "${RAW}/packages/$i"     ; evaluate_retval
+	#log_info_msg "${cyan}Fetching package ${orange}${cpacote}.sha256"; curl -k -O "${RAW}/packages/$i.sha256" ; evaluate_retval
+	#log_info_msg "${cyan}Fetching package ${orange}${cpacote}.desc"  ; curl -k -O "${RAW}/packages/$i.desc"   ; evaluate_retval
+	#log_info_msg "${cyan}Fetching package ${orange}${cpacote}.sig"   ; curl -k -O "${RAW}/packages/$i.sig"    ; evaluate_retval
+	return $?
 }
 
 function sh_wgetpartial()
@@ -1246,20 +1246,31 @@ function sh_search()
 			fi
 
 			test -e $VARCACHE_ARCHIVES/$cpacote || sh_wgetfull
-#			sh_checksha256sum
-
 			local error_value="${?}"
 			if [ ${error_value} -ne 0 ]; then
-				log_failure_msg2 "ERROR: Checking sha256sum ${cpacote}.sha256"
-				log_wait_msg "Restarting download ${cpacote}"
+				log_failure_msg2 "ERROR: Downloading ${orange}${cpacote}"
+				log_wait_msg "Restarting download ${orange}${cpacote}"
 				sh_wgetfull
-				sh_checksha256sum
 				local error_value="${?}"
 				if [ ${error_value} -ne 0 ]; then
-					log_failure_msg2 "ERROR: Checking sha256sum ${cpacote}.sha256. Aborting..."
+					log_failure_msg2 "ERROR: Fatal error downloading ${orange}${cpacote}. ${reset}Aborting..."
 					exit 1
 				fi
 			fi
+
+#			sh_checksha256sum
+#			local error_value="${?}"
+#			if [ ${error_value} -ne 0 ]; then
+#				log_failure_msg2 "ERROR: Checking sha256sum ${cpacote}.sha256"
+#				log_wait_msg "Restarting download ${cpacote}"
+#				sh_wgetfull
+#				sh_checksha256sum
+#				local error_value="${?}"
+#				if [ ${error_value} -ne 0 ]; then
+#					log_failure_msg2 "ERROR: Checking sha256sum ${cpacote}.sha256. Aborting..."
+#					exit 1
+#				fi
+#			fi
 
 			if !(( $LINSTALLED )); then
 				log_info_msg "Installing package ${orange}$cpacote"
@@ -1274,7 +1285,7 @@ function sh_search()
 			if [ ${error_value} -ne 0 ]; then
 				log_failure_msg2 "ERROR: installing package ${orange}${cpacote}"
 			else
-				log_success_msg2 "${orange}${cpacote} ${reset}Done. package installation successfully."
+				log_success_msg2 "${green}${cpacote} ${reset}Done. package installation successfully."
 			fi
 		done
 	fi
@@ -2422,45 +2433,40 @@ function sh_alienpkg_exec()
 	local ncount=0
 	local arraypkg=
 
-# 	if [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]] || [[ $(toupper "${param}") = "ALL OFF" ]]; then
-#		LALL=$true
-#		pkg=$(ls -1 $ALIEN_CACHE_DIR/*)
-#	else
-   	for s in ${param[@]}; do
-		 	if [[ "${s}" == "" ]] || [[ $(toupper "${s}") = "ALL" ]] || [[ $(toupper "${s}") = "ALL OFF" ]]; then
-				LALL=$true
-      	elif [[ $(toupper "${s}") = "-Y" ]]; then
-         	LAUTO=$true
-			elif [[ $(toupper "${s}") = "-F" ]]; then
-				LFORCE=$true
-			elif [[ $(toupper "${s}") = "OFF" ]]; then
-				LLIST=$false
-			elif [[ $(toupper "${s:0:7}") = "-CTIME=" ]]; then
-				LFIND=$true
-				mtime=${s:7}
+  	for s in ${param[@]}; do
+	 	if [[ "${s}" == "" ]] || [[ $(toupper "${s}") = "ALL" ]] || [[ $(toupper "${s}") = "ALL OFF" ]]; then
+			LALL=$true
+     	elif [[ $(toupper "${s}") = "-Y" ]]; then
+        	LAUTO=$true
+		elif [[ $(toupper "${s}") = "-F" ]]; then
+			LFORCE=$true
+		elif [[ $(toupper "${s}") = "OFF" ]]; then
+			LLIST=$false
+		elif [[ $(toupper "${s:0:7}") = "-CTIME=" ]]; then
+			LFIND=$true
+			mtime=${s:7}
+		else
+			string="$string ${s}"
+		fi
+	done
+
+	if (( $LALL )); then
+		if !(( $LFIND )); then
+			pkg=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz})
+		else
+			pkg=$(find $ALIEN_CACHE_DIR/ -type f -ctime $mtime)
+		fi
+	else
+  		for str in ${string[@]}; do
+			if !(( $LFIND )); then
+				files=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz} | grep $str)
+				pkg="$pkg $(echo $files | grep $str)"
 			else
-				string="$string ${s}"
+				files=$(find $ALIEN_CACHE_DIR/*.{zst,xz} -type f -ctime $mtime | grep $str)
+				pkg="$pkg $(echo $files | grep $str)"
 			fi
 		done
-
-		if (( $LALL )); then
-			if !(( $LFIND )); then
-				pkg=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz})
-			else
-				pkg=$(find $ALIEN_CACHE_DIR/ -type f -ctime $mtime)
-			fi
-		else
-   		for str in ${string[@]}; do
-				if !(( $LFIND )); then
-					files=$(ls -1 $ALIEN_CACHE_DIR/*.{zst,xz} | grep $str)
-					pkg="$pkg $(echo $files | grep $str)"
-				else
-					files=$(find $ALIEN_CACHE_DIR/*.{zst,xz} -type f -ctime $mtime | grep $str)
-					pkg="$pkg $(echo $files | grep $str)"
-				fi
-			done
-		fi
-#	fi
+	fi
 
 	arraypkg=($pkg)
 	ntotalpkg=${#arraypkg[*]}
@@ -2473,16 +2479,17 @@ function sh_alienpkg_exec()
 #		echo
 #		packagedir=${package%$EXT}
 		packagedir=${package}
+		file=${package}
 		FULLDIR=$BUILDDIR/$packagedir
 		((ncount++))
 
-		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/.pkg.tar\|.zst\|.xz//g'|sed 's/.pkg.tar\|.zst\|.xz//g'|sed 's/1://g'|sed 's/2://g')
-#		pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar\|.zst\|.xz//g'|sed 's/-any.pkg.tar\|.zst\|.xz//g'|sed 's/1://g'|sed 's/2://g')
-#	   pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/1://g'|sed 's/2://g')
-#		pkgtar=$(echo $FULLDIR |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.pkg.tar.xz//g'|sed 's/-any.pkg.tar.xz//g'|sed 's/\(.*\)_/\1 /'|sed 's/1://g'|sed 's/2://g')
-#		pkgtar=$(echo $FULLDIR |sed 's/\// /g' | awk '{print $NF}'|sed 's/-/_/g'| sed 's/\(.*\)_/\1 /')
-#		arr=($pkg)
-#	   pkgtar="${arr[0]}-${arr[1]} ${arr[2]}"
+#	   pkgtar=$(echo $packagedir |sed 's/\// /g'|awk '{print $NF}'|sed 's/.pkg.tar\|.zst\|.xz//g'|sed 's/.pkg.tar\|.zst\|.xz//g'|sed 's/1://g'|sed 's/2://g')
+		pkgtar=$(echo ${file##*/})                   #remove diretorio deixando somente nome do pacote
+		pkgtar=$(echo ${pkgtar%%.pkg.tar.zst})       #remove .pkg.tar.zst
+		pkgtar=$(echo ${pkgtar%%.pkg.tar.xz})        #remove .pkg.tar.xz
+
+		cPacoteSemExt=$(echo ${pkgtar%%.*})          # https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+		cPacoteSemExt=$(echo ${cPacoteSemExt%-*})    # https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 
 		if !(( $LFORCELOCAL )); then
 			local firstletter=${pkgtar::1}
@@ -2492,11 +2499,11 @@ function sh_alienpkg_exec()
 			local destpkgCORE="${GITDIR}/packages/core/${FilteredPackage}"
 
 			if [[ -e ${destpkgGIT} ]]; then
-				log_failure_msg2 "(${ncount}/${ntotalpkg}) ${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/${firstletter/}${reset} Use the -f option to force rebuild."
+				log_failure_msg2 "(${ncount}/${ntotalpkg}) ${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/packages/${firstletter/}${reset} Use the -f option to force rebuild."
 				continue
 			fi
 			if [[ -e ${destpkgCORE} ]]; then
-				log_failure_msg2 "(${ncount}/${ntotalpkg}) ${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/core/${reset} Use the -f option to force rebuild."
+				log_failure_msg2 "(${ncount}/${ntotalpkg}) ${orange}${FilteredPackage} ${reset}Package already exist in ${green}${GITDIR}/packages/core/${reset} Use the -f option to force rebuild."
 				continue
 			fi
 		fi
@@ -2574,6 +2581,8 @@ function sh_alienpkg_exec()
 		sh_alienpkg_pkgsize
 		popd >/dev/null 2>&1
 		unset size
+
+		removeoldpkgchili $cPacoteSemExt
 		echo
 	done
 	unset ncount
