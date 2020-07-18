@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/07/17
+ # Altered: 2020/07/18
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,7 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.01.80.20200717"
+_VERSION_="2.02.00.20200718"
 
 #fatorial
 #seq -s* 6 | bc
@@ -105,6 +105,24 @@ LREMOVED=3
 : ${PKG_BUILD=6}
 
 # SUBROUTINES
+
+function cpad()
+{ # centralizar string
+	COLS=$(tput cols)
+	printf "%*s\n" $[$COLS/2] "${1}"
+}
+
+function rpad()
+{ # justificar à direita
+	COLS=$(tput cols)
+	printf "%*s\n" $COLS "${1}"
+}
+
+function lpad()
+{ # justificar à esquerda + $2 espacos
+	COLS=$(tput cols)
+	printf "%ds\n" ${2} "${1}"
+}
 
 function sh_cdroot()
 {
@@ -1235,9 +1253,10 @@ function sh_checksha256sum()
 	return $?
 }
 
-function sh_splitpkg()
+
+function sh_oldsplitpkg()
 {
-	local cfile=${1}
+	local file=${1}
 	local pkg_folder_dir
 	local pkg_fullname
 	local pkg_arch
@@ -1246,19 +1265,79 @@ function sh_splitpkg()
 	local pkg_version
 	local pkg_build
 
-	pkg_folder_dir=$(echo ${cfile%/*})							#remove arquivo deixando somente o diretorio/repo
-	pkg_fullname=$(echo ${cfile##*/})    						#remove diretorio deixando somente nome do pacote
+	pkg_folder_dir=$(echo ${file%/*})							#remove arquivo deixando somente o diretorio/repo
+	pkg_fullname=$(echo ${file##*/})    						#remove diretorio deixando somente nome do pacote
 	pkg_arch=$(echo ${pkg_fullname%%.${PRG}})   				#remove extensao pacote (chi.zst/mz)
 	pkg_base=$(echo ${pkg_arch%.*})         					# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 	pkg_base=$(echo ${pkg_base%-*})   				  			# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 	pkg_base_version=$(echo ${pkg_arch%-any*})      		# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 	pkg_base_version=$(echo ${pkg_base_version%-x86_64*})	# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 	pkg_version=$(echo ${pkg_base_version#*-})				# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+	pkg_version=$(echo ${pkg_version#*-})						# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 	pkg_build=$(echo ${pkg_version#*-})							# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+
+	pkg_arch="${file%.*}"
+	pkg_base_version="${file%-*}"
+	pkg_build="${pkg_base_version##*-}"
+	pkg_version="${file%-*}"
+	pkg_version="${pkg_version%-*}"
+	pkg_base="${pkg_version%-*}"
+	pkg_version="${pkg_version##*-}-$pkg_build"
 
 	aPKGSPLIT=($pkg_folder_dir $pkg_fullname $pkg_arch $pkg_base $pkg_base_version $pkg_version $pkg_build)
 	aPKGLIST=${aPKGSPLIT[*]}
 #	arr=(${aPKGSPLIT[*]})
+#	info "${arr[0]}\n${arr[1]}\n${arr[2]}\n${arr[3]}\n${arr[4]}\n${arr[5]}\n${arr[6]}\n${arr[7]}"
+	return $?
+}
+
+
+function sh_splitpkg()
+{
+	local file=${1}
+	local pkg_folder_dir
+	local pkg_fullname
+	local pkg_arch
+	local pkg_base
+	local pkg_base_version
+	local pkg_version
+	local pkg_build
+	local pkg_str
+	local nconta=0
+	local char="-"
+	local var
+	local ra
+	local re
+
+	pkg_folder_dir=$(echo ${file%/*})							#remove arquivo deixando somente o diretorio/repo
+	pkg_fullname=$(echo ${file##*/})    						#remove diretorio deixando somente nome do pacote
+	pkg_arch=$(echo ${pkg_fullname%%.${PRG}})   				#remove extensao pacote (chi.zst/mz)
+	pkg_str=$(echo ${pkg_arch%-any$*})      					# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+	pkg_str=$(echo ${pkg_str%-x86_64*})      					# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+
+#	info "$file\n$pkg_folder_dir\n$pkg_fullname\n$pkg_arch"
+
+	IFS='-' 									# hyphen (-) is set as delimiter
+	read -ra ADDR <<< "$pkg_str"		# str is read into an array as tokens separated by IFS
+	for var in "${ADDR[@]}"; do 		# access each element of array
+		re='[a-zA-Z]'
+		if [[ "$var" =~ $re ]]; then
+			pkg_base="$pkg_base${var}$char"
+		else
+			((nconta++))
+			[[ $nconta -eq 1 ]] && pkg_version=$var || pkg_build=$var
+		fi
+	done
+	IFS=' ' # reset to default value after usage
+
+	pkg_base=${pkg_base%-*}
+	pkg_version="${pkg_version}-${pkg_build}"
+	pkg_base_version="${pkg_base}-${pkg_version}"
+
+	aPKGSPLIT=($pkg_folder_dir $pkg_fullname $pkg_arch $pkg_base $pkg_base_version $pkg_version $pkg_build)
+	aPKGLIST=${aPKGSPLIT[*]}
+	arr=(${aPKGSPLIT[*]})
+#	echo -e "${arr[0]}\n${arr[1]}\n${arr[2]}\n${arr[3]}\n${arr[4]}\n${arr[5]}\n${arr[6]}\n${arr[7]}"
 #	info "${arr[0]}\n${arr[1]}\n${arr[2]}\n${arr[3]}\n${arr[4]}\n${arr[5]}\n${arr[6]}\n${arr[7]}"
 	return $?
 }
@@ -1567,9 +1646,14 @@ function sh_listinstalled()
 		log_wait_msg "${green}Listing..."
 		if [[ $pkginstalled != "" ]]; then
 			pkgNumber=0
+			maxcol; replicate "=" $?
+ 			printf "%12sPacote%35sversao\n"
+			maxcol; replicate "=" $?
 			for i in $pkginstalled; do
-				log_success_msg2 "${green}FOUND ${orange}$i${reset}"
 				((pkgNumber++))
+				sh_splitpkg "${i}"
+#				log_success_msg2 "${green}FOUND ($pkgNumber) ${orange}${aPKGSPLIT[PKG_BASE]} ${aPKGSPLIT[PKG_VERSION]}${reset}"
+ 				printf "${green}%s(%04d) ${orange}%-40s ${reset}%-40s\n" "     " "$pkgNumber" "${aPKGSPLIT[PKG_BASE]}" "${aPKGSPLIT[PKG_VERSION]}"
 			done
 			public_ntotal_pkg_listed=$pkgNumber
 			log_success_msg2 "($pkgNumber) package(s) installed."
