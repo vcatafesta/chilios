@@ -3,7 +3,7 @@
  # fetch - Search an Install packages in LFS
  #
  # Created: 2019/04/05
- # Altered: 2020/07/18
+ # Altered: 2020/07/24
  #
  # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
  # All rights reserved.
@@ -33,7 +33,10 @@
  # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #########################################################################
-_VERSION_="2.02.00.20200718"
+_VERSION_="2.02.02.20200724"
+
+# awk -F: '{print $1}' /var/cache/fetch/search/packages-split | grep ^python$
+
 
 #fatorial
 #seq -s* 6 | bc
@@ -41,6 +44,7 @@ _VERSION_="2.02.00.20200718"
 #ls | cut -d. -sf2-  | sort | uniq -c
 #source=($pkgname-${pkgver//_/-}.tar.gz)
 IFS=$' \t\n'
+SAVEIFS=$IFS
 
 #hex code
 barra=$'\x5c'
@@ -323,6 +327,7 @@ function _GREP()
     while IFS= read line; do
         [[ "$line" =~ $expression ]] && { echo "$line"; return 0;}
     done < "$receive"
+	 IFS=$SAVEIFS
     return 1
 }
 
@@ -594,7 +599,7 @@ function sh_checknet()
 }
 
 
-function sh_updateself()
+function sh_selfupdate()
 {
 	local param=$@
 	sh_checkparametros ${param}
@@ -678,9 +683,9 @@ function help()
 	echo -e "${pink}  -Sa, --alienpkg,      alienpkg       ${reset}- import package from ARCH"
 	echo -e "${pink}  -Sl, --local,         local          ${reset}- install local package"
 	echo -e "${pink}  -c  --create,         create         ${reset}- build package"
-	echo -e "${pink}  -g, --generate,       generate       ${reset}- generate info package from source"
+	echo -e "${pink}  -Sg, --generate,      generate       ${reset}- generate info package from source"
 	echo -e "${pink}  -Sy, --update,        update         ${reset}- update list packages in repository online. Need Internet"
-	echo -e "${pink}  -i, --install,        install        ${reset}- install packages"
+	echo -e "${pink}  -Si, --install,       install        ${reset}- install packages"
 	echo -e "${pink}  -m, --meta,           meta           ${reset}- install meta packages"
 	echo -e "${pink}  -r, --remove,         remove         ${reset}- remove packages"
 	echo -e "${pink}  -Sc, --clean,         clean          ${reset}- erase downloaded packages files"
@@ -721,11 +726,11 @@ function init()
 		-Sl|--local|local)  							shift;sh_initinstallpkg "$@";;
 		-Sa|-a|--alienpkg|alienpkg)	  		   shift;sh_alienpkg_main "$@";;
 		-Sy|--update|update)							shift;sh_update "$@";;
-		-g|--generate|generate)						sh_generatepkg "$@";;
+		-Sg|-g|--generate|generate)				sh_generatepkg "$@";;
 		-c|--create|create)					    	sh_createpkg "$@";;
 		-m|--meta|meta)	                     shift;sh_meta   "$@";;
 		-s|-S|--search|search)	               shift;sh_search "$@";;
-		-i|--install|install) 						shift;sh_search "$@";;
+		-Si|-i|--install|install)					shift;sh_search "$@";;
 		-r|--remove|remove) 							shift;sh_remove "$@";;
 		-R|--reinstall|reinstall) 					shift;sh_search "$@";;
 		-Sw|--download|download) 					shift;sh_download "$@";;
@@ -826,7 +831,7 @@ function sh_checkdir()
 
 function sh_update()
 {
-	[[ $(toupper "${1}") = "SELF" ]] && { shift; sh_updateself "$@"; return $?;}
+	[[ $(toupper "${1}") = "SELF" ]] && { shift; sh_selfupdate "$@"; return $?;}
 
 	#internet?
 	sh_checknet; [[ $? = $false ]] || { return 1;}
@@ -838,6 +843,7 @@ function sh_update()
 	> $VARCACHE_SEARCH/folders
 	> $VARCACHE_SEARCH/folders_packages
 	> $VARCACHE_SEARCH/packages
+	> $VARCACHE_SEARCH/packages-split
 	> $VARCACHE_SEARCH/folders_metapackages
 	> $VARCACHE_SEARCH/metapackages
 	evaluate_retval
@@ -881,6 +887,8 @@ function sh_update()
 		for pkgInFolder in $PackagesInFolders; do
 			echo "${Folders}/${pkgInFolder}" >> folders_packages
 			echo "${pkgInFolder}"            >> packages
+			sh_splitpkg ${pkgInFolder}
+			echo "${aPKGSPLIT[$PKG_BASE]}:${aPKGSPLIT[$PKG_VERSION]}:${aPKGSPLIT[$PKG_BUILD]}:${aPKGSPLIT[$PKG_FULLNAME]}" >> $VARCACHE_SEARCH/packages-split
 			((count++))
 		done
 		for MetaInFolder in $MetaPkgInFolders; do
@@ -1035,7 +1043,7 @@ function sh_show()
 
     		log_info_msg "${green}Fetching... $cpacote${reset}"
     		if [ $LFORCE = $true ]; then
-				if !(( $SITEGIT )); then
+				if !(( $GITSITE )); then
 					#site normal
 					curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
 				else
@@ -1043,7 +1051,7 @@ function sh_show()
 					curl --silent --insecure --remote-name "${RAW}/packages/$cbase/$cpacote"
 				fi
 			else
-				if !(( $SITEGIT )); then
+				if !(( $GITSITE )); then
 					#site normal
 					test -e $VARCACHE_ARCHIVES/$cpacote || curl -s -k -O "${SITE}/packages/$cbase/$cpacote"
 				else
@@ -1088,10 +1096,6 @@ function sh_doremove()
 	if [ ${error_value} != 0 ]; then
 		log_failure_msg2 "$ERROR"
 	else
-		#ajustado o sh_pkgremove para fazer esse job
-		#test -e $VARCACHE_REMOVED/${2}    || touch $VARCACHE_REMOVED/${2}
-		#test -e $VARCACHE_INSTALLED/${2}  && rm -f $VARCACHE_INSTALLED/${2}
-		#sed -i  '/'${2}'/d' $VARCACHE_SEARCH/packages-installed
 		if (( $LLIST )); then
 			log_success_msg2 "Removal of the package (${orange}${2}${reset}) successfully completed"
 		fi
@@ -1169,7 +1173,7 @@ function sh_download()
 			log_wait_msg "File ${red}#${nFilesDownloaded} of ${nTotalFiles}${reset}|Checking package ${orange}${cpacote} ${cspace}"
 
 			if (( $LFORCE )); then
-				if !(( $SITEGIT )); then
+				if !(( $GITSITE )); then
 					#site normal
 					curl -k --silent -O "${SITE}/packages/$i"       ;log_info_msg "[$nFilesDownloaded]${orange}${cpacote}${reset} fetching now!" ; evaluate_retval;
 					curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc fetching now!"   ; evaluate_retval;
@@ -1183,7 +1187,7 @@ function sh_download()
 					curl --insecure --silent --remote-name "${RAW}/packages/$i.sig"   ;log_info_msg "   ${cpacote}.sig fetching now" ; evaluate_retval;
 				fi
 			else
-				if !(( $SITEGIT )); then
+				if !(( $GITSIE )); then
 					#site normal
    	 			test -e $VARCACHE_ARCHIVES/$cpacote        && log_success_msg2 "[$nFilesDownloaded]${orange}${i}${reset} already downloaded!" || { curl -k --silent -O "${SITE}/packages/$i" ;log_info_msg "[$nFilesDownloaded]${orange}$cpacote${reset} downloading now!" ; evaluate_retval;}
 					test -e $VARCACHE_ARCHIVES/$cpacote.desc   && log_success_msg2 "   ${i}.desc already downloaded!"   || { curl -k --silent -O "${SITE}/packages/$i.desc"  ;log_info_msg "   ${cpacote}.desc downloading now!"   ; evaluate_retval;}
@@ -1210,7 +1214,7 @@ function sh_download()
 
 function sh_wgetfull()
 {
-	if !(( $SITEGIT )); then
+	if !(( $GITSITE )); then
 		#site normal
 		log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O "${SITE}/packages/$i"
 		log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O "${SITE}/packages/$i.sha256"
@@ -1219,7 +1223,7 @@ function sh_wgetfull()
 		return $?
 	else
 		#github
-		log_info_msg "${cyan}Fetching package ${orange}${cpacote}"       ; curl -s -k -O "${RAW}/packages/$i"     ; evaluate_retval
+		log_info_msg "${cyan}Fetching package ${RAW}/packages/${orange}${i}"       ; curl -s -k -O "${RAW}/packages/$i"     ; evaluate_retval
 		#log_info_msg "${cyan}Fetching package ${orange}${cpacote}.sha256"; curl -k -O "${RAW}/packages/$i.sha256" ; evaluate_retval
 		#log_info_msg "${cyan}Fetching package ${orange}${cpacote}.desc"  ; curl -k -O "${RAW}/packages/$i.desc"   ; evaluate_retval
 		#log_info_msg "${cyan}Fetching package ${orange}${cpacote}.sig"   ; curl -k -O "${RAW}/packages/$i.sig"    ; evaluate_retval
@@ -1229,7 +1233,7 @@ function sh_wgetfull()
 
 function sh_wgetpartial()
 {
-	if !(( $SITEGIT )); then
+	if !(( $GITSITE )); then
 		#site normal
 		test -e $VARCACHE_ARCHIVES/$cpacote       || log_info_msg "${cyan}Fetching ${cpacote}"       ; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i"
 		test -e $VARCACHE_ARCHIVES/$cpacote.sha26 || log_info_msg "${cyan}Fetching ${cpacote}.sha256"; evaluate_retval; curl -k -O -C - "${SITE}/packages/$i.sha256"
@@ -1253,6 +1257,32 @@ function sh_checksha256sum()
 	return $?
 }
 
+function sh_splitbase()
+{
+	local file=${1}
+	local pkg_folder_dir=""
+	local pkg_fullname
+	local pkg_arch
+	local pkg_base
+	local pkg_base_version
+	local pkg_version
+	local pkg_build
+
+	aPKGSPLIT=()
+	pkg_fullname=$(echo ${file##*/})    						#remove diretorio deixando somente nome do pacote
+	pkg_arch=$(echo ${pkg_fullname%%.${PRG}})   				#remove extensao pacote (chi.zst/mz)
+	pkg_base=$(echo ${pkg_arch%.*})         					# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+	pkg_base=$(echo ${pkg_base%-*})   				  			# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+
+	pkg_base_version=$(echo ${pkg_arch%-any*})      		# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+	pkg_base_version=$(echo ${pkg_base_version%-x86_64*})	# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+	pkg_version=$(echo ${pkg_base_version#*-})				# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+	pkg_version=$(echo ${pkg_version#*-})						# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+	pkg_build=$(echo ${pkg_version#*-})							# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+
+	aPKGSPLIT=($pkg_folder_dir $pkg_fullname $pkg_arch $pkg_base $pkg_base_version $pkg_version $pkg_build)
+	return $?
+}
 
 function sh_oldsplitpkg()
 {
@@ -1265,11 +1295,13 @@ function sh_oldsplitpkg()
 	local pkg_version
 	local pkg_build
 
+	aPKGSPLIT=()
 	pkg_folder_dir=$(echo ${file%/*})							#remove arquivo deixando somente o diretorio/repo
 	pkg_fullname=$(echo ${file##*/})    						#remove diretorio deixando somente nome do pacote
 	pkg_arch=$(echo ${pkg_fullname%%.${PRG}})   				#remove extensao pacote (chi.zst/mz)
 	pkg_base=$(echo ${pkg_arch%.*})         					# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 	pkg_base=$(echo ${pkg_base%-*})   				  			# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+
 	pkg_base_version=$(echo ${pkg_arch%-any*})      		# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 	pkg_base_version=$(echo ${pkg_base_version%-x86_64*})	# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 	pkg_version=$(echo ${pkg_base_version#*-})				# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
@@ -1309,13 +1341,20 @@ function sh_splitpkg()
 	local ra
 	local re
 
+	aPKGSPLIT=()
 	pkg_folder_dir=$(echo ${file%/*})							#remove arquivo deixando somente o diretorio/repo
 	pkg_fullname=$(echo ${file##*/})    						#remove diretorio deixando somente nome do pacote
-	pkg_arch=$(echo ${pkg_fullname%%.${PRG}})   				#remove extensao pacote (chi.zst/mz)
-	pkg_str=$(echo ${pkg_arch%-any$*})      					# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
-	pkg_str=$(echo ${pkg_str%-x86_64*})      					# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+#	pkg_arch=$(echo ${pkg_fullname%.${PRG}*})  				#remove extensao pacote (chi.zst/mz)
+#	pkg_str=$(echo ${pkg_arch%-any*})      					# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
+#	pkg_str=$(echo ${pkg_str%-x86_64*})      					# https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 
-#	info "$file\n$pkg_folder_dir\n$pkg_fullname\n$pkg_arch"
+	pkg_arch=$(echo ${pkg_fullname%-any.${PRG}*}) 			#remove extensao pacote (chi.zst/mz)
+	pkg_arch=$(echo ${pkg_arch%-x86_64.${PRG}*}) 			#remove extensao pacote (chi.zst/mz)
+	pkg_arch=$(echo ${pkg_arch%.${PRG}*})  				  #remove extensao pacote (chi.zst/mz)
+	pkg_str=$pkg_arch
+
+	#debug
+	#info "file: $file\npkg_folder_dir: $pkg_folder_dir\npkg_fullname: $pkg_fullname\npkg_arch: $pkg_arch\npkg_str: $pkg_str"
 
 	IFS='-' 									# hyphen (-) is set as delimiter
 	read -ra ADDR <<< "$pkg_str"		# str is read into an array as tokens separated by IFS
@@ -1326,13 +1365,24 @@ function sh_splitpkg()
 		else
 			((nconta++))
 			[[ $nconta -eq 1 ]] && pkg_version=$var || pkg_build=$var
+			#debug
+			#info "pkg_version: $pkg_version\npkg_build: $pkg_build"
 		fi
 	done
-	IFS=' ' # reset to default value after usage
-
+ 	IFS=$SAVEIFS # reset to default value after usage
 	pkg_base=${pkg_base%-*}
 	pkg_version="${pkg_version}-${pkg_build}"
 	pkg_base_version="${pkg_base}-${pkg_version}"
+	[[ $pkg_folder = "" ]] && pkg_folder=$pkg_fullname
+
+	#debug
+#	info " pkg_folder      : $pkg_folder\n" \
+#	 	  "pkg_fullname    : $pkg_fullname\n" \
+#	 	  "pkg_arch        : $pkg_arch\n" \
+#	 	  "pkg_base        : $pkg_base\n" \
+#		  "pkg_base_version: $pkg_base_version\n" \
+#		  "pkg_version     : $pkg_version\n" \
+#		  "pkg_build       : $pkg_build"
 
 	aPKGSPLIT=($pkg_folder_dir $pkg_fullname $pkg_arch $pkg_base $pkg_base_version $pkg_version $pkg_build)
 	aPKGLIST=${aPKGSPLIT[*]}
@@ -1507,7 +1557,7 @@ function sh_meta()
 			local cmetabase=$(echo $cmetafile | cut -d/ -f1)
 			local cmetapacote=$(echo $cmetafile | cut -d/ -f2)
 
-			if !(( $SITEGIT )); then
+			if !(( $GITSITE )); then
 				#site normal
             curl --silent -k -O "${SITE}/packages/$x"
 			else
@@ -1578,6 +1628,7 @@ function sh_meta()
 
 
 function sh_recreatefilepackagesinstalled()
+###########################################
 {
 	local pkgNumber=0
 	local s
@@ -1587,8 +1638,9 @@ function sh_recreatefilepackagesinstalled()
 	param=$@
 
 	log_info_msg "${green}Checking packages"
-	rm -f $VARCACHE_INSTALLED/* &> /dev/null
-	rm -f $VARCACHE_SEARCH/packages-installed &> /dev/null
+	rm -f $VARCACHE_INSTALLED/*                     &> /dev/null
+	rm -f $VARCACHE_SEARCH/packages-installed       &> /dev/null
+	rm -f $VARCACHE_SEARCH/packages-installed-split &> /dev/null
 
 	pushd $VARLIB_DESC/ &>/dev/null
 	aCachedesc=($(echo *.desc))
@@ -1596,6 +1648,8 @@ function sh_recreatefilepackagesinstalled()
 		cfileinstalled=$(echo ${item%.desc*})
 		cfileinstalled=$(echo ${cfileinstalled%.${PRG}*})
 		echo ${cfileinstalled} >> $VARCACHE_SEARCH/packages-installed
+		sh_splitpkg ${cfileinstalled}
+		echo "${aPKGSPLIT[$PKG_BASE]}:${aPKGSPLIT[$PKG_VERSION]}:${aPKGSPLIT[$PKG_BUILD]}:${aPKGSPLIT[$PKG_FULLNAME]}" >> $VARCACHE_SEARCH/packages-installed-split
 		> $VARCACHE_INSTALLED/${cfileinstalled}
 		mv $item $cfileinstalled.desc  &> /dev/null    #consertar pacotes antigos
 	done
@@ -1617,25 +1671,29 @@ function sh_listinstalled()
 	local param=$@
 	local LLIST=$true
 	local LEXACT=$false
+	local LALL=$false
 	local cListSearch
 
 	public_ntotal_pkg_installed=$(grep ^ $VARCACHE_SEARCH/packages-installed | wc -l)
 	public_ntotal_pkg_listed=$public_ntotal_pkg_installed
 	pkginstalled=
 
-	if  [[ "${param}" == "" ]] || [[ $(toupper "${param}") = "ALL" ]]; then
+	for s in ${param[@]}; do
+		[[ $(toupper "${s}") = "-Y" ]]    && { LAUTO=$true; continue; }
+     	[[ $(toupper "${s}") = "-F" ]]    && { LFORCE=$true; continue; }
+     	[[ $(toupper "${s}") = "OFF" ]]   && { LLIST=$false; continue; }
+		[[ $(toupper "${s}") = "EXACT" ]] && { LEXACT=$true; continue; }
+		[[ $(toupper "${s}") = "ALL" ]]   && { LALL=$true; continue; }
+		cListSearch="$cListSearch $(echo ${s})"
+	done
+
+	if (( $LALL )) || [[ "$cListSearch" == "" ]]; then
 		pkginstalled=$(grep ^ $VARCACHE_SEARCH/packages-installed)
 	else
-		for s in ${param[@]}; do
-			[[ $(toupper "${s}") = "-Y" ]] && { LAUTO=$true; continue; }
-        	[[ $(toupper "${s}") = "-F" ]] && { LFORCE=$true; continue; }
-        	[[ $(toupper "${s}") = "OFF" ]] && { LLIST=$false; continue; }
-			[[ $(toupper "${s}") = "EXACT" ]] && { LEXACT=$true; continue; }
-			cListSearch="$cListSearch $(echo ${s})"
-		done
 		for x in ${cListSearch}; do
 			if (( $LEXACT )); then
-				pkginstalled="$pkginstalled $(grep ^$x $VARCACHE_SEARCH/packages-installed)"
+#				pkginstalled="$pkginstalled $(grep ^$x $VARCACHE_SEARCH/packages-installed-split)"
+				pkginstalled="$pkginstalled $(grep ^$x: $VARCACHE_SEARCH/packages-installed-split | cut -d: -f4)"
 			else
 				pkginstalled="$pkginstalled $(grep $x $VARCACHE_SEARCH/packages-installed)"
 			fi
@@ -2290,6 +2348,7 @@ function sh_installpkg()
 		[[ $retval = 0 ]] && rm -f $VARCACHE_REMOVED/${_pkg}
 		[[ $retval = 0 ]] && sed -i '/'${_pkg}'/d' $VARCACHE_SEARCH/packages-installed
 		[[ $retval = 0 ]] && echo ${_pkg} >> $VARCACHE_SEARCH/packages-installed
+		[[ $retval = 0 ]] && echo "${aPKGSPLIT[$PKG_BASE]}:${aPKGSPLIT[$PKG_VERSION]}:${aPKGSPLIT[$PKG_BUILD]}:${aPKGSPLIT[$PKG_ARCH]}" >> $VARCACHE_SEARCH/packages-installed-split
 		shift
 	done
 	return 0
@@ -2356,6 +2415,7 @@ function _REMOVE_NOW()
 		fi
 	done
 	popd &>/dev/null
+	IFS=$SAVEIFS
 	return 0
 }
 
@@ -2545,6 +2605,7 @@ function sh_removepkg()
 		[[ $retval = 0 ]] && rm -f $VARCACHE_INSTALLED/${_pkg}
 		[[ $retval = 0 ]] && > $VARCACHE_REMOVED/${_pkg}
 		[[ $retval = 0 ]] && sed -i  '/'${_pkginstalled}'/d' $VARCACHE_SEARCH/packages-installed
+		[[ $retval = 0 ]] && sed -i  '/'${_pkginstalled}'/d' $VARCACHE_SEARCH/packages-installed-split
 		shift
 	done
 	return 0
@@ -2852,7 +2913,7 @@ function sh_upgrade()
 	local	cBase cBaseVersion cVersion cBuild
 	local ntotalinstalled
 	local ntotalconfered
-	local pkg
+	local pkgrepo
 	local ntotal_pkg_installed
 	local ntotal_pkg_listed
 
@@ -2879,15 +2940,19 @@ function sh_upgrade()
 		cBaseVersionInstalled=${aPKGSPLIT[PKG_BASE_VERSION]}
 		cVersionInstalled=${aPKGSPLIT[PKG_VERSION]}
 		cBuildInstalled=${aPKGSPLIT[PKG_BUILD]}
-
-		pkg=
-		pkg="$pkg $(grep ^$cBaseInstalled $VARCACHE_SEARCH/packages)"
+#		pkgrepo=$(grep ^$cBaseInstalled $VARCACHE_SEARCH/packages)
+		pkgrepo=$(grep ^$cBaseInstalled: $VARCACHE_SEARCH/packages-split | cut -d: -f4)
 		count=0
 		((ntotalconfered++))
 
-		if [[ "${#pkg}" -gt 0 ]]; then # pacote?
-			for x in $pkg; do
-				sh_splitpkg "${x}"
+		#debug
+		#info "pkginstalled: ${i}\npkgrepo: $pkgrepo"
+
+		if [[ "${#pkgrepo}" -gt 0 ]]; then # pacote?
+			for cPkg in ${pkgrepo}; do
+				#debug
+				#info $cPkg
+				sh_splitpkg "${cPkg}"
 				cBase=${aPKGSPLIT[PKG_BASE]}
 				cBaseVersion=${aPKGSPLIT[PKG_BASE_VERSION]}
 				cVersion=${aPKGSPLIT[PKG_VERSION]}
@@ -2898,6 +2963,7 @@ function sh_upgrade()
 					gtk+)   continue;;
 				esac
 
+				#debug
 				#info "$cBaseInstalled == $cBase"
 
 				if [[ $cBaseInstalled == $cBase ]]; then
@@ -2925,7 +2991,7 @@ function sh_upgrade()
 						fi
 					fi
 				else
-   	 			log_warning_msg "[$ntotalconfered/$ntotal_pkg_listed]${orange}${cBaseInstalled} ${reset}not installed."
+   	 			log_warning_msg "[$ntotalconfered/$ntotal_pkg_listed]${orange}${cBase} ${reset}not installed."
 				fi
 			done
 		else
