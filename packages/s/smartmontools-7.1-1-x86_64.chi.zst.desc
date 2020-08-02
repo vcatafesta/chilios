@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='smartmontools'
+version='7.1'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives'
+size='2110705'
+url='http://smartmontools.sourceforge.net'
+dep=('')

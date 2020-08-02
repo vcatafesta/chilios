@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='drbl'
+version='2.30.5'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Diskless Remote Boot in Linux: manage the deployment of the GNU/Linux operating system across many clients'
+size='5440433'
+url='http://drbl.sourceforge.net'
+dep=('')

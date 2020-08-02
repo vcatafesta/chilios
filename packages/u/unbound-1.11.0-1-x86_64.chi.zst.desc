@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='unbound'
+version='1.11.0'
+build='1'
+license='custom:BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Validating, recursive, and caching DNS resolver'
+size='4681095'
+url='https://unbound.net/'
+dep=('')

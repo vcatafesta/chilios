@@ -16,7 +16,7 @@ ulimit -n 32767
 #export TZ=America/Porto_Velho
 #export GREP_OPTIONS='-n --color=auto'
 export ROOTDIR=${PWD#/} ROOTDIR=/${ROOTDIR%%/*}
-export PATH="/usr/bin:/usr/sbin:/bin:/sbin:/tools/bin:/usr/local/bin:/usr/local/sbin"
+export PATH="/usr/bin:/usr/sbin:/bin:/sbin:/tools/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/sbin"
 #export LD_LIBRARY_PATH=/lib:/usr/lib
 
 #harbour
@@ -1507,35 +1507,33 @@ function chrootlfs()
 
 function limpa()
 {
-	#!/bin/bash
-	#source /lib/lsb/init-functions
-	cdir=$(ls -l|awk '/^d/ {print $9}')
-	blue="\e[1;34m"
+    #!/bin/bash
+    #source /lib/lsb/init-functions
+    cdir=$(ls -l|awk '/^d/ {print $9}')
+    blue="\e[1;34m"
 
-	echo -e ${blue}
-	log_success_msg2 "Iniciando limpeza..."
+    echo -e ${blue}
+    log_success_msg2 "Iniciando limpeza..."
 
-	for i in $cdir
-	do
-		log_info_msg "${blue}Removendo diretorio temporario... $i/"
-		sudo rm -rfd $i/
-		evaluate_retval
-	done
-	log_success_msg2 "Finish."
+    for i in $cdir
+    do
+        log_info_msg "${blue}Removendo diretorio temporario... $i/"
+        sudo rm -Rfd $i/
+        evaluate_retval
+    done
+    log_success_msg2 "Finish."
 }
-export -f limpa
 
 repairdirvar()
 {
-	log_wait_msg "Iniciando reparo do /var/run..."
-#	exec &> /dev/null
-	sudo mv -f /var/run/* /run/  > /dev/null 2>&1
-	sudo rm -rf /var/run         > /dev/null 2>&1
-	sudo ln -s /run /var/run     > /dev/null 2>&1
-	exec >/dev/tty
-	log_success_msg2 "Feito..."
+    log_wait_msg "Iniciando reparo do /var/run..."
+#    exec &> /dev/null
+    mv -f /var/run/* /run/  > /dev/null 2>&1
+    rm -rf /var/run         > /dev/null 2>&1
+    ln -s /run /var/run     > /dev/null 2>&1
+    exec >/dev/tty
+    log_success_msg2 "Feito..."
 }
-
 
 function ex()
 {
@@ -1660,8 +1658,8 @@ function removeoldpkgarch()
 {
 		local nfiles=0
 		local cOldDir=$PWD
-
 		cd /var/cache/pacman/pkg
+
 		shopt -s nullglob       # enable suppress error message of a command
 		if [ $# -lt 1 ]; then
 			AllFilesPackages=$(ls -1 *.{zst,xz})
@@ -1707,18 +1705,15 @@ function removeoldpkgarch()
 		done
 		cd $cOldDir
 }
-export -f removeoldpkgarch
 
 
 function removeoldpkgchili()
 {
-	local cHomeDir=$PWD
-	local pkgdir="/github/ChiliOS/packages/"
 	local cdir=
-
-	cd "$pkgdir"
+	cd /github/ChiliOS/packages/
 	for cdir in {a..z}
 	do
+		echo -e "${white}Verifying packages in ${green}$cdir"
 		local nfiles=0
 		local cOldDir=$PWD
 		local AllFilesPackages=
@@ -1727,20 +1722,16 @@ function removeoldpkgchili()
 		local FilteredPackages=
 		local AllFilteredPackages=
 
-		shopt -s nullglob       # enable suppress error message of a command
 		if [ $# -lt 1 ]; then
-			log_wait_msg "${white}Verifying packages in ${green}$pkgdir$cdir/"
 			pushd $cdir >/dev/null 2>&1
-			AllFilesPackages=$(ls -1 *.{zst,xz} 2> /dev/null)
+			AllFilesPackages=$(ls -1 *.{zst,xz})
 		else
 			cdir=${1:0:1}
-			log_wait_msg "${white}Verifying packages in ${green}$pkgdir$cdir/"
 			pushd $cdir >/dev/null 2>&1
-			AllFilesPackages=$(ls -1 $1*.{zst,xz}  2> /dev/null | grep $1)
+			AllFilesPackages=$(ls -1 $1*.{zst,xz} | grep $1)
 		fi
-		shopt -u nullglob       # disable suppress error message of a command
 
-		log_wait_msg "Wait, working on it..."
+		log_wait_msg "wait, working on it..."
 		for pkgInAll in $AllFilesPackages
 		do
 			pkgtar=$(echo $pkgInAll |sed 's/\// /g'|awk '{print $NF}'|sed 's/-x86_64.chi.\|zst\|xz//g'|sed 's/-any.chi.\|zst\|xz//g'|sed 's/.chi.\|zst\|xz//g'|sed 's/1://g'|sed 's/2://g')
@@ -1750,36 +1741,29 @@ function removeoldpkgchili()
 			nfiles=0
 			y=
 			pkg=
-			cPacoteSemExt=$(echo ${pkgtar%%.*})        # https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
-         cPacoteSemExt=$(echo ${cPacoteSemExt%-*})  # https://elmord.org/blog/?entry=20121227-manipulando-strings-bash
 
 			for y in ${AllFilteredPackages[*]}
 			do
 				((nfiles++))
 			done
 
-			log_wait_msg "${white}Checking OLD packages of ${purple}(#$nfiles found) ${green}$cPacoteSemExt"
+			log_wait_msg "${white}Verifying package ${purple}($nfiles) ${green}$pkgInAll"
 			if [[ $nfiles -gt 1 ]]; then
 				for pkg in $AllFilteredPackages
 				do
+
 					if [[ "$(vercmp $pkgInAll $pkg)" -lt 0 ]]; then
-#						maxcol; replicate "=" $?; echo
+						maxcol; replicate "=" $?
 						log_info_msg "Removing ${red}OLD ${reset}package ${yellow}$pkgInAll"
-						shopt -s nullglob       # enable suppress error message of a command
-#						rm $pkgInAll*  >/dev/null 2>&1
-						rm $pkgInAll*
+						rm $pkgInAll*  >/dev/null 2>&1
 						evaluate_retval
-#						maxcol; replicate "=" $?; echo
-						shopt -u nullglob       # disable suppress error message of a command
+						maxcol; replicate "=" $?
 					elif [[ "$(vercmp $pkgInAll $pkg)" -gt 0 ]]; then
 						continue
 					elif [[ "$(vercmp $pkgInAll $pkg)" -eq 0 ]]; then
 						continue
 					fi
 				done
-			else
-				log_info_msg "Package ${yellow}$pkgInAll ${reset}is already the newest. Nothing to do. ${reset}"
-				echo
 			fi
 		done
 		popd >/dev/null 2>&1
@@ -1787,10 +1771,7 @@ function removeoldpkgchili()
 			break
 		fi
 	done
-	cd $cHomeDir
 }
-export -f removeoldpkgchili
-
 
 function limpa_tar_zst()
 {
@@ -1808,20 +1789,19 @@ function copiapkg()
 	for letra in {a..z}
 	do
 		log_info_msg "Copiando arquivos iniciados com a letra: $letra para diretorio /github/ChiliOS/packages/$letra/"
-		sudo cp $letra* /github/ChiliOS/packages/$letra/ &>/dev/null
+		cp $letra* /github/ChiliOS/packages/$letra/ &>/dev/null
 		evaluate_retval
 	done
 }
-export -f copiapkg
+
 
 function dw()
 {
-	sudo pacman -Sw $* --noconfirm --quiet
+	pacman -Sw $* --noconfirm --quiet
 	if [ $? == 0 ]; then
-		sudo fetch -a $*
+		fetch -a $*
 	fi
 }
-export -f dw
 
 function mput()
 {
@@ -1922,217 +1902,3 @@ export CHOST CFLAGS CXXFLAGS
 #unset CXXFLAGS
 export PATH="$PATH:/src/depot_tools"
 #PS1="\e[32;1m\u \e[33;1m→ \e[36;1m\h \e[37;0m\w\n\e[35;1m⚡\e[m"
-
-
-#!/bin/bash
-
-#. /etc/init.d/functions
-
-# Use step(), try(), and next() to perform a series of commands and print
-# [  OK  ] or [FAILED] at the end. The step as a whole fails if any individual
-# command fails.
-#
-# Example:
-#     step "Remounting / and /boot as read-write:"
-#     try mount -o remount,rw /
-#     try mount -o remount,rw /boot
-#     next
-
-step() {
-    echo -n "$@"
-    STEP_OK=0
-    [[ -w /tmp ]] && echo $STEP_OK > /tmp/step.$$
-}
-
-try() {
-    # Check for `-b' argument to run command in the background.
-    local BG=
-
-    [[ $1 == -b ]] && { BG=1; shift; }
-    [[ $1 == -- ]] && {       shift; }
-
-    # Run the command.
-    if [[ -z $BG ]]; then
-        "$@"
-    else
-        "$@" &
-    fi
-
-    # Check if command failed and update $STEP_OK if so.
-    local EXIT_CODE=$?
-
-    if [[ $EXIT_CODE -ne 0 ]]; then
-        STEP_OK=$EXIT_CODE
-        [[ -w /tmp ]] && echo $STEP_OK > /tmp/step.$$
-
-        if [[ -n $LOG_STEPS ]]; then
-            local FILE=$(readlink -m "${BASH_SOURCE[1]}")
-            local LINE=${BASH_LINENO[0]}
-
-            echo "$FILE: line $LINE: Command \`$*' failed with exit code $EXIT_CODE." >> "$LOG_STEPS"
-        fi
-    fi
-
-    return $EXIT_CODE
-}
-
-next() {
-    [[ -f /tmp/step.$$ ]] && { STEP_OK=$(< /tmp/step.$$); rm -f /tmp/step.$$; }
-    [[ $STEP_OK -eq 0 ]]  && echo_success || echo_failure
-    echo
-
-    return $STEP_OK
-}
-
-yell() { echo "$0: $*" >&2; }
-die() { yell "$*"; exit 111; }
-try2() { "$@" || die "cannot $*"; }
-asuser() { sudo su - "$1" -c "${*:2}"; }
-
-set -o pipefail
-shopt -s expand_aliases
-declare -ig __oo__insideTryCatch=0
-
-# if try-catch is nested, then set +e before so the parent handler doesn't catch us
-alias try3="[[ \$__oo__insideTryCatch -gt 0 ]] && set +e;
-           __oo__insideTryCatch+=1; ( set -e;
-           trap \"Exception.Capture \${LINENO}; \" ERR;"
-alias catch=" ); Exception.Extract \$? || "
-
-Exception.Capture() {
-    local script="${BASH_SOURCE[1]#./}"
-
-    if [[ ! -f /tmp/stored_exception_source ]]; then
-        echo "$script" > /tmp/stored_exception_source
-    fi
-    if [[ ! -f /tmp/stored_exception_line ]]; then
-        echo "$1" > /tmp/stored_exception_line
-    fi
-    return 0
-}
-
-Exception.Extract() {
-    if [[ $__oo__insideTryCatch -gt 1 ]]
-    then
-        set -e
-    fi
-
-    __oo__insideTryCatch+=-1
-
-    __EXCEPTION_CATCH__=( $(Exception.GetLastException) )
-
-    local retVal=$1
-    if [[ $retVal -gt 0 ]]
-    then
-        # BACKWARDS COMPATIBILE WAY:
-        # export __EXCEPTION_SOURCE__="${__EXCEPTION_CATCH__[(${#__EXCEPTION_CATCH__[@]}-1)]}"
-        # export __EXCEPTION_LINE__="${__EXCEPTION_CATCH__[(${#__EXCEPTION_CATCH__[@]}-2)]}"
-        export __EXCEPTION_SOURCE__="${__EXCEPTION_CATCH__[-1]}"
-        export __EXCEPTION_LINE__="${__EXCEPTION_CATCH__[-2]}"
-        export __EXCEPTION__="${__EXCEPTION_CATCH__[@]:0:(${#__EXCEPTION_CATCH__[@]} - 2)}"
-        return 1 # so that we may continue with a "catch"
-    fi
-}
-
-Exception.GetLastException() {
-    if [[ -f /tmp/stored_exception ]] && [[ -f /tmp/stored_exception_line ]] && [[ -f /tmp/stored_exception_source ]]
-    then
-        cat /tmp/stored_exception
-        cat /tmp/stored_exception_line
-        cat /tmp/stored_exception_source
-    else
-        echo -e " \n${BASH_LINENO[1]}\n${BASH_SOURCE[2]#./}"
-    fi
-
-    rm -f /tmp/stored_exception /tmp/stored_exception_line /tmp/stored_exception_source
-    return 0
-}
-
-function check_exit {
-    cmd_output=$($@)
-    local status=$?
-    echo $status
-    if [ $status -ne 0 ]; then
-        echo "error with $1" >&2
-    fi
-    return $status
-}
-
-function run_command() {
-    exit 1
-}
-
-BOOTUP=color
-RES_COL=60
-MOVE_TO_COL="echo -en \\033[${RES_COL}G"
-SETCOLOR_SUCCESS="echo -en \\033[1;32m"
-SETCOLOR_FAILURE="echo -en \\033[1;31m"
-SETCOLOR_WARNING="echo -en \\033[1;33m"
-SETCOLOR_NORMAL="echo -en \\033[0;39m"
-
-echo_success() {
-    [ "$BOOTUP" = "color" ] && $MOVE_TO_COL
-    echo -n "["
-    [ "$BOOTUP" = "color" ] && $SETCOLOR_SUCCESS
-    echo -n $"  OK  "
-    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
-    echo -n "]"
-    echo -ne "\r"
-    return 0
-}
-
-echo_failure() {
-    [ "$BOOTUP" = "color" ] && $MOVE_TO_COL
-    echo -n "["
-    [ "$BOOTUP" = "color" ] && $SETCOLOR_FAILURE
-    echo -n $"FAILED"
-    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
-    echo -n "]"
-    echo -ne "\r"
-    return 1
-}
-
-echo_passed() {
-    [ "$BOOTUP" = "color" ] && $MOVE_TO_COL
-    echo -n "["
-    [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
-    echo -n $"PASSED"
-    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
-    echo -n "]"
-    echo -ne "\r"
-    return 1
-}
-
-echo_warning() {
-    [ "$BOOTUP" = "color" ] && $MOVE_TO_COL
-    echo -n "["
-    [ "$BOOTUP" = "color" ] && $SETCOLOR_WARNING
-    echo -n $"WARNING"
-    [ "$BOOTUP" = "color" ] && $SETCOLOR_NORMAL
-    echo -n "]"
-    echo -ne "\r"
-    return 1
-}
-
-assert_exit_status() {
-
-  lambda() {
-    local val_fd=$(echo $@ | tr -d ' ' | cut -d':' -f2)
-    local arg=$1
-    shift
-    shift
-    local cmd=$(echo $@ | xargs -E ':')
-    local val=$(cat $val_fd)
-    eval $arg=$val
-    eval $cmd
-  }
-
-  local lambda=$1
-  shift
-
-  eval $@
-  local ret=$?
-  $lambda : <(echo $ret)
-
-}
-

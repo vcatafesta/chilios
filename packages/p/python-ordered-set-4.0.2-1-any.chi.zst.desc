@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='ordered'
+build='set'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A MutableSet that remembers its order, so that every entry has an index'
+size='59049'
+url='https://github.com/LuminosoInsight/ordered-set'
+dep=('')

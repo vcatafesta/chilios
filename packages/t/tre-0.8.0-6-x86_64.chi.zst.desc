@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='tre'
+version='0.8.0'
+build='6'
+license='custom:BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='POSIX compliant regexp matching library. Includes agrep for approximate grepping.'
+size='169485'
+url='https://laurikari.net/tre'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='partimage'
+version='0.6.9'
+build='13'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Partition Image saves partitions in many formats to an image file.'
+size='807079'
+url='https://www.partimage.org/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='powerline'
+version='common'
+build='2.8.1'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='common files for python-powerline and python2-powerline'
+size='6280'
+url='https://github.com/powerline/powerline'
+dep=('')
