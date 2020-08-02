@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='suitesparse'
+version='5.8.1'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A collection of sparse matrix libraries'
+size='3563019'
+url='http://faculty.cse.tamu.edu/davis/suitesparse.html'
+dep=('')

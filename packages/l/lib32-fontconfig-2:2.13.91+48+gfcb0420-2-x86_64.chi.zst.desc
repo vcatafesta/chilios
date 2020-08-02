@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='fontconfig'
+build='2:2.13.91+48+gfcb0420'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for configuring and customizing font access (32-bit)'
+size='336348'
+url='https://www.freedesktop.org/wiki/Software/fontconfig/'
+dep=('')
