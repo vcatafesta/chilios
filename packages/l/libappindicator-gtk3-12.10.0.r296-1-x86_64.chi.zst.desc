@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libappindicator'
+version='gtk3'
+build='12.10.0.r296'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Allow applications to extend a menu via Ayatana indicators in Unity, KDE or Systray (GTK+ 3 library)'
+size='359472'
+url='https://launchpad.net/libappindicator'
+dep=('')

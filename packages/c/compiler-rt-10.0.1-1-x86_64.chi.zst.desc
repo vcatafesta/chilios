@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='compiler'
+version='rt'
+build='10.0.1'
+license='custom:Apache 2.0 with LLVM Exception'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Compiler runtime libraries for clang'
+size='31331340'
+url='https://compiler-rt.llvm.org/'
+dep=('')

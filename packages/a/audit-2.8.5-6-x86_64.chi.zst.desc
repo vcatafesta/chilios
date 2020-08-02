@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='audit'
+version='2.8.5'
+build='6'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Userspace components of the audit framework'
+size='1005395'
+url='https://people.redhat.com/sgrubb/audit'
+dep=('')

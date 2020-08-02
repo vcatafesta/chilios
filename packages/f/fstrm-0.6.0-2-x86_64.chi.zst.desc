@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='fstrm'
+version='0.6.0'
+build='2'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A C implementation of the Frame Streams data transport protocol'
+size='247096'
+url='https://github.com/farsightsec/fstrm'
+dep=('')

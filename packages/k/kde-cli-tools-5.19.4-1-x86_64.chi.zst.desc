@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='kde'
+version='cli'
+build='tools'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Tools based on KDE Frameworks 5 to better interact with the system'
+size='4183418'
+url='https://www.kde.org/workspaces/plasmadesktop/'
+dep=('')

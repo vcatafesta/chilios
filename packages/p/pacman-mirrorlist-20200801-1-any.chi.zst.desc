@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='pacman'
+version='mirrorlist'
+build='20200801'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Arch Linux mirror list for use by pacman'
+size='33520'
+url='https://www.archlinux.org/mirrorlist/'
+dep=('')

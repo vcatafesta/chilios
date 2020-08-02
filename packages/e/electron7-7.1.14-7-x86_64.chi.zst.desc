@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='electron7'
+version='7.1.14'
+build='7'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Build cross platform desktop apps with web technologies'
+size='168566852'
+url='https://electronjs.org/'
+dep=('')

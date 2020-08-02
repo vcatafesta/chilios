@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dnssec'
+version='anchors'
+build='20190629'
+license='custom:none'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='DNSSEC trust anchors for the root zone'
+size='809'
+url='https://data.iana.org/root-anchors/'
+dep=('')

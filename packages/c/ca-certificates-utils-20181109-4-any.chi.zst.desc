@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ca'
+version='certificates'
+build='utils'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Common CA certificates (utilities)'
+size='6188'
+url='https://src.fedoraproject.org/rpms/ca-certificates'
+dep=('')

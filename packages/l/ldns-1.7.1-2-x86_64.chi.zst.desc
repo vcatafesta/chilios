@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ldns'
+version='1.7.1'
+build='2'
+license='custom:BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Fast DNS library supporting recent RFCs'
+size='1944077'
+url='https://www.nlnetlabs.nl/projects/ldns/'
+dep=('')

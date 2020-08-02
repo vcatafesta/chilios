@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='code'
+version='1.47.3'
+build='1'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The Open Source build of Visual Studio Code (vscode) editor'
+size='77441161'
+url='https://github.com/microsoft/vscode'
+dep=('')

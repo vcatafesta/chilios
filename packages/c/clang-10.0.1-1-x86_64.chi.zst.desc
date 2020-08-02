@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='clang'
+version='10.0.1'
+build='1'
+license='custom:Apache 2.0 with LLVM Exception'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='C language family frontend for LLVM'
+size='171589268'
+url='https://clang.llvm.org/'
+dep=('')

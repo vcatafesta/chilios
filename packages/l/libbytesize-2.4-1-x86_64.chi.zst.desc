@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libbytesize'
+version='2.4'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A tiny library providing a C class for working with arbitrary big sizes in bytes'
+size='82621'
+url='https://github.com/rhinstaller/libbytesize'
+dep=('')

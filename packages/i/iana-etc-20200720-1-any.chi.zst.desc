@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='iana'
+version='etc'
+build='20200720'
+license='custom:none'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='/etc/protocols and /etc/services provided by IANA'
+size='4082522'
+url='https://www.iana.org/protocols'
+dep=('')
