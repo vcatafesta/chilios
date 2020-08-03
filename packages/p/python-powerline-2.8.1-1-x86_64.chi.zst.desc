@@ -15,3 +15,5 @@ desc='python library for powerline'
 size='1816612'
 url='https://github.com/powerline/powerline'
 dep=('')
+depend='python>=3.2'
+depend='powerline-common'

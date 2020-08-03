@@ -15,3 +15,4 @@ desc='Common CA certificates (default providers)'
 size='0'
 url='https://src.fedoraproject.org/rpms/ca-certificates'
 dep=('')
+depend='ca-certificates-mozilla'

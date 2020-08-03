@@ -15,3 +15,7 @@ desc='Common CA certificates (utilities)'
 size='6188'
 url='https://src.fedoraproject.org/rpms/ca-certificates'
 dep=('')
+depend='bash'
+depend='coreutils'
+depend='findutils'
+depend='p11-kit>=0.23.19'

@@ -1,7 +1,18 @@
-<html>
-<head><title>404 Not Found</title></head>
-<body>
-<center><h1>404 Not Found</h1></center>
-<hr><center>nginx/1.18.0</center>
-</body>
-</html>
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libffi'
+version='3.3'
+build='3'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Portable foreign function interface library'
+size='75601'
+url='https://sourceware.org/libffi/'
+dep=('')
+depend='glibc'

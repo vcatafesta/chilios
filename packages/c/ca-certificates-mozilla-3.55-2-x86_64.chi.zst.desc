@@ -15,3 +15,4 @@ desc='Mozilla's set of trusted CA certificates'
 size='943998'
 url='https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS'
 dep=('')
+depend='ca-certificates-utils>=20181109-3'
