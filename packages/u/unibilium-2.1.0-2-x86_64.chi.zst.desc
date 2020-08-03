@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='unibilium'
+version='2.1.0'
+build='2'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A terminfo parsing library'
+size='217771'
+url='https://github.com/neovim/unibilium'
+dep=('')
+depend='glibc'
