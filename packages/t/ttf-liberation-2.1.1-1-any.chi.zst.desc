@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ttf'
+version='liberation'
+build='2.1.1'
+license='custom:OFL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Red Hats Liberation fonts'
+size='4332974'
+url='https://github.com/liberationfonts/liberation-fonts'
+dep=('')
