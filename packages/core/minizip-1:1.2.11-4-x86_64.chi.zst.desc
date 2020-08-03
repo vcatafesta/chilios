@@ -15,3 +15,4 @@ desc='Mini zip and unzip based on zlib'
 size='87647'
 url='https://www.zlib.net/'
 dep=('')
+depend='zlib'
