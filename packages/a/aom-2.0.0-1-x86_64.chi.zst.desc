@@ -15,3 +15,4 @@ desc='Alliance for Open Media video codec'
 size='12281019'
 url='https://aomedia.org/'
 dep=('')
+depend='gcc-libs'

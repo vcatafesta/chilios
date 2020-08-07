@@ -15,3 +15,6 @@ desc='Library to import various well-known 3D model formats in an uniform manner
 size='14373666'
 url='http://assimp.sourceforge.net/index.html'
 dep=('')
+depend='zlib'
+depend='gcc-libs'
+depend='boost-libs'

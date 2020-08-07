@@ -15,3 +15,5 @@ desc='The Apache Portable Runtime'
 size='700809'
 url='https://apr.apache.org/'
 dep=('')
+depend='apr'
+depend='expat'

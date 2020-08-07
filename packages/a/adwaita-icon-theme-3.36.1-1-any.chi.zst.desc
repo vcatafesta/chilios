@@ -15,3 +15,6 @@ desc='GNOME standard icons'
 size='23429532'
 url='https://gitlab.gnome.org/GNOME/adwaita-icon-theme'
 dep=('')
+depend='hicolor-icon-theme'
+depend='gtk-update-icon-cache'
+depend='librsvg'

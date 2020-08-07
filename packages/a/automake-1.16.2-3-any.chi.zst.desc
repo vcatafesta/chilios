@@ -15,3 +15,5 @@ desc='A GNU tool for automatically creating Makefiles'
 size='1628877'
 url='https://www.gnu.org/software/automake'
 dep=('')
+depend='perl'
+depend='bash'

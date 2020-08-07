@@ -15,3 +15,5 @@ desc='A spell checker designed to eventually replace Ispell'
 size='3470424'
 url='http://aspell.net/'
 dep=('')
+depend='gcc-libs'
+depend='ncurses'

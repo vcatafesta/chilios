@@ -15,3 +15,4 @@ desc='A password-hashing function (reference C implementation)'
 size='116248'
 url='https://github.com/P-H-C/phc-winner-argon2'
 dep=('')
+depend='glibc'

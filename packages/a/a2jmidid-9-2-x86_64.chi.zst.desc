@@ -15,3 +15,5 @@ desc='A daemon for exposing legacy ALSA sequencer applications in JACK MIDI syst
 size='101688'
 url='https://github.com/linuxaudio/a2jmidid'
 dep=('')
+depend='jack'
+depend='dbus'

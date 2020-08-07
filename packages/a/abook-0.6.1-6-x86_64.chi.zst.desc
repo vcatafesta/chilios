@@ -15,3 +15,4 @@ desc='Text-based addressbook designed for use with Mutt'
 size='204176'
 url='http://abook.sourceforge.net/'
 dep=('')
+depend='readline'

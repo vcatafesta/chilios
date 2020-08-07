@@ -15,3 +15,4 @@ desc='A Perl-based grep replacement, aimed at programmers with large trees of he
 size='180986'
 url='http://betterthangrep.com/'
 dep=('')
+depend='perl-file-next'

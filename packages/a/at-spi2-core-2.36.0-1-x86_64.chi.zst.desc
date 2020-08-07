@@ -15,3 +15,6 @@ desc='Protocol definitions and daemon for D-Bus at-spi'
 size='2225576'
 url='https://gitlab.gnome.org/GNOME/at-spi2-core'
 dep=('')
+depend='dbus'
+depend='glib2'
+depend='libxtst'

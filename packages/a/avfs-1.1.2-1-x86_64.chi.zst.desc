@@ -15,3 +15,7 @@ desc='Virtual filesystem that allows browsing compressed files'
 size='772016'
 url='http://avf.sourceforge.net/'
 dep=('')
+depend='fuse2'
+depend='perl'
+depend='xz'
+depend='zstd'

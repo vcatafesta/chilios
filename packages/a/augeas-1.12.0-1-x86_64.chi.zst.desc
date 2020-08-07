@@ -15,3 +15,5 @@ desc='A configuration editing tool that parses config files and transforms them 
 size='2302976'
 url='http://augeas.net'
 dep=('')
+depend='libxml2'
+depend='gcc-libs'

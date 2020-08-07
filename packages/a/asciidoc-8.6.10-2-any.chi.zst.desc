@@ -15,3 +15,6 @@ desc='Text document format for short documents, articles, books and UNIX man pag
 size='1844846'
 url='https://www.methods.co.nz/asciidoc/'
 dep=('')
+depend='python2'
+depend='libxslt'
+depend='docbook-xsl'

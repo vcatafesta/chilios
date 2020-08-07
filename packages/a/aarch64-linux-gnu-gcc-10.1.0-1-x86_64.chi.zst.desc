@@ -15,3 +15,7 @@ desc='The GNU Compiler Collection - cross compiler for ARM64 target'
 size='290429737'
 url='https://gcc.gnu.org/'
 dep=('')
+depend='aarch64-linux-gnu-binutils'
+depend='aarch64-linux-gnu-glibc'
+depend='libmpc'
+depend='zlib'

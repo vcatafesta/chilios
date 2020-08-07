@@ -15,3 +15,4 @@ desc='Minimal http daemon that answers acme challenges and redirects everything 
 size='7231085'
 url='https://github.com/kpcyrd/acme-redirect'
 dep=('')
+depend='openssl'

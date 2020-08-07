@@ -15,3 +15,5 @@ desc='An Any to PostScript filter'
 size='3518779'
 url='https://www.gnu.org/software/a2ps/'
 dep=('')
+depend='psutils'
+depend='imagemagick'

@@ -15,3 +15,4 @@ desc='The Apache Portable Runtime'
 size='1205949'
 url='https://apr.apache.org/'
 dep=('')
+depend='util-linux'

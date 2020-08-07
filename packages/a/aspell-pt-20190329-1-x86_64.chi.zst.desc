@@ -15,3 +15,4 @@ desc='Portuguese and Brazilian Portuguese dictionary for aspell'
 size='54060441'
 url='http://aspell.net/'
 dep=('')
+depend='aspell'

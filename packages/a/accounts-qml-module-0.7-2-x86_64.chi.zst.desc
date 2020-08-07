@@ -15,3 +15,6 @@ desc='Expose the Online Accounts API to QML applications'
 size='468992'
 url='https://gitlab.com/accounts-sso/accounts-qml-module'
 dep=('')
+depend='signond'
+depend='libaccounts-qt'
+depend='qt5-declarative'

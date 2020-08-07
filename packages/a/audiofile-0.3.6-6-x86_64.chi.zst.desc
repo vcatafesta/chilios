@@ -15,3 +15,6 @@ desc='Silicon Graphics Audio File Library'
 size='395664'
 url='https://audiofile.68k.org/'
 dep=('')
+depend='gcc-libs'
+depend='alsa-lib'
+depend='flac'

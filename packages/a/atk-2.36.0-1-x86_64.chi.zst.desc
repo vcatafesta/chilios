@@ -15,3 +15,4 @@ desc='Interface definitions of accessibility infrastructure'
 size='3746902'
 url='https://gitlab.gnome.org/GNOME/atk'
 dep=('')
+depend='glib2'

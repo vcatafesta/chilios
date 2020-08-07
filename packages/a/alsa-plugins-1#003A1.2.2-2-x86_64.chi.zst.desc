@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='alsa'
+version='plugins'
+build='1#003A1.2.2'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Additional ALSA plugins'
+size='355049'
+url='https://www.alsa-project.org'
+dep=('')
+depend='glibc'
+depend='libasound.so=2-64'

@@ -15,3 +15,4 @@ desc='A kernel-based automounter for Linux'
 size='3502828'
 url='https://www.kernel.org/pub/linux/daemons/autofs/'
 dep=('')
+depend='libxml2'

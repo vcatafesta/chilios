@@ -15,3 +15,5 @@ desc='GNU C Library ARM64 target'
 size='20436033'
 url='https://www.gnu.org/software/libc/'
 dep=('')
+depend='aarch64-linux-gnu-gcc'
+depend='aarch64-linux-gnu-linux-api-headers'

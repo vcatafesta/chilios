@@ -15,3 +15,4 @@ desc='Actions, Menus and Toolbars Kit for GTK+ applications'
 size='610602'
 url='https://wiki.gnome.org/Projects/Amtk'
 dep=('')
+depend='gtk3'

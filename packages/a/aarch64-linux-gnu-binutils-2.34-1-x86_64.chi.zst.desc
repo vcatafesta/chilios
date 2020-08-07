@@ -15,3 +15,4 @@ desc='A set of programs to assemble and manipulate binary and object files for t
 size='31273098'
 url='https://www.gnu.org/software/binutils/'
 dep=('')
+depend='zlib'

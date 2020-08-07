@@ -15,3 +15,6 @@ desc='The GNU AVR Compiler Collection'
 size='179898580'
 url='http://gcc.gnu.org/'
 dep=('')
+depend='avr-binutils'
+depend='gcc-libs'
+depend='libmpc'

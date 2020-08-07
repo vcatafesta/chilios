@@ -15,3 +15,5 @@ desc='A portable ASCII art graphic library'
 size='293999'
 url='http://aa-project.sourceforge.net/aalib/'
 dep=('')
+depend='gpm'
+depend='libx11'

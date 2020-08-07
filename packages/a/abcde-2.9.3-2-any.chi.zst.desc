@@ -15,3 +15,7 @@ desc='Frontend command-line utility that grabs tracks off a CD, encodes them to 
 size='364497'
 url='https://abcde.einval.com/'
 dep=('')
+depend='bash'
+depend='cd-discid'
+depend='wget'
+depend='vorbis-tools'

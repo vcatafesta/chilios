@@ -15,3 +15,7 @@ desc='Radically simple IT automation platform'
 size='147444730'
 url='https://www.ansible.com'
 dep=('')
+depend='python'
+depend='python-yaml'
+depend='python-paramiko'
+depend='python-jinja'

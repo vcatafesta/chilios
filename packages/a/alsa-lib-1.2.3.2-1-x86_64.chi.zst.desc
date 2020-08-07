@@ -15,3 +15,6 @@ desc='An alternative implementation of Linux sound support'
 size='1646986'
 url='https://www.alsa-project.org'
 dep=('')
+depend='glibc'
+depend='alsa-topology-conf'
+depend='alsa-ucm-conf'

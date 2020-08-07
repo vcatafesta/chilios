@@ -15,3 +15,5 @@ desc='AT and batch delayed command scheduling utility and daemon'
 size='98304'
 url='http://blog.calhariz.com/tag/at'
 dep=('')
+depend='pam'
+depend='flex'

@@ -15,3 +15,4 @@ desc='Library for ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-T
 size='122603'
 url='https://github.com/nkoriyama/aribb24'
 dep=('')
+depend='libpng'

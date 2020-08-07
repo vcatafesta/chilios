@@ -15,3 +15,6 @@ desc='Mandatory Access Control (MAC) using Linux Security Module (LSM)'
 size='3907463'
 url='https://gitlab.com/apparmor/apparmor'
 dep=('')
+depend='audit'
+depend='pam'
+depend='python'

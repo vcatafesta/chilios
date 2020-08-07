@@ -15,3 +15,4 @@ desc='A daemon for delivering ACPI power management events with netlink support'
 size='156422'
 url='https://sourceforge.net/projects/acpid2/'
 dep=('')
+depend='bash'

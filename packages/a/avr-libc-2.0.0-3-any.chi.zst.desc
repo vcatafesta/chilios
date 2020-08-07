@@ -15,3 +15,4 @@ desc='The C runtime library for the AVR family of microcontrollers'
 size='30135296'
 url='http://savannah.nongnu.org/projects/avr-libc/'
 dep=('')
+depend='avr-gcc'

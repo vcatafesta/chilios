@@ -5,7 +5,7 @@
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
 pkgname='autoconf'
 version='archive'
-build='1:2019.01.06'
+build='1#003A2019.01.06'
 license='GPL3'
 lfs_version='8.4'
 lfs_init='SYSTEMD'
@@ -15,3 +15,4 @@ desc='A collection of freely re-usable Autoconf macros'
 size='2318336'
 url='https://www.gnu.org/software/autoconf-archive/'
 dep=('')
+depend='autoconf'

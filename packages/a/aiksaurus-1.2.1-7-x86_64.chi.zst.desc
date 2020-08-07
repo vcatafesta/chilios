@@ -15,3 +15,4 @@ desc='A cross-platform, open-source thesaurus'
 size='693340'
 url='http://aiksaurus.sourceforge.net/'
 dep=('')
+depend='gtk2'

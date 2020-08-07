@@ -15,3 +15,7 @@ desc='D-Bus interface for user account query and manipulation'
 size='1059636'
 url='https://gitlab.freedesktop.org/accountsservice/accountsservice'
 dep=('')
+depend='glib2'
+depend='polkit'
+depend='systemd'
+depend='shadow'

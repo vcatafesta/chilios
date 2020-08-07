@@ -15,3 +15,4 @@ desc='An ACME Shell script, an acme client alternative to certbot'
 size='835920'
 url='https://github.com/acmesh-official/acme.sh'
 dep=('')
+depend='bash'

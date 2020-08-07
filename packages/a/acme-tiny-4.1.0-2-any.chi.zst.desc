@@ -15,3 +15,5 @@ desc='A tiny script to issue and renew TLS certs from Let's Encrypt'
 size='12594'
 url='https://github.com/diafygi/acme-tiny'
 dep=('')
+depend='python'
+depend='openssl'

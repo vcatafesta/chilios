@@ -15,3 +15,7 @@ desc='A GTK+ module that bridges ATK to D-Bus at-spi'
 size='226424'
 url='https://wiki.gnome.org/Accessibility'
 dep=('')
+depend='at-spi2-core'
+depend='libx11'
+depend='libxml2'
+depend='atk'

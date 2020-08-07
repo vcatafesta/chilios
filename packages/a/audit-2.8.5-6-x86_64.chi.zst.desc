@@ -15,3 +15,5 @@ desc='Userspace components of the audit framework'
 size='1005395'
 url='https://people.redhat.com/sgrubb/audit'
 dep=('')
+depend='krb5'
+depend='libcap-ng'

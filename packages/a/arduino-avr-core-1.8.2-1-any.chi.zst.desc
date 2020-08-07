@@ -15,3 +15,6 @@ desc='Arduino AVR core with upstream avr-gcc and avrdude'
 size='11225404'
 url='https://github.com/arduino/ArduinoCore-avr'
 dep=('')
+depend='avrdude'
+depend='avr-gcc'
+depend='avr-libc'
