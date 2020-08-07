@@ -15,3 +15,6 @@ desc='A tool for generating text-scanning programs'
 size='994302'
 url='https://github.com/westes/flex'
 dep=('')
+depend='glibc'
+depend='m4'
+depend='sh'

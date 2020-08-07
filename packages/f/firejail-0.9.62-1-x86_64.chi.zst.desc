@@ -15,3 +15,4 @@ desc='Linux namespaces sandbox program'
 size='1666867'
 url='https://github.com/netblue30/firejail'
 dep=('')
+depend='apparmor'

@@ -15,3 +15,5 @@ desc='XAudio2 reimplementation'
 size='357130'
 url='https://github.com/FNA-XNA/FAudio/'
 dep=('')
+depend='sdl2'
+depend='ffmpeg'

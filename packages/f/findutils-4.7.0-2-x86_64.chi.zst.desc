@@ -15,3 +15,5 @@ desc='GNU utilities to locate files'
 size='1658139'
 url='https://www.gnu.org/software/findutils/'
 dep=('')
+depend='glibc'
+depend='sh'

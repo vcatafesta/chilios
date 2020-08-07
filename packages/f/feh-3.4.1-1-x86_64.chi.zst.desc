@@ -15,3 +15,7 @@ desc='Fast and light imlib2-based image viewer'
 size='450684'
 url='https://feh.finalrewind.org/'
 dep=('')
+depend='imlib2'
+depend='curl'
+depend='libxinerama'
+depend='libexif'

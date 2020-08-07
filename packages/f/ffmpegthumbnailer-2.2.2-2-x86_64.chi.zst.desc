@@ -15,3 +15,6 @@ desc='Lightweight video thumbnailer that can be used by file managers.'
 size='303416'
 url='https://github.com/dirkvdb/ffmpegthumbnailer'
 dep=('')
+depend='ffmpeg'
+depend='libjpeg'
+depend='libpng'

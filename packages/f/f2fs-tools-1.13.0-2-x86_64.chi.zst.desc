@@ -15,3 +15,4 @@ desc='Tools for Flash-Friendly File System (F2FS)'
 size='502674'
 url='https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/about/'
 dep=('')
+depend='util-linux'

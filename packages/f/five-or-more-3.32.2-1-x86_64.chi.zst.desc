@@ -15,3 +15,6 @@ desc='Remove colored balls from the board by forming lines'
 size='2566333'
 url='https://wiki.gnome.org/Apps/Five%20or%20more'
 dep=('')
+depend='gtk3'
+depend='librsvg'
+depend='libgnome-games-support'

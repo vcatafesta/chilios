@@ -15,3 +15,5 @@ desc='Free Lossless Audio Codec'
 size='1116204'
 url='https://xiph.org/flac/'
 dep=('')
+depend='gcc-libs'
+depend='libogg'

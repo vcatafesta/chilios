@@ -15,3 +15,5 @@ desc='Minimalistic plugin API for video effects'
 size='5793622'
 url='https://frei0r.dyne.org/'
 dep=('')
+depend='cairo'
+depend='gavl'

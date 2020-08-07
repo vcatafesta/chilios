@@ -15,3 +15,4 @@ desc='Freeware Advanced Audio Coder'
 size='152077'
 url='https://www.audiocoding.com/'
 dep=('')
+depend='glibc'

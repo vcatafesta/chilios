@@ -15,3 +15,6 @@ desc='Provides functionality for small OpenGL programs'
 size='408712'
 url='http://freeglut.sourceforge.net/'
 dep=('')
+depend='libxi'
+depend='libxrandr'
+depend='libgl'

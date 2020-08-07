@@ -15,3 +15,5 @@ desc='Farstream (formerly Farsight) - Audio/Video Communications Framework'
 size='1664715'
 url='https://www.freedesktop.org/wiki/Software/Farstream'
 dep=('')
+depend='gst-plugins-base-libs'
+depend='libnice'

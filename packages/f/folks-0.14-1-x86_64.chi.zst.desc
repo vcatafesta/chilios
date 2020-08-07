@@ -15,3 +15,7 @@ desc='Library to aggregates people into metacontacts'
 size='11370059'
 url='https://wiki.gnome.org/Projects/Folks'
 dep=('')
+depend='telepathy-glib'
+depend='libgee'
+depend='libxml2'
+depend='evolution-data-server'

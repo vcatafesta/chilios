@@ -15,3 +15,6 @@ desc='FUSE module to mount ISO filesystem images'
 size='43160'
 url='https://sourceforge.net/projects/fuseiso/'
 dep=('')
+depend='fuse2'
+depend='glib2'
+depend='zlib'

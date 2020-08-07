@@ -15,3 +15,5 @@ desc='Feature-rich cron implementation'
 size='317440'
 url='http://fcron.free.fr'
 dep=('')
+depend='pam'
+depend='run-parts'

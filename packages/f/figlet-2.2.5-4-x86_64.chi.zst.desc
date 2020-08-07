@@ -15,3 +15,5 @@ desc='A program for making large letters out of ordinary text'
 size='657353'
 url='http://www.figlet.org/'
 dep=('')
+depend='glibc'
+depend='sh'

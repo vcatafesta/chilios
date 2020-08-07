@@ -15,3 +15,4 @@ desc='A Free Implementation of the Unicode Bidirectional Algorithm'
 size='223608'
 url='https://github.com/fribidi/fribidi/'
 dep=('')
+depend='glibc'

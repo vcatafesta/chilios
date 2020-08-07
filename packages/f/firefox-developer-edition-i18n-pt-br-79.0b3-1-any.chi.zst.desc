@@ -15,3 +15,4 @@ desc='Portuguese (Brazilian) language pack for Firefox Developer Edition'
 size='558846'
 url='https://www.mozilla.com/'
 dep=('')
+depend='firefox-developer-edition>=79.0b3'
