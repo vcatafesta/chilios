@@ -15,3 +15,5 @@ desc='Thunderbolt 3 device manager'
 size='407519'
 url='https://gitlab.freedesktop.org/bolt/bolt'
 dep=('')
+depend='polkit'
+depend='systemd'

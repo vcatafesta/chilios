@@ -15,3 +15,4 @@ desc='Basic Linear Algebra Subprograms'
 size='350956'
 url='https://www.netlib.org/lapack'
 dep=('')
+depend='gcc-libs'

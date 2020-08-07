@@ -15,3 +15,6 @@ desc='A fast Bayesian spam filtering tool'
 size='931803'
 url='https://bogofilter.sourceforge.io/'
 dep=('')
+depend='db'
+depend='perl'
+depend='gsl'

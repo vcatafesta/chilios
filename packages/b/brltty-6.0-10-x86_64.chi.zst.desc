@@ -15,3 +15,7 @@ desc='Braille display driver for Linux/Unix'
 size='8115992'
 url='https://brltty.app'
 dep=('')
+depend='gpm'
+depend='icu'
+depend='liblouis'
+depend='tcl'

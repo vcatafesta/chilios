@@ -15,3 +15,4 @@ desc='Native host app for Browserpass, browser extension for zx2c4's pass (passw
 size='3943324'
 url='https://github.com/browserpass/browserpass-native'
 dep=('')
+depend='gnupg'

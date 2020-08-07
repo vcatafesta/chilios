@@ -15,3 +15,5 @@ desc='A high-quality data compression program'
 size='147453'
 url='https://sourceware.org/bzip2/'
 dep=('')
+depend='glibc'
+depend='sh'

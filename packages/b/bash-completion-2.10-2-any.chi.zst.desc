@@ -15,3 +15,4 @@ desc='Programmable completion for the bash shell'
 size='856491'
 url='https://github.com/scop/bash-completion'
 dep=('')
+depend='bash'

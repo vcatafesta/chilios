@@ -15,3 +15,6 @@ desc='A set of programs to assemble and manipulate binary and object files'
 size='31146405'
 url='https://www.gnu.org/software/binutils/'
 dep=('')
+depend='glibc'
+depend='zlib'
+depend='elfutils'

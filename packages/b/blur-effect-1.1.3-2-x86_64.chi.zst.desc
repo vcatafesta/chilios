@@ -15,3 +15,7 @@ desc='Off-screen image blurring utility using OpenGL ES 3.0'
 size='39016'
 url='https://github.com/sonald/blur-effect'
 dep=('')
+depend='gdk-pixbuf2'
+depend='mesa'
+depend='libegl'
+depend='libgles'

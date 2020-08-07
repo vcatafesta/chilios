@@ -15,3 +15,5 @@ desc='Unprivileged sandboxing tool'
 size='59736'
 url='https://github.com/projectatomic/bubblewrap'
 dep=('')
+depend='glibc'
+depend='libcap'

@@ -15,3 +15,4 @@ desc='Utilities for configuring the Linux ethernet bridge'
 size='45616'
 url='https://wiki.linuxfoundation.org/networking/bridge'
 dep=('')
+depend='glibc'

@@ -15,3 +15,4 @@ desc='Free peer-reviewed portable C++ source libraries - development headers'
 size='184251662'
 url='https://www.boost.org/'
 dep=('')
+depend='boost-libs=1.72.0'

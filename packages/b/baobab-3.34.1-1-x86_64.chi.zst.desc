@@ -15,3 +15,7 @@ desc='A graphical directory tree analyzer'
 size='1362866'
 url='https://wiki.gnome.org/Apps/DiskUsageAnalyzer'
 dep=('')
+depend='dconf'
+depend='gtk3'
+depend='gsettings-desktop-schemas'
+depend='librsvg'

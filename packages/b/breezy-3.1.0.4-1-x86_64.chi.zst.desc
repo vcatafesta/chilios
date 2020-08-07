@@ -15,3 +15,6 @@ desc='A decentralized revision control system with support for Bazaar and Git fi
 size='41678668'
 url='https://www.breezy-vcs.org/'
 dep=('')
+depend='python-configobj'
+depend='python-patiencediff'
+depend='python-six'

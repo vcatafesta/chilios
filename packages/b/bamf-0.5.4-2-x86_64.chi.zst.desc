@@ -15,3 +15,5 @@ desc='Application matching framework'
 size='1010703'
 url='https://launchpad.net/bamf'
 dep=('')
+depend='libgtop'
+depend='libwnck3'

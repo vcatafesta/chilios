@@ -15,3 +15,4 @@ desc='An arbitrary precision calculator language'
 size='179607'
 url='https://www.gnu.org/software/bc/'
 dep=('')
+depend='readline'

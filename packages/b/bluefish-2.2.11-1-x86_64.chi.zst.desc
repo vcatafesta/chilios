@@ -15,3 +15,6 @@ desc='A powerful HTML editor for experienced web designers and programmers'
 size='9694855'
 url='http://bluefish.openoffice.nl/'
 dep=('')
+depend='gtk3'
+depend='enchant'
+depend='python'

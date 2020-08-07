@@ -15,3 +15,5 @@ desc='Dynamic, any to any, pixel format conversion library'
 size='1283861'
 url='https://gegl.org/babl/'
 dep=('')
+depend='glibc'
+depend='lcms2'

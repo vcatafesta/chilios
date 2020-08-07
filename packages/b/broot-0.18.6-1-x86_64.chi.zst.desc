@@ -15,3 +15,5 @@ desc='Fuzzy Search + tree + cd'
 size='3913974'
 url='https://github.com/Canop/broot'
 dep=('')
+depend='gcc-libs'
+depend='zlib'

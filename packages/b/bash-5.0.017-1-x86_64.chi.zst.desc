@@ -15,3 +15,6 @@ desc='The GNU Bourne Again shell'
 size='8443805'
 url='https://www.gnu.org/software/bash/bash.html'
 dep=('')
+depend='readline>=7.0'
+depend='glibc'
+depend='ncurses'

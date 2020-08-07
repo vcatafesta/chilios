@@ -15,3 +15,4 @@ desc='Deprecated libraries for the bluetooth protocol stack'
 size='291172'
 url='http://www.bluez.org/'
 dep=('')
+depend='glibc'

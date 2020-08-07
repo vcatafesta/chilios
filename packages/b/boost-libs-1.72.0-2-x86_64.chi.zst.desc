@@ -15,3 +15,7 @@ desc='Free peer-reviewed portable C++ source libraries - runtime libraries'
 size='11033522'
 url='https://www.boost.org/'
 dep=('')
+depend='bzip2'
+depend='zlib'
+depend='icu'
+depend='zstd'
