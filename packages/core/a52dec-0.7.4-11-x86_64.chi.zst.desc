@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='a52dec'
+version='0.7.4'
+build='11'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A free library for decoding ATSC A/52 streams'
+size='117111'
+url='http://liba52.sourceforge.net/'
+dep=('')
+depend='glibc'

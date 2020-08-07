@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='4ti2'
+version='1.6.9'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A software package for algebraic, geometric and combinatorial problems on linear spaces'
+size='3141090'
+url='https://4ti2.github.io/'
+dep=('')
+depend='glpk'
