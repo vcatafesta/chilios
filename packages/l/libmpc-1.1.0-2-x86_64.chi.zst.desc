@@ -15,3 +15,4 @@ desc='Library for the arithmetic of complex numbers with arbitrarily high precis
 size='140123'
 url='http://www.multiprecision.org/'
 dep=('')
+depend='mpfr'

@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libupnp'
+version='1.6.25'
+build='2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Portable Open Source UPnP Development Kit'
+size='489818'
+url='http://pupnp.sourceforge.net/'
+dep=('')
+depend='glibc'

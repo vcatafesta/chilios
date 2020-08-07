@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='libxxf86vm'
+build='1.1.4'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='X11 XFree86 video mode extension library (32-bit)'
+size='23552'
+url='http://xorg.freedesktop.org/'
+dep=('')
+depend='lib32-libxext'
+depend='libxxf86vm'

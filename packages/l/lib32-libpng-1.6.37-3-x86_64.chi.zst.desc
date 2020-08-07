@@ -1,7 +1,19 @@
-<html>
-<head><title>404 Not Found</title></head>
-<body>
-<center><h1>404 Not Found</h1></center>
-<hr><center>nginx/1.18.0</center>
-</body>
-</html>
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='libpng'
+build='1.6.37'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A collection of routines used to create PNG format graphics files (32-bit)'
+size='313672'
+url='http://www.libpng.org/pub/png/libpng.html'
+dep=('')
+depend='lib32-zlib'
+depend='libpng'

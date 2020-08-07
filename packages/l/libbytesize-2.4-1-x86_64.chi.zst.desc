@@ -15,3 +15,6 @@ desc='A tiny library providing a C class for working with arbitrary big sizes in
 size='82621'
 url='https://github.com/rhinstaller/libbytesize'
 dep=('')
+depend='mpfr'
+depend='pcre2'
+depend='python'

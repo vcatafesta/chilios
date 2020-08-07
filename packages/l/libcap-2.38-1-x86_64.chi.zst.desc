@@ -15,3 +15,5 @@ desc='POSIX 1003.1e capabilities'
 size='165424'
 url='https://sites.google.com/site/fullycapable/'
 dep=('')
+depend='glibc'
+depend='attr'

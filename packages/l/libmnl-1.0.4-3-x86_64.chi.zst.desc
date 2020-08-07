@@ -15,3 +15,4 @@ desc='Minimalistic user-space library oriented to Netlink developers.'
 size='34682'
 url='https://www.netfilter.org/projects/libmnl/'
 dep=('')
+depend='glibc'

@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libsamplerate'
+version='0.1.9'
+build='3'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Secret Rabbit Code - aka Sample Rate Converter for audio'
+size='1639552'
+url='http://www.mega-nerd.com/SRC/index.html'
+dep=('')
+depend='glibc'

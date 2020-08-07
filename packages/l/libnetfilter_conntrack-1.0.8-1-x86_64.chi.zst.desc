@@ -15,3 +15,5 @@ desc='Library providing an API to the in-kernel connection tracking state table'
 size='153539'
 url='https://www.netfilter.org/projects/libnetfilter_conntrack/'
 dep=('')
+depend='libnfnetlink'
+depend='libmnl'

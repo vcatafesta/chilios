@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libproxy'
+version='0.4.15+33+g454a499'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Automatic proxy configuration management library'
+size='270500'
+url='https://libproxy.github.io/libproxy/'
+dep=('')
+depend='gcc-libs'
+depend='glib2'
+depend='dbus'

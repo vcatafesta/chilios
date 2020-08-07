@@ -15,3 +15,5 @@ desc='X11 client-side library'
 size='10652260'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libxcb'
+depend='xorgproto'

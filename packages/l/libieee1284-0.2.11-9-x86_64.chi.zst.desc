@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libieee1284'
+version='0.2.11'
+build='9'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library to query devices connected in parallel port'
+size='125562'
+url='https://github.com/twaugh/libieee1284'
+dep=('')

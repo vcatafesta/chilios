@@ -1,7 +1,18 @@
-<html>
-<head><title>404 Not Found</title></head>
-<body>
-<center><h1>404 Not Found</h1></center>
-<hr><center>nginx/1.19.1</center>
-</body>
-</html>
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lmdb'
+version='0.9.25'
+build='1'
+license='custom:OpenLDAP'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Symas Lightning Memory-Mapped Database'
+size='533468'
+url='https://symas.com/mdb'
+dep=('')
+depend='glibc'

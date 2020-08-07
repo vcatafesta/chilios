@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='liblqr'
+version='0.4.2'
+build='3'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A seam-carving C/C++ library called Liquid Rescale'
+size='89961'
+url='https://liblqr.wikidot.com/'
+dep=('')
+depend='glib2'

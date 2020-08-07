@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libltc'
+version='1.3.1'
+build='3'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Linear/Logitudinal Time Code (LTC) Library'
+size='662684'
+url='https://x42.github.io/libltc/'
+dep=('')
+depend='glibc'

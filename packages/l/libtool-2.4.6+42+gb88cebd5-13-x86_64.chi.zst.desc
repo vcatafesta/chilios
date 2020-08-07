@@ -15,3 +15,6 @@ desc='A generic library support script'
 size='2294074'
 url='https://www.gnu.org/software/libtool'
 dep=('')
+depend='sh'
+depend='tar'
+depend='glibc'

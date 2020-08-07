@@ -15,3 +15,4 @@ desc='Library making programming with POSIX capabilities easier than traditional
 size='100467'
 url='https://people.redhat.com/sgrubb/libcap-ng/'
 dep=('')
+depend='glibc'

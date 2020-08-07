@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libisofs'
+version='1.5.2'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library to pack up hard disk files and directories into a ISO 9660 disk image'
+size='787286'
+url='https://dev.lovelyhq.com/libburnia'
+dep=('')
+depend='acl'
+depend='zlib'

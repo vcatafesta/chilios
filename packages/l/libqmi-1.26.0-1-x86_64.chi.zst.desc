@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libqmi'
+version='1.26.0'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='QMI modem protocol helper library'
+size='34740743'
+url='https://www.freedesktop.org/wiki/Software/libqmi/'
+dep=('')
+depend='libmbim'
+depend='libgudev'

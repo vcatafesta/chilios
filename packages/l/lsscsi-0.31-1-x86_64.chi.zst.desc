@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lsscsi'
+version='0.31'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A tool that lists devices connected via SCSI and its transports'
+size='94457'
+url='http://sg.danny.cz/scsi/lsscsi.html'
+dep=('')
+depend='sysfsutils'

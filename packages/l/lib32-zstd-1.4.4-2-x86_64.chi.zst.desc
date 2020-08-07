@@ -15,3 +15,7 @@ desc='Zstandard - Fast real-time compression algorithm (32-bit)'
 size='683190'
 url='https://www.zstd.net/'
 dep=('')
+depend='zstd'
+depend='lib32-zlib'
+depend='lib32-xz'
+depend='lib32-lz4'

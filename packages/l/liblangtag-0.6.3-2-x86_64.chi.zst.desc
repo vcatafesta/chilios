@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='liblangtag'
+version='0.6.3'
+build='2'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='interface library to access/deal with tags for identifying languages'
+size='3196871'
+url='https://bitbucket.org/tagoh/liblangtag/wiki/Home'
+dep=('')
+depend='libxml2'
+depend='glib2'

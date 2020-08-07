@@ -15,3 +15,4 @@ desc='Wrapper library for evdev devices'
 size='258089'
 url='https://www.freedesktop.org/wiki/Software/libevdev/'
 dep=('')
+depend='glibc'

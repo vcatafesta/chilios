@@ -1,0 +1,24 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libwebsockets'
+version='4.0.20'
+build='3'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='C library for websocket clients and servers'
+size='1138926'
+url='https://libwebsockets.org'
+dep=('')
+depend='glibc'
+depend='openssl'
+depend='libuv'
+depend='libev'
+depend='zlib'
+depend='libcap.so=2-64'
+depend='libglib-2.0.so=0-64'

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libfdk'
+version='aac'
+build='2.0.1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Fraunhofer FDK AAC codec library'
+size='1536436'
+url='https://sourceforge.net/projects/opencore-amr/'
+dep=('')

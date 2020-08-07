@@ -1,0 +1,30 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libblockdev'
+version='2.24'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library for manipulating block devices'
+size='1576328'
+url='https://github.com/rhinstaller/libblockdev'
+dep=('')
+depend='btrfs-progs'
+depend='dosfstools'
+depend='dmraid'
+depend='gptfdisk'
+depend='libbytesize'
+depend='lvm2'
+depend='mdadm'
+depend='ndctl'
+depend='parted'
+depend='volume_key'
+depend='xfsprogs'
+depend='kmod'
+depend='libyaml'

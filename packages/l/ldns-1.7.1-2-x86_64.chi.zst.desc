@@ -15,3 +15,5 @@ desc='Fast DNS library supporting recent RFCs'
 size='1944077'
 url='https://www.nlnetlabs.nl/projects/ldns/'
 dep=('')
+depend='openssl'
+depend='dnssec-anchors'

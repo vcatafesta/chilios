@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libmms'
+version='0.6.4'
+build='3'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='MMS stream protocol library'
+size='79122'
+url='https://sourceforge.net/projects/libmms/'
+dep=('')
+depend='glibc'

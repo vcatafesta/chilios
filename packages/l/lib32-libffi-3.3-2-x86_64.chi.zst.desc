@@ -1,7 +1,19 @@
-<html>
-<head><title>404 Not Found</title></head>
-<body>
-<center><h1>404 Not Found</h1></center>
-<hr><center>nginx/1.18.0</center>
-</body>
-</html>
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='libffi'
+build='3.3'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A portable, high level programming interface to various calling conventions (32-bit)'
+size='39606'
+url='https://sourceware.org/libffi/'
+dep=('')
+depend='lib32-glibc'
+depend='libffi'

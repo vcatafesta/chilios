@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libkexiv2'
+version='20.04.2'
+build='1'
+license='FDL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library to manipulate pictures metadata'
+size='469610'
+url='https://www.kde.org/applications/graphics/'
+dep=('')
+depend='qt5-base'
+depend='exiv2'

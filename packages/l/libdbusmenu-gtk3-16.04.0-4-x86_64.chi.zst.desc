@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libdbusmenu'
+version='gtk3'
+build='16.04.0'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for passing menus over DBus (GTK+ 3 library)'
+size='139485'
+url='https://launchpad.net/libdbusmenu'
+dep=('')
+depend='libdbusmenu-glib'
+depend='gtk3'

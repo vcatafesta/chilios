@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libdca'
+version='0.0.7'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Free library for decoding DTS Coherent Acoustics streams'
+size='229321'
+url='https://www.videolan.org/developers/libdca.html'
+dep=('')
+depend='sh'

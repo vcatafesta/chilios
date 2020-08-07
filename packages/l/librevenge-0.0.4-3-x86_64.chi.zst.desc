@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='librevenge'
+version='0.0.4'
+build='3'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='library for REVerses ENGineered formats filters'
+size='8776629'
+url='https://sf.net/p/libwpd/librevenge/'
+dep=('')
+depend='boost-libs'

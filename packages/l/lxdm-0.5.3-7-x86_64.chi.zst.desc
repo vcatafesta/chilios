@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lxdm'
+version='0.5.3'
+build='7'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Lightweight X11 Display Manager'
+size='360658'
+url='https://lxde.org/'
+dep=('')
+depend='gtk2'
+depend='xorg-server'

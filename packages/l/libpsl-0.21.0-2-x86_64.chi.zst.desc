@@ -15,3 +15,6 @@ desc='Public Suffix List library'
 size='194099'
 url='https://github.com/rockdaboot/libpsl'
 dep=('')
+depend='libidn2'
+depend='libidn2.so=0-64'
+depend='libunistring'

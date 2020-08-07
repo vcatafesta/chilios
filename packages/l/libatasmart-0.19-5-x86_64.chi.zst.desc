@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libatasmart'
+version='0.19'
+build='5'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='ATA S.M.A.R.T. Reading and Parsing Library'
+size='105208'
+url='http://0pointer.de/blog/projects/being-smart.html'
+dep=('')
+depend='systemd-libs'

@@ -15,3 +15,4 @@ desc='A parallel, SMP-based, bzip2-compatible compression utility'
 size='143764'
 url='http://lbzip2.org'
 dep=('')
+depend='glibc'
