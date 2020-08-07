@@ -15,3 +15,5 @@ desc='A rolling eyes (following mouse pointer) plugin for the Xfce panel'
 size='96629'
 url='https://docs.xfce.org/panel-plugins/xfce4-eyes-plugin'
 dep=('')
+depend='xfce4-panel'
+depend='hicolor-icon-theme'

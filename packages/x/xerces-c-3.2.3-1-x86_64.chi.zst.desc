@@ -15,3 +15,6 @@ desc='A validating XML parser written in a portable subset of C++'
 size='8865086'
 url='https://xerces.apache.org/xerces-c/'
 dep=('')
+depend='gcc-libs'
+depend='curl'
+depend='libnsl'

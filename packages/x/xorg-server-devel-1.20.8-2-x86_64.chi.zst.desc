@@ -15,3 +15,7 @@ desc='Development files for the X.Org X server'
 size='1270296'
 url='https://xorg.freedesktop.org'
 dep=('')
+depend='xorgproto'
+depend='mesa'
+depend='libpciaccess'
+depend='xorg-util-macros'

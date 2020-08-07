@@ -15,3 +15,4 @@ desc='Set the keyboard using the X Keyboard Extension'
 size='29789'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libxkbfile'

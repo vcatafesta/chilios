@@ -15,3 +15,5 @@ desc='Utility libraries for XC Binding - Port of Xlib's XImage and XShmImage fun
 size='54054'
 url='https://xcb.freedesktop.org'
 dep=('')
+depend='libxcb>=1.7'
+depend='xcb-util>=0.3.9'

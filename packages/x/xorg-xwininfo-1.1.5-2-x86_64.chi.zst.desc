@@ -15,3 +15,4 @@ desc='Command-line utility to print information about windows on an X server'
 size='53440'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libxcb'

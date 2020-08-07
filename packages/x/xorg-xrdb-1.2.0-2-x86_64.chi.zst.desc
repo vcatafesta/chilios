@@ -15,3 +15,5 @@ desc='X server resource database utility'
 size='41549'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'
+depend='libxmu'

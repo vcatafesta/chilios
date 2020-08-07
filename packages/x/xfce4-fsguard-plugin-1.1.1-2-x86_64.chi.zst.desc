@@ -15,3 +15,4 @@ desc='File system usage monitor plugin for the Xfce4 panel'
 size='244780'
 url='https://docs.xfce.org/panel-plugins/xfce4-fsguard-plugin'
 dep=('')
+depend='xfce4-panel'

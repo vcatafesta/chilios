@@ -15,3 +15,6 @@ desc='Plugin that makes screenshots for the Xfce panel'
 size='686908'
 url='https://docs.xfce.org/apps/screenshooter/start'
 dep=('')
+depend='xfce4-panel'
+depend='libsoup'
+depend='hicolor-icon-theme'

@@ -15,3 +15,5 @@ desc='Prints out the capabilities of any video adaptors associated with the disp
 size='20063'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'
+depend='libxv'

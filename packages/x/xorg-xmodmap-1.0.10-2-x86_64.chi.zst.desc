@@ -15,3 +15,4 @@ desc='Utility for modifying keymaps and button mappings'
 size='50269'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'

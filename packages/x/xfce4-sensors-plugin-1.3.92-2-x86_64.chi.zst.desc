@@ -15,3 +15,7 @@ desc='A lm_sensors plugin for the Xfce panel'
 size='538504'
 url='https://docs.xfce.org/panel-plugins/xfce4-sensors-plugin'
 dep=('')
+depend='xfce4-panel'
+depend='lm_sensors'
+depend='libnotify'
+depend='hicolor-icon-theme'

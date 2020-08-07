@@ -15,3 +15,6 @@ desc='Notification daemon for the Xfce desktop'
 size='596291'
 url='https://docs.xfce.org/apps/notifyd/start'
 dep=('')
+depend='libxfce4ui'
+depend='libnotify'
+depend='hicolor-icon-theme'

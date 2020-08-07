@@ -15,3 +15,4 @@ desc='A system load plugin for the Xfce4 panel'
 size='149916'
 url='https://docs.xfce.org/panel-plugins/xfce4-systemload-plugin'
 dep=('')
+depend='xfce4-panel'

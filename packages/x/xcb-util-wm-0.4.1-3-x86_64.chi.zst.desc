@@ -15,3 +15,4 @@ desc='Utility libraries for XC Binding - client and window-manager helpers for I
 size='229825'
 url='https://xcb.freedesktop.org'
 dep=('')
+depend='libxcb>=1.7'

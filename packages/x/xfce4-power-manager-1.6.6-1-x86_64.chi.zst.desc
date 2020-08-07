@@ -15,3 +15,7 @@ desc='Power manager for Xfce desktop'
 size='3889057'
 url='https://www.xfce.org/'
 dep=('')
+depend='libxfce4ui'
+depend='upower'
+depend='libnotify'
+depend='hicolor-icon-theme'

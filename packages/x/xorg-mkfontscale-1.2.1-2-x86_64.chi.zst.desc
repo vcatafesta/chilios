@@ -15,3 +15,5 @@ desc='Create an index of scalable font files for X'
 size='52821'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='freetype2'
+depend='libfontenc'

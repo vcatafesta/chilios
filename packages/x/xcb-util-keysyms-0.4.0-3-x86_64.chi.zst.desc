@@ -15,3 +15,4 @@ desc='Utility libraries for XC Binding - Standard X key constants and conversion
 size='30011'
 url='https://xcb.freedesktop.org'
 dep=('')
+depend='libxcb>=1.7'

@@ -15,3 +15,4 @@ desc='Library and command line tools for XZ and LZMA compressed files'
 size='968603'
 url='https://tukaani.org/xz/'
 dep=('')
+depend='sh'

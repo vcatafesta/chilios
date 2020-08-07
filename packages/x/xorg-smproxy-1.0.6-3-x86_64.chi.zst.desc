@@ -15,3 +15,6 @@ desc='Allows X applications that do not support X11R6 session management to part
 size='28863'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libsm'
+depend='libxt'
+depend='libxmu'

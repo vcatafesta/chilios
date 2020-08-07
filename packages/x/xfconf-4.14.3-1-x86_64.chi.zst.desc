@@ -15,3 +15,4 @@ desc='Flexible, easy-to-use configuration management system'
 size='1103894'
 url='https://www.xfce.org/'
 dep=('')
+depend='libxfce4util'

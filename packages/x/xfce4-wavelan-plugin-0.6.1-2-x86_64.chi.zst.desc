@@ -15,3 +15,4 @@ desc='Plugin to monitor wifi connectivity for the Xfce4 panel'
 size='119232'
 url='https://docs.xfce.org/panel-plugins/xfce4-wavelan-plugin'
 dep=('')
+depend='xfce4-panel'

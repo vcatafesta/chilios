@@ -15,3 +15,5 @@ desc='Convert X cursors to PNG images'
 size='27634'
 url='https://github.com/eworm-de/xcur2png'
 dep=('')
+depend='libpng'
+depend='libxcursor'

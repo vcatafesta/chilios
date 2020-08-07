@@ -15,3 +15,6 @@ desc='Menu for Xfce4'
 size='688705'
 url='https://gottcode.org/xfce4-whiskermenu-plugin/'
 dep=('')
+depend='garcon'
+depend='xfce4-panel'
+depend='gtk3>=3.22'

@@ -15,3 +15,4 @@ desc='Device Color Characterization utility for X Color Management System'
 size='43437'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'

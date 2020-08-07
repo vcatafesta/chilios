@@ -15,3 +15,4 @@ desc='X.Org authorization settings program'
 size='57195'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libxmu'

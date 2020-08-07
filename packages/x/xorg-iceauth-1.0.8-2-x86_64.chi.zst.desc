@@ -15,3 +15,4 @@ desc='ICE authority file utility'
 size='41659'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libice'

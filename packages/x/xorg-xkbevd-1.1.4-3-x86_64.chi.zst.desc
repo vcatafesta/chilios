@@ -15,3 +15,4 @@ desc='XKB event daemon'
 size='45868'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libxkbfile'

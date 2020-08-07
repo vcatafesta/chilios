@@ -15,3 +15,6 @@ desc='XKB utility demos'
 size='67035'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libxaw'
+depend='libxt'
+depend='libx11'

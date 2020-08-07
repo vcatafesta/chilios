@@ -15,3 +15,7 @@ desc='An Xearth wannabe'
 size='2412035'
 url='http://xplanet.sourceforge.net/'
 dep=('')
+depend='pango'
+depend='giflib'
+depend='libtiff'
+depend='libxss'

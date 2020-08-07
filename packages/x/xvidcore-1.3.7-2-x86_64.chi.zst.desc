@@ -15,3 +15,4 @@ desc='XviD is an open source MPEG-4 video codec'
 size='708993'
 url='https://www.xvid.com/'
 dep=('')
+depend='glibc'

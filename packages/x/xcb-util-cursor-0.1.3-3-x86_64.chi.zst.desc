@@ -15,3 +15,6 @@ desc='XCB cursor library'
 size='33387'
 url='https://cgit.freedesktop.org/xcb/util-cursor'
 dep=('')
+depend='libxcb'
+depend='xcb-util-renderutil'
+depend='xcb-util-image'

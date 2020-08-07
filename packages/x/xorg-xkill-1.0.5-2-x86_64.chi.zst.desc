@@ -15,3 +15,5 @@ desc='Kill a client by its X resource'
 size='17036'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'
+depend='libxmu'

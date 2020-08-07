@@ -15,3 +15,4 @@ desc='Open Source H265/HEVC video encoder'
 size='19820307'
 url='https://bitbucket.org/multicoreware/x265'
 dep=('')
+depend='gcc-libs'

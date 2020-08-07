@@ -15,3 +15,4 @@ desc='A set of additional themes for the Xfce window manager'
 size='3594380'
 url='https://www.xfce.org/'
 dep=('')
+depend='xfwm4'

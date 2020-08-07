@@ -15,3 +15,6 @@ desc='A notes plugin for the Xfce4 panel'
 size='558528'
 url='https://docs.xfce.org/panel-plugins/xfce4-notes-plugin'
 dep=('')
+depend='xfce4-panel'
+depend='libunique'
+depend='hicolor-icon-theme'

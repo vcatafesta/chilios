@@ -15,3 +15,7 @@ desc='An application finder for Xfce'
 size='566410'
 url='https://www.xfce.org/'
 dep=('')
+depend='libxfce4ui'
+depend='garcon'
+depend='xfconf'
+depend='hicolor-icon-theme'

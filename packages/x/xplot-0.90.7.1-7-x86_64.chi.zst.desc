@@ -15,3 +15,5 @@ desc='Reads from a xpl file to generate plots'
 size='103171'
 url='http://www.xplot.org/'
 dep=('')
+depend='libx11'
+depend='perl'

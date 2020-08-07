@@ -15,3 +15,4 @@ desc='Command line plugin Xfce4 panel'
 size='160255'
 url='https://docs.xfce.org/panel-plugins/xfce4-verve-plugin'
 dep=('')
+depend='xfce4-panel'

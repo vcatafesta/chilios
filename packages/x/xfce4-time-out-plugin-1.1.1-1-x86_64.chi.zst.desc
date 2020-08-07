@@ -15,3 +15,4 @@ desc='Take a break from your computer with this plugin for Xfce4'
 size='217275'
 url='https://docs.xfce.org/panel-plugins/xfce4-time-out-plugin'
 dep=('')
+depend='xfce4-panel'

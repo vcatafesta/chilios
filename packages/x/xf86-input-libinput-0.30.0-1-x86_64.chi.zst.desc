@@ -15,3 +15,4 @@ desc='Generic input driver for the X.Org server based on libinput'
 size='92901'
 url='http://xorg.freedesktop.org/'
 dep=('')
+depend='libinput>=1.2.0'

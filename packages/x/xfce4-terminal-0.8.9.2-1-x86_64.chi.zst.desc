@@ -15,3 +15,6 @@ desc='A modern terminal emulator primarily for the Xfce desktop environment'
 size='2075338'
 url='https://www.xfce.org/'
 dep=('')
+depend='libxfce4ui'
+depend='vte3'
+depend='hicolor-icon-theme'

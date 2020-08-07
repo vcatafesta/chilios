@@ -15,3 +15,5 @@ desc='Creates user dirs and asks to relocalize them'
 size='177584'
 url='https://www.gnome.org'
 dep=('')
+depend='gtk3'
+depend='xdg-user-dirs'

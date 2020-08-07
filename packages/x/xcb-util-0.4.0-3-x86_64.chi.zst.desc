@@ -15,3 +15,4 @@ desc='Utility libraries for XC Binding'
 size='39089'
 url='https://xcb.freedesktop.org'
 dep=('')
+depend='libxcb>=1.7'

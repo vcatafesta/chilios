@@ -15,3 +15,4 @@ desc='CPU frequency plugin for the Xfce4 panel'
 size='209523'
 url='https://docs.xfce.org/panel-plugins/xfce4-cpufreq-plugin'
 dep=('')
+depend='xfce4-panel'

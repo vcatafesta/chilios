@@ -15,3 +15,4 @@ desc='Refresh all or part of an X screen'
 size='17968'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'

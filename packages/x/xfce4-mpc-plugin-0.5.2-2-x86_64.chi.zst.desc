@@ -15,3 +15,5 @@ desc='Control the Music Player Daemon from the Xfce4 panel'
 size='150824'
 url='https://docs.xfce.org/panel-plugins/xfce4-mpc-plugin'
 dep=('')
+depend='xfce4-panel'
+depend='libmpd'

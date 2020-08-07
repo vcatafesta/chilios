@@ -15,3 +15,6 @@ desc='Xorg server common files'
 size='130263'
 url='https://xorg.freedesktop.org'
 dep=('')
+depend='xkeyboard-config'
+depend='xorg-xkbcomp'
+depend='xorg-setxkbmap'

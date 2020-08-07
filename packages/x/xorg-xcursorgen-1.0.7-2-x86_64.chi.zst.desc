@@ -15,3 +15,6 @@ desc='Create an X cursor file from PNG images'
 size='20637'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'
+depend='libxcursor'
+depend='libpng'

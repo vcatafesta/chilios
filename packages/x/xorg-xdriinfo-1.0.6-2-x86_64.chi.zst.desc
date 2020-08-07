@@ -15,3 +15,5 @@ desc='Query configuration information of DRI drivers'
 size='15795'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'
+depend='libgl'

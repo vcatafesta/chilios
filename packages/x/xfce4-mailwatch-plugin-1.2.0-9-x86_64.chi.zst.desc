@@ -15,3 +15,6 @@ desc='Multi-protocol, multi-mailbox mail watcher for the Xfce4 panel'
 size='652503'
 url='https://docs.xfce.org/panel-plugins/xfce4-mailwatch-plugin'
 dep=('')
+depend='xfce4-panel'
+depend='gnutls'
+depend='libgcrypt'

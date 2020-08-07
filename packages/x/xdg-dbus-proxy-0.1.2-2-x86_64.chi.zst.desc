@@ -15,3 +15,4 @@ desc='D-Bus proxy'
 size='50952'
 url='https://github.com/flatpak/xdg-dbus-proxy'
 dep=('')
+depend='glib2'

@@ -15,3 +15,5 @@ desc='Print contents of X events'
 size='33326'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'
+depend='libxrandr'

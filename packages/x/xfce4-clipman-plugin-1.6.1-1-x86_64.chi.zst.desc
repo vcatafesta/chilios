@@ -15,3 +15,6 @@ desc='A clipboard plugin for the Xfce4 panel'
 size='820502'
 url='https://docs.xfce.org/panel-plugins/xfce4-clipman-plugin'
 dep=('')
+depend='xfce4-panel'
+depend='libxtst'
+depend='qrencode'

@@ -15,3 +15,4 @@ desc='Plugin for the Xfce4 panel displaying instant disk/partition performance'
 size='228034'
 url='https://docs.xfce.org/panel-plugins/xfce4-diskperf-plugin'
 dep=('')
+depend='xfce4-panel'

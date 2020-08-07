@@ -15,3 +15,4 @@ desc='Mount/umount utility for the Xfce4 panel'
 size='313736'
 url='https://docs.xfce.org/panel-plugins/xfce4-mount-plugin'
 dep=('')
+depend='xfce4-panel'

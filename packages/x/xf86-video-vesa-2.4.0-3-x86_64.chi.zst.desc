@@ -15,3 +15,4 @@ desc='X.org vesa video driver'
 size='33931'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='glibc'

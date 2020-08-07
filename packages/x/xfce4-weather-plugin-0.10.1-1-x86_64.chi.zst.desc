@@ -15,3 +15,7 @@ desc='A weather plugin for the Xfce4 panel'
 size='4578608'
 url='https://docs.xfce.org/panel-plugins/xfce4-weather-plugin'
 dep=('')
+depend='xfce4-panel'
+depend='libxml2'
+depend='libsoup'
+depend='hicolor-icon-theme'

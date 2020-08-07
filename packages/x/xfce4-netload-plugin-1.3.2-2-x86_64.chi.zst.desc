@@ -15,3 +15,4 @@ desc='A netload plugin for the Xfce panel'
 size='203503'
 url='https://docs.xfce.org/panel-plugins/xfce4-netload-plugin'
 dep=('')
+depend='xfce4-panel'

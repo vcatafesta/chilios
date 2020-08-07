@@ -15,3 +15,4 @@ desc='Plugin to track time for the Xfce4 panel'
 size='196599'
 url='https://docs.xfce.org/panel-plugins/xfce4-timer-plugin'
 dep=('')
+depend='xfce4-panel'

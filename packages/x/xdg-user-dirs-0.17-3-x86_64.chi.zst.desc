@@ -15,3 +15,5 @@ desc='Manage user directories like ~/Desktop and ~/Music'
 size='152088'
 url='https://www.freedesktop.org/wiki/Software/xdg-user-dirs'
 dep=('')
+depend='sh'
+depend='systemd'

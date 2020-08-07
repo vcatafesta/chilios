@@ -15,3 +15,5 @@ desc='Alter a monitor's gamma correction'
 size='18041'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'
+depend='libxxf86vm'

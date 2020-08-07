@@ -15,3 +15,4 @@ desc='X Window System image dumping utility'
 size='38950'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libxkbfile'

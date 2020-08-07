@@ -15,3 +15,7 @@ desc='Small commandline tool to configure devices'
 size='65346'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'
+depend='libxi>=1.5.99.2'
+depend='xorg-xrandr'
+depend='libxinerama'

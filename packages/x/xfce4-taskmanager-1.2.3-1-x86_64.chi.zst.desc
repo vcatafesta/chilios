@@ -15,3 +15,5 @@ desc='Easy to use task manager'
 size='471810'
 url='https://docs.xfce.org/apps/xfce4-taskmanager'
 dep=('')
+depend='libwnck3'
+depend='libxmu'

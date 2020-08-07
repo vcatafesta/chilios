@@ -15,3 +15,6 @@ desc='Print an X window dump from xwd'
 size='66399'
 url='https://xorg.freedesktop.org/'
 dep=('')
+depend='libx11'
+depend='libxmu'
+depend='sh'

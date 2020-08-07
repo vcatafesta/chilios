@@ -15,3 +15,4 @@ desc='Plugin for the Xfce4 panel that lets you quicksearch from selected website
 size='69406'
 url='https://docs.xfce.org/panel-plugins/xfce4-smartbookmark-plugin'
 dep=('')
+depend='xfce4-panel'

@@ -15,3 +15,6 @@ desc='A dictionary plugin for the Xfce panel'
 size='795657'
 url='https://docs.xfce.org/apps/xfce4-dict/start'
 dep=('')
+depend='xfce4-panel'
+depend='librsvg'
+depend='hicolor-icon-theme'
