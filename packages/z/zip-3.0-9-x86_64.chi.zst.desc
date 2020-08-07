@@ -15,3 +15,4 @@ desc='Compressor/archiver for creating and modifying zipfiles'
 size='571520'
 url='http://www.info-zip.org/Zip.html'
 dep=('')
+depend='bzip2'

@@ -15,3 +15,6 @@ desc='The successor of clalsadrv, provides easy access to ALSA PCM devices.'
 size='82972'
 url='https://kokkinizita.linuxaudio.org/linuxaudio/'
 dep=('')
+depend='gcc-libs'
+depend='glibc'
+depend='libasound.so=2-64'

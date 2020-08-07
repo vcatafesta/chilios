@@ -15,3 +15,5 @@ desc='VBI capture and decoding library'
 size='1292404'
 url='http://zapping.sourceforge.net/cgi-bin/view/ZVBI/WebHome'
 dep=('')
+depend='libpng'
+depend='libx11'

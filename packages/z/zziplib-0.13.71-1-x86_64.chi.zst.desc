@@ -15,3 +15,4 @@ desc='A lightweight library that offers the ability to easily extract data from 
 size='324537'
 url='http://zziplib.sourceforge.net'
 dep=('')
+depend='zlib'

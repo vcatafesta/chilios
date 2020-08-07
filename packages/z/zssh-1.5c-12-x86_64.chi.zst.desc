@@ -15,3 +15,4 @@ desc='SSH and Telnet client with ZMODEM file transfer capability'
 size='42107'
 url='http://zssh.sourceforge.net/'
 dep=('')
+depend='readline'

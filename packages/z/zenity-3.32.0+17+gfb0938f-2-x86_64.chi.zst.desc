@@ -15,3 +15,5 @@ desc='Display graphical dialog boxes from shell scripts'
 size='6927756'
 url='https://gitlab.gnome.org/GNOME/zenity'
 dep=('')
+depend='webkit2gtk'
+depend='libnotify'

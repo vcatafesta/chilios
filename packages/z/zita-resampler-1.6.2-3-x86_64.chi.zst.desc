@@ -15,3 +15,5 @@ desc='A C++ library for resampling audio signals'
 size='202165'
 url='https://kokkinizita.linuxaudio.org/linuxaudio/'
 dep=('')
+depend='gcc-libs'
+depend='glibc'

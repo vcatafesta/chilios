@@ -15,3 +15,7 @@ desc='Fast messaging system built on sockets. C and C++ bindings. aka 0MQ, ZMQ.'
 size='3106260'
 url='http://www.zeromq.org'
 dep=('')
+depend='gcc-libs'
+depend='util-linux'
+depend='libsodium'
+depend='libpgm'
