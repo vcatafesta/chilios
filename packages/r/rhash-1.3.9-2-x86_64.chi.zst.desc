@@ -15,3 +15,4 @@ desc='Utility for verifying hash sums of files'
 size='308046'
 url='https://github.com/rhash/RHash'
 dep=('')
+depend='glibc'

@@ -15,3 +15,7 @@ desc='portmap replacement which supports RPC over various protocols'
 size='96454'
 url='http://rpcbind.sourceforge.net'
 dep=('')
+depend='bash'
+depend='glibc'
+depend='libtirpc'
+depend='systemd-libs'

@@ -15,3 +15,5 @@ desc='Thorough inotify wrapper for Ruby using FFI'
 size='74345'
 url='https://github.com/guard/rb-inotify'
 dep=('')
+depend='ruby'
+depend='ruby-ffi'

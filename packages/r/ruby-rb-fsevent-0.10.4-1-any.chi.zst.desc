@@ -15,3 +15,4 @@ desc='FSEvents API with signals handled (without RubyCocoa)'
 size='87495'
 url='https://github.com/thibaudgg/rb-fsevent'
 dep=('')
+depend='ruby'

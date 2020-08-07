@@ -15,3 +15,7 @@ desc='Cantonese input for rime'
 size='51506382'
 url='https://github.com/rime/rime-cantonese'
 dep=('')
+depend='rime-cangjie'
+depend='rime-emoji'
+depend='rime-luna-pinyin'
+depend='rime-stroke'

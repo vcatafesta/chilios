@@ -15,3 +15,4 @@ desc='Converts files between various character sets and usages'
 size='1696350'
 url='https://github.com/rrthomas/recode'
 dep=('')
+depend='glibc'

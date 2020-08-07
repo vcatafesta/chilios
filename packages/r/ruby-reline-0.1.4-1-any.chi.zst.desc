@@ -15,3 +15,4 @@ desc='Alternative GNU Readline or Editline implementation by pure Ruby.'
 size='193332'
 url='https://github.com/ruby/reline'
 dep=('')
+depend='ruby'

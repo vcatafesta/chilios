@@ -15,3 +15,4 @@ desc='Reiserfs utilities'
 size='609727'
 url='https://www.kernel.org/'
 dep=('')
+depend='util-linux'

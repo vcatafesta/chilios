@@ -15,3 +15,6 @@ desc='GNU readline library'
 size='724876'
 url='https://tiswww.case.edu/php/chet/readline/rltop.html'
 dep=('')
+depend='glibc'
+depend='ncurses'
+depend='libncursesw.so=6-64'

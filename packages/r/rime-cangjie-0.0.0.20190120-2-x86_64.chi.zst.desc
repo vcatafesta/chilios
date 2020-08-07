@@ -15,3 +15,4 @@ desc='Cangjie input for rime'
 size='15318003'
 url='https://github.com/rime/rime-cangjie'
 dep=('')
+depend='rime-luna-pinyin'

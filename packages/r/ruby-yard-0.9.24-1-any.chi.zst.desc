@@ -15,3 +15,5 @@ desc='YARD is a Ruby Documentation tool. The Y stands for Yay!'
 size='4773055'
 url='https://yardoc.org/'
 dep=('')
+depend='ruby'
+depend='ruby-rdoc'

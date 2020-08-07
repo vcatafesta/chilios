@@ -15,3 +15,6 @@ desc='Fast and lightweight picture-viewer for Xfce4'
 size='1042338'
 url='https://docs.xfce.org/apps/ristretto/start'
 dep=('')
+depend='libxfce4ui'
+depend='libexif'
+depend='file'

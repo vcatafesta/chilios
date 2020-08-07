@@ -15,3 +15,5 @@ desc='Bopomofo input for rime'
 size='677617'
 url='https://github.com/rime/rime-bopomofo'
 dep=('')
+depend='rime-cangjie'
+depend='rime-terra-pinyin'

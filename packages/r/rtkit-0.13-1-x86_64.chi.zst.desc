@@ -15,3 +15,6 @@ desc='Realtime Policy and Watchdog Daemon'
 size='87358'
 url='https://github.com/heftig/rtkit'
 dep=('')
+depend='dbus'
+depend='polkit'
+depend='systemd'

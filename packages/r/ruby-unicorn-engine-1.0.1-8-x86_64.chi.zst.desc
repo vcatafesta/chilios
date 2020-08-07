@@ -15,3 +15,6 @@ desc='Lightweight, multi-platform, multi-architecture CPU emulator framework bas
 size='450342'
 url='https://www.unicorn-engine.org'
 dep=('')
+depend='ruby'
+depend='ruby-rdoc'
+depend='unicorn'

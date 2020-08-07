@@ -15,3 +15,5 @@ desc='An AV1 encoder focused on speed and safety'
 size='5121080'
 url='https://github.com/xiph/rav1e/'
 dep=('')
+depend='gcc-libs'
+depend='glibc'

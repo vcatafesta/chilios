@@ -15,3 +15,5 @@ desc='Interactive Ruby command-line tool for REPL (Read Eval Print Loop).'
 size='209388'
 url='https://github.com/ruby/irb'
 dep=('')
+depend='ruby'
+depend='ruby-reline'

@@ -15,3 +15,4 @@ desc='Pure-Ruby Markdown-superset interpreter'
 size='813542'
 url='https://github.com/bhollis/maruku'
 dep=('')
+depend='ruby'

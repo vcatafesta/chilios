@@ -15,3 +15,4 @@ desc='Stroke input for rime'
 size='8501573'
 url='https://github.com/rime/rime-stroke'
 dep=('')
+depend='rime-luna-pinyin'

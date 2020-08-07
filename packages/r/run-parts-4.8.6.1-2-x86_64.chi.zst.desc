@@ -15,3 +15,4 @@ desc='run scripts or programs in a directory'
 size='41989'
 url='https://packages.qa.debian.org/d/debianutils.html'
 dep=('')
+depend='glibc'

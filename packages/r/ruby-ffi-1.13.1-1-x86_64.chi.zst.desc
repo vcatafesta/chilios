@@ -15,3 +15,4 @@ desc='Ruby FFI'
 size='8389234'
 url='https://github.com/ffi/ffi'
 dep=('')
+depend='ruby'

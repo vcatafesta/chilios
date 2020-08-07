@@ -15,3 +15,4 @@ desc='Ruby module for interaction with D-Bus'
 size='262053'
 url='https://trac.luon.net/ruby-dbus'
 dep=('')
+depend='ruby'

@@ -15,3 +15,6 @@ desc='A C library that parses RDF/XML/N-Triples into RDF triples'
 size='2016305'
 url='http://librdf.org/raptor'
 dep=('')
+depend='curl'
+depend='libxslt'
+depend='icu'

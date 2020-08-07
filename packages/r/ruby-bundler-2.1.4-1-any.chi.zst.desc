@@ -15,3 +15,4 @@ desc='Manages an application's dependencies through its entire life, across many
 size='2876784'
 url='http://bundler.io'
 dep=('')
+depend='ruby'

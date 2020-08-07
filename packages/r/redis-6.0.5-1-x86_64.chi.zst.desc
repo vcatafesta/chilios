@@ -15,3 +15,6 @@ desc='An in-memory database that persists on disk'
 size='5399429'
 url='https://redis.io/'
 dep=('')
+depend='jemalloc'
+depend='grep'
+depend='shadow'

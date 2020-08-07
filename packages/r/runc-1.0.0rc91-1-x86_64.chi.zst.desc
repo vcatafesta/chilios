@@ -15,3 +15,4 @@ desc='CLI tool for managing OCI compliant containers'
 size='11624500'
 url='https://runc.io/'
 dep=('')
+depend='libseccomp'
