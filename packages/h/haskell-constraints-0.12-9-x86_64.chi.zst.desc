@@ -15,3 +15,7 @@ desc='Constraint manipulation'
 size='1400562'
 url='https://github.com/ekmett/constraints/'
 dep=('')
+depend='ghc-libs'
+depend='haskell-hashable'
+depend='haskell-transformers-compat'
+depend='haskell-type-equality'

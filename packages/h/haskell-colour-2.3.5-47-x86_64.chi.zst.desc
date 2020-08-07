@@ -15,3 +15,4 @@ desc='A model for human colour/color perception'
 size='762242'
 url='https://hackage.haskell.org/package/colour'
 dep=('')
+depend='ghc-libs'

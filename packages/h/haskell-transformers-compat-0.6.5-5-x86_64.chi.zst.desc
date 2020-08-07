@@ -15,3 +15,4 @@ desc='A small compatibility shim exposing the new types from transformers 0.3 to
 size='323022'
 url='https://hackage.haskell.org/package/transformers-compat'
 dep=('')
+depend='ghc-libs'

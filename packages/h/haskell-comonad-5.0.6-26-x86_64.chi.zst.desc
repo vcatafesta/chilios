@@ -15,3 +15,7 @@ desc='Comonads'
 size='527017'
 url='https://github.com/ekmett/comonad/'
 dep=('')
+depend='ghc-libs'
+depend='haskell-distributive'
+depend='haskell-tagged'
+depend='haskell-transformers-compat'

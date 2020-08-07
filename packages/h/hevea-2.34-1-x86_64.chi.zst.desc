@@ -15,3 +15,4 @@ desc='A quite complete and fast LATEX to HTML translator'
 size='7568921'
 url='http://pauillac.inria.fr/~maranget/hevea/'
 dep=('')
+depend='texlive-bin'

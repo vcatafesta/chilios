@@ -15,3 +15,4 @@ desc='Network byte order utilities'
 size='169881'
 url='https://github.com/kazu-yamamoto/network-byte-order'
 dep=('')
+depend='ghc-libs'

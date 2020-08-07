@@ -15,3 +15,4 @@ desc='A binding to libffi'
 size='188476'
 url='https://hackage.haskell.org/package/libffi'
 dep=('')
+depend='ghc-libs'

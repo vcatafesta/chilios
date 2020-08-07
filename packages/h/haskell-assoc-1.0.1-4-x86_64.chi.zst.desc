@@ -15,3 +15,6 @@ desc='swap and assoc: Symmetric and Semigroupy Bifunctors'
 size='55533'
 url='https://github.com/phadej/assoc'
 dep=('')
+depend='ghc-libs'
+depend='haskell-bifunctors'
+depend='haskell-tagged'

@@ -15,3 +15,4 @@ desc='Efficient buffered output'
 size='302376'
 url='https://github.com/lpsmith/blaze-builder'
 dep=('')
+depend='ghc-libs'

@@ -15,3 +15,5 @@ desc='library for high quality hyphenation and justification'
 size='33662'
 url='https://hunspell.sf.net'
 dep=('')
+depend='glibc'
+depend='perl'

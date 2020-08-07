@@ -15,3 +15,4 @@ desc='Wrappers for primitive operations'
 size='1492605'
 url='https://hackage.haskell.org/package/primitive'
 dep=('')
+depend='ghc-libs'

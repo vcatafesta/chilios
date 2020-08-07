@@ -15,3 +15,4 @@ desc='Parser for HTTP Request/Response written in C'
 size='63030'
 url='https://github.com/nodejs/http-parser'
 dep=('')
+depend='glibc'

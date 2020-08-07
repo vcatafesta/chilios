@@ -15,3 +15,4 @@ desc='A command-line interface for user input, written in Haskell'
 size='2431114'
 url='https://github.com/commercialhaskell/haskeline'
 dep=('')
+depend='ghc-libs'

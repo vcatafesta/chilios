@@ -15,3 +15,4 @@ desc='Cross-platform File handling'
 size='116459'
 url='https://github.com/kazu-yamamoto/easy-file'
 dep=('')
+depend='ghc-libs'

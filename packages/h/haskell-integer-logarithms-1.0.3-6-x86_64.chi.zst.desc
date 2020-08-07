@@ -15,3 +15,4 @@ desc='Integer logarithms'
 size='96169'
 url='https://github.com/Bodigrim/integer-logarithms'
 dep=('')
+depend='ghc-libs'

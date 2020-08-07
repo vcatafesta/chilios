@@ -15,3 +15,4 @@ desc='A shell utility for manipulating Linux IDE drive/driver parameters'
 size='188264'
 url='https://sourceforge.net/projects/hdparm/'
 dep=('')
+depend='glibc'

@@ -15,3 +15,4 @@ desc='Haskell 98 phantom types to avoid unsafely passing dummy arguments'
 size='299064'
 url='https://github.com/ekmett/tagged'
 dep=('')
+depend='ghc-libs'

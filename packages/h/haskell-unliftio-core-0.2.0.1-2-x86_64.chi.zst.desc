@@ -15,3 +15,4 @@ desc='The MonadUnliftIO typeclass for unlifting monads to IO'
 size='70126'
 url='https://github.com/fpco/monad-unlift'
 dep=('')
+depend='ghc-libs'

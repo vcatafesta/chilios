@@ -15,3 +15,6 @@ desc='Portable Hardware Locality is a portable abstraction of hierarchical archi
 size='1384991'
 url='https://www.open-mpi.org/projects/hwloc/'
 dep=('')
+depend='libtool'
+depend='systemd-libs'
+depend='libpciaccess'

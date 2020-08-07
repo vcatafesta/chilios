@@ -15,3 +15,6 @@ desc='Type definitions for Universally Unique Identifiers'
 size='264292'
 url='https://github.com/aslatter/uuid'
 dep=('')
+depend='ghc-libs'
+depend='haskell-hashable'
+depend='haskell-random'

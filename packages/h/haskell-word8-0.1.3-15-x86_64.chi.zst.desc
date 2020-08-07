@@ -15,3 +15,4 @@ desc='Word8 library'
 size='134554'
 url='https://hackage.haskell.org/package/word8'
 dep=('')
+depend='ghc-libs'

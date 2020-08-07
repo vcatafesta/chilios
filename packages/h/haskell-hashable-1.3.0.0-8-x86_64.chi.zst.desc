@@ -15,3 +15,5 @@ desc='Mutable hash tables in the ST monad'
 size='387038'
 url='https://hackage.haskell.org/package/hashable'
 dep=('')
+depend='ghc-libs'
+depend='sh'

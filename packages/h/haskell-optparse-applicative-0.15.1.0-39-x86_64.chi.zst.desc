@@ -15,3 +15,6 @@ desc='Utilities and combinators for parsing command line options'
 size='1240191'
 url='https://github.com/pcapriotti/optparse-applicative'
 dep=('')
+depend='ghc-libs'
+depend='haskell-ansi-wl-pprint'
+depend='haskell-transformers-compat'

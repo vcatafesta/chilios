@@ -15,3 +15,4 @@ desc='Fast base64 encoding and decoding for ByteStrings'
 size='125150'
 url='https://github.com/bos/base64-bytestring'
 dep=('')
+depend='ghc-libs'

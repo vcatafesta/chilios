@@ -15,3 +15,4 @@ desc='Nicer interface for reified information about data types'
 size='793842'
 url='https://github.com/glguy/th-abstraction/'
 dep=('')
+depend='ghc-libs'

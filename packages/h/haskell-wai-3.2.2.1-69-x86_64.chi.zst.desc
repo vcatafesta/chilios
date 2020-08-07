@@ -15,3 +15,7 @@ desc='Web Application Interface.'
 size='127090'
 url='https://github.com/yesodweb/wai'
 dep=('')
+depend='ghc-libs'
+depend='haskell-http-types'
+depend='haskell-network'
+depend='haskell-vault'

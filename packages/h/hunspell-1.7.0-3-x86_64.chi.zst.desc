@@ -15,3 +15,5 @@ desc='Spell checker and morphological analyzer library and program'
 size='803238'
 url='https://hunspell.github.io/'
 dep=('')
+depend='gcc-libs'
+depend='readline'

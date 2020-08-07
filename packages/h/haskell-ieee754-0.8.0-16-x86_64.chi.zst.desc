@@ -15,3 +15,4 @@ desc='Utilities for dealing with IEEE floating point numbers'
 size='323673'
 url='https://github.com/patperry/hs-ieee754'
 dep=('')
+depend='ghc-libs'

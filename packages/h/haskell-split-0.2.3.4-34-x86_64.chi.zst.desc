@@ -15,3 +15,4 @@ desc='Combinator library for splitting lists.'
 size='142425'
 url='https://hackage.haskell.org/package/split'
 dep=('')
+depend='ghc-libs'

@@ -15,3 +15,4 @@ desc='Minimalistic C client library for Redis'
 size='127565'
 url='https://github.com/redis/hiredis/'
 dep=('')
+depend='glibc'

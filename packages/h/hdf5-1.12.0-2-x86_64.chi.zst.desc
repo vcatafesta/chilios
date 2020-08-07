@@ -15,3 +15,6 @@ desc='General purpose library and file format for storing scientific data'
 size='22176972'
 url='https://www.hdfgroup.org/hdf5'
 dep=('')
+depend='zlib'
+depend='libaec'
+depend='bash'

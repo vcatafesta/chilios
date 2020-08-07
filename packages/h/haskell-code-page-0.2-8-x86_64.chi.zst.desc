@@ -15,3 +15,4 @@ desc='Windows code page library for Haskell'
 size='62637'
 url='https://github.com/RyanGlScott/code-page'
 dep=('')
+depend='ghc-libs'

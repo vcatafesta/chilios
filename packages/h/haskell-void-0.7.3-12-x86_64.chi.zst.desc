@@ -15,3 +15,5 @@ desc='A Haskell 98 logically uninhabited data type'
 size='16414'
 url='https://github.com/ekmett/void'
 dep=('')
+depend='ghc-libs'
+depend='haskell-hashable'

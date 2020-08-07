@@ -15,3 +15,4 @@ desc='This package provides the ability to adapt to locale conventions such as d
 size='123475'
 url='https://hackage.haskell.org/package/old-locale'
 dep=('')
+depend='ghc-libs'

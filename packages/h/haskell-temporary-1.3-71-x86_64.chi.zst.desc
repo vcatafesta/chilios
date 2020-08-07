@@ -15,3 +15,5 @@ desc='Portable temporary file and directory support'
 size='61954'
 url='https://www.github.com/batterseapower/temporary'
 dep=('')
+depend='ghc-libs'
+depend='haskell-random'

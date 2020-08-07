@@ -15,3 +15,6 @@ desc='OpenType text shaping engine (ICU integration)'
 size='17678'
 url='https://www.freedesktop.org/wiki/Software/HarfBuzz'
 dep=('')
+depend='harfbuzz=2.7.0-1'
+depend='icu'
+depend='libharfbuzz.so=0-64'

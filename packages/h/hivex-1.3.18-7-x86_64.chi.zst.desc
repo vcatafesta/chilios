@@ -15,3 +15,7 @@ desc='System for extracting the contents of Windows Registry.'
 size='496989'
 url='http://libguestfs.org'
 dep=('')
+depend='libxml2'
+depend='perl'
+depend='perl>=5.32'
+depend='perl<5.33'

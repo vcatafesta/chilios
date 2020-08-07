@@ -15,3 +15,5 @@ desc='Efficient hashing-based container types'
 size='1112297'
 url='https://github.com/haskell-unordered-containers/unordered-containers'
 dep=('')
+depend='ghc-libs'
+depend='haskell-hashable'

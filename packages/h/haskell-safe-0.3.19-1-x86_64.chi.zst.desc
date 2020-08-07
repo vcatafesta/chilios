@@ -15,3 +15,4 @@ desc='Library of safe (exception free) functions'
 size='303622'
 url='https://github.com/ndmitchell/safe#readme'
 dep=('')
+depend='ghc-libs'

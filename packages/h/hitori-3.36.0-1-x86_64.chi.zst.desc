@@ -15,3 +15,4 @@ desc='GTK+ application to generate and let you play games of Hitori'
 size='525268'
 url='https://wiki.gnome.org/Apps/Hitori'
 dep=('')
+depend='gtk3'

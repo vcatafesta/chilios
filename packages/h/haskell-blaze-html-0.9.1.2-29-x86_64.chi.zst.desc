@@ -15,3 +15,6 @@ desc='A blazingly fast HTML combinator library for Haskell'
 size='5689353'
 url='https://jaspervdj.be/blaze'
 dep=('')
+depend='ghc-libs'
+depend='haskell-blaze-builder'
+depend='haskell-blaze-markup'

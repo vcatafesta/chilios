@@ -15,3 +15,4 @@ desc='Lightweight package providing commonly useful parser combinators'
 size='203939'
 url='https://github.com/mrkkrp/parser-combinators'
 dep=('')
+depend='ghc-libs'

@@ -15,3 +15,4 @@ desc='Backwards-compatible orphan instances for base'
 size='16663'
 url='https://github.com/haskell-compat/base-orphans#readme'
 dep=('')
+depend='ghc-libs'

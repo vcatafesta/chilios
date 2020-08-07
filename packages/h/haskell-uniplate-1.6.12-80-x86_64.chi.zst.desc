@@ -15,3 +15,7 @@ desc='Help writing simple, concise and fast generic operations.'
 size='1463658'
 url='http://community.haskell.org/~ndm/uniplate/'
 dep=('')
+depend='ghc-libs'
+depend='haskell-hashable'
+depend='haskell-syb'
+depend='haskell-unordered-containers'

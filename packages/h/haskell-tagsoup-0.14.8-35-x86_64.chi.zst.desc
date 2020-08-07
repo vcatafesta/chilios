@@ -15,3 +15,4 @@ desc='Parsing and extracting information from (possibly malformed) HTML/XML docu
 size='4866664'
 url='http://community.haskell.org/~ndm/tagsoup/'
 dep=('')
+depend='ghc-libs'

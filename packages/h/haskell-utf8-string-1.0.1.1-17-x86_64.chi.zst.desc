@@ -15,3 +15,5 @@ desc='Support for reading and writing UTF8 Strings'
 size='295241'
 url='https://hackage.haskell.org/package/utf8-string'
 dep=('')
+depend='ghc-libs'
+depend='sh'
