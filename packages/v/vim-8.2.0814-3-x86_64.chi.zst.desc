@@ -15,3 +15,11 @@ desc='Vi Improved, a highly configurable, improved version of the vi text editor
 size='3776494'
 url='https://www.vim.org'
 dep=('')
+depend='vim-runtime=8.2.0814-3'
+depend='gpm'
+depend='acl'
+depend='glibc'
+depend='libgcrypt'
+depend='pcre'
+depend='zlib'
+depend='libffi'

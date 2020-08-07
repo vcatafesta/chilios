@@ -15,3 +15,7 @@ desc='Userspace tools and conversion library for Video 4 Linux'
 size='4654525'
 url='https://linuxtv.org/'
 dep=('')
+depend='hicolor-icon-theme'
+depend='gcc-libs'
+depend='sysfsutils'
+depend='libjpeg-turbo'

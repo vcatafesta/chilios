@@ -15,3 +15,4 @@ desc='Perceptual video quality assessment algorithm based on multi-method fusion
 size='4752457'
 url='https://github.com/Netflix/vmaf/'
 dep=('')
+depend='gcc-libs'

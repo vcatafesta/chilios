@@ -15,3 +15,7 @@ desc='Extra tools for Ogg-Vorbis'
 size='786658'
 url='https://www.xiph.org/vorbis/'
 dep=('')
+depend='libao'
+depend='libvorbis'
+depend='curl'
+depend='flac'

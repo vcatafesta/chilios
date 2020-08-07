@@ -15,3 +15,6 @@ desc='Virtual Distributed Ethernet for emulators like qemu'
 size='845019'
 url='https://sourceforge.net/projects/vde/'
 dep=('')
+depend='bash'
+depend='libpcap'
+depend='openssl'

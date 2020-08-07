@@ -15,3 +15,5 @@ desc='Video stabilization library'
 size='141316'
 url='http://public.hronopik.de/vid.stab'
 dep=('')
+depend='gcc-libs'
+depend='glibc'

@@ -15,3 +15,5 @@ desc='A virtual 3D GPU library, that allows the guest operating system to use th
 size='491273'
 url='https://virgil3d.github.io/'
 dep=('')
+depend='libepoxy'
+depend='mesa'

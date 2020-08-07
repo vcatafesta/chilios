@@ -15,3 +15,5 @@ desc='The Vamp audio analysis plug-in system'
 size='1071468'
 url='https://www.vamp-plugins.org/'
 dep=('')
+depend='gcc-libs'
+depend='glibc'

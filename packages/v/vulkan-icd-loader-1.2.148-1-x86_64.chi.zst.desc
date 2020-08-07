@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='vulkan'
+version='icd'
+build='loader'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Vulkan Installable Client Driver (ICD) Loader'
+size='394706'
+url='https://www.khronos.org/vulkan/'
+dep=('')
+depend='glibc'
