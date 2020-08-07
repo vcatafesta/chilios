@@ -15,3 +15,4 @@ desc='Library that implements a custom algorithm for extracting fingerprints fro
 size='127788'
 url='https://acoustid.org/chromaprint'
 dep=('')
+depend='ffmpeg'

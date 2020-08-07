@@ -15,3 +15,5 @@ desc='Original cdrtools supporting CD, DVD and BluRay burning'
 size='4293671'
 url='http://cdrecord.org/'
 dep=('')
+depend='acl'
+depend='libcap'

@@ -15,3 +15,4 @@ desc='Class library for numbers'
 size='2714006'
 url='https://www.ginac.de/CLN/'
 dep=('')
+depend='gmp'

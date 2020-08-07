@@ -5,7 +5,7 @@
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
 pkgname='cantarell'
 version='fonts'
-build='1:0.201'
+build='1#003A0.201'
 license='custom:SIL'
 lfs_version='8.4'
 lfs_init='SYSTEMD'

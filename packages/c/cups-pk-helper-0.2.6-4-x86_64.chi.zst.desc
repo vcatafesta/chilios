@@ -15,3 +15,5 @@ desc='A helper that makes system-config-printer use PolicyKit'
 size='361988'
 url='https://www.freedesktop.org/software/cups-pk-helper/releases/'
 dep=('')
+depend='polkit'
+depend='libcups'

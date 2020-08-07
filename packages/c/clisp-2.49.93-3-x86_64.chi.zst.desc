@@ -15,3 +15,5 @@ desc='ANSI Common Lisp interpreter, compiler and debugger'
 size='18369821'
 url='https://clisp.sourceforge.io/'
 dep=('')
+depend='readline'
+depend='libsigsegv'

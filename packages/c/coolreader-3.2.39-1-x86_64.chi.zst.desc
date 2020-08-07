@@ -15,3 +15,5 @@ desc='Fast and small XML/CSS based eBook reader'
 size='5964154'
 url='https://github.com/buggins/coolreader'
 dep=('')
+depend='hicolor-icon-theme'
+depend='qt5-base'

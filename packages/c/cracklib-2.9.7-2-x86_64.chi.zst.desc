@@ -15,3 +15,5 @@ desc='Password Checking Library'
 size='931164'
 url='https://github.com/cracklib/cracklib'
 dep=('')
+depend='glibc'
+depend='zlib'

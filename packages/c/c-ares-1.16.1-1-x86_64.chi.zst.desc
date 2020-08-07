@@ -15,3 +15,4 @@ desc='C library that performs DNS requests and name resolves asynchronously'
 size='196950'
 url='https://c-ares.haxx.se/'
 dep=('')
+depend='glibc'

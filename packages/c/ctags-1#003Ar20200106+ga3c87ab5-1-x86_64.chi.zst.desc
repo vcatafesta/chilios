@@ -4,7 +4,7 @@
 ######################################################################
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
 pkgname='ctags'
-version='1:r20200106+ga3c87ab5'
+version='1#003Ar20200106+ga3c87ab5'
 build='1'
 license='GPL'
 lfs_version='8.4'
@@ -15,3 +15,7 @@ desc='Generates an index file of language objects found in source files'
 size='1115193'
 url='https://ctags.io/'
 dep=('')
+depend='libxml2'
+depend='jansson'
+depend='libyaml'
+depend='libseccomp'

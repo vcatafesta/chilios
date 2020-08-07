@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='colorgcc'
+version='1.4.5'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A Perl wrapper to colorize the output of compilers with warning/error messages matching the gcc output format'
+size='14587'
+url='https://github.com/colorgcc/colorgcc'
+dep=('')
+depend='perl'

@@ -15,3 +15,5 @@ desc='System daemon for managing color devices (SANE support)'
 size='32112'
 url='https://www.freedesktop.org/software/colord'
 dep=('')
+depend='colord=1.4.4+9+g1ce26da-2'
+depend='sane'

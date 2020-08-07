@@ -15,3 +15,6 @@ desc='Additional GTK support code for colord'
 size='169378'
 url='https://www.freedesktop.org/software/colord/'
 dep=('')
+depend='lcms2'
+depend='gtk3'
+depend='colord'

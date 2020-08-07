@@ -15,3 +15,4 @@ desc='Utils & libs to convert from/to X-Face format.'
 size='69581'
 url='http://ftp.xemacs.org/pub/xemacs/aux/'
 dep=('')
+depend='glibc'

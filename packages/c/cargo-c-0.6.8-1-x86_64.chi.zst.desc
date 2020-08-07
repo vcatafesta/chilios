@@ -15,3 +15,6 @@ desc='A cargo subcommand to build and install C-ABI compatibile dynamic and stat
 size='26582365'
 url='https://github.com/lu-zero/cargo-c/'
 dep=('')
+depend='curl'
+depend='openssl'
+depend='zlib'

@@ -15,3 +15,6 @@ desc='An automatic theorem prover'
 size='27664443'
 url='https://cvc4.github.io/'
 dep=('')
+depend='boost'
+depend='libantlr3c'
+depend='cln'

@@ -15,3 +15,4 @@ desc='A tool for generating C bindings to Rust code'
 size='4782291'
 url='https://github.com/eqrion/cbindgen'
 dep=('')
+depend='gcc-libs'

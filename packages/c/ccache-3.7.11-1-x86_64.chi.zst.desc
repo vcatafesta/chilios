@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ccache'
+version='3.7.11'
+build='1'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Compiler cache that speeds up recompilation by caching previous compilations'
+size='280328'
+url='https://ccache.samba.org/'
+dep=('')
+depend='glibc'
+depend='zlib'

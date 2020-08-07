@@ -15,3 +15,4 @@ desc='A backend utility to get CDDB discid information from a CD-ROM disc'
 size='14841'
 url='http://linukz.org/cd-discid.shtml'
 dep=('')
+depend='glibc'

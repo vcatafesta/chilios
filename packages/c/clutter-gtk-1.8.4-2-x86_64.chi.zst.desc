@@ -15,3 +15,4 @@ desc='Clutter integration with GTK+'
 size='262295'
 url='https://gitlab.gnome.org/GNOME/clutter-gtk'
 dep=('')
+depend='clutter'

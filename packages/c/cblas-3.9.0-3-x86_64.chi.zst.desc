@@ -15,3 +15,4 @@ desc='C interface to BLAS'
 size='173756'
 url='https://www.netlib.org/lapack'
 dep=('')
+depend='blas'

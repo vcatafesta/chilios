@@ -15,3 +15,4 @@ desc='A unit testing framework for C'
 size='177298'
 url='https://libcheck.github.io/check/'
 dep=('')
+depend='awk'
