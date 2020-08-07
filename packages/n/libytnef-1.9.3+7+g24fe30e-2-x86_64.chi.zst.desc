@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libytnef'
+version='1.9.3+7+g24fe30e'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Yerase's TNEF Stream Reader library (decode winmail.dat)'
+size='205904'
+url='https://github.com/Yeraze/ytnef'
+dep=('')
+depend='glibc'

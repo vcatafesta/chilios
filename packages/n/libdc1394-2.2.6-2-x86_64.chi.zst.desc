@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libdc1394'
+version='2.2.6'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='High level programming interface to control IEEE 1394 based cameras'
+size='378582'
+url='https://sourceforge.net/projects/libdc1394/'
+dep=('')
+depend='libraw1394'
+depend='libusb'

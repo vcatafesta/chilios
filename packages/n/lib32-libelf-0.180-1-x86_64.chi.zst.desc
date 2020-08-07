@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='libelf'
+build='0.180'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Libraries to handle ELF object files and DWARF debugging information (32-bit)'
+size='2531740'
+url='https://sourceware.org/elfutils/'
+dep=('')
+depend='lib32-bzip2'
+depend='lib32-zlib'
+depend='lib32-xz'
+depend='libelf'

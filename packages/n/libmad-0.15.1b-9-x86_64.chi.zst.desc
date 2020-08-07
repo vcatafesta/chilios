@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libmad'
+version='0.15.1b'
+build='9'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A high-quality MPEG audio decoder'
+size='160251'
+url='https://www.underbit.com/products/mad/'
+dep=('')
+depend='glibc'

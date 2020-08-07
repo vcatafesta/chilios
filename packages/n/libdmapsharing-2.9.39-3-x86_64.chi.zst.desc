@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libdmapsharing'
+version='2.9.39'
+build='3'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library that implements the DMAP family of protocols'
+size='938046'
+url='https://www.flyn.org/projects/libdmapsharing/index.html'
+dep=('')
+depend='libsoup'
+depend='avahi'
+depend='gst-plugins-base-libs'
+depend='gdk-pixbuf2'

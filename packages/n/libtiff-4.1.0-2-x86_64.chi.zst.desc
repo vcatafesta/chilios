@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libtiff'
+version='4.1.0'
+build='2'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for manipulation of TIFF images'
+size='2863893'
+url='http://www.simplesystems.org/libtiff/'
+dep=('')
+depend='libjpeg'
+depend='zlib'
+depend='xz'
+depend='zstd'

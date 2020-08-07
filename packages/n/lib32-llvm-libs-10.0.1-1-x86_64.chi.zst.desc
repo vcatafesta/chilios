@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='llvm'
+build='libs'
+license='custom:Apache 2.0 with LLVM Execption'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Low Level Virtual Machine (runtime library)(32-bit)'
+size='96597745'
+url='https://llvm.org/'
+dep=('')

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libspeechd'
+version='0.9.1'
+build='4'
+license='FDL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='High-level device independent layer for speech synthesis interface'
+size='53803'
+url='http://www.freebsoft.org/speechd'
+dep=('')

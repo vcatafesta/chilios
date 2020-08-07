@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libmpc'
+version='1.1.0'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for the arithmetic of complex numbers with arbitrarily high precision'
+size='140123'
+url='http://www.multiprecision.org/'
+dep=('')
+depend='mpfr'

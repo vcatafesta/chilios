@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='expat'
+build='2.2.9'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An XML Parser library'
+size='173494'
+url='https://libexpat.github.io/'
+dep=('')
+depend='expat'
+depend='lib32-glibc'

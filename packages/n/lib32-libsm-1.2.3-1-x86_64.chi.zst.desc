@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='libsm'
+build='1.2.3'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='X11 Session Management library (32-bit)'
+size='43008'
+url='https://xorg.freedesktop.org/'
+dep=('')
+depend='lib32-libice'
+depend='lib32-util-linux'
+depend='libsm'

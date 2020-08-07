@@ -1,0 +1,22 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libgit2'
+version='glib'
+build='0.99.0.1'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GLib wrapper for libgit2'
+size='3111707'
+url='https://wiki.gnome.org/Projects/Libgit2-glib'
+dep=('')
+depend='glibc'
+depend='libgio-2.0.so=0-64'
+depend='libgit2.so=1.0-64'
+depend='libglib-2.0.so=0-64'
+depend='libgobject-2.0.so=0-64'

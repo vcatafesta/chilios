@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libevdev'
+version='1.9.1'
+build='1'
+license='custom:X11'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Wrapper library for evdev devices'
+size='258089'
+url='https://www.freedesktop.org/wiki/Software/libevdev/'
+dep=('')
+depend='glibc'

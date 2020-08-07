@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libgme'
+version='0.6.3'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Video game music file emulation/playback library'
+size='3311588'
+url='https://bitbucket.org/mpyne/game-music-emu'
+dep=('')
+depend='gcc-libs'

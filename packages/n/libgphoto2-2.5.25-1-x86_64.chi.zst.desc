@@ -1,0 +1,24 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libgphoto2'
+version='2.5.25'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The core library of gphoto2, designed to allow access to digital camera by external programs.'
+size='6606554'
+url='http://www.gphoto.org/'
+dep=('')
+depend='libexif'
+depend='libjpeg'
+depend='gd'
+depend='libltdl'
+depend='libusb'
+depend='libxml2'
+depend='curl'

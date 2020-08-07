@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libaec'
+version='1.0.4'
+build='1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Adaptive Entropy Coding library'
+size='72641'
+url='https://gitlab.dkrz.de/k202009/libaec/'
+dep=('')
+depend='glibc'

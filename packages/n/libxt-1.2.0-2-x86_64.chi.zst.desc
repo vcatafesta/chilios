@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libxt'
+version='1.2.0'
+build='2'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='X11 toolkit intrinsics library'
+size='2129546'
+url='https://xorg.freedesktop.org/'
+dep=('')
+depend='libsm'
+depend='libx11'

@@ -1,0 +1,23 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libldm'
+version='0.2.4.r20.a856552'
+build='1'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A tool and library for managing Microsoft Windows Dynamic Disks'
+size='110344'
+url='https://github.com/mdbooth/libldm'
+dep=('')
+depend='device-mapper'
+depend='glib2'
+depend='json-glib'
+depend='libreadline.so=8-64'
+depend='libuuid.so=1-64'
+depend='zlib'

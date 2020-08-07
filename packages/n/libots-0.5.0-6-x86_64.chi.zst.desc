@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libots'
+version='0.5.0'
+build='6'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Open Text Summarizer'
+size='176852'
+url='https://libots.sourceforge.net/'
+dep=('')
+depend='libxml2'
+depend='glib2'
+depend='popt'

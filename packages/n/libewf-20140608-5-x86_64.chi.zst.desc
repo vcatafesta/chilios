@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libewf'
+version='20140608'
+build='5'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library for support of the Expert Witness Compression Format (EWF)'
+size='8014848'
+url='https://github.com/libyal/libewf/'
+dep=('')
+depend='util-linux'
+depend='zlib'
+depend='bzip2'

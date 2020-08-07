@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libvirt'
+version='glib'
+build='3.0.0'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GLib bindings for libvirt'
+size='3355268'
+url='https://libvirt.org'
+dep=('')
+depend='libvirt'
+depend='libcap-ng'

@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='libxcb'
+build='1.14'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='X11 client-side library (32-bit)'
+size='1019020'
+url='https://xcb.freedesktop.org/'
+dep=('')
+depend='lib32-libxdmcp'
+depend='lib32-libxau'
+depend='libxcb'

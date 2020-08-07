@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libsynctex'
+version='2020.54586'
+build='4'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for synchronization between TeX files and resulting file'
+size='150478'
+url='https://tug.org/texlive/'
+dep=('')
+depend='glibc'
+depend='zlib'

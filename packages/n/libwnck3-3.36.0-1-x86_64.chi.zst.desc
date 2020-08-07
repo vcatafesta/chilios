@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libwnck3'
+version='3.36.0'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library to manage X windows and workspaces (via pagers, tasklists, etc.)'
+size='3151894'
+url='https://gitlab.gnome.org/GNOME/libwnck'
+dep=('')
+depend='gtk3'
+depend='startup-notification'
+depend='libxres'

@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libqtxdg'
+version='3.5.0'
+build='2'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library providing freedesktop.org XDG specs implementations for Qt.'
+size='487289'
+url='https://lxqt.org'
+dep=('')
+depend='libsm'
+depend='libxkbcommon-x11'
+depend='qt5-base'
+depend='qt5-svg'

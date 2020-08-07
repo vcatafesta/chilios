@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libtasn1'
+version='4.16.0'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The ASN.1 library used in GNUTLS'
+size='270767'
+url='https://www.gnu.org/software/libtasn1/'
+dep=('')
+depend='glibc'

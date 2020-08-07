@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libportal'
+version='0.3'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GIO-style async APIs for most Flatpak portals'
+size='577413'
+url='https://github.com/flatpak/libportal'
+dep=('')
+depend='glib2'

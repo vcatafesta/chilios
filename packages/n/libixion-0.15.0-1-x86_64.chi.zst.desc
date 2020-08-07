@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libixion'
+version='0.15.0'
+build='1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A general purpose formula parser & interpreter'
+size='1153142'
+url='https://gitlab.com/ixion/ixion/blob/master/README.md'
+dep=('')
+depend='boost-libs'
+depend='python'

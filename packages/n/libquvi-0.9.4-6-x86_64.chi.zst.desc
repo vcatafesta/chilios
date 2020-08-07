@@ -1,0 +1,23 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libquvi'
+version='0.9.4'
+build='6'
+license='AGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for parsing video download links.'
+size='125906'
+url='http://quvi.sourceforge.net/'
+dep=('')
+depend='libquvi-scripts'
+depend='curl'
+depend='lua52'
+depend='libproxy'
+depend='libgcrypt'
+depend='glib2'
