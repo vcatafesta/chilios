@@ -15,3 +15,5 @@ desc='dconf Editor'
 size='2883290'
 url='https://wiki.gnome.org/Projects/dconf'
 dep=('')
+depend='gtk3'
+depend='dconf'

@@ -15,3 +15,7 @@ desc='Library to discover and manipulate Digital Media Renderers'
 size='120889'
 url='http://01.org/dleyna'
 dep=('')
+depend='dleyna-connector-dbus'
+depend='gupnp-av'
+depend='gupnp-dlna'
+depend='libsoup'

@@ -15,3 +15,7 @@ desc='Distributed SQLite'
 size='136474'
 url='https://github.com/CanonicalLtd/dqlite'
 dep=('')
+depend='libuv'
+depend='raft'
+depend='libco'
+depend='sqlite-replication'

@@ -15,3 +15,4 @@ desc='Deepin menu service for building beautiful menus'
 size='112695'
 url='https://github.com/linuxdeepin/deepin-menu'
 dep=('')
+depend='deepin-qt5integration'

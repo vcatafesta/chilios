@@ -15,3 +15,7 @@ desc='RFC2131 compliant DHCP client daemon'
 size='489108'
 url='https://roy.marples.name/projects/dhcpcd/'
 dep=('')
+depend='glibc'
+depend='sh'
+depend='udev'
+depend='systemd-libs'

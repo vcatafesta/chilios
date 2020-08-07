@@ -15,3 +15,6 @@ desc='DVD authoring tools'
 size='591189'
 url='http://dvdauthor.sourceforge.net/'
 dep=('')
+depend='libdvdread'
+depend='imagemagick'
+depend='libxml2'

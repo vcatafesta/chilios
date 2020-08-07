@@ -15,3 +15,5 @@ desc='The Berkeley DB embedded database system'
 size='6719960'
 url='https://www.oracle.com/technology/software/products/berkeley-db/index.html'
 dep=('')
+depend='gcc-libs'
+depend='sh'

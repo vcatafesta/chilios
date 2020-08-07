@@ -15,3 +15,6 @@ desc='Qt platform theme integration plugins for DDE'
 size='1404472'
 url='https://github.com/linuxdeepin/qt5integration'
 dep=('')
+depend='dtkwidget'
+depend='libqtxdg'
+depend='deepin-qt5platform-plugins'

@@ -15,3 +15,6 @@ desc='Deepin Polkit Agent'
 size='248019'
 url='https://github.com/linuxdeepin/dde-polkit-agent'
 dep=('')
+depend='deepin-qt5integration'
+depend='deepin-qt-dbus-factory'
+depend='polkit-qt5'

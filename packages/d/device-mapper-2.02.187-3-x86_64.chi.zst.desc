@@ -15,3 +15,6 @@ desc='Device mapper userspace library and tools'
 size='854843'
 url='http://sourceware.org/dm/'
 dep=('')
+depend='glibc'
+depend='systemd-libs'
+depend='libudev.so=1-64'

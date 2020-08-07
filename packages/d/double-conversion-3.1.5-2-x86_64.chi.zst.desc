@@ -15,3 +15,4 @@ desc='Binary-decimal and decimal-binary routines for IEEE doubles'
 size='172637'
 url='https://github.com/google/double-conversion'
 dep=('')
+depend='gcc-libs'

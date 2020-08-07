@@ -15,3 +15,4 @@ desc='Find and optionally remove unneeded includes in C or C++ source files'
 size='74952'
 url='http://www.catb.org/~esr/deheader/'
 dep=('')
+depend='python'

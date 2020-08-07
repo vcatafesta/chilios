@@ -15,3 +15,6 @@ desc='Deepin Anything file search tool'
 size='509440'
 url='https://github.com/linuxdeepin/deepin-anything'
 dep=('')
+depend='DEEPIN-ANYTHING-MODULE'
+depend='dtkcore'
+depend='udisks2-qt5'

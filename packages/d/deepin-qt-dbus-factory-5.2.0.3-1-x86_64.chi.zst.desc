@@ -15,3 +15,4 @@ desc='A repository stores auto-generated Qt5 dbus code (libdframeworkdbus)'
 size='3420812'
 url='https://github.com/linuxdeepin/dde-qt-dbus-factory'
 dep=('')
+depend='qt5-base'

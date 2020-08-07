@@ -15,3 +15,4 @@ desc='Device mapper RAID interface'
 size='332734'
 url='https://people.redhat.com/~heinzm/sw/dmraid/'
 dep=('')
+depend='device-mapper>=2.0.54'

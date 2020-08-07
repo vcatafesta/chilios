@@ -15,3 +15,7 @@ desc='The Debian Package Manager tools'
 size='8658088'
 url='https://tracker.debian.org/pkg/dpkg'
 dep=('')
+depend='xz'
+depend='zlib'
+depend='bzip2'
+depend='perl'

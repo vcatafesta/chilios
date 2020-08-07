@@ -15,3 +15,4 @@ desc='Deepin Anything file search tool, kernel module for Arch kernel'
 size='9928'
 url='https://github.com/linuxdeepin/deepin-anything'
 dep=('')
+depend='linux'

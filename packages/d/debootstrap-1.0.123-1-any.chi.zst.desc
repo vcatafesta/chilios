@@ -15,3 +15,6 @@ desc='Bootstrap a basic Debian system'
 size='189944'
 url='https://tracker.debian.org/pkg/debootstrap'
 dep=('')
+depend='perl'
+depend='wget'
+depend='binutils'

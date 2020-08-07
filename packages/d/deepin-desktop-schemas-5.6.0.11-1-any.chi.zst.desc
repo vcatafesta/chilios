@@ -15,3 +15,7 @@ desc='GSettings deepin desktop-wide schemas'
 size='279375'
 url='https://github.com/linuxdeepin/deepin-desktop-schemas'
 dep=('')
+depend='dconf'
+depend='deepin-gtk-theme'
+depend='deepin-icon-theme'
+depend='deepin-sound-theme'

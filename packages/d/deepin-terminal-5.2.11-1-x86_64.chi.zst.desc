@@ -15,3 +15,5 @@ desc='Default terminal emulation application for Deepin'
 size='2725143'
 url='https://github.com/linuxdeepin/deepin-terminal'
 dep=('')
+depend='at-spi2-core'
+depend='deepin-qt5integration'

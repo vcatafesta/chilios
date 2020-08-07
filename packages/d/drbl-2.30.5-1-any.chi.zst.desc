@@ -15,3 +15,5 @@ desc='Diskless Remote Boot in Linux: manage the deployment of the GNU/Linux oper
 size='5440433'
 url='http://drbl.sourceforge.net'
 dep=('')
+depend='perl'
+depend='bc'

@@ -15,3 +15,5 @@ desc='Suite to create, manipulate and view DjVu ('déjà vu') documents'
 size='3286507'
 url='http://djvu.sourceforge.net/'
 dep=('')
+depend='libtiff'
+depend='hicolor-icon-theme'

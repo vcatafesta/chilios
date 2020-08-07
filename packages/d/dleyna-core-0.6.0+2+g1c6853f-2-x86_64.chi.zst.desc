@@ -15,3 +15,4 @@ desc='Library of utility functions that are used by the higher level dLeyna'
 size='59560'
 url='https://01.org/dleyna'
 dep=('')
+depend='gupnp'

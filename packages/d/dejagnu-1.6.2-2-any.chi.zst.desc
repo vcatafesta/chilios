@@ -15,3 +15,5 @@ desc='Framework for testing other programs'
 size='542208'
 url='https://www.gnu.org/software/dejagnu/'
 dep=('')
+depend='sh'
+depend='expect'

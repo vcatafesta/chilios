@@ -15,3 +15,5 @@ desc='Command line utilities for working with desktop entries'
 size='208510'
 url='https://www.freedesktop.org/wiki/Software/desktop-file-utils'
 dep=('')
+depend='glib2'
+depend='libglib-2.0.so=0-64'

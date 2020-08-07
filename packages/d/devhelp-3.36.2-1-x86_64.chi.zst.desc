@@ -15,3 +15,5 @@ desc='API documentation browser for GNOME'
 size='1913599'
 url='https://wiki.gnome.org/Apps/Devhelp'
 dep=('')
+depend='webkit2gtk'
+depend='amtk'

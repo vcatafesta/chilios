@@ -15,3 +15,6 @@ desc='Deepin Toolkit, gui module for DDE look and feel'
 size='571177'
 url='https://github.com/linuxdeepin/dtkgui'
 dep=('')
+depend='dtkcore'
+depend='librsvg'
+depend='qt5-x11extras'

@@ -15,3 +15,6 @@ desc='GNOME keyring extension for dde-polkit-agent'
 size='30858'
 url='https://github.com/linuxdeepin/dpa-ext-gnomekeyring'
 dep=('')
+depend='deepin-polkit-agent'
+depend='deepin-qt5integration'
+depend='libgnome-keyring'

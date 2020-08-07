@@ -15,3 +15,5 @@ desc='Utility programs used for creating patch files'
 size='1454815'
 url='https://www.gnu.org/software/diffutils'
 dep=('')
+depend='glibc'
+depend='bash'

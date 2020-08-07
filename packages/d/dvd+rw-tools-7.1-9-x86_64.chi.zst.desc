@@ -15,3 +15,5 @@ desc='dvd burning tools'
 size='324896'
 url='http://fy.chalmers.se/~appro/linux/DVD+RW'
 dep=('')
+depend='cdrkit'
+depend='gcc-libs'

@@ -15,3 +15,7 @@ desc='Generic menu for X'
 size='52433'
 url='https://tools.suckless.org/dmenu/'
 dep=('')
+depend='sh'
+depend='libxinerama'
+depend='libxft'
+depend='freetype2'

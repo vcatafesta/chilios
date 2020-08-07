@@ -15,3 +15,7 @@ desc='Query and change Linux monitor settings using DDC/CI and USB.'
 size='1205846'
 url='http://ddcutil.com/'
 dep=('')
+depend='glib2'
+depend='libusb'
+depend='libdrm'
+depend='libxrandr'

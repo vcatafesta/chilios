@@ -15,3 +15,6 @@ desc='XML stylesheets for Docbook-xml transformations'
 size='27602025'
 url='https://docbook.org/'
 dep=('')
+depend='libxml2'
+depend='libxslt'
+depend='docbook-xml'

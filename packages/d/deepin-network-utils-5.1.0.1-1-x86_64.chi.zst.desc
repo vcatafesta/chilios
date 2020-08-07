@@ -15,3 +15,4 @@ desc='DDE network utils'
 size='332420'
 url='https://github.com/linuxdeepin/dde-network-utils'
 dep=('')
+depend='deepin-qt-dbus-factory'

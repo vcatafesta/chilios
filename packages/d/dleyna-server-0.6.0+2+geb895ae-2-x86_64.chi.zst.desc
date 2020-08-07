@@ -15,3 +15,7 @@ desc='Library to discover, browse and manipulate Digital Media Servers'
 size='182166'
 url='http://01.org/dleyna'
 dep=('')
+depend='dleyna-connector-dbus'
+depend='gupnp-av'
+depend='gupnp-dlna'
+depend='libsoup'

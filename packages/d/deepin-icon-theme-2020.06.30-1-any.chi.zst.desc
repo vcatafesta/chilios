@@ -15,3 +15,4 @@ desc='Deepin Icons'
 size='77966544'
 url='https://github.com/linuxdeepin/deepin-icon-theme'
 dep=('')
+depend='papirus-icon-theme'

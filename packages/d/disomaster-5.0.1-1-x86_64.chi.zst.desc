@@ -15,3 +15,5 @@ desc='A libisoburn wrapper class for Qt'
 size='66944'
 url='https://github.com/linuxdeepin/disomaster'
 dep=('')
+depend='libisoburn'
+depend='qt5-base'

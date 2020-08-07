@@ -15,3 +15,7 @@ desc='Qt platform plugins for DDE'
 size='530424'
 url='https://github.com/linuxdeepin/qt5platform-plugins'
 dep=('')
+depend='cairo'
+depend='kwayland'
+depend='qt5-wayland'
+depend='qt5-x11extras'

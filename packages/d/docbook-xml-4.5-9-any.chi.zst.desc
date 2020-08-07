@@ -15,3 +15,4 @@ desc='A widely used XML scheme for writing documentation and help'
 size='2058639'
 url='https://www.oasis-open.org/docbook/'
 dep=('')
+depend='libxml2'

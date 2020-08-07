@@ -15,3 +15,5 @@ desc='AV1 cross-platform decoder focused on speed and correctness'
 size='1065475'
 url='https://code.videolan.org/videolan/dav1d/'
 dep=('')
+depend='glibc'
+depend='vulkan-icd-loader'

@@ -15,3 +15,5 @@ desc='A DHCP server, client, and relay agent'
 size='10089826'
 url='https://www.isc.org/dhcp/'
 dep=('')
+depend='glibc'
+depend='libldap'
