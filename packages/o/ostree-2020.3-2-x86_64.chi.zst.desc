@@ -1,0 +1,27 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ostree'
+version='2020.3'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Operating system and container binary deployment and upgrades'
+size='3561582'
+url='https://ostree.readthedocs.org/en/latest/'
+dep=('')
+depend='glib2'
+depend='xz'
+depend='zlib'
+depend='libsoup'
+depend='gpgme'
+depend='libarchive'
+depend='fuse2'
+depend='util-linux'
+depend='openssl'
+depend='avahi'

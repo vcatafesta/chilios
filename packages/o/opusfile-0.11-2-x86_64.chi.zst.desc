@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='opusfile'
+version='0.11'
+build='2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for opening, seeking, and decoding .opus files'
+size='214382'
+url='https://opus-codec.org/'
+dep=('')
+depend='libogg'
+depend='openssl'
+depend='opus'

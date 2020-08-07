@@ -1,0 +1,27 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='obs'
+version='studio'
+build='25.0.8'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Free, open source software for live streaming and recording'
+size='14156648'
+url='https://obsproject.com'
+dep=('')
+depend='ffmpeg'
+depend='jansson'
+depend='libxinerama'
+depend='libxkbcommon-x11'
+depend='mbedtls'
+depend='qt5-svg'
+depend='qt5-x11extras'
+depend='curl'
+depend='jack'
+depend='gtk-update-icon-cache'

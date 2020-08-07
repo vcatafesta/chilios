@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='opensp'
+version='1.5.2'
+build='9'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library and a set of tools for validating, parsing and manipulating SGML and XML documents'
+size='3265750'
+url='http://openjade.sourceforge.net/'
+dep=('')
+depend='sgml-common'
+depend='perl'

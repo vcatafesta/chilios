@@ -1,0 +1,26 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='opencv'
+version='4.3.0'
+build='7'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Open Source Computer Vision Library'
+size='105451444'
+url='https://opencv.org/'
+dep=('')
+depend='intel-tbb'
+depend='openexr'
+depend='gst-plugins-base'
+depend='libdc1394'
+depend='cblas'
+depend='lapack'
+depend='libgphoto2'
+depend='openjpeg2'
+depend='ffmpeg'

@@ -1,0 +1,26 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='openbox'
+version='3.6.1'
+build='7'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Highly configurable and lightweight X11 window manager'
+size='1255171'
+url='http://openbox.org'
+dep=('')
+depend='startup-notification'
+depend='libxml2'
+depend='libxinerama'
+depend='libxrandr'
+depend='libxcursor'
+depend='pango'
+depend='imlib2'
+depend='librsvg'
+depend='libsm'
