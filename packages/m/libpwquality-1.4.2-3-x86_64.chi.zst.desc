@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libpwquality'
+version='1.4.2'
+build='3'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Library for password quality checking and generating random passwords'
+size='406918'
+url='https://github.com/libpwquality/libpwquality'
+dep=('')
+depend='cracklib'
+depend='pam'

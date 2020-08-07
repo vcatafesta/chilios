@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='p11'
+build='kit'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Loads and enumerates PKCS#11 modules (32-bit library)'
+size='2491770'
+url='https://p11-glue.freedesktop.org'
+dep=('')
+depend='lib32-glibc'
+depend='lib32-libtasn1'
+depend='lib32-libffi'
+depend='libp11-kit'

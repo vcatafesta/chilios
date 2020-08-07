@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='gettext'
+build='0.20.2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GNU internationalization library (32-bit)'
+size='3093093'
+url='https://www.gnu.org/software/gettext/'
+dep=('')
+depend='lib32-acl'
+depend='lib32-gcc-libs'
+depend='gettext'

@@ -1,0 +1,26 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libvirt'
+version='6.4.0'
+build='1'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)'
+size='43679711'
+url='https://libvirt.org/'
+dep=('')
+depend='libpciaccess'
+depend='yajl'
+depend='fuse2'
+depend='gnutls'
+depend='parted'
+depend='libssh'
+depend='libxml2'
+depend='numactl'
+depend='polkit'

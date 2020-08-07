@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libabw'
+version='0.1.3'
+build='2'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='a library that parses the file format of AbiWord documents'
+size='2864215'
+url='https://wiki.documentfoundation.org/DLP/Libraries/libabw'
+dep=('')
+depend='librevenge'
+depend='libxml2'

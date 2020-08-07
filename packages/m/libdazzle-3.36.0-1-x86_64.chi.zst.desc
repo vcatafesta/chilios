@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libdazzle'
+version='3.36.0'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A library to delight your users with fancy features'
+size='5396304'
+url='https://gitlab.gnome.org/GNOME/libdazzle'
+dep=('')
+depend='gtk3'

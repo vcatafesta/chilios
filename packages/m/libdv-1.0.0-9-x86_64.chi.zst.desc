@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libdv'
+version='1.0.0'
+build='9'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The Quasar DV codec (libdv) is a software codec for DV video'
+size='201358'
+url='http://libdv.sourceforge.net/'
+dep=('')
+depend='popt'

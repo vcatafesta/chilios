@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libpciaccess'
+version='0.16'
+build='2'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='X11 PCI access library'
+size='63229'
+url='https://xorg.freedesktop.org/'
+dep=('')
+depend='glibc'

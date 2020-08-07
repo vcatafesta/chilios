@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libpeas'
+version='1.26.0'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A GObject plugins library'
+size='1075777'
+url='https://wiki.gnome.org/Projects/Libpeas'
+dep=('')
+depend='gtk3'
+depend='gobject-introspection-runtime'

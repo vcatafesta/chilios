@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libmaxminddb'
+version='1.4.2'
+build='1'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='MaxMindDB GeoIP2 database library'
+size='41154'
+url='https://dev.maxmind.com/geoip/geoip2/downloadable/'
+dep=('')
+depend='glibc'

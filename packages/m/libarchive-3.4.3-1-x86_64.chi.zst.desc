@@ -1,0 +1,26 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libarchive'
+version='3.4.3'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Multi-format archive and compression library'
+size='1136152'
+url='https://libarchive.org/'
+dep=('')
+depend='acl'
+depend='libacl.so=1-64'
+depend='bzip2'
+depend='expat'
+depend='lz4'
+depend='openssl'
+depend='xz'
+depend='zlib'
+depend='zstd'

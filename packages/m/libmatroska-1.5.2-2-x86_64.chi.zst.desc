@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libmatroska'
+version='1.5.2'
+build='2'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Matroska library'
+size='890030'
+url='https://dl.matroska.org/downloads/libmatroska/'
+dep=('')
+depend='libebml.so=4-64'

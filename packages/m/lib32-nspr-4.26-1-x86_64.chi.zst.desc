@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='nspr'
+build='4.26'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Netscape Portable Runtime (32-bit)'
+size='308490'
+url='https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR'
+dep=('')
+depend='lib32-glibc'
+depend='nspr'

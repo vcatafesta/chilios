@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libgnome'
+version='games'
+build='support'
+license='LGPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Code shared between GNOME games'
+size='175581'
+url='https://gitlab.gnome.org/GNOME/libgnome-games-support'
+dep=('')
+depend='libgee'
+depend='gtk3'

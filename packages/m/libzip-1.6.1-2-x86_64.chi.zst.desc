@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libzip'
+version='1.6.1'
+build='2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A C library for reading, creating, and modifying zip archives'
+size='398727'
+url='https://libzip.org'
+dep=('')
+depend='zlib'
+depend='bzip2'
+depend='openssl'
+depend='gnutls'

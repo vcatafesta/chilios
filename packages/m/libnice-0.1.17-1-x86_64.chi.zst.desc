@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libnice'
+version='0.1.17'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An implementation of the IETF's draft ICE (for p2p UDP data streams)'
+size='1898804'
+url='https://nice.freedesktop.org'
+dep=('')
+depend='glib2'
+depend='gnutls'
+depend='gupnp-igd'

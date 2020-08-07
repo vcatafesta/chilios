@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libedit'
+version='20191231_3.1'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Command line editor library providing generic line editing, history, and tokenization functions'
+size='264121'
+url='https://thrysoee.dk/editline/'
+dep=('')
+depend='ncurses'

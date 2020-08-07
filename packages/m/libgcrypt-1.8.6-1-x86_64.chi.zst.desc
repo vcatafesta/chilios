@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libgcrypt'
+version='1.8.6'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='General purpose cryptographic library based on the code from GnuPG'
+size='1394889'
+url='https://www.gnupg.org'
+dep=('')
+depend='libgpg-error'

@@ -1,0 +1,22 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libpcap'
+version='1.9.1'
+build='2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A system-independent interface for user-level packet capture'
+size='553766'
+url='https://www.tcpdump.org/'
+dep=('')
+depend='glibc'
+depend='libnl'
+depend='sh'
+depend='libusbx'
+depend='dbus'

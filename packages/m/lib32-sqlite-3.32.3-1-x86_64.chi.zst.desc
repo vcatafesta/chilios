@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='lib32'
+version='sqlite'
+build='3.32.3'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A C library that implements an SQL database engine (32-bit)'
+size='1133120'
+url='https://www.sqlite.org/'
+dep=('')
+depend='lib32-glibc'
+depend='sqlite'

@@ -1,0 +1,23 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libass'
+version='0.14.0'
+build='2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A portable library for SSA/ASS subtitles rendering'
+size='237800'
+url='https://github.com/libass/libass/'
+dep=('')
+depend='fontconfig'
+depend='fribidi'
+depend='glib2'
+depend='glibc'
+depend='harfbuzz'
+depend='libfreetype.so=6-64'

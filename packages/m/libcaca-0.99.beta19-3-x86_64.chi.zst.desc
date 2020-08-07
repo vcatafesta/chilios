@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libcaca'
+version='0.99.beta19'
+build='3'
+license='custom:WTFPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Color AsCii Art library'
+size='1282106'
+url='http://caca.zoy.org/wiki/libcaca'
+dep=('')
+depend='imlib2'
+depend='ncurses'

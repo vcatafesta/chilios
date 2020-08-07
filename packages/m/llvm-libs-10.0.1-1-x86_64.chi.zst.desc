@@ -1,0 +1,23 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='llvm'
+version='libs'
+build='10.0.1'
+license='custom:Apache 2.0 with LLVM Exception'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='LLVM runtime libraries'
+size='88149317'
+url='https://llvm.org/'
+dep=('')
+depend='gcc-libs'
+depend='zlib'
+depend='libffi'
+depend='libedit'
+depend='ncurses'
+depend='libxml2'
