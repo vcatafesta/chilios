@@ -15,3 +15,5 @@ desc='Mouse wheel configuration tool for XFree86/Xorg'
 size='134144'
 url='http://imwheel.sourceforge.net'
 dep=('')
+depend='libxtst'
+depend='libxmu'

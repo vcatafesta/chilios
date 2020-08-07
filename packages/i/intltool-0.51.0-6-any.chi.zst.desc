@@ -15,3 +15,4 @@ desc='The internationalization tool collection'
 size='153149'
 url='https://launchpad.net/intltool'
 dep=('')
+depend='perl-xml-parser'

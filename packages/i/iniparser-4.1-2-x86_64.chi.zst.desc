@@ -15,3 +15,4 @@ desc='A free stand-alone ini file parsing library written in portable ANSI C'
 size='39298'
 url='http://ndevilla.free.fr/iniparser/'
 dep=('')
+depend='glibc'

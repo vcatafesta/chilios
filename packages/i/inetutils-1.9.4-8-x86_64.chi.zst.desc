@@ -15,3 +15,5 @@ desc='A collection of common network programs'
 size='1165935'
 url='https://www.gnu.org/software/inetutils/'
 dep=('')
+depend='pam'
+depend='libcap'

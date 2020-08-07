@@ -15,3 +15,5 @@ desc='International Components for Unicode library'
 size='39210467'
 url='http://site.icu-project.org/home'
 dep=('')
+depend='gcc-libs'
+depend='sh'

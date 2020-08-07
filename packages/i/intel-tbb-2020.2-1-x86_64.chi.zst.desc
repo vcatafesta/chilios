@@ -15,3 +15,4 @@ desc='High level abstract threading library'
 size='2283709'
 url='https://www.threadingbuildingblocks.org/'
 dep=('')
+depend='gcc-libs'

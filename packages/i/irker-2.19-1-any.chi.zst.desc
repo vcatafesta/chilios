@@ -15,3 +15,5 @@ desc='An IRC client that runs as a daemon accepting notification requests'
 size='104505'
 url='https://gitlab.com/esr/irker'
 dep=('')
+depend='python'
+depend='python-pysocks'

@@ -15,3 +15,5 @@ desc='a library which implements a protocol for transmission of raster page imag
 size='123395'
 url='https://www.openprinting.org/download/ijs/'
 dep=('')
+depend='glibc'
+depend='sh'

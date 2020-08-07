@@ -15,3 +15,6 @@ desc='Network monitoring tools, including ping'
 size='290875'
 url='http://www.skbuff.net/iputils/'
 dep=('')
+depend='openssl'
+depend='libcap'
+depend='libidn2'

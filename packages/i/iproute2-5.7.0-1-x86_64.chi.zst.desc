@@ -15,3 +15,6 @@ desc='IP Routing Utilities'
 size='2810928'
 url='https://git.kernel.org/pub/scm/network/iproute2/iproute2.git'
 dep=('')
+depend='glibc'
+depend='iptables'
+depend='libelf'

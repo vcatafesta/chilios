@@ -15,3 +15,4 @@ desc='nl80211 based CLI configuration utility for wireless devices'
 size='265240'
 url='https://wireless.kernel.org/en/users/Documentation/iw'
 dep=('')
+depend='libnl'
