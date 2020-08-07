@@ -15,3 +15,6 @@ desc='MSWord library can load and parse Word 2000, 97, 95 and 6 file formats'
 size='833983'
 url='https://sourceforge.net/projects/wvware'
 dep=('')
+depend='libgsf'
+depend='libpng'
+depend='sh'

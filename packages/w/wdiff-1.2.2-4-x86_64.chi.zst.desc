@@ -15,3 +15,4 @@ desc='A wordwise implementation of GNU diff'
 size='490890'
 url='https://www.gnu.org/software/wdiff/'
 dep=('')
+depend='ncurses'

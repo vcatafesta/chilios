@@ -15,3 +15,6 @@ desc='C++ library to create, manipulate and render SVG files'
 size='2090142'
 url='http://wxsvg.sourceforge.net/'
 dep=('')
+depend='ffmpeg'
+depend='libexif'
+depend='wxgtk3'

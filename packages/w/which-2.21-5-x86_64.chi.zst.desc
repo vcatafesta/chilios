@@ -15,3 +15,5 @@ desc='A utility to show the full path of commands'
 size='35209'
 url='https://savannah.gnu.org/projects/which/'
 dep=('')
+depend='glibc'
+depend='bash'

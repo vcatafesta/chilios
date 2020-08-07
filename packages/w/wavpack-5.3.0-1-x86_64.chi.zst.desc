@@ -15,3 +15,4 @@ desc='Audio compression format with lossless, lossy and hybrid compression modes
 size='451706'
 url='http://www.wavpack.com/'
 dep=('')
+depend='glibc'
