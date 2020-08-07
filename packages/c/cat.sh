@@ -1,2 +1,0 @@
-cat t | grep '[[:alnum:]]'
-
