@@ -15,3 +15,4 @@ desc='Extensions for GNOME shell, including classic mode'
 size='900414'
 url='https://wiki.gnome.org/Projects/GnomeShell/Extensions'
 dep=('')
+depend='gnome-shell'

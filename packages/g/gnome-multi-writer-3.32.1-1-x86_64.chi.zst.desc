@@ -15,3 +15,7 @@ desc='Write an ISO file to multiple USB devices at once'
 size='433152'
 url='https://wiki.gnome.org/Apps/MultiWriter'
 dep=('')
+depend='gtk3'
+depend='libcanberra'
+depend='libgusb'
+depend='udisks2'

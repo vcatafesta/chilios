@@ -15,3 +15,4 @@ desc='Low level library, upon which multimedia APIs can be built'
 size='9815277'
 url='http://gmerlin.sourceforge.net/'
 dep=('')
+depend='glibc'

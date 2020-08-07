@@ -15,3 +15,6 @@ desc='Help a new user get started in GNOME'
 size='63549123'
 url='https://gitlab.gnome.org/GNOME/gnome-getting-started-docs'
 dep=('')
+depend='yelp'
+depend='gst-plugins-base'
+depend='gst-plugins-good'

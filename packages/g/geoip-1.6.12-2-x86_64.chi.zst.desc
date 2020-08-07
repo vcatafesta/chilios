@@ -15,3 +15,5 @@ desc='Non-DNS IP-to-country resolver C library & utils'
 size='297892'
 url='https://www.maxmind.com/app/c'
 dep=('')
+depend='zlib'
+depend='geoip-database'

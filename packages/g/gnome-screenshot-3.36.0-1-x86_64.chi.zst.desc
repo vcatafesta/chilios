@@ -15,3 +15,5 @@ desc='Take pictures of your screen'
 size='914778'
 url='https://gitlab.gnome.org/GNOME/gnome-screenshot'
 dep=('')
+depend='gtk3'
+depend='libcanberra'

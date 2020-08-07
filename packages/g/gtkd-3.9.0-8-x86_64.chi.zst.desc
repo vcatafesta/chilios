@@ -15,3 +15,5 @@ desc='D bindings for GTK+ and related libraries.'
 size='33652016'
 url='https://gtkd.org'
 dep=('')
+depend='liblphobos'
+depend='gtk3'

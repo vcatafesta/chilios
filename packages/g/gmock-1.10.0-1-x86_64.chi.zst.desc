@@ -15,3 +15,7 @@ desc='Google Mock - A library for writing and using C++ mock classes'
 size='1026657'
 url='https://github.com/google/googletest'
 dep=('')
+depend='python'
+depend='gtest'
+depend='gcc-libs'
+depend='sh'

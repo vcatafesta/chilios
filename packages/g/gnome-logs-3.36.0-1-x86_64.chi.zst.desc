@@ -15,3 +15,6 @@ desc='A log viewer for the systemd journal'
 size='985319'
 url='https://wiki.gnome.org/Apps/Logs'
 dep=('')
+depend='systemd'
+depend='gtk3'
+depend='gsettings-desktop-schemas'

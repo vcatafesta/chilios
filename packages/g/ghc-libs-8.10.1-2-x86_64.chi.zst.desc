@@ -15,3 +15,6 @@ desc='The Glasgow Haskell Compiler - Dynamic Libraries'
 size='125107964'
 url='https://www.haskell.org/ghc/'
 dep=('')
+depend='gmp'
+depend='libffi'
+depend='perl'

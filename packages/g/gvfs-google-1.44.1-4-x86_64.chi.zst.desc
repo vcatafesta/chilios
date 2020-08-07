@@ -15,3 +15,5 @@ desc='Virtual filesystem implementation for GIO (Google Drive backend)'
 size='79693'
 url='https://wiki.gnome.org/Projects/gvfs'
 dep=('')
+depend='gvfs-goa=1.44.1'
+depend='libgdata'

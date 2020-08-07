@@ -15,3 +15,7 @@ desc='Framework that provides access to various sources of multimedia content'
 size='3057915'
 url='https://wiki.gnome.org/Projects/Grilo'
 dep=('')
+depend='libxml2'
+depend='libsoup'
+depend='liboauth'
+depend='totem-plparser'

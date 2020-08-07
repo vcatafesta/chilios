@@ -15,3 +15,7 @@ desc='A utility to make simple audio recording from your GNOME desktop'
 size='546942'
 url='https://wiki.gnome.org/Apps/SoundRecorder'
 dep=('')
+depend='gtk3'
+depend='gjs'
+depend='gst-plugins-good'
+depend='gst-plugins-base'

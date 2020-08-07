@@ -15,3 +15,5 @@ desc='GNU rewrite of netcat, the network piping application'
 size='67738'
 url='http://netcat.sourceforge.net/'
 dep=('')
+depend='glibc'
+depend='texinfo'

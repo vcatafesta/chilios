@@ -15,3 +15,8 @@ desc='Low level core library'
 size='15376347'
 url='https://wiki.gnome.org/Projects/GLib'
 dep=('')
+depend='pcre'
+depend='libffi'
+depend='libutil-linux'
+depend='zlib'
+depend='libmount.so=1-64'

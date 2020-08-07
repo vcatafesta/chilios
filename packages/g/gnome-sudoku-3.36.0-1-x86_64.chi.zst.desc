@@ -15,3 +15,7 @@ desc='Test your logic skills in this number grid puzzle'
 size='1354658'
 url='https://wiki.gnome.org/Apps/Sudoku'
 dep=('')
+depend='gtk3'
+depend='qqwing'
+depend='libgee'
+depend='json-glib'

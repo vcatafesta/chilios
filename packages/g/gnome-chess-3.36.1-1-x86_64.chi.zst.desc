@@ -15,3 +15,5 @@ desc='Play the classic two-player boardgame of chess'
 size='2548760'
 url='https://wiki.gnome.org/Apps/Chess'
 dep=('')
+depend='gtk3'
+depend='librsvg'

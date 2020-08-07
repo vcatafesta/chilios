@@ -15,3 +15,5 @@ desc='A GObject to SQLite object mapper'
 size='700142'
 url='https://wiki.gnome.org/Projects/Gom'
 dep=('')
+depend='glib2'
+depend='sqlite'

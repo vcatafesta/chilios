@@ -15,3 +15,4 @@ desc='GNU Linear Programming Kit : solve LP, MIP and other problems.'
 size='1806325'
 url='https://www.gnu.org/software/glpk/glpk.html'
 dep=('')
+depend='gmp'

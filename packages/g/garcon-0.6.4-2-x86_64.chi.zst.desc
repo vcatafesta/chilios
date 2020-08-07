@@ -15,3 +15,4 @@ desc='Implementation of the freedesktop.org menu specification'
 size='946500'
 url='https://www.xfce.org/'
 dep=('')
+depend='libxfce4ui'

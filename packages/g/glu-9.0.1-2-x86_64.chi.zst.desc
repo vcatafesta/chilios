@@ -15,3 +15,4 @@ desc='Mesa OpenGL Utility library'
 size='493653'
 url='https://cgit.freedesktop.org/mesa/glu/'
 dep=('')
+depend='libgl'

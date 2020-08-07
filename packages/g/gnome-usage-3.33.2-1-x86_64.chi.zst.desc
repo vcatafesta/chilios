@@ -15,3 +15,7 @@ desc='GNOME application to view information about use of system resources'
 size='506880'
 url='https://wiki.gnome.org/Apps/Usage'
 dep=('')
+depend='gtk3'
+depend='libgtop'
+depend='libdazzle'
+depend='tracker'

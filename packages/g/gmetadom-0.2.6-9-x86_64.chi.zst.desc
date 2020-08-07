@@ -15,3 +15,4 @@ desc='C++ bindings for GDome2 DOM implementation'
 size='1311753'
 url='http://gmetadom.sourceforge.net/'
 dep=('')
+depend='gdome2'

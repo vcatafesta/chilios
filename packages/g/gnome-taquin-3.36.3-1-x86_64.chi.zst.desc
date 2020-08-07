@@ -15,3 +15,6 @@ desc='Move tiles so that they reach their places'
 size='5616656'
 url='https://wiki.gnome.org/Apps/Taquin'
 dep=('')
+depend='gtk3'
+depend='librsvg'
+depend='gsound'

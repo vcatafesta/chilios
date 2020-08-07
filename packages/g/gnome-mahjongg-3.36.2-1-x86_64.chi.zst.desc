@@ -15,3 +15,5 @@ desc='Disassemble a pile of tiles by removing matching pairs'
 size='3880851'
 url='https://wiki.gnome.org/Apps/Mahjongg'
 dep=('')
+depend='gtk3'
+depend='librsvg'

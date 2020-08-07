@@ -15,3 +15,4 @@ desc='Runtime libraries shipped by GCC (8.x.x)'
 size='59218736'
 url='http://gcc.gnu.org'
 dep=('')
+depend='glibc>=2.27'

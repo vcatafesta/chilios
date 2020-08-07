@@ -15,3 +15,6 @@ desc='The GNU Compiler Collection - C and C++ frontends (9.x.x)'
 size='120810814'
 url='https://gcc.gnu.org'
 dep=('')
+depend='gcc9-libs=9.3.0-3'
+depend='binutils>=2.28'
+depend='libmpc'

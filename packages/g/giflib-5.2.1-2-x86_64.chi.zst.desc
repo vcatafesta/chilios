@@ -15,3 +15,4 @@ desc='Library for reading and writing gif images'
 size='314071'
 url='http://giflib.sourceforge.net/'
 dep=('')
+depend='glibc'

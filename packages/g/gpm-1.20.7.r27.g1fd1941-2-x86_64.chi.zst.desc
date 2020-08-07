@@ -15,3 +15,5 @@ desc='A mouse server for the console and xterm'
 size='428834'
 url='https://www.nico.schottelius.org/software/gpm/'
 dep=('')
+depend='bash'
+depend='procps-ng'

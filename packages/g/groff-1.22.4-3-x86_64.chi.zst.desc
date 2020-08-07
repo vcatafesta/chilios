@@ -15,3 +15,5 @@ desc='GNU troff text-formatting system'
 size='10038512'
 url='https://www.gnu.org/software/groff/groff.html'
 dep=('')
+depend='perl'
+depend='gcc-libs'

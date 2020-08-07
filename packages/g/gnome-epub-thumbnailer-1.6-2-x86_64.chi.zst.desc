@@ -15,3 +15,7 @@ desc='Thumbnailer for EPub and MOBI books'
 size='36853'
 url='https://gitlab.gnome.org/GNOME/gnome-epub-thumbnailer'
 dep=('')
+depend='gdk-pixbuf2'
+depend='librsvg'
+depend='libarchive'
+depend='libxml2'

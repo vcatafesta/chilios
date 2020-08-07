@@ -15,3 +15,5 @@ desc='Virtual filesystem implementation for GIO (gphoto2 backend; PTP camera, MT
 size='172111'
 url='https://wiki.gnome.org/Projects/gvfs'
 dep=('')
+depend='gvfs=1.44.1'
+depend='libgphoto2'

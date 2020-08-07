@@ -15,3 +15,5 @@ desc='GStreamer open-source multimedia framework gtk plugin'
 size='51056'
 url='https://gstreamer.freedesktop.org/'
 dep=('')
+depend='gst-plugins-base-libs'
+depend='gtk3'

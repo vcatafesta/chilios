@@ -15,3 +15,6 @@ desc='Collection of GStreamer effects for GNOME'
 size='188144'
 url='https://gitlab.gnome.org/GNOME/gnome-video-effects'
 dep=('')
+depend='gst-plugins-good'
+depend='gst-plugins-bad'
+depend='frei0r-plugins'

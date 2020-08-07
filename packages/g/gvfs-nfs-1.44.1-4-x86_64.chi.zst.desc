@@ -15,3 +15,5 @@ desc='Virtual filesystem implementation for GIO (NFS backend)'
 size='55180'
 url='https://wiki.gnome.org/Projects/gvfs'
 dep=('')
+depend='gvfs=1.44.1'
+depend='libnfs'

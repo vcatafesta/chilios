@@ -15,3 +15,5 @@ desc='Provides word-processor-style highlighting and replacement of misspelled w
 size='209077'
 url='http://gtkspell.sourceforge.net/'
 dep=('')
+depend='gtk3'
+depend='enchant'

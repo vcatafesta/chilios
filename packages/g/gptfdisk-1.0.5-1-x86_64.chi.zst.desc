@@ -15,3 +15,7 @@ desc='A text-mode partitioning tool that works on GUID Partition Table (GPT) dis
 size='788668'
 url='https://www.rodsbooks.com/gdisk/'
 dep=('')
+depend='gcc-libs'
+depend='popt'
+depend='libuuid.so=1-64'
+depend='libncursesw.so=6-64'

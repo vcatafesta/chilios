@@ -15,3 +15,6 @@ desc='C++ bindings for GTK+ 3'
 size='11122757'
 url='http://www.gtkmm.org/'
 dep=('')
+depend='gtk3'
+depend='pangomm'
+depend='atkmm'

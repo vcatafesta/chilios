@@ -15,3 +15,6 @@ desc='Slide blocks to solve the puzzle'
 size='1728521'
 url='https://wiki.gnome.org/Apps/Klotski'
 dep=('')
+depend='gtk3'
+depend='librsvg'
+depend='libgnome-games-support'

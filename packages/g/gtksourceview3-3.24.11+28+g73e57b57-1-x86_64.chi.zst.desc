@@ -15,3 +15,5 @@ desc='A text widget adding syntax highlighting and more to GNOME'
 size='6160917'
 url='https://wiki.gnome.org/Projects/GtkSourceView'
 dep=('')
+depend='gtk3'
+depend='libxml2'

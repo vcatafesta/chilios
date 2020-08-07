@@ -15,3 +15,7 @@ desc='a flexible API to implement the spell checking in a GTK+ application'
 size='744067'
 url='https://wiki.gnome.org/Projects/gspell'
 dep=('')
+depend='gtk3'
+depend='enchant'
+depend='libxml2'
+depend='iso-codes'

@@ -15,3 +15,5 @@ desc='A font viewer utility for GNOME'
 size='914794'
 url='https://gitlab.gnome.org/GNOME/gnome-font-viewer'
 dep=('')
+depend='gtk3'
+depend='gnome-desktop'

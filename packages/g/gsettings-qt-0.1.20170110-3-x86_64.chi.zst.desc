@@ -15,3 +15,4 @@ desc='Qml bindings for GSettings'
 size='91240'
 url='https://launchpad.net/gsettings-qt'
 dep=('')
+depend='qt5-declarative'

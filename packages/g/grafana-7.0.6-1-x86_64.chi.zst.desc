@@ -15,3 +15,7 @@ desc='Gorgeous metric viz, dashboards & editors for Graphite, InfluxDB & OpenTSD
 size='137276050'
 url='https://grafana.com/'
 dep=('')
+depend='glibc'
+depend='freetype2'
+depend='fontconfig'
+depend='gsfonts'

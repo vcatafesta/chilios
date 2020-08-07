@@ -15,3 +15,4 @@ desc='Introspection system for GObject-based libraries (runtime library)'
 size='845884'
 url='https://wiki.gnome.org/Projects/GObjectIntrospection'
 dep=('')
+depend='glib2'

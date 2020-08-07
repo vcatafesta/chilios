@@ -15,3 +15,7 @@ desc='GNOME Color Profile Tools'
 size='3371592'
 url='https://gitlab.gnome.org/GNOME/gnome-color-manager'
 dep=('')
+depend='shared-color-targets'
+depend='colord'
+depend='gtk3'
+depend='lcms2'

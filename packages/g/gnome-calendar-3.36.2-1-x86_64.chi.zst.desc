@@ -15,3 +15,7 @@ desc='Simple and beautiful calendar application designed to perfectly fit the GN
 size='1594702'
 url='https://wiki.gnome.org/Apps/Calendar'
 dep=('')
+depend='evolution-data-server'
+depend='gsettings-desktop-schemas'
+depend='gnome-control-center'
+depend='libdazzle'

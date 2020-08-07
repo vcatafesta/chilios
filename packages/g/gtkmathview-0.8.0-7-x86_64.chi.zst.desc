@@ -15,3 +15,7 @@ desc='C++ rendering engine for MathML documents'
 size='3217647'
 url='http://helm.cs.unibo.it/mml-widget/'
 dep=('')
+depend='popt'
+depend='gtk2'
+depend='t1lib'
+depend='gmetadom'

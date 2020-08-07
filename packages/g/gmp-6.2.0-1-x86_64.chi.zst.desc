@@ -15,3 +15,5 @@ desc='A free library for arbitrary precision arithmetic'
 size='1034495'
 url='https://gmplib.org/'
 dep=('')
+depend='gcc-libs'
+depend='sh'

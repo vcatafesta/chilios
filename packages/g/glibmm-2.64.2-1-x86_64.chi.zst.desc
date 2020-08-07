@@ -15,3 +15,5 @@ desc='C++ bindings for GLib'
 size='6003444'
 url='https://www.gtkmm.org/'
 dep=('')
+depend='glib2'
+depend='libsigc++'

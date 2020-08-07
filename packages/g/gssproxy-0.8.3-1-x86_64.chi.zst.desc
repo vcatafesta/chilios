@@ -15,3 +15,6 @@ desc='GSSAPI Proxy'
 size='247142'
 url='https://github.com/gssapi/gssproxy'
 dep=('')
+depend='krb5'
+depend='popt'
+depend='ding-libs'

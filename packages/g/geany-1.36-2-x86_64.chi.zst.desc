@@ -15,3 +15,5 @@ desc='Fast and lightweight IDE'
 size='13709928'
 url='https://www.geany.org/'
 dep=('')
+depend='gtk3'
+depend='python'

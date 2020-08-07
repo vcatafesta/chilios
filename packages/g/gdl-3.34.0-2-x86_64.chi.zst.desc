@@ -15,3 +15,4 @@ desc='GNOME Docking Library'
 size='1808635'
 url='https://gitlab.gnome.org/GNOME/gdl'
 dep=('')
+depend='gtk3'

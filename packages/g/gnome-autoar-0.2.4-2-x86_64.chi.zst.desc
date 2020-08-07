@@ -15,3 +15,6 @@ desc='Automatic archives creating and extracting library'
 size='542776'
 url='https://wiki.gnome.org/TingweiLan/GSoC2013Final'
 dep=('')
+depend='glib2'
+depend='libarchive'
+depend='gtk3'

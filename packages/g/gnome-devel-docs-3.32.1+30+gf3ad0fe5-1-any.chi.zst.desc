@@ -15,3 +15,4 @@ desc='Developer documentation for GNOME'
 size='36974979'
 url='https://gitlab.gnome.org/GNOME/gnome-devel-docs'
 dep=('')
+depend='yelp'

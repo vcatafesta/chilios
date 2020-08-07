@@ -15,3 +15,5 @@ desc='Extra GNOME icons for specific devices and file types'
 size='935495'
 url='https://git.gnome.org/browse/gnome-icon-theme-extras'
 dep=('')
+depend='gtk-update-icon-cache'
+depend='hicolor-icon-theme'

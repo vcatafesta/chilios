@@ -15,3 +15,6 @@ desc='Helper library for geocoding services'
 size='871145'
 url='https://gitlab.gnome.org/GNOME/geocode-glib'
 dep=('')
+depend='glib2'
+depend='json-glib'
+depend='libsoup'

@@ -15,3 +15,9 @@ desc='A GObject-based API for handling resource discovery and announcement over 
 size='407812'
 url='https://wiki.gnome.org/Projects/GUPnP'
 dep=('')
+depend='glib2'
+depend='libsoup'
+depend='libglib-2.0.so=0-64'
+depend='libgobject-2.0.so=0-64'
+depend='libgio-2.0.so=0-64'
+depend='libsoup-2.4.so=1-64'

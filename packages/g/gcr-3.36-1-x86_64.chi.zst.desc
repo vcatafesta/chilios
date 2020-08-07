@@ -15,3 +15,6 @@ desc='A library for bits of crypto UI and parsing'
 size='6026125'
 url='https://gitlab.gnome.org/GNOME/gcr'
 dep=('')
+depend='gtk3'
+depend='libgcrypt'
+depend='p11-kit'

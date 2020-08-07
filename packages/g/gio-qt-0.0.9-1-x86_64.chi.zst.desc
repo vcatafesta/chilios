@@ -15,3 +15,5 @@ desc='Gio wrapper for Qt applications'
 size='429187'
 url='https://github.com/linuxdeepin/gio-qt'
 dep=('')
+depend='glibmm'
+depend='qt5-base'

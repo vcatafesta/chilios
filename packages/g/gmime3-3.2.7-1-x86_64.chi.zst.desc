@@ -15,3 +15,7 @@ desc='A C/C++ MIME creation and parser library with support for S/MIME, PGP, and
 size='3906022'
 url='https://github.com/jstedfast/gmime'
 dep=('')
+depend='glib2'
+depend='gpgme'
+depend='zlib'
+depend='libidn2'

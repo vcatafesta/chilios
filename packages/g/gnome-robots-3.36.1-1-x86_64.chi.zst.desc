@@ -15,3 +15,7 @@ desc='Avoid the robots and make them crash into each other'
 size='1752280'
 url='https://wiki.gnome.org/Apps/Robots'
 dep=('')
+depend='gtk3'
+depend='gsound'
+depend='librsvg'
+depend='libgnome-games-support'

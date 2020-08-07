@@ -15,3 +15,5 @@ desc='Gnome DOM Engine'
 size='365929'
 url='http://gdome2.cs.unibo.it/'
 dep=('')
+depend='libxml2'
+depend='glib2'

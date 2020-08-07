@@ -15,3 +15,5 @@ desc='Provides useful functions to deal with 3D surfaces meshed with interconnec
 size='703975'
 url='http://gts.sourceforge.net/'
 dep=('')
+depend='glib2'
+depend='netpbm'

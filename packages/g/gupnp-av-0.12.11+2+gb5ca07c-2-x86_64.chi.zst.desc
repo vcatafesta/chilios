@@ -15,3 +15,5 @@ desc='Library to ease handling and implementation of UPnP A/V profiles'
 size='1403984'
 url='https://wiki.gnome.org/Projects/GUPnP'
 dep=('')
+depend='glib2'
+depend='libxml2'

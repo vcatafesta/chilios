@@ -15,3 +15,6 @@ desc='Task manager for GNOME'
 size='2020773'
 url='https://wiki.gnome.org/Apps/Todo'
 dep=('')
+depend='evolution-data-server'
+depend='libpeas'
+depend='python'

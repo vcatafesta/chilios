@@ -15,3 +15,7 @@ desc='A VNC viewer widget for GTK+'
 size='902253'
 url='https://wiki.gnome.org/Projects/gtk-vnc'
 dep=('')
+depend='libgcrypt'
+depend='gtk3'
+depend='gnutls'
+depend='libpulse'

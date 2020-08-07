@@ -15,3 +15,5 @@ desc='The GNU Debugger'
 size='461092'
 url='https://www.gnu.org/software/gdb/'
 dep=('')
+depend='python'
+depend='guile2.0'

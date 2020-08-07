@@ -15,3 +15,7 @@ desc='View current processes and monitor system state'
 size='4078391'
 url='https://wiki.gnome.org/Apps/SystemMonitor'
 dep=('')
+depend='libgtop'
+depend='gtkmm3'
+depend='librsvg'
+depend='systemd'

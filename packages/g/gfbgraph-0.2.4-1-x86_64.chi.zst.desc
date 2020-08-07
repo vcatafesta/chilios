@@ -15,3 +15,4 @@ desc='GLib/GObject wrapper for the Facebook Graph API'
 size='497947'
 url='https://wiki.gnome.org/Projects/GFBGraph'
 dep=('')
+depend='gnome-online-accounts'

@@ -15,3 +15,7 @@ desc='Common files for guvcview'
 size='790383'
 url='http://guvcview.sourceforge.net/'
 dep=('')
+depend='ffmpeg'
+depend='gsl'
+depend='libusb'
+depend='portaudio'

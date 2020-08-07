@@ -15,3 +15,5 @@ desc='A Partition Magic clone, frontend to GNU Parted'
 size='7386162'
 url='http://gparted.sourceforge.net'
 dep=('')
+depend='parted'
+depend='gtkmm3'

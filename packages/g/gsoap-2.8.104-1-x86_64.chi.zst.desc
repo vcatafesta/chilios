@@ -15,3 +15,6 @@ desc='Offers an XML language binding to ease the development of SOAP/XML Web ser
 size='8424001'
 url='https://www.cs.fsu.edu/~engelen/soap.html'
 dep=('')
+depend='openssl'
+depend='zlib'
+depend='gcc-libs'

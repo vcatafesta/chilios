@@ -15,3 +15,5 @@ desc='User Interface Builder for GTK+ applications'
 size='13548918'
 url='https://glade.gnome.org/'
 dep=('')
+depend='gtk3'
+depend='libxml2'

@@ -15,3 +15,5 @@ desc='A C wrapper library for GnuPG'
 size='1302793'
 url='https://www.gnupg.org/related_software/gpgme/'
 dep=('')
+depend='libgpg-error'
+depend='gnupg>=2'

@@ -15,3 +15,6 @@ desc='Graphical interface for advanced GNOME 3 settings (Tweak Tool)'
 size='1226915'
 url='https://wiki.gnome.org/Apps/Tweaks'
 dep=('')
+depend='gnome-settings-daemon'
+depend='python-gobject'
+depend='libhandy'

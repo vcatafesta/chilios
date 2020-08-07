@@ -15,3 +15,4 @@ desc='Library to ease DLNA-related bits for applications using gupnp'
 size='1027713'
 url='https://wiki.gnome.org/Projects/GUPnP'
 dep=('')
+depend='gst-plugins-base-libs'

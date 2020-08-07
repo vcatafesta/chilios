@@ -15,3 +15,6 @@ desc='Clear hidden mines from a minefield'
 size='1173559'
 url='https://wiki.gnome.org/Apps/Mines'
 dep=('')
+depend='gtk3'
+depend='librsvg'
+depend='libgnome-games-support'

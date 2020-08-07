@@ -15,3 +15,6 @@ desc='OpenGL and OpenGL ES shader front end and validator'
 size='14091107'
 url='https://github.com/KhronosGroup/glslang'
 dep=('')
+depend='gcc-libs'
+depend='spirv-tools'
+depend='python'

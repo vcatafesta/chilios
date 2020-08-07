@@ -15,3 +15,7 @@ desc='A character map application'
 size='810436'
 url='https://gitlab.gnome.org/GNOME/gnome-characters'
 dep=('')
+depend='gjs'
+depend='gtk3'
+depend='libunistring'
+depend='gnome-desktop'

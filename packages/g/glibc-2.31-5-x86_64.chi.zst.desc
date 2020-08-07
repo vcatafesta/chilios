@@ -15,3 +15,6 @@ desc='GNU C Library'
 size='48455005'
 url='https://www.gnu.org/software/libc'
 dep=('')
+depend='linux-api-headers>=4.10'
+depend='tzdata'
+depend='filesystem'

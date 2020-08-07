@@ -15,3 +15,6 @@ desc='Library for the dynamic creation of images by programmers'
 size='702347'
 url='https://libgd.github.io/'
 dep=('')
+depend='fontconfig'
+depend='libxpm'
+depend='libwebp'

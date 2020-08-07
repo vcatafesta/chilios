@@ -15,3 +15,5 @@ desc='Virtual filesystem implementation for GIO (MTP backend; Android, media pla
 size='167988'
 url='https://wiki.gnome.org/Projects/gvfs'
 dep=('')
+depend='gvfs=1.44.1'
+depend='libmtp'

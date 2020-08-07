@@ -15,3 +15,6 @@ desc='GNU version of awk'
 size='2790732'
 url='https://www.gnu.org/software/gawk/'
 dep=('')
+depend='sh'
+depend='glibc'
+depend='mpfr'

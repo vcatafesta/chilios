@@ -15,3 +15,6 @@ desc='The GNU Compiler Collection - C and C++ frontends'
 size='154342164'
 url='https://gcc.gnu.org'
 dep=('')
+depend='gcc-libs=10.1.0-2'
+depend='binutils>=2.28'
+depend='libmpc'

@@ -15,3 +15,6 @@ desc='Virtual filesystem implementation for GIO (AFC backend; Apple mobile devic
 size='147530'
 url='https://wiki.gnome.org/Projects/gvfs'
 dep=('')
+depend='gvfs=1.44.1'
+depend='libimobiledevice'
+depend='usbmuxd'

@@ -15,3 +15,4 @@ desc='Go front-end for GCC'
 size='171260301'
 url='https://gcc.gnu.org'
 dep=('')
+depend='gcc=10.1.0-2'

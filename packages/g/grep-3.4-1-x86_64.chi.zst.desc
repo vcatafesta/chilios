@@ -15,3 +15,5 @@ desc='A string search utility'
 size='713581'
 url='https://www.gnu.org/software/grep/'
 dep=('')
+depend='glibc'
+depend='pcre'

@@ -15,3 +15,7 @@ desc='Shared GSettings schemas for the desktop'
 size='4568211'
 url='https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas'
 dep=('')
+depend='glib2'
+depend='dconf'
+depend='cantarell-fonts'
+depend='adobe-source-code-pro-fonts'

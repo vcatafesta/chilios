@@ -15,3 +15,5 @@ desc='Small library for playing system sounds'
 size='277024'
 url='https://wiki.gnome.org/Projects/GSound'
 dep=('')
+depend='glib2'
+depend='libcanberra'

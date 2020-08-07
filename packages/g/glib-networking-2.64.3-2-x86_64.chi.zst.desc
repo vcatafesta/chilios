@@ -15,3 +15,7 @@ desc='Network extensions for GLib'
 size='485438'
 url='https://gitlab.gnome.org/GNOME/glib-networking'
 dep=('')
+depend='glib2'
+depend='libproxy'
+depend='gnutls'
+depend='gsettings-desktop-schemas'

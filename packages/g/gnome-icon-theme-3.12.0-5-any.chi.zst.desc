@@ -15,3 +15,6 @@ desc='GNOME icon theme'
 size='10530816'
 url='http://www.gnome.org'
 dep=('')
+depend='hicolor-icon-theme'
+depend='gtk-update-icon-cache'
+depend='gnome-icon-theme-symbolic'

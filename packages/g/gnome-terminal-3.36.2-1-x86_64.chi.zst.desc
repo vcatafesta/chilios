@@ -15,3 +15,5 @@ desc='The GNOME Terminal Emulator'
 size='7589026'
 url='https://wiki.gnome.org/Apps/Terminal'
 dep=('')
+depend='vte3>=0.60.0'
+depend='gsettings-desktop-schemas'

@@ -15,3 +15,5 @@ desc='Simple GTK+ interface for capturing and viewing video from v4l2 devices'
 size='166962'
 url='http://guvcview.sourceforge.net/'
 dep=('')
+depend='guvcview-common'
+depend='gtk3'

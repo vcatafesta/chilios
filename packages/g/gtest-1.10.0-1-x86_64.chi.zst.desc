@@ -15,3 +15,5 @@ desc='Google Test - C++ testing utility based on the xUnit framework (like JUnit
 size='1558109'
 url='https://github.com/google/googletest'
 dep=('')
+depend='gcc-libs'
+depend='sh'

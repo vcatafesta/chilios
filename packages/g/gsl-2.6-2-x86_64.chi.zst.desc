@@ -15,3 +15,4 @@ desc='The GNU Scientific Library (GSL) is a modern numerical library for C and C
 size='4885440'
 url='https://www.gnu.org/software/gsl/gsl.html'
 dep=('')
+depend='glibc'

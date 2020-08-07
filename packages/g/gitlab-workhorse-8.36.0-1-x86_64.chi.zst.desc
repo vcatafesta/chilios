@@ -15,3 +15,5 @@ desc='A smart reverse proxy for GitLab that handles large HTTP requests such as 
 size='53525338'
 url='https://gitlab.com/gitlab-org/gitlab-workhorse'
 dep=('')
+depend='glibc'
+depend='perl-image-exiftool'

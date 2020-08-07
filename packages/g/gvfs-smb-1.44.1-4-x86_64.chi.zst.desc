@@ -15,3 +15,5 @@ desc='Virtual filesystem implementation for GIO (SMB/CIFS backend; Windows clien
 size='94398'
 url='https://wiki.gnome.org/Projects/gvfs'
 dep=('')
+depend='gvfs=1.44.1'
+depend='smbclient>=4.12.0'
