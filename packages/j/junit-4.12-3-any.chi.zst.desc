@@ -15,3 +15,5 @@ desc='Simple JVM framework to write repeatable tests'
 size='314932'
 url='https://junit.org/'
 dep=('')
+depend='java-environment'
+depend='java-hamcrest'

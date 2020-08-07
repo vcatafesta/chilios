@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='js68'
+version='68.11.0'
+build='1'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='JavaScript interpreter and libraries - Version 68'
+size='59678189'
+url='https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey'
+dep=('')
+depend='gcc-libs'
+depend='readline'
+depend='zlib'
+depend='sh'

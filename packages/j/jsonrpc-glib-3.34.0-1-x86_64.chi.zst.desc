@@ -15,3 +15,4 @@ desc='A JSON-RPC library for GLib'
 size='458752'
 url='https://gitlab.gnome.org/GNOME/jsonrpc-glib'
 dep=('')
+depend='json-glib'

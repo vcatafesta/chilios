@@ -15,3 +15,7 @@ desc='OpenJDK Java 14 development kit'
 size='91211914'
 url='https://openjdk.java.net/'
 dep=('')
+depend='jre14-openjdk=14.0.1.u7-1'
+depend='java-environment-common=3'
+depend='hicolor-icon-theme'
+depend='libelf'

@@ -15,3 +15,4 @@ desc='JFS filesystem utilities'
 size='1065657'
 url='http://jfs.sourceforge.net'
 dep=('')
+depend='util-linux'

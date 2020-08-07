@@ -15,3 +15,5 @@ desc='OpenJDK Java 14 full runtime environment'
 size='535136'
 url='https://openjdk.java.net/'
 dep=('')
+depend='jre14-openjdk-headless=14.0.1.u7-1'
+depend='giflib'

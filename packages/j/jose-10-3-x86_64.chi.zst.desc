@@ -15,3 +15,6 @@ desc='C-language implementation of Javascript Object Signing and Encryption'
 size='294675'
 url='https://github.com/latchset/jose'
 dep=('')
+depend='jansson'
+depend='openssl'
+depend='zlib'

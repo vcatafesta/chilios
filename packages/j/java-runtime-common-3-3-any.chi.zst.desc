@@ -15,3 +15,6 @@ desc='Common files for Java Runtime Environments'
 size='5376'
 url='https://www.archlinux.org/packages/extra/any/java-common/'
 dep=('')
+depend='bash'
+depend='findutils'
+depend='coreutils'

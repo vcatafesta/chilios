@@ -15,3 +15,7 @@ desc='JavaScript interpreter and libraries - Version 60'
 size='58074340'
 url='https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey'
 dep=('')
+depend='gcc-libs'
+depend='readline'
+depend='zlib'
+depend='sh'

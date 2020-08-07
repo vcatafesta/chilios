@@ -15,3 +15,4 @@ desc='Java matcher objects library'
 size='312511'
 url='https://code.google.com/p/hamcrest'
 dep=('')
+depend='java-runtime-headless'

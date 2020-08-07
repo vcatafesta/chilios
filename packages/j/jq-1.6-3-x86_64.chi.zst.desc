@@ -15,3 +15,5 @@ desc='Command-line JSON processor'
 size='706775'
 url='https://stedolan.github.io/jq/'
 dep=('')
+depend='glibc'
+depend='oniguruma'

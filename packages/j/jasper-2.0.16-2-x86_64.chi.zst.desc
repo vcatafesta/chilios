@@ -15,3 +15,4 @@ desc='Software-based implementation of the codec specified in the emerging JPEG-
 size='1406101'
 url='https://www.ece.uvic.ca/~mdadams/jasper/'
 dep=('')
+depend='libjpeg'

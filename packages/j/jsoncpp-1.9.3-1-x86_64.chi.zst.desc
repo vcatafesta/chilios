@@ -15,3 +15,4 @@ desc='C++ library for interacting with JSON'
 size='1846328'
 url='https://github.com/open-source-parsers/jsoncpp'
 dep=('')
+depend='gcc-libs'

@@ -15,3 +15,4 @@ desc='Joe's own editor'
 size='2075852'
 url='https://joe-editor.sourceforge.io/'
 dep=('')
+depend='ncurses'

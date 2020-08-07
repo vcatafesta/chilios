@@ -15,3 +15,4 @@ desc='C library for encoding, decoding and manipulating JSON data'
 size='187102'
 url='http://www.digip.org/jansson/'
 dep=('')
+depend='glibc'

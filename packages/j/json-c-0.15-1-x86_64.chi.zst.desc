@@ -15,3 +15,4 @@ desc='A JSON implementation in C'
 size='177456'
 url='https://github.com/json-c/json-c/wiki'
 dep=('')
+depend='glibc'
