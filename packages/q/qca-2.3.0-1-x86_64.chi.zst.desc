@@ -15,3 +15,6 @@ desc='Qt Cryptographic Architecture'
 size='3334844'
 url='https://userbase.kde.org/QCA'
 dep=('')
+depend='qt5-base'
+depend='nss'
+depend='ca-certificates'

@@ -15,3 +15,4 @@ desc='Provides access to QObject or QML objects from HTML clients for seamless i
 size='228231'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-declarative'

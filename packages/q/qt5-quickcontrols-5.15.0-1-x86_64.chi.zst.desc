@@ -15,3 +15,4 @@ desc='Reusable Qt Quick based UI controls to create classic desktop-style user i
 size='4992343'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-declarative'

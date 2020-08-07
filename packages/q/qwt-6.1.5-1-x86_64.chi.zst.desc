@@ -15,3 +15,5 @@ desc='Qt Widgets for Technical Applications'
 size='19288017'
 url='https://qwt.sourceforge.io/'
 dep=('')
+depend='qt5-base'
+depend='qt5-svg'

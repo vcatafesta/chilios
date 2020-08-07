@@ -15,3 +15,5 @@ desc='C++ and QML APIs for easy inclusion of 3D graphics'
 size='11929889'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-declarative'
+depend='assimp'

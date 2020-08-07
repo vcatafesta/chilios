@@ -15,3 +15,4 @@ desc='Qt module to make text to speech and speech recognition easy'
 size='176991'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-multimedia'

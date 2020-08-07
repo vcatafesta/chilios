@@ -15,3 +15,5 @@ desc='QEMU iSCSI block module'
 size='44696'
 url='https://wiki.qemu.org/'
 dep=('')
+depend='glib2'
+depend='libiscsi'

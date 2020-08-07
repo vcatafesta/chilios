@@ -15,3 +15,4 @@ desc='Qt module for keyframe-based timeline construction'
 size='77763'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-declarative'

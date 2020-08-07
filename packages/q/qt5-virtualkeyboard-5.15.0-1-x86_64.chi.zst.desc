@@ -15,3 +15,6 @@ desc='Virtual keyboard framework'
 size='19742205'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-declarative'
+depend='qt5-svg'
+depend='hunspell'

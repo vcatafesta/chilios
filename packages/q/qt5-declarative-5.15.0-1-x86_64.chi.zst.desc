@@ -15,3 +15,4 @@ desc='Classes for QML and JavaScript languages'
 size='25921881'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'

@@ -15,3 +15,7 @@ desc='Plugins for additional image formats: TIFF, MNG, TGA, WBMP'
 size='213122'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'
+depend='jasper'
+depend='libmng'
+depend='libwebp'

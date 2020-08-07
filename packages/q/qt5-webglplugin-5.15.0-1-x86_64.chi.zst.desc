@@ -15,3 +15,5 @@ desc='QPA plugin for running an application via a browser using streamed WebGL c
 size='691012'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-websockets'
+depend='qt5-declarative'

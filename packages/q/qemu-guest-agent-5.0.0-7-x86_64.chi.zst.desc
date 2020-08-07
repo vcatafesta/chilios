@@ -15,3 +15,6 @@ desc='QEMU Guest Agent'
 size='490583'
 url='https://wiki.qemu.org/'
 dep=('')
+depend='gcc-libs'
+depend='glib2'
+depend='libudev.so=1-64'

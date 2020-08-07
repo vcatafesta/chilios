@@ -15,3 +15,5 @@ desc='Adds support for getting events from gamepad devices'
 size='315533'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'
+depend='sdl2'

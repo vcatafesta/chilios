@@ -15,3 +15,4 @@ desc='Qt module for general purpose serial bus access'
 size='707590'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-serialport'

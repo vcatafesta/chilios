@@ -15,3 +15,6 @@ desc='QPDF: A Content-Preserving PDF Transformation System'
 size='2857346'
 url='https://github.com/qpdf/qpdf'
 dep=('')
+depend='libjpeg-turbo'
+depend='zlib'
+depend='gnutls'

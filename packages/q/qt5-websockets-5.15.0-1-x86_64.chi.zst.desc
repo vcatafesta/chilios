@@ -15,3 +15,4 @@ desc='Provides WebSocket communication compliant with RFC 6455'
 size='309427'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'

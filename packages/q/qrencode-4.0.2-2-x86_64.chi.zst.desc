@@ -15,3 +15,4 @@ desc='C library for encoding data in a QR Code symbol.'
 size='104227'
 url='https://fukuchi.org/works/qrencode/'
 dep=('')
+depend='libpng'

@@ -15,3 +15,5 @@ desc='Provides support for secure credentials storage'
 size='205944'
 url='https://github.com/frankosterfeld/qtkeychain'
 dep=('')
+depend='libsecret'
+depend='qt5-base'

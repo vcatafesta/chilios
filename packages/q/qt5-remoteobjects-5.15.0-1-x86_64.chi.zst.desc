@@ -15,3 +15,4 @@ desc='Inter-process communication (IPC) module developed for Qt'
 size='1282624'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'

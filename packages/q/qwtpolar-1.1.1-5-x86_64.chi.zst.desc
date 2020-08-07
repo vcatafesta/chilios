@@ -15,3 +15,4 @@ desc='Qwt library that contains classes for displaying values on a polar coordin
 size='2688381'
 url='http://qwtpolar.sourceforge.net/'
 dep=('')
+depend='qwt'

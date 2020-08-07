@@ -15,3 +15,7 @@ desc='Classes for audio, video, radio and camera functionality'
 size='3685024'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'
+depend='gst-plugins-base'
+depend='libpulse'
+depend='openal'

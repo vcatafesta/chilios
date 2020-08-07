@@ -15,3 +15,7 @@ desc='Fit falling blocks together (Tetris-like game for GNOME)'
 size='1153900'
 url='https://wiki.gnome.org/Apps/Quadrapassel'
 dep=('')
+depend='clutter-gtk'
+depend='gsound'
+depend='librsvg'
+depend='libmanette'

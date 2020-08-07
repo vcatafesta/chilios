@@ -15,3 +15,4 @@ desc='Provides access to sensor hardware and motion gesture recognition'
 size='930660'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'

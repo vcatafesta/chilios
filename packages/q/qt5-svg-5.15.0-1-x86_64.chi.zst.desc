@@ -15,3 +15,4 @@ desc='Classes for displaying the contents of SVG files'
 size='502136'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'

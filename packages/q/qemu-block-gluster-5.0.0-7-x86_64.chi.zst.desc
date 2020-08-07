@@ -15,3 +15,5 @@ desc='QEMU GlusterFS block module'
 size='38872'
 url='https://wiki.qemu.org/'
 dep=('')
+depend='glib2'
+depend='glusterfs'

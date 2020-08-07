@@ -15,3 +15,5 @@ desc='A cross-platform application and UI framework (Development Tools, QtHelp)'
 size='17052200'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'
+depend='hicolor-icon-theme'

@@ -15,3 +15,4 @@ desc='Static and runtime integration of SCXML models into Qt code'
 size='952038'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-declarative'

@@ -15,3 +15,4 @@ desc='Provides a way to display web content in a QML application'
 size='214042'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-webengine'

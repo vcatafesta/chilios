@@ -15,3 +15,4 @@ desc='Classes for making Qt applications scriptable. Provided for Qt 4.x compati
 size='3746369'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'

@@ -15,3 +15,4 @@ desc='C++ wrapper for the Gilles Vollant's ZIP/UNZIP C package'
 size='351689'
 url='https://stachenov.github.io/quazip/'
 dep=('')
+depend='qt5-base'

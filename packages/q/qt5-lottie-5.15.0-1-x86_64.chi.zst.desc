@@ -15,3 +15,4 @@ desc='A family of player software for a certain json-based file format for descr
 size='398982'
 url='https://www.qt.io'
 dep=('')
+depend='qt5-base'
