@@ -15,3 +15,5 @@ desc='USB Device Utilities'
 size='296343'
 url='http://linux-usb.sourceforge.net/'
 dep=('')
+depend='libusb'
+depend='hwids'

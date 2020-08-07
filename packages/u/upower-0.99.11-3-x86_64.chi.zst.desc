@@ -15,3 +15,7 @@ desc='Abstraction for enumerating power devices, listening to device events and 
 size='1004560'
 url='https://upower.freedesktop.org'
 dep=('')
+depend='systemd'
+depend='libusb'
+depend='libimobiledevice'
+depend='libgudev'

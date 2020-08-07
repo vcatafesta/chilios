@@ -15,3 +15,4 @@ desc='Lightweight, multi-platform, multi-architecture CPU emulator framework bas
 size='24860722'
 url='https://www.unicorn-engine.org'
 dep=('')
+depend='glibc'

@@ -15,3 +15,4 @@ desc='Mutt and terminal url selector'
 size='161396'
 url='https://github.com/firecat53/urlscan'
 dep=('')
+depend='python-urwid'

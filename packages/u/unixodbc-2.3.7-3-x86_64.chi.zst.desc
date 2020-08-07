@@ -15,3 +15,5 @@ desc='ODBC is an open specification for providing application developers with a 
 size='915928'
 url='http://www.unixodbc.org/'
 dep=('')
+depend='readline'
+depend='libltdl'

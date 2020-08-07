@@ -15,3 +15,7 @@ desc='Disk Management Service, version 2'
 size='14379938'
 url='https://www.freedesktop.org/wiki/Software/udisks'
 dep=('')
+depend='polkit'
+depend='libatasmart'
+depend='libgudev'
+depend='libblockdev'

@@ -15,3 +15,4 @@ desc='Encoding detector library ported from Mozilla'
 size='216859'
 url='https://www.freedesktop.org/wiki/Software/uchardet'
 dep=('')
+depend='gcc-libs'

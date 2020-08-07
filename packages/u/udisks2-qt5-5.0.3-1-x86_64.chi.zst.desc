@@ -15,3 +15,5 @@ desc='UDisks2 DBus interfaces binding for Qt5'
 size='631481'
 url='https://github.com/linuxdeepin/udisks2-qt5'
 dep=('')
+depend='qt5-base'
+depend='udisks2'
