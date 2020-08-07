@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='make'
+version='4.3'
+build='3'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='GNU make utility to maintain groups of programs'
+size='1588974'
+url='https://www.gnu.org/software/make'
+dep=('')
+depend='glibc'
+depend='guile'

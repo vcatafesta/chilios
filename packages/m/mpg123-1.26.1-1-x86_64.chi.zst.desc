@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mpg123'
+version='1.26.1'
+build='1'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Console based real time MPEG Audio Player for Layer 1, 2 and 3'
+size='1143100'
+url='https://sourceforge.net/projects/mpg123'
+dep=('')
+depend='libltdl'
+depend='alsa-lib'

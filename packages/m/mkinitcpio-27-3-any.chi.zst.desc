@@ -1,0 +1,30 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mkinitcpio'
+version='27'
+build='3'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Modular initramfs image creation utility'
+size='103946'
+url='https://projects.archlinux.org/mkinitcpio.git/'
+dep=('')
+depend='awk'
+depend='mkinitcpio-busybox>=1.19.4-2'
+depend='kmod'
+depend='util-linux>=2.23'
+depend='libarchive'
+depend='coreutils'
+depend='bash'
+depend='diffutils'
+depend='findutils'
+depend='grep'
+depend='filesystem>=2011.10-1'
+depend='gzip'
+depend='systemd'

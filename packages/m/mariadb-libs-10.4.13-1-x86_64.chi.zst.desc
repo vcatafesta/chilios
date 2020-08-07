@@ -1,0 +1,24 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mariadb'
+version='libs'
+build='10.4.13'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='MariaDB libraries'
+size='23130822'
+url='https://mariadb.org/'
+dep=('')
+depend='bzip2'
+depend='libaio'
+depend='lz4'
+depend='lzo'
+depend='openssl'
+depend='xz'
+depend='zlib'

@@ -1,0 +1,22 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mono'
+version='6.8.0.123'
+build='1'
+license='MPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Free implementation of the .NET platform including runtime and compiler'
+size='263788110'
+url='https://www.mono-project.com/'
+dep=('')
+depend='zlib'
+depend='libgdiplus>=4.2'
+depend='sh'
+depend='python'
+depend='ca-certificates'

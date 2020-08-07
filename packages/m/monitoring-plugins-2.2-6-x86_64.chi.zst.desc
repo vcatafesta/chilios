@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='monitoring'
+version='plugins'
+build='2.2'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Plugins for Icinga, Naemon, Nagios, Shinken, Sensu and other monitoring applications'
+size='2805895'
+url='https://www.monitoring-plugins.org'
+dep=('')
+depend='perl'

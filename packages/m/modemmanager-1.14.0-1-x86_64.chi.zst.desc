@@ -1,0 +1,33 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='modemmanager'
+version='1.14.0'
+build='1'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Mobile broadband modem management service'
+size='10873579'
+url='https://www.freedesktop.org/wiki/Software/ModemManager/'
+dep=('')
+depend='systemd'
+depend='libgudev'
+depend='polkit'
+depend='ppp'
+depend='libqmi'
+depend='libmbim'
+depend='mobile-broadband-provider-info'
+depend='libmm-glib.so=0-64'
+depend='libglib-2.0.so=0-64'
+depend='libgobject-2.0.so=0-64'
+depend='libgio-2.0.so=0-64'
+depend='libgmodule-2.0.so=0-64'
+depend='libsystemd.so=0-64'
+depend='libgudev-1.0.so=0-64'
+depend='libqmi-glib.so=5-64'
+depend='libmbim-glib.so=4-64'

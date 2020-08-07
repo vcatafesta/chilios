@@ -1,0 +1,30 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mesa'
+version='20.1.4'
+build='3'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An open-source implementation of the OpenGL specification'
+size='88674885'
+url='https://www.mesa3d.org/'
+dep=('')
+depend='libdrm'
+depend='wayland'
+depend='libxxf86vm'
+depend='libxdamage'
+depend='libxshmfence'
+depend='libelf'
+depend='libomxil-bellagio'
+depend='libunwind'
+depend='llvm-libs'
+depend='lm_sensors'
+depend='libglvnd'
+depend='zstd'
+depend='vulkan-icd-loader'

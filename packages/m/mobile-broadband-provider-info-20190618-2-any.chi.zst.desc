@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mobile'
+version='broadband'
+build='provider'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Network Management daemon'
+size='498150'
+url='https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info'
+dep=('')

@@ -1,0 +1,22 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mariadb'
+version='10.4.13'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Fast SQL database server, derived from MySQL'
+size='239990888'
+url='https://mariadb.org/'
+dep=('')
+depend='mariadb-clients=10.4.13'
+depend='inetutils'
+depend='systemd-libs'
+depend='libxml2'
+depend='zstd'

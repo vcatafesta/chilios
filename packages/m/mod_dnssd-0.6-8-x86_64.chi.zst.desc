@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mod_dnssd'
+version='0.6'
+build='8'
+license='APACHE'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Zeroconf module for Apache2'
+size='22336'
+url='http://0pointer.de/lennart/projects/mod_dnssd'
+dep=('')
+depend='avahi'
+depend='apache'

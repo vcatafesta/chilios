@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='mtools'
+version='4.0.24'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A collection of utilities to access MS-DOS disks'
+size='354537'
+url='https://www.gnu.org/software/mtools/'
+dep=('')
+depend='sh'
