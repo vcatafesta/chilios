@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='nilfs'
+version='utils'
+build='2.2.8'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A log-structured file system supporting continuous snapshotting (userspace utils)'
+size='446752'
+url='http://nilfs.sourceforge.net/'
+dep=('')
+depend='util-linux'

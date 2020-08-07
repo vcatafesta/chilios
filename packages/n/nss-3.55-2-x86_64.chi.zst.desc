@@ -1,0 +1,22 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='nss'
+version='3.55'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Network Security Services'
+size='5519150'
+url='https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS'
+dep=('')
+depend='nspr'
+depend='sqlite'
+depend='zlib'
+depend='sh'
+depend='p11-kit>=0.23.19'

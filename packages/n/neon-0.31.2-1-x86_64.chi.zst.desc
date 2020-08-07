@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='neon'
+version='0.31.2'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='HTTP and WebDAV client library with a C interface'
+size='651913'
+url='https://notroj.github.io/neon/'
+dep=('')
+depend='krb5'
+depend='expat'
+depend='ca-certificates'
+depend='zlib'

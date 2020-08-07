@@ -1,0 +1,22 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='net'
+version='snmp'
+build='5.8'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A suite of applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both IPv4 and IPv6'
+size='8139140'
+url='http://www.net-snmp.org/'
+dep=('')
+depend='libnsl'
+depend='libpcap'
+depend='lm_sensors'
+depend='pciutils'
+depend='pcre'

@@ -1,0 +1,26 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='nautilus'
+version='3.36.3'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Default file manager for GNOME'
+size='13990906'
+url='https://wiki.gnome.org/Apps/Files'
+dep=('')
+depend='libgexiv2'
+depend='gnome-desktop'
+depend='gvfs'
+depend='dconf'
+depend='tracker'
+depend='gnome-autoar'
+depend='gst-plugins-base-libs'
+depend='tracker-miners'
+depend='libnautilus-extension'

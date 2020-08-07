@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='nvidia'
+version='utils'
+build='450.57'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='NVIDIA drivers utilities'
+size='262786816'
+url='http://www.nvidia.com/'
+dep=('')
+depend='xorg-server'
+depend='libglvnd'
+depend='egl-wayland'

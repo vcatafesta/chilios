@@ -1,0 +1,30 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='networkmanager'
+version='1.24.2'
+build='1'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Network connection manager and user applications'
+size='16533908'
+url='https://wiki.gnome.org/Projects/NetworkManager'
+dep=('')
+depend='libnm'
+depend='iproute2'
+depend='polkit'
+depend='wpa_supplicant'
+depend='libmm-glib'
+depend='libnewt'
+depend='libndp'
+depend='libteam'
+depend='curl'
+depend='bluez-libs'
+depend='libpsl'
+depend='audit'
+depend='mobile-broadband-provider-info'

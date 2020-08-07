@@ -1,0 +1,26 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='nghttp2'
+version='1.41.0'
+build='1'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Framing layer of HTTP/2 is implemented as a reusable C library'
+size='1908721'
+url='https://nghttp2.org/'
+dep=('')
+depend='openssl'
+depend='libev'
+depend='zlib'
+depend='libxml2'
+depend='jansson'
+depend='jemalloc'
+depend='c-ares'
+depend='libnghttp2'
+depend='systemd-libs'

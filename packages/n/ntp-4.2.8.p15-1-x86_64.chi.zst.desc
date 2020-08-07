@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ntp'
+version='4.2.8.p15'
+build='1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Network Time Protocol reference implementation'
+size='4679592'
+url='http://www.ntp.org/'
+dep=('')
+depend='openssl'
+depend='perl'
+depend='libcap'
+depend='libedit'

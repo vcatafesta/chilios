@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='net'
+version='tools'
+build='1.60.20181103git'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Configuration tools for Linux networking'
+size='558305'
+url='http://net-tools.sourceforge.net/'
+dep=('')
+depend='glibc'
