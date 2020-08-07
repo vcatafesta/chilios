@@ -15,3 +15,7 @@ desc='A low-level interface to a growing number of Amazon Web Services'
 size='47640814'
 url='https://github.com/boto/botocore'
 dep=('')
+depend='python-dateutil'
+depend='python-jmespath'
+depend='python-docutils'
+depend='python-urllib3'

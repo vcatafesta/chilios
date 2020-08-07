@@ -15,3 +15,5 @@ desc='A library that allows developers to access PolicyKit API with a nice Qt-st
 size='301436'
 url='https://www.kde.org/'
 dep=('')
+depend='polkit'
+depend='qt5-base'

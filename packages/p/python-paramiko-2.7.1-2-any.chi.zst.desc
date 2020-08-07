@@ -15,3 +15,6 @@ desc='Python module that implements the SSH2 protocol'
 size='1829725'
 url='https://github.com/paramiko/paramiko/'
 dep=('')
+depend='python-bcrypt'
+depend='python-cryptography'
+depend='python-pynacl'

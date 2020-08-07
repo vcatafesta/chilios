@@ -15,3 +15,4 @@ desc='Pretty-print tabular data in Python, a library and a command-line utility.
 size='203986'
 url='https://bitbucket.org/astanin/python-tabulate'
 dep=('')
+depend='python-setuptools'

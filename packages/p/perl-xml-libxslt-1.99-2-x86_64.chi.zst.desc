@@ -15,3 +15,5 @@ desc='Interface to the gnome libxslt library'
 size='107401'
 url='https://search.cpan.org/dist/XML-LibXSLT'
 dep=('')
+depend='perl-xml-libxml'
+depend='libxslt'

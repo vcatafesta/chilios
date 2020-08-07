@@ -15,3 +15,4 @@ desc='Detect what shell the current Python executable is running in.'
 size='36073'
 url='https://github.com/sarugaku/shellingham'
 dep=('')
+depend='python'

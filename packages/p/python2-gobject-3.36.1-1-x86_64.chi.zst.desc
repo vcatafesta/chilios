@@ -15,3 +15,5 @@ desc='Python2 Bindings for GLib/GObject/GIO/GTK+'
 size='1250642'
 url='https://wiki.gnome.org/Projects/PyGObject'
 dep=('')
+depend='pygobject-devel=3.36.1'
+depend='python2'

@@ -15,3 +15,5 @@ desc='Command-line file archiver with high compression ratio'
 size='6383681'
 url='http://p7zip.sourceforge.net/'
 dep=('')
+depend='gcc-libs'
+depend='sh'

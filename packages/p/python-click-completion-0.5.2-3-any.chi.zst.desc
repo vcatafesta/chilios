@@ -15,3 +15,7 @@ desc='Add or enhance bash, fish, zsh and powershell completion in Click'
 size='76642'
 url='https://github.com/click-contrib/click-completion'
 dep=('')
+depend='python-click'
+depend='python-jinja'
+depend='python-six'
+depend='python-shellingham'

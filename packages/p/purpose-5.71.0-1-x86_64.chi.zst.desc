@@ -15,3 +15,6 @@ desc='Framework for providing abstractions to get the developer's purposes fulfi
 size='1447108'
 url='https://community.kde.org/Frameworks'
 dep=('')
+depend='kaccounts-integration'
+depend='kirigami2'
+depend='accounts-qml-module'

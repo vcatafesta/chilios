@@ -15,3 +15,4 @@ desc='Recursive descent parser generator'
 size='260490'
 url='https://search.cpan.org/dist/Parse-RecDescent'
 dep=('')
+depend='perl>=5.10.0'

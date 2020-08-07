@@ -15,3 +15,5 @@ desc='Jinja2 Extension for Dates and Times'
 size='19263'
 url='https://github.com/hackebrot/jinja2-time'
 dep=('')
+depend='python-arrow'
+depend='python-jinja'

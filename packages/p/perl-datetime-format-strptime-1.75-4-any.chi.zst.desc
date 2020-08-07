@@ -15,3 +15,8 @@ desc='Parse and Format DateTimes using Strptime'
 size='53929'
 url='https://search.cpan.org/dist/DateTime-Format-Strptime'
 dep=('')
+depend='perl-datetime>=0.72'
+depend='perl-datetime-locale>=0.45'
+depend='perl-datetime-timezone>=0.79'
+depend='perl-params-validate>=0.64'
+depend='perl-package-deprecationmanager'

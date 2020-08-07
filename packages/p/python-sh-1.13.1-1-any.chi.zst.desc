@@ -15,3 +15,4 @@ desc='Subprocess interface that allows you to call any program as if it were a f
 size='304441'
 url='https://pypi.python.org/pypi/sh'
 dep=('')
+depend='python'

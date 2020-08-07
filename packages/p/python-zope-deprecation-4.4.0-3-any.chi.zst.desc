@@ -15,3 +15,4 @@ desc='Zope Deprecation Infrastructure'
 size='101175'
 url='https://github.com/zopefoundation/zope.deprecation'
 dep=('')
+depend='python-setuptools'

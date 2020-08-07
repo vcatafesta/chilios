@@ -15,3 +15,4 @@ desc='Fast and correct UTF-8 PerlIO'
 size='25373'
 url='https://metacpan.org/release/PerlIO-utf8_strict'
 dep=('')
+depend='perl'

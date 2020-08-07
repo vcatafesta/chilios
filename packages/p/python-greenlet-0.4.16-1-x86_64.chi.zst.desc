@@ -15,3 +15,4 @@ desc='Lightweight in-process concurrent programming'
 size='42067'
 url='https://pypi.org/project/greenlet/'
 dep=('')
+depend='python'

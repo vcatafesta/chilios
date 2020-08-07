@@ -15,3 +15,4 @@ desc='mro::* interface compatibility for Perls < 5.9.5'
 size='14482'
 url='https://search.cpan.org/dist/MRO-Compat'
 dep=('')
+depend='perl'

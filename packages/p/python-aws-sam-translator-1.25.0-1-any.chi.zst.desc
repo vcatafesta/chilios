@@ -15,3 +15,7 @@ desc='AWS Serverless Application Model (AWS SAM) prescribes rules for expressing
 size='1582121'
 url='https://github.com/awslabs/serverless-application-model'
 dep=('')
+depend='python'
+depend='python-boto3'
+depend='python-jsonschema'
+depend='python-six'

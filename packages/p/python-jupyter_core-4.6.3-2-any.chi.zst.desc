@@ -15,3 +15,4 @@ desc='Jupyter core package. A base package on which Jupyter projects rely.'
 size='330988'
 url='https://pypi.python.org/pypi/jupyter_core'
 dep=('')
+depend='python-traitlets'

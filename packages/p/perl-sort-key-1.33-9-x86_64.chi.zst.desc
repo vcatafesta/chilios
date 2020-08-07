@@ -15,3 +15,4 @@ desc='Sort::Key - the fastest way to sort anything in Perl'
 size='79664'
 url='https://search.cpan.org/dist/Sort-Key'
 dep=('')
+depend='perl'

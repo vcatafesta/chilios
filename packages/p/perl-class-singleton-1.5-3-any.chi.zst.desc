@@ -15,3 +15,4 @@ desc='Implementation of a singleton class'
 size='18432'
 url='http://search.cpan.org/dist/Class-Singleton'
 dep=('')
+depend='perl>=5.10.0'

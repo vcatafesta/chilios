@@ -15,3 +15,4 @@ desc='Better dates and times for Python'
 size='477401'
 url='https://arrow.readthedocs.io'
 dep=('')
+depend='python-dateutil'

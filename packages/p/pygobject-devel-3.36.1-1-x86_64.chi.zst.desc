@@ -15,3 +15,4 @@ desc='Common development files for pygobject'
 size='25689'
 url='https://wiki.gnome.org/Projects/PyGObject'
 dep=('')
+depend='gobject-introspection-runtime'

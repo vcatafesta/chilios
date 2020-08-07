@@ -15,3 +15,6 @@ desc='Simple API for XML'
 size='104401'
 url='https://search.cpan.org/dist/XML-SAX'
 dep=('')
+depend='perl'
+depend='perl-xml-sax-base'
+depend='perl-xml-namespacesupport'

@@ -15,3 +15,4 @@ desc='A lightweight YAML Parser for Python'
 size='70422'
 url='https://github.com/hackebrot/poyo'
 dep=('')
+depend='python'

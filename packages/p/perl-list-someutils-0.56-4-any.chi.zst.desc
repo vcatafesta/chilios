@@ -15,3 +15,5 @@ desc='Perl package that combines List::Util and List::MoreUtils in one bite-size
 size='49880'
 url='https://search.cpan.org/dist/List-SomeUtils'
 dep=('')
+depend='perl'
+depend='perl-module-implementation'

@@ -15,3 +15,5 @@ desc='Declare version conflicts for your dist'
 size='12928'
 url='https://metacpan.org/release/Dist-CheckConflicts'
 dep=('')
+depend='perl-list-moreutils'
+depend='perl-exporter'

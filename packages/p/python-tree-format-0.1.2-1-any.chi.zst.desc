@@ -15,3 +15,4 @@ desc='Python library for printing trees on the console'
 size='30755'
 url='https://github.com/jml/tree-format'
 dep=('')
+depend='python'

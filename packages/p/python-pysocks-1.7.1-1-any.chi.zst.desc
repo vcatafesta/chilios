@@ -15,3 +15,4 @@ desc='SOCKS4, SOCKS5 or HTTP proxy (Anorov fork PySocks replaces socksipy)'
 size='103335'
 url='https://github.com/Anorov/PySocks'
 dep=('')
+depend='python'

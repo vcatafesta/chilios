@@ -15,3 +15,5 @@ desc='Portable library for reading/writing Standard MIDI Files'
 size='213993'
 url='https://sourceforge.net/p/portmedia/wiki/portsmf/'
 dep=('')
+depend='gcc-libs'
+depend='glibc'

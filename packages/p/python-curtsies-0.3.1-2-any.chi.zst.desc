@@ -15,3 +15,5 @@ desc='Curses-like terminal wrapper with a display based on compositing 2d arrays
 size='187001'
 url='https://pypi.python.org/pypi/curtsies'
 dep=('')
+depend='python-blessings'
+depend='python-wcwidth'

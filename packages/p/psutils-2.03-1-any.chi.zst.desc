@@ -15,3 +15,7 @@ desc='A set of postscript utilities'
 size='72015'
 url='https://github.com/rrthomas/psutils'
 dep=('')
+depend='glibc'
+depend='ghostscript'
+depend='perl-ipc-run3'
+depend='paper'

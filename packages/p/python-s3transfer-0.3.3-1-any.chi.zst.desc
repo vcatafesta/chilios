@@ -15,3 +15,4 @@ desc='Amazon S3 Transfer Manager for Python'
 size='690562'
 url='https://github.com/boto/s3transfer'
 dep=('')
+depend='python-botocore'

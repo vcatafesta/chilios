@@ -15,3 +15,5 @@ desc='Enables the use of Qt5 APIs in Python applications'
 size='52778263'
 url='https://www.qt.io'
 dep=('')
+depend='python-shiboken2'
+depend='qt5-declarative'

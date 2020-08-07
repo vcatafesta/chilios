@@ -15,3 +15,4 @@ desc='an exporter with the features of Sub::Exporter but only core dependencies'
 size='34770'
 url='https://search.cpan.org/dist/Exporter-Tiny'
 dep=('')
+depend='perl'

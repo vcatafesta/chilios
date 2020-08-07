@@ -15,3 +15,5 @@ desc='ISO country, subdivision, language, currency and script definitions and th
 size='27722368'
 url='https://pypi.org/project/pycountry/'
 dep=('')
+depend='python'
+depend='python-lxml'

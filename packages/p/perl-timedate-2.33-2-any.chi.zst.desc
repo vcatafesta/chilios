@@ -15,3 +15,4 @@ desc='Date formating subroutines'
 size='86982'
 url='https://search.cpan.org/dist/TimeDate/'
 dep=('')
+depend='perl'

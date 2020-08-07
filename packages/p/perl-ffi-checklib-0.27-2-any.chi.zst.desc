@@ -15,3 +15,4 @@ desc='Check that a library is available for FFI'
 size='21517'
 url='https://metacpan.org/release/FFI-CheckLib'
 dep=('')
+depend='perl'

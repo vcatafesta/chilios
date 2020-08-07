@@ -15,3 +15,4 @@ desc='Locate per-dist and per-module shared files'
 size='23425'
 url='https://metacpan.org/release/File-ShareDir'
 dep=('')
+depend='perl-class-inspector'

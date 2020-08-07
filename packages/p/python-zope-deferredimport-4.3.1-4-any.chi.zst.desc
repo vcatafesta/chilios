@@ -15,3 +15,5 @@ desc='Allows you to perform imports names that will only be resolved when used i
 size='41198'
 url='https://github.com/zopefoundation/zope.deferredimport'
 dep=('')
+depend='python-setuptools'
+depend='python-zope-proxy'

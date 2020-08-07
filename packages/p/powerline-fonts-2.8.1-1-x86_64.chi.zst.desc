@@ -15,3 +15,4 @@ desc='patched fonts for powerline'
 size='4977'
 url='https://github.com/powerline/powerline'
 dep=('')
+depend='powerline-common'

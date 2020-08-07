@@ -15,3 +15,5 @@ desc='A simple pythonic template language written in Python'
 size='1692513'
 url='https://palletsprojects.com/p/jinja/'
 dep=('')
+depend='python-setuptools'
+depend='python-markupsafe'

@@ -15,3 +15,4 @@ desc='A pure-Python, bring-your-own-I/O implementation of HTTP/1.1'
 size='392844'
 url='https://github.com/njsmith/h11'
 dep=('')
+depend='python'

@@ -15,3 +15,4 @@ desc='Build, test, and install Perl modules'
 size='17928'
 url='https://github.com/dagolden/inc-latest'
 dep=('')
+depend='perl'

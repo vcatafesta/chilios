@@ -15,3 +15,5 @@ desc='Provide the stuff missing in List::Util'
 size='73309'
 url='https://search.cpan.org/dist/List-MoreUtils'
 dep=('')
+depend='perl-exporter-tiny'
+depend='perl-list-moreutils-xs'

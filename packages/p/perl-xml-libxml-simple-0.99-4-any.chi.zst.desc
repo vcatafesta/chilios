@@ -15,3 +15,6 @@ desc='An analogue of XML::Simple using libxml'
 size='23795'
 url='https://metacpan.org/release/XML-LibXML-Simple'
 dep=('')
+depend='perl'
+depend='perl-xml-libxml'
+depend='perl-file-slurp-tiny'

@@ -15,3 +15,6 @@ desc='The AWS SDK for Python'
 size='1372817'
 url='https://github.com/boto/boto3'
 dep=('')
+depend='python-botocore'
+depend='python-jmespath'
+depend='python-s3transfer'

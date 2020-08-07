@@ -15,3 +15,6 @@ desc='Useful miscellaneous modules used by Logilab projects'
 size='1945998'
 url='https://github.com/PyCQA/astroid'
 dep=('')
+depend='python-six'
+depend='python-lazy-object-proxy'
+depend='python-wrapt'

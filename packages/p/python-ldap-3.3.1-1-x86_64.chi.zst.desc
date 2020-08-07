@@ -15,3 +15,6 @@ desc='LDAP client API for Python'
 size='854022'
 url='https://python-ldap.readthedocs.io/'
 dep=('')
+depend='python-pyasn1'
+depend='python-pyasn1-modules'
+depend='libldap'

@@ -15,3 +15,5 @@ desc='A program for creating, destroying, resizing, checking and copying partiti
 size='2364164'
 url='https://www.gnu.org/software/parted/parted.html'
 dep=('')
+depend='device-mapper'
+depend='libutil-linux'

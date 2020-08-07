@@ -15,3 +15,5 @@ desc='Install the C libxml2 library on your system'
 size='12085'
 url='https://metacpan.org/release/Alien-Libxml2'
 dep=('')
+depend='libxml2'
+depend='perl-alien-build'

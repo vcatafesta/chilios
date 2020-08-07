@@ -15,3 +15,4 @@ desc='A fully functional X client library for Python programs'
 size='1490024'
 url='https://github.com/python-xlib/python-xlib'
 dep=('')
+depend='python-six'

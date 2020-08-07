@@ -15,3 +15,4 @@ desc='A python module for writing pandoc filters'
 size='26715'
 url='https://pypi.python.org/pypi/pandocfilters'
 dep=('')
+depend='python'

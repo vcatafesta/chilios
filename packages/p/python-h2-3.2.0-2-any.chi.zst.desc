@@ -15,3 +15,5 @@ desc='HTTP/2 State-Machine based protocol implementation'
 size='582916'
 url='https://hyper.rtfd.org'
 dep=('')
+depend='python-hpack'
+depend='python-hyperframe'

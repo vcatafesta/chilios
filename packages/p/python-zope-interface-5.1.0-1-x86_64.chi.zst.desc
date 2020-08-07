@@ -15,3 +15,4 @@ desc='Zope Interfaces for Python 3.x'
 size='2510726'
 url='https://pypi.python.org/pypi/zope.interface'
 dep=('')
+depend='python'

@@ -15,3 +15,4 @@ desc='Allows conversion between Roman and Arabic algarisms'
 size='10337'
 url='https://metacpan.org/release/Text-Roman'
 dep=('')
+depend='perl'

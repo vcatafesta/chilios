@@ -15,3 +15,7 @@ desc='PC/SC Architecture smartcard middleware library'
 size='309754'
 url='https://pcsclite.apdu.fr/'
 dep=('')
+depend='python'
+depend='systemd'
+depend='libsystemd.so=0-64'
+depend='libudev.so=1-64'

@@ -15,3 +15,6 @@ desc='Protocol Buffers - Google's data interchange format'
 size='9656114'
 url='https://developers.google.com/protocol-buffers/'
 dep=('')
+depend='gcc-libs'
+depend='glibc'
+depend='zlib'

@@ -15,3 +15,5 @@ desc='The GNU Portable Threads.'
 size='159867'
 url='https://www.gnu.org/software/pth/'
 dep=('')
+depend='glibc'
+depend='awk'

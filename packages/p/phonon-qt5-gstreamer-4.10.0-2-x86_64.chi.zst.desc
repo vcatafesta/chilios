@@ -15,3 +15,6 @@ desc='Phonon GStreamer backend for Qt5'
 size='434679'
 url='https://community.kde.org/Phonon'
 dep=('')
+depend='gst-plugins-base'
+depend='qt5-x11extras'
+depend='phonon-qt5'

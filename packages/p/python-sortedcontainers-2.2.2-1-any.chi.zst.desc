@@ -15,3 +15,4 @@ desc='Python Sorted Container Types: SortedList, SortedDict, and SortedSet'
 size='343232'
 url='http://www.grantjenks.com/docs/sortedcontainers/'
 dep=('')
+depend='python'

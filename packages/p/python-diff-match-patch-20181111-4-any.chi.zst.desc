@@ -15,3 +15,4 @@ desc='Robust algorithms to perform the operations required for synchronizing pla
 size='150906'
 url='https://github.com/diff-match-patch-python/diff-match-patch'
 dep=('')
+depend='python'

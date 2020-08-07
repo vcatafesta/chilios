@@ -15,3 +15,5 @@ desc='A collection of tools for internationalizing Python applications'
 size='27698352'
 url='http://babel.pocoo.org/'
 dep=('')
+depend='python'
+depend='python-pytz'

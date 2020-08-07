@@ -15,3 +15,6 @@ desc='C++ bindings for Pango'
 size='477761'
 url='https://www.gtkmm.org/'
 dep=('')
+depend='pango'
+depend='glibmm'
+depend='cairomm'

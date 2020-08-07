@@ -15,3 +15,4 @@ desc='A lint-like tool for Python to identify common errors quickly without exec
 size='915250'
 url='https://pypi.python.org/pypi/pyflakes'
 dep=('')
+depend='python-setuptools'

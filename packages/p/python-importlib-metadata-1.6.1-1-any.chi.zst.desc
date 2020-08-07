@@ -15,3 +15,4 @@ desc='Read metadata from Python packages'
 size='199283'
 url='https://importlib-metadata.readthedocs.io'
 dep=('')
+depend='python-zipp'

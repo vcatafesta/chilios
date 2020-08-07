@@ -15,3 +15,5 @@ desc='Advanced Quickcheck style testing library for Python'
 size='2223600'
 url='https://hypothesis.readthedocs.org'
 dep=('')
+depend='python-attrs'
+depend='python-sortedcontainers'

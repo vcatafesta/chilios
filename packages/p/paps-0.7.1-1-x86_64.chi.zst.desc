@@ -15,3 +15,4 @@ desc='Converts Unicode text to postscript and pdf using pango'
 size='37857'
 url='https://github.com/dov/paps'
 dep=('')
+depend='pango'

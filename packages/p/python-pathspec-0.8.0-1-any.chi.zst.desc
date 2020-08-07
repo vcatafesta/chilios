@@ -15,3 +15,4 @@ desc='Utility library for gitignore style pattern matching of file paths'
 size='202976'
 url='https://github.com/cpburnz/python-path-specification'
 dep=('')
+depend='python'

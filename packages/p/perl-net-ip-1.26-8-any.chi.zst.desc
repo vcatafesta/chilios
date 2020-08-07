@@ -15,3 +15,4 @@ desc='Perl Module: Easy manipulation of IPv4 and IPv6 addresses'
 size='85815'
 url='https://search.cpan.org/dist/Net-IP/'
 dep=('')
+depend='perl'

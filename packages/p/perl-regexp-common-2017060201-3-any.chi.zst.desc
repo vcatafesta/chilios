@@ -15,3 +15,4 @@ desc='Commonly requested regular expressions'
 size='491585'
 url='https://metacpan.org/release/Regexp-Common'
 dep=('')
+depend='perl'

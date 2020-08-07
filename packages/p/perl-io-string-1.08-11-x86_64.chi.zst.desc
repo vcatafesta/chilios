@@ -15,3 +15,4 @@ desc='IO::File interface for in-core strings'
 size='15360'
 url='http://search.cpan.org/dist/IO-String'
 dep=('')
+depend='perl>=5.10.0'

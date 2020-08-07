@@ -15,3 +15,4 @@ desc='Identify specific nodes in a JSON document (RFC 6901)'
 size='24832'
 url='https://github.com/stefankoegl/python-json-pointer'
 dep=('')
+depend='python'

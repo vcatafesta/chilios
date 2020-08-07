@@ -15,3 +15,5 @@ desc='library with cross-python path, ini-parsing, io, code, log facilities'
 size='751122'
 url='https://py.readthedocs.io/'
 dep=('')
+depend='python-iniconfig'
+depend='python-apipkg'

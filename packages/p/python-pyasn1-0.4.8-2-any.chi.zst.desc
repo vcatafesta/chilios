@@ -15,3 +15,4 @@ desc='ASN.1 library for Python 3'
 size='630777'
 url='https://github.com/etingof/pyasn1'
 dep=('')
+depend='python'

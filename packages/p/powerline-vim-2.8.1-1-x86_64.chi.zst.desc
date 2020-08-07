@@ -15,3 +15,6 @@ desc='vim plugin for powerline'
 size='7008'
 url='https://github.com/powerline/powerline'
 dep=('')
+depend='powerline'
+depend='powerline-common'
+depend='vim-runtime'

@@ -15,3 +15,4 @@ desc='An easy whitelist-based HTML-sanitizing tool'
 size='1430018'
 url='https://pypi.org/project/bleach/'
 dep=('')
+depend='python-webencodings'

@@ -15,3 +15,7 @@ desc='Provide https support for LWP::UserAgent'
 size='8111'
 url='https://metacpan.org/release/LWP-Protocol-https'
 dep=('')
+depend='ca-certificates'
+depend='perl-io-socket-ssl'
+depend='perl-net-http'
+depend='perl-libwww'

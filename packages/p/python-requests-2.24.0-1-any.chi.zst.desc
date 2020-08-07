@@ -15,3 +15,6 @@ desc='Python HTTP for Humans'
 size='464694'
 url='http://python-requests.org'
 dep=('')
+depend='python-urllib3'
+depend='python-chardet'
+depend='python-idna'

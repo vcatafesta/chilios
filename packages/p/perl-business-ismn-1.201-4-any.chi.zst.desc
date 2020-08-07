@@ -15,3 +15,5 @@ desc='Perl package to work with International Standard Music Numbers'
 size='22471'
 url='https://metacpan.org/release/Business-ISMN'
 dep=('')
+depend='perl'
+depend='perl-tie-cycle>=1.21'

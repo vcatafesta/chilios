@@ -15,3 +15,5 @@ desc='Poppler Qt5 bindings'
 size='681959'
 url='https://poppler.freedesktop.org/'
 dep=('')
+depend='poppler=0.88.0'
+depend='qt5-base'

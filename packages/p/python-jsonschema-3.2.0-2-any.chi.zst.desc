@@ -15,3 +15,7 @@ desc='An implementation of JSON Schema validation for Python'
 size='596621'
 url='https://pypi.python.org/pypi/jsonschema'
 dep=('')
+depend='python-attrs'
+depend='python-importlib-metadata'
+depend='python-pyrsistent'
+depend='python-setuptools'

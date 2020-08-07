@@ -15,3 +15,4 @@ desc='Date conversion routines'
 size='15041'
 url='https://search.cpan.org/dist/HTTP-Date'
 dep=('')
+depend='perl-timedate'

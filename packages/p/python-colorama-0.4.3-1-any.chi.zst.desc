@@ -15,3 +15,4 @@ desc='Python API for cross-platform colored terminal text.'
 size='89398'
 url='https://pypi.python.org/pypi/colorama'
 dep=('')
+depend='python'

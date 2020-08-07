@@ -15,3 +15,4 @@ desc='Python parser that supports error recovery and round-trip parsing for diff
 size='730797'
 url='https://github.com/davidhalter/parso'
 dep=('')
+depend='python'

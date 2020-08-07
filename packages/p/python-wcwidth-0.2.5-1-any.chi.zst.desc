@@ -15,3 +15,4 @@ desc='Measures number of Terminal column cells of wide-character codes'
 size='497953'
 url='https://github.com/jquast/wcwidth'
 dep=('')
+depend='python'

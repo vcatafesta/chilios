@@ -15,3 +15,5 @@ desc='Generic Transparent Proxies'
 size='359277'
 url='https://github.com/zopefoundation/zope.proxy'
 dep=('')
+depend='python-setuptools'
+depend='python-zope-interface'

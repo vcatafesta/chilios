@@ -15,3 +15,6 @@ desc='Routines for manipulating stashes'
 size='33006'
 url='https://search.cpan.org/dist/Package-Stash'
 dep=('')
+depend='perl-dist-checkconflicts'
+depend='perl-package-stash-xs'
+depend='perl-module-implementation'

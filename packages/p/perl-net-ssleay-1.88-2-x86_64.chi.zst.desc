@@ -15,3 +15,4 @@ desc='Perl extension for using OpenSSL'
 size='896388'
 url='https://search.cpan.org/dist/Net-SSLeay/'
 dep=('')
+depend='openssl'

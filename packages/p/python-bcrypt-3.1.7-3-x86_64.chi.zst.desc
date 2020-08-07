@@ -15,3 +15,5 @@ desc='Modern password hashing for your software and your servers'
 size='73913'
 url='https://github.com/pyca/bcrypt'
 dep=('')
+depend='python-cffi'
+depend='python-six'

@@ -15,3 +15,6 @@ desc='A daemon which implements the Point-to-Point Protocol for dial-up networki
 size='891541'
 url='https://www.samba.org/ppp/'
 dep=('')
+depend='glibc'
+depend='libpcap'
+depend='openssl'

@@ -15,3 +15,5 @@ desc='Validate sub params against a spec'
 size='119703'
 url='https://search.cpan.org/dist/Params-Validate'
 dep=('')
+depend='perl'
+depend='perl-module-implementation'

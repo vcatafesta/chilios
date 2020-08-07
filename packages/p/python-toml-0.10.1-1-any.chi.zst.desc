@@ -15,3 +15,4 @@ desc='A Python library for parsing and creating TOML'
 size='136383'
 url='https://github.com/uiri/toml'
 dep=('')
+depend='python'

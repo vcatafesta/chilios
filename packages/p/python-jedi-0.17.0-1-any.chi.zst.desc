@@ -15,3 +15,5 @@ desc='Awesome autocompletion for python'
 size='4764793'
 url='https://github.com/davidhalter/jedi'
 dep=('')
+depend='python'
+depend='python-parso'

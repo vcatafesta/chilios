@@ -15,3 +15,4 @@ desc='Snowball stemming library collection for Python'
 size='1510915'
 url='https://snowballstem.org'
 dep=('')
+depend='python'

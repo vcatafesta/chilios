@@ -15,3 +15,4 @@ desc='(re)name a sub'
 size='23140'
 url='https://search.cpan.org/dist/Sub-Name'
 dep=('')
+depend='perl'

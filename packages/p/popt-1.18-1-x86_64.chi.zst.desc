@@ -15,3 +15,4 @@ desc='A commandline option parser'
 size='220572'
 url='https://github.com/rpm-software-management/popt'
 dep=('')
+depend='glibc'

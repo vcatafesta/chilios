@@ -15,3 +15,7 @@ desc='Python binding to the Networking and Cryptography (NaCl) library'
 size='604165'
 url='https://pypi.python.org/pypi/PyNaCl'
 dep=('')
+depend='libsodium'
+depend='python'
+depend='python-six'
+depend='python-cffi'

@@ -15,3 +15,4 @@ desc='Perl extension for simple generation of unique IDs'
 size='3763'
 url='https://search.cpan.org/dist/Data-Uniqid'
 dep=('')
+depend='perl'

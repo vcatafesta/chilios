@@ -15,3 +15,5 @@ desc='Linux OS platform information API'
 size='153338'
 url='https://github.com/nir0s/distro'
 dep=('')
+depend='python'
+depend='python-setuptools'

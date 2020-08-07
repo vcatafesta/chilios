@@ -15,3 +15,4 @@ desc='Simple but powerful config file reader and writer for Python'
 size='348450'
 url='https://github.com/DiffSK/configobj'
 dep=('')
+depend='python-six'

@@ -15,3 +15,4 @@ desc='MessagePack serializer implementation for Python'
 size='283562'
 url='https://github.com/msgpack/msgpack-python'
 dep=('')
+depend='python'

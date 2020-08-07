@@ -15,3 +15,5 @@ desc='Legacy Python 2 bindings for GObject'
 size='1925894'
 url='https://wiki.gnome.org/Projects/PyGObject'
 dep=('')
+depend='glib2'
+depend='python2'

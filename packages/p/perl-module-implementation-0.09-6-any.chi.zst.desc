@@ -15,3 +15,5 @@ desc='Loads one of several alternate underlying implementations for a module'
 size='10865'
 url='https://search.cpan.org/dist/Module-Implementation/'
 dep=('')
+depend='perl-module-runtime>=0.012'
+depend='perl-try-tiny'

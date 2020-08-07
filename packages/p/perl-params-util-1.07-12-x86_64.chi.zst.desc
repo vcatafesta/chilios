@@ -15,3 +15,4 @@ desc='Simple, compact and correct param-checking functions'
 size='49471'
 url='https://metacpan.org/release/Params-Util'
 dep=('')
+depend='perl'

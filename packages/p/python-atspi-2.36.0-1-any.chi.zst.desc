@@ -15,3 +15,5 @@ desc='Python bindings for D-Bus AT-SPI'
 size='509925'
 url='https://wiki.linuxfoundation.org/accessibility/atk/at-spi/at-spi_on_d-bus'
 dep=('')
+depend='python-gobject'
+depend='at-spi2-core'

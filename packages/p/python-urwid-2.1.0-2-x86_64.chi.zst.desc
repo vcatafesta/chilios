@@ -15,3 +15,5 @@ desc='Curses-based user interface library'
 size='2048037'
 url='http://excess.org/urwid/'
 dep=('')
+depend='python'
+depend='glibc'

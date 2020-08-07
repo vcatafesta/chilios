@@ -15,3 +15,5 @@ desc='For controlling and automating applications'
 size='325471'
 url='https://pexpect.readthedocs.org/en/stable/'
 dep=('')
+depend='python'
+depend='python-ptyprocess'

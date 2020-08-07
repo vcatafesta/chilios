@@ -15,3 +15,6 @@ desc='Oslo i18n library'
 size='239620'
 url='https://pypi.python.org/pypi/oslo.i18n/5.0.0'
 dep=('')
+depend='python-six'
+depend='python-pbr'
+depend='python-babel'

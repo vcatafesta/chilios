@@ -15,3 +15,4 @@ desc='Inheritable, overridable class data'
 size='8192'
 url='http://search.cpan.org/dist/Class-Data-Inheritable'
 dep=('')
+depend='perl>=5.10.0'

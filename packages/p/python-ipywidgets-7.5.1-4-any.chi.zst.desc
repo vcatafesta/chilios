@@ -15,3 +15,5 @@ desc='IPython widgets for the Jupyter Notebook'
 size='597137'
 url='https://github.com/ipython/ipywidgets'
 dep=('')
+depend='python'
+depend='jupyter-widgetsnbextension'

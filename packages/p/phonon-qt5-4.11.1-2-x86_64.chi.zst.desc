@@ -15,3 +15,6 @@ desc='The multimedia framework by KDE'
 size='1343646'
 url='https://community.kde.org/Phonon'
 dep=('')
+depend='libpulse'
+depend='qt5-base'
+depend='phonon-qt5-backend'

@@ -15,3 +15,6 @@ desc='Library for building powerful interactive command lines in Python'
 size='3317967'
 url='https://github.com/jonathanslenders/python-prompt-toolkit'
 dep=('')
+depend='python-pygments'
+depend='python-six'
+depend='python-wcwidth'

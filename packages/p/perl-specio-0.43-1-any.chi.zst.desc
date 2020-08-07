@@ -15,3 +15,7 @@ desc='Type constraints and coercions for Perl'
 size='405504'
 url='http://search.cpan.org/dist/Specio'
 dep=('')
+depend='perl-role-tiny'
+depend='perl-test-fatal'
+depend='perl-mro-compat'
+depend='perl-devel-stacktrace'

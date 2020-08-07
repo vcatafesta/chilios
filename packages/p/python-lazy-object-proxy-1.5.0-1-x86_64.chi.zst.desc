@@ -15,3 +15,4 @@ desc='A fast and thorough lazy object proxy'
 size='120733'
 url='https://github.com/ionelmc/python-lazy-object-proxy'
 dep=('')
+depend='python'

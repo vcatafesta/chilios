@@ -15,3 +15,7 @@ desc='Accurately separate the TLD from the registered domain and subdomains of a
 size='181790'
 url='https://github.com/john-kurkowski/tldextract'
 dep=('')
+depend='python-idna'
+depend='python-requests'
+depend='python-requests-file'
+depend='python-setuptools'

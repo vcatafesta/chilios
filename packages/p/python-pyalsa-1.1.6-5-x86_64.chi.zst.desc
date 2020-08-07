@@ -15,3 +15,5 @@ desc='Python binding for the ALSA library'
 size='230796'
 url='https://www.alsa-project.org'
 dep=('')
+depend='alsa-lib'
+depend='python'

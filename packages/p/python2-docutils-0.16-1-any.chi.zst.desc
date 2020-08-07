@@ -15,3 +15,4 @@ desc='Set of tools for processing plaintext docs into formats such as HTML, XML,
 size='5008295'
 url='http://docutils.sourceforge.net'
 dep=('')
+depend='python2'

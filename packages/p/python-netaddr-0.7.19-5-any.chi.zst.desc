@@ -15,3 +15,4 @@ desc='Pure Python network address representation and manipulation library'
 size='7496778'
 url='https://github.com/drkjam/netaddr'
 dep=('')
+depend='python'

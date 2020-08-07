@@ -15,3 +15,4 @@ desc='Implementation of lex and yacc parsing tools'
 size='321626'
 url='https://www.dabeaz.com/ply/'
 dep=('')
+depend='python'

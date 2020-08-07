@@ -15,3 +15,4 @@ desc='Module for writing XML documents'
 size='49585'
 url='https://search.cpan.org/dist/XML-Writer'
 dep=('')
+depend='perl'

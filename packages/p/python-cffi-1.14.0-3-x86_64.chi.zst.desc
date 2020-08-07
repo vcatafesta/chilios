@@ -15,3 +15,4 @@ desc='Foreign Function Interface for Python calling C code'
 size='1059602'
 url='https://cffi.readthedocs.org/'
 dep=('')
+depend='python-pycparser'

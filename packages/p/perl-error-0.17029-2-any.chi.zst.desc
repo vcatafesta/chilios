@@ -15,3 +15,4 @@ desc='Perl/CPAN Error module - Error/exception handling in an OO-ish way'
 size='44127'
 url='https://search.cpan.org/dist/Error/'
 dep=('')
+depend='perl'

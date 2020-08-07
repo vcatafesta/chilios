@@ -15,3 +15,4 @@ desc='A library to provide abstract access to various archives'
 size='1377673'
 url='https://icculus.org/physfs/'
 dep=('')
+depend='zlib'

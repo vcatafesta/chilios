@@ -15,3 +15,5 @@ desc='CLI PulseAudio Volume Control'
 size='89269'
 url='https://github.com/falconindy/ponymix'
 dep=('')
+depend='pulseaudio'
+depend='libnotify'

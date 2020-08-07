@@ -15,3 +15,6 @@ desc='Build an optimized subroutine parameter validator once, use it forever'
 size='48606'
 url='https://search.cpan.org/dist/Params-ValidationCompiler/'
 dep=('')
+depend='perl-role-tiny'
+depend='perl-eval-closure'
+depend='perl-exception-class'

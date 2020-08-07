@@ -15,3 +15,4 @@ desc='Perl HTML parser class'
 size='171259'
 url='https://search.cpan.org/dist/HTML-Parser/'
 dep=('')
+depend='perl-html-tagset'

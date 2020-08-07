@@ -15,3 +15,4 @@ desc='Ultra-lightweight pure Python package to check if a file is binary or text
 size='34115'
 url='https://github.com/audreyr/binaryornot'
 dep=('')
+depend='python-chardet'

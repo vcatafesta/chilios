@@ -15,3 +15,5 @@ desc='Python bindings for YAML, using fast libYAML library'
 size='801516'
 url='https://pyyaml.org/wiki/PyYAML'
 dep=('')
+depend='python'
+depend='libyaml'

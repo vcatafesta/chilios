@@ -15,3 +15,4 @@ desc='Colorization of help messages in Click'
 size='40717'
 url='https://github.com/click-contrib/click-help-colors'
 dep=('')
+depend='python-click'

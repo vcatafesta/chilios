@@ -15,3 +15,5 @@ desc='Legacy polkit authentication agent for GNOME'
 size='344872'
 url='https://www.freedesktop.org/wiki/Software/polkit/'
 dep=('')
+depend='polkit'
+depend='gtk3'

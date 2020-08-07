@@ -15,3 +15,4 @@ desc='brain-dead simple config-ini parsing'
 size='19680'
 url='https://github.com/RonnyPfannschmidt/iniconfig'
 dep=('')
+depend='python'

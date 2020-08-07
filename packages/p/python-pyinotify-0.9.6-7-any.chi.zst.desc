@@ -15,3 +15,4 @@ desc='Python module used for monitoring filesystems events on Linux platforms wi
 size='245488'
 url='https://github.com/seb-m/pyinotify'
 dep=('')
+depend='python'

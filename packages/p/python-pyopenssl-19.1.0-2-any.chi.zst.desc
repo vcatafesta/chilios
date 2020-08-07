@@ -15,3 +15,7 @@ desc='Python3 wrapper module around the OpenSSL library'
 size='555858'
 url='https://github.com/pyca/pyopenssl'
 dep=('')
+depend='openssl'
+depend='python'
+depend='python-six'
+depend='python-cryptography'

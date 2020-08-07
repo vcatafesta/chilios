@@ -15,3 +15,4 @@ desc='A simple, sane and efficient file slurper'
 size='6950'
 url='https://search.cpan.org/dist/File-Slurp-Tiny'
 dep=('')
+depend='perl'

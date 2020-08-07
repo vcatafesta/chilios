@@ -15,3 +15,4 @@ desc='Hamcrest framework for matcher objects'
 size='311305'
 url='https://github.com/hamcrest/PyHamcrest'
 dep=('')
+depend='python-six'

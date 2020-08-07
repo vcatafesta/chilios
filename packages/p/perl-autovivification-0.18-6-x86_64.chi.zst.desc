@@ -15,3 +15,4 @@ desc='Lexically disable autovivification.'
 size='52009'
 url='https://metacpan.org/release/autovivification'
 dep=('')
+depend='perl>=5.8.3'

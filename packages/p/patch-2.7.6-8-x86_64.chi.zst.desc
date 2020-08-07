@@ -15,3 +15,5 @@ desc='A utility to apply patch files to original sources'
 size='202498'
 url='https://www.gnu.org/software/patch/'
 dep=('')
+depend='glibc'
+depend='attr'

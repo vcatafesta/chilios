@@ -15,3 +15,4 @@ desc='A MutableSet that remembers its order, so that every entry has an index'
 size='59049'
 url='https://github.com/LuminosoInsight/ordered-set'
 dep=('')
+depend='python'

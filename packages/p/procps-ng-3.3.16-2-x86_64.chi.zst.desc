@@ -15,3 +15,5 @@ desc='Utilities for monitoring your system and its processes'
 size='1413615'
 url='https://gitlab.com/procps-ng/procps'
 dep=('')
+depend='ncurses'
+depend='systemd-libs'

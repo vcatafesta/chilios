@@ -15,3 +15,4 @@ desc='library for accessing and manipulating reiserfs partitions'
 size='191482'
 url='https://www.namesys.com'
 dep=('')
+depend='e2fsprogs'

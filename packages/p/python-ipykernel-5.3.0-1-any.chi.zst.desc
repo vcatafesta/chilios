@@ -15,3 +15,7 @@ desc='The ipython kernel for Jupyter'
 size='919992'
 url='https://pypi.org/project/ipykernel/'
 dep=('')
+depend='python-traitlets'
+depend='python-tornado'
+depend='ipython'
+depend='python-jupyter_client'

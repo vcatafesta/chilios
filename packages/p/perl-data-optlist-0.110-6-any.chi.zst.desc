@@ -15,3 +15,6 @@ desc='Parse and validate simple name/value option pairs'
 size='14805'
 url='https://metacpan.org/release/Data-OptList'
 dep=('')
+depend='perl-params-util'
+depend='perl-scalar-list-utils'
+depend='perl-sub-install'

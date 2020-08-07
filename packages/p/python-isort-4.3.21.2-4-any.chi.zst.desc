@@ -15,3 +15,4 @@ desc='A Python utility / library to sort Python imports.'
 size='320758'
 url='https://github.com/timothycrosley/isort'
 dep=('')
+depend='python-setuptools'

@@ -15,3 +15,5 @@ desc='Python bindings for the cairo graphics library'
 size='266137'
 url='https://pycairo.readthedocs.io/en/latest/'
 dep=('')
+depend='cairo'
+depend='python'

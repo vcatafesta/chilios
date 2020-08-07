@@ -15,3 +15,4 @@ desc='Represents the core of the Zope hookable Architecture'
 size='58225'
 url='https://github.com/zopefoundation/zope.hookable'
 dep=('')
+depend='python-setuptools'

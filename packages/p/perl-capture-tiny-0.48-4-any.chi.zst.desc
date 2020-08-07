@@ -15,3 +15,4 @@ desc='Capture STDOUT and STDERR from Perl, XS or external programs'
 size='35771'
 url='https://metacpan.org/release/Capture-Tiny'
 dep=('')
+depend='perl'

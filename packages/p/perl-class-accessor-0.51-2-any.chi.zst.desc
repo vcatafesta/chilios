@@ -15,3 +15,4 @@ desc='Automated accessor generation'
 size='36083'
 url='https://search.cpan.org/dist/Class-Accessor/'
 dep=('')
+depend='perl>=5.10.0'

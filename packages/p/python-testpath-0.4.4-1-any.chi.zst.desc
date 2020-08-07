@@ -15,3 +15,4 @@ desc='Test utilities for code working with files and commands'
 size='24533'
 url='https://pypi.python.org/pypi/testpath'
 dep=('')
+depend='python'

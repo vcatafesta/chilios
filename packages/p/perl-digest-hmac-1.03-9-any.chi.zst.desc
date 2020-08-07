@@ -15,3 +15,5 @@ desc='Perl Module: Keyed-Hashing for Message Authentication.'
 size='9751'
 url='https://search.cpan.org/dist/Digest-HMAC/'
 dep=('')
+depend='perl-digest-sha1'
+depend='perl'

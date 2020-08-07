@@ -15,3 +15,7 @@ desc='Time zone object base class and factory'
 size='6921216'
 url='https://search.cpan.org/dist/DateTime-TimeZone'
 dep=('')
+depend='perl-class-singleton>=1.03'
+depend='perl-params-validate>=0.72'
+depend='perl-class-load'
+depend='perl-list-allutils'

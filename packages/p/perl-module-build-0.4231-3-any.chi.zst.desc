@@ -15,3 +15,6 @@ desc='Build, test, and install Perl modules'
 size='392538'
 url='https://search.cpan.org/dist/Module-Build'
 dep=('')
+depend='perl'
+depend='perl-cpan-meta'
+depend='perl-inc-latest'

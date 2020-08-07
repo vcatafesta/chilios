@@ -15,3 +15,4 @@ desc='Expand template text with embedded perl'
 size='95038'
 url='https://search.cpan.org/dist/Text-Template'
 dep=('')
+depend='perl'

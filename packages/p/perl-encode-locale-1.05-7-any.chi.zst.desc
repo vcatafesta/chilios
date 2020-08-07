@@ -15,3 +15,4 @@ desc='Determine the locale encoding'
 size='16550'
 url='https://search.cpan.org/dist/Encode-Locale'
 dep=('')
+depend='perl'

@@ -15,3 +15,4 @@ desc='Python Decorator module'
 size='49643'
 url='https://pypi.python.org/pypi/decorator'
 dep=('')
+depend='python'

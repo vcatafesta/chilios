@@ -15,3 +15,5 @@ desc='A set of Python bindings for the Qt5 toolkit'
 size='27997301'
 url='https://riverbankcomputing.com/software/pyqt/intro'
 dep=('')
+depend='python-pyqt5-sip'
+depend='qt5-base'

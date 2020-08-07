@@ -15,3 +15,4 @@ desc='Namespace control and lazy-import mechanism'
 size='25876'
 url='https://github.com/pytest-dev/apipkg'
 dep=('')
+depend='python'

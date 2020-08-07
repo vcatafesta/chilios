@@ -15,3 +15,4 @@ desc='Replacement for Debian's libpaper'
 size='26452'
 url='https://github.com/rrthomas/paper'
 dep=('')
+depend='perl'

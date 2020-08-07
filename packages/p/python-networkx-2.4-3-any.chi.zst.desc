@@ -15,3 +15,4 @@ desc='Python package for the creation, manipulation, and study of the structure,
 size='13080434'
 url='https://networkx.github.io'
 dep=('')
+depend='python-decorator'

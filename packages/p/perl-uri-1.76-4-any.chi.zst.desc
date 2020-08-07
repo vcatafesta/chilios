@@ -15,3 +15,4 @@ desc='Uniform Resource Identifiers (absolute and relative)'
 size='166946'
 url='https://search.cpan.org/dist/URI/'
 dep=('')
+depend='perl'

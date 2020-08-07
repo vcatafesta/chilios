@@ -15,3 +15,4 @@ desc='A query language for JSON'
 size='175699'
 url='https://github.com/jmespath/jmespath'
 dep=('')
+depend='python'

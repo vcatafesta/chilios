@@ -15,3 +15,4 @@ desc='Provides powerful extensions to the standard datetime module'
 size='830612'
 url='https://github.com/dateutil/dateutil'
 dep=('')
+depend='python-six'

@@ -15,3 +15,6 @@ desc='Partition Image saves partitions in many formats to an image file.'
 size='807079'
 url='https://www.partimage.org/'
 dep=('')
+depend='libnewt'
+depend='bzip2'
+depend='openssl'

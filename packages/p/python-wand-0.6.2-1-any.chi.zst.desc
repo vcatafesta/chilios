@@ -15,3 +15,6 @@ desc='Ctypes-based simple MagickWand API binding for Python'
 size='1629131'
 url='https://github.com/emcconville/wand'
 dep=('')
+depend='imagemagick'
+depend='libxml2'
+depend='python'

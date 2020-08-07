@@ -15,3 +15,4 @@ desc='A simple GIT URL parser'
 size='16368'
 url='https://github.com/coala/git-url-parse'
 dep=('')
+depend='python-pbr'

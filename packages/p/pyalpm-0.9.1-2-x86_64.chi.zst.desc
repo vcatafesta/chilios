@@ -15,3 +15,5 @@ desc='Libalpm bindings for Python 3'
 size='180041'
 url='https://git.archlinux.org/pyalpm.git/'
 dep=('')
+depend='python>=3.6'
+depend='pacman>=5.0'

@@ -15,3 +15,4 @@ desc='Attributes without boilerplate.'
 size='311940'
 url='https://attrs.readthedocs.org/'
 dep=('')
+depend='python'

@@ -15,3 +15,5 @@ desc='Expat-based XML parser module for perl'
 size='455405'
 url='https://search.cpan.org/dist/XML-Parser/'
 dep=('')
+depend='perl-libwww'
+depend='expat'

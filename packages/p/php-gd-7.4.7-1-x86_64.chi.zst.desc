@@ -15,3 +15,5 @@ desc='gd module for PHP'
 size='108408'
 url='https://www.php.net/'
 dep=('')
+depend='php'
+depend='gd'

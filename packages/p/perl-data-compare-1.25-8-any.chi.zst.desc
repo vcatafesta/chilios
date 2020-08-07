@@ -15,3 +15,4 @@ desc='compare perl data structures'
 size='22450'
 url='https://metacpan.org/release/Data-Compare'
 dep=('')
+depend='perl-file-find-rule>=0.1'

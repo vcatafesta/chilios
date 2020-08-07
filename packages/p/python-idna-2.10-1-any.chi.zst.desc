@@ -15,3 +15,4 @@ desc='Internationalized Domain Names in Applications (IDNA)'
 size='703102'
 url='https://github.com/kjd/idna'
 dep=('')
+depend='python'

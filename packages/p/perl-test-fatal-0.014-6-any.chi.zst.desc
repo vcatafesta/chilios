@@ -15,3 +15,4 @@ desc='Incredibly simple helpers for testing code with exceptions'
 size='14494'
 url='https://metacpan.org/release/Test-Fatal'
 dep=('')
+depend='perl-try-tiny'

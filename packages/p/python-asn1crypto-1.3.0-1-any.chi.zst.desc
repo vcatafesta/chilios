@@ -15,3 +15,4 @@ desc='Python ASN.1 library with a focus on performance and a pythonic API'
 size='1269267'
 url='https://github.com/wbond/asn1crypto'
 dep=('')
+depend='python'

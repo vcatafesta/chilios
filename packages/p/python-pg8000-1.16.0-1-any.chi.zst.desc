@@ -15,3 +15,5 @@ desc='Pure-Python PostgreSQL database driver, DB-API compatible'
 size='221899'
 url='https://github.com/tlocke/pg8000'
 dep=('')
+depend='python'
+depend='python-scramp'

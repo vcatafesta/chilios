@@ -15,3 +15,4 @@ desc='Portable module to access network interface information in Python'
 size='40826'
 url='https://alastairs-place.net/netifaces/'
 dep=('')
+depend='python'

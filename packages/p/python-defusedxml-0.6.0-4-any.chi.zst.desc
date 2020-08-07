@@ -15,3 +15,4 @@ desc='XML bomb protection for Python stdlib modules'
 size='131491'
 url='https://bitbucket.org/tiran/defusedxml'
 dep=('')
+depend='python'

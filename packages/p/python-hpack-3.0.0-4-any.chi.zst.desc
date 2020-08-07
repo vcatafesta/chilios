@@ -15,3 +15,4 @@ desc='Pure-Python HPACK header compression'
 size='398282'
 url='https://hyper.rtfd.org/'
 dep=('')
+depend='python'

@@ -15,3 +15,6 @@ desc='A module that allows you to declare real exception classes in Perl'
 size='43926'
 url='https://metacpan.org/release/Exception-Class'
 dep=('')
+depend='perl>=5.8.1'
+depend='perl-class-data-inheritable>=0.02'
+depend='perl-devel-stacktrace>=2.00'

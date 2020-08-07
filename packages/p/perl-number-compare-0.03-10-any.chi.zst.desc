@@ -15,3 +15,4 @@ desc='numeric comparisons for human file sizes'
 size='4279'
 url='https://search.mcpan.org/dist/Number-Compare'
 dep=('')
+depend='perl'

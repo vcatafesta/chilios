@@ -15,3 +15,4 @@ desc='Plugin and hook calling mechanisms for python'
 size='128174'
 url='https://www.pluggypayments.com/docs/python'
 dep=('')
+depend='python-importlib-metadata'

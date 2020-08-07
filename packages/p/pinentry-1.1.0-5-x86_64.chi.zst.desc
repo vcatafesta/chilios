@@ -15,3 +15,7 @@ desc='Collection of simple PIN or passphrase entry dialogs which utilize the Ass
 size='521815'
 url='https://gnupg.org/related_software/pinentry/'
 dep=('')
+depend='ncurses'
+depend='libcap'
+depend='libassuan'
+depend='libsecret'

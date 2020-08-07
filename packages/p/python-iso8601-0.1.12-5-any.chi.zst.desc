@@ -15,3 +15,4 @@ desc='Simple module to parse ISO 8601 dates'
 size='49014'
 url='https://pyiso8601.readthedocs.io/en/latest/'
 dep=('')
+depend='python'

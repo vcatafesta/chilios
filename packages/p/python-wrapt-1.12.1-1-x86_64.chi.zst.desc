@@ -15,3 +15,4 @@ desc='A Python module for decorators, wrappers and monkey patching'
 size='196627'
 url='https://pypi.python.org/pypi/wrapt'
 dep=('')
+depend='python'

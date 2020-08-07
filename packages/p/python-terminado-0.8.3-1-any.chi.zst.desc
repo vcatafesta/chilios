@@ -15,3 +15,5 @@ desc='Terminals served to term.js using Tornado websockets'
 size='56444'
 url='https://github.com/takluyver/terminado'
 dep=('')
+depend='python-tornado'
+depend='python-ptyprocess'

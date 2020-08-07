@@ -15,3 +15,4 @@ desc='Compatibility API between asyncio/Twisted/Trollius'
 size='160752'
 url='https://github.com/crossbario/txaio'
 dep=('')
+depend='python-six'

@@ -15,3 +15,5 @@ desc='runtime module handling'
 size='56320'
 url='http://search.cpan.org/dist/Module-Runtime/'
 dep=('')
+depend='perl'
+depend='perl-module-build'

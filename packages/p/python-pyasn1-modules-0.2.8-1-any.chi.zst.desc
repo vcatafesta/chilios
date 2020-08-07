@@ -15,3 +15,4 @@ desc='A collection of ASN.1-based protocols modules'
 size='1608630'
 url='https://pypi.python.org/pypi/pyasn1-modules'
 dep=('')
+depend='python-pyasn1'

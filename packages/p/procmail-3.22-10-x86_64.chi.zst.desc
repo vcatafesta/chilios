@@ -15,3 +15,5 @@ desc='Highly configurable auto mail processing.'
 size='250526'
 url='http://pm-doc.sourceforge.net/'
 dep=('')
+depend='glibc'
+depend='sh'

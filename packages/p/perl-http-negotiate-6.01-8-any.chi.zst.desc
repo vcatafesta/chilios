@@ -15,3 +15,5 @@ desc='Choose a variant to serve'
 size='20303'
 url='https://search.cpan.org/dist/HTTP-Negotiate'
 dep=('')
+depend='perl'
+depend='perl-http-message'

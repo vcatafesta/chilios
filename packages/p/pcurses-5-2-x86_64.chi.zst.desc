@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='pcurses'
+version='5'
+build='2'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A curses package management tool using libalpm'
+size='834281'
+url='https://github.com/schuay/pcurses'
+dep=('')
+depend='ncurses'
+depend='pacman'

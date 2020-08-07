@@ -15,3 +15,4 @@ desc='A cross-platform process and system utilities module for Python'
 size='2078245'
 url='https://github.com/giampaolo/psutil'
 dep=('')
+depend='python'

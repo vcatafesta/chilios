@@ -15,3 +15,4 @@ desc='Braintree Python Library'
 size='1115652'
 url='https://www.braintreepayments.com/docs/python'
 dep=('')
+depend='python-requests'

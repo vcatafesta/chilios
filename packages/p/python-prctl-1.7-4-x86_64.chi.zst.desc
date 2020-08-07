@@ -15,3 +15,5 @@ desc='Python(ic) interface to the linux prctl syscall'
 size='48419'
 url='https://github.com/seveas/python-prctl'
 dep=('')
+depend='python'
+depend='libcap'

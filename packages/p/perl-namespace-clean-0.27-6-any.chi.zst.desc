@@ -15,3 +15,6 @@ desc='Keep imports and functions out of your namespace'
 size='20021'
 url='https://search.cpan.org/dist/namespace-clean'
 dep=('')
+depend='perl>=5.5.0'
+depend='perl-b-hooks-endofscope>=0.12'
+depend='perl-package-stash>=0.23'

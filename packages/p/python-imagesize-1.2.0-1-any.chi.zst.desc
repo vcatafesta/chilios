@@ -15,3 +15,4 @@ desc='Getting image size from png/jpeg/jpeg2000/gif file'
 size='25680'
 url='https://github.com/shibukawa/imagesize_py'
 dep=('')
+depend='python'

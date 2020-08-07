@@ -15,3 +15,5 @@ desc='Poppler glib bindings'
 size='2604309'
 url='https://poppler.freedesktop.org/'
 dep=('')
+depend='poppler=0.90.0'
+depend='glib2'

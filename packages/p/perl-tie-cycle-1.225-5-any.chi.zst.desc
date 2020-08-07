@@ -15,3 +15,4 @@ desc='Cycle through a list of values via a scalar'
 size='5425'
 url='https://metacpan.org/release/Tie-Cycle'
 dep=('')
+depend='perl'

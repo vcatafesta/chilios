@@ -15,3 +15,5 @@ desc='OpenStack Context library'
 size='126112'
 url='https://pypi.python.org/pypi/oslo.context/3.1.0'
 dep=('')
+depend='python-pbr'
+depend='python-debtcollector'

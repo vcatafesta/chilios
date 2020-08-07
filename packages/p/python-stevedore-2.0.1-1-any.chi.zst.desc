@@ -15,3 +15,4 @@ desc='Manage dynamic plugins for Python applications'
 size='291033'
 url='https://github.com/openstack/stevedore'
 dep=('')
+depend='python-setuptools'

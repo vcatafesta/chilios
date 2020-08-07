@@ -15,3 +15,7 @@ desc='A sophisticated exporter for custom-built routines'
 size='67030'
 url='https://metacpan.org/release/Sub-Exporter'
 dep=('')
+depend='perl'
+depend='perl-data-optlist'
+depend='perl-params-util'
+depend='perl-sub-install'

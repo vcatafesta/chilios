@@ -15,3 +15,4 @@ desc='Easy, extensible command line tab completion of arguments for your Python 
 size='201527'
 url='https://github.com/kislyuk/argcomplete'
 dep=('')
+depend='python'

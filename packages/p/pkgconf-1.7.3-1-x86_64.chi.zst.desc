@@ -15,3 +15,5 @@ desc='Package compiler and linker metadata toolkit'
 size='160086'
 url='https://git.sr.ht/~kaniini/pkgconf'
 dep=('')
+depend='glibc'
+depend='sh'

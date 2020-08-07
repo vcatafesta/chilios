@@ -15,3 +15,5 @@ desc='Alternative interface to File::Find'
 size='35435'
 url='https://search.mcpan.org/dist/File-Find-Rule'
 dep=('')
+depend='perl-number-compare'
+depend='perl-text-glob>=0.07'

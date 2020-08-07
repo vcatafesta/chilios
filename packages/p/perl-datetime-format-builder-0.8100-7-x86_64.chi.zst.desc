@@ -15,3 +15,8 @@ desc='Create DateTime parser classes and objects'
 size='66052'
 url='https://search.cpan.org/dist/DateTime-Format-Builder'
 dep=('')
+depend='perl'
+depend='perl-class-factory-util>=1.6'
+depend='perl-datetime>=0.12'
+depend='perl-datetime-format-strptime>=1.04'
+depend='perl-params-validate>=0.72'

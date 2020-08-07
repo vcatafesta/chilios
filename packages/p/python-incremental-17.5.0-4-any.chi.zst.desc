@@ -15,3 +15,5 @@ desc='A small library that versions your Python projects'
 size='154109'
 url='https://github.com/hawkowl/incremental'
 dep=('')
+depend='python-click'
+depend='python-twisted'

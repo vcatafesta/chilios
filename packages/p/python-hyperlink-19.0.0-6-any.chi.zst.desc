@@ -15,3 +15,4 @@ desc='A featureful, correct URL for Python'
 size='381658'
 url='https://github.com/python-hyper/hyperlink'
 dep=('')
+depend='python-idna'

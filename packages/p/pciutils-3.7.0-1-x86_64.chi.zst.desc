@@ -15,3 +15,6 @@ desc='PCI bus configuration space access library and tools'
 size='279696'
 url='https://mj.ucw.cz/sw/pciutils/'
 dep=('')
+depend='glibc'
+depend='hwids'
+depend='kmod'

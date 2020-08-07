@@ -15,3 +15,6 @@ desc='Keep imports out of your namespace'
 size='15425'
 url='https://metacpan.org/release/namespace-autoclean'
 dep=('')
+depend='perl-b-hooks-endofscope'
+depend='perl-sub-identify'
+depend='perl-namespace-clean'

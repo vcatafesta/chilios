@@ -15,3 +15,4 @@ desc='match globbing patterns against text'
 size='7294'
 url='https://search.mcpan.org/dist/Text-Glob'
 dep=('')
+depend='perl'

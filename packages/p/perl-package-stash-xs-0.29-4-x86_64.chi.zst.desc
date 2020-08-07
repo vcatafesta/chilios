@@ -15,3 +15,4 @@ desc='Faster and more correct implementation of the Package::Stash API'
 size='44185'
 url='https://search.cpan.org/dist/Package-Stash-XS'
 dep=('')
+depend='perl'

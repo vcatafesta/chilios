@@ -15,3 +15,5 @@ desc='A Python module for creating JUnit XML test result documents'
 size='44256'
 url='https://github.com/kyrus/python-junit-xml'
 dep=('')
+depend='python'
+depend='python-six'

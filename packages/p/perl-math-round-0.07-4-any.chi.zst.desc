@@ -15,3 +15,4 @@ desc='Perl extension for rounding numbers'
 size='12901'
 url='https://search.cpan.org/dist/Math-Round'
 dep=('')
+depend='perl'

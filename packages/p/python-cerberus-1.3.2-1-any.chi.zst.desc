@@ -15,3 +15,4 @@ desc='Lightweight, extensible schema and data validation tool for Python diction
 size='597909'
 url='https://github.com/pyeve/cerberus'
 dep=('')
+depend='python'

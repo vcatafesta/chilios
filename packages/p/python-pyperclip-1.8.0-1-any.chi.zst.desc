@@ -15,3 +15,4 @@ desc='A cross-platform clipboard module for Python'
 size='65009'
 url='https://github.com/asweigart/pyperclip'
 dep=('')
+depend='python'

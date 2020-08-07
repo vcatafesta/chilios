@@ -15,3 +15,7 @@ desc='Bluetooth support for PulseAudio'
 size='201016'
 url='https://www.freedesktop.org/wiki/Software/PulseAudio/'
 dep=('')
+depend='pulseaudio=13.0-3'
+depend='bluez'
+depend='bluez-libs'
+depend='sbc'

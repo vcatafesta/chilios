@@ -15,3 +15,4 @@ desc='Various e-mail related modules'
 size='110135'
 url='https://metacpan.org/release/MailTools'
 dep=('')
+depend='perl-timedate'

@@ -15,3 +15,4 @@ desc='Mozilla's CA cert bundle in PEM format'
 size='247884'
 url='https://metacpan.org/release/Mozilla-CA'
 dep=('')
+depend='perl'

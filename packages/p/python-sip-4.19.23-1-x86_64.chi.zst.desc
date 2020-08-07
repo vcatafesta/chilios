@@ -15,3 +15,4 @@ desc='Python SIP4 bindings for C and C++ libraries'
 size='256070'
 url='https://www.riverbankcomputing.com/software/sip/intro'
 dep=('')
+depend='python'

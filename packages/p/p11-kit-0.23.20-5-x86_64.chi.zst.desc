@@ -15,3 +15,7 @@ desc='Loads and enumerates PKCS#11 modules'
 size='720712'
 url='https://p11-glue.freedesktop.org'
 dep=('')
+depend='libp11-kit=0.23.20-5'
+depend='coreutils'
+depend='libp11-kit.so=0-64'
+depend='libsystemd.so=0-64'

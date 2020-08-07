@@ -15,3 +15,5 @@ desc='safely and cleanly create closures via string eval'
 size='13262'
 url='https://metacpan.org/release/Eval-Closure'
 dep=('')
+depend='perl-try-tiny'
+depend='perl-sub-exporter'

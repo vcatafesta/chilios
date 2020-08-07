@@ -15,3 +15,4 @@ desc='WebSocket client library for Python'
 size='332793'
 url='https://github.com/websocket-client/websocket-client'
 dep=('')
+depend='python-six'

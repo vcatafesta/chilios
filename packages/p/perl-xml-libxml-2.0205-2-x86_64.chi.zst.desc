@@ -15,3 +15,6 @@ desc='Interface to the libxml library'
 size='742067'
 url='https://search.cpan.org/dist/XML-LibXML'
 dep=('')
+depend='perl-alien-libxml2'
+depend='perl-xml-sax'
+depend='perl-xml-namespacesupport'

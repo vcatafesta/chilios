@@ -15,3 +15,5 @@ desc='Database of robots.txt-derived permissions'
 size='19553'
 url='https://metacpan.org/release/WWW-RobotRules'
 dep=('')
+depend='perl'
+depend='perl-uri'

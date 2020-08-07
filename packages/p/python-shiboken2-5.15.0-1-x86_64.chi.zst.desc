@@ -15,3 +15,4 @@ desc='Generates bindings for C++ libraries using CPython source code'
 size='417738'
 url='https://www.qt.io'
 dep=('')
+depend='python'

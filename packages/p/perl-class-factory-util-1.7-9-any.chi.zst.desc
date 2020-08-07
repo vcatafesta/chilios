@@ -15,3 +15,4 @@ desc='Provide utility methods for factory classes'
 size='6144'
 url='http://search.cpan.org/dist/Class-Factory-Util/'
 dep=('')
+depend='perl'

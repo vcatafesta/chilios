@@ -15,3 +15,4 @@ desc='An implementation of time.monotonic() for Python 2.'
 size='17922'
 url='https://pypi.python.org/pypi/monotonic'
 dep=('')
+depend='python'

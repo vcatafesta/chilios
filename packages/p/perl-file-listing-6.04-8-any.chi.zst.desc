@@ -15,3 +15,5 @@ desc='parse directory listing'
 size='12786'
 url='https://search.cpan.org/dist/File-Listing'
 dep=('')
+depend='perl'
+depend='perl-http-date'

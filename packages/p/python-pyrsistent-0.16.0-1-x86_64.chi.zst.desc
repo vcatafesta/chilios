@@ -15,3 +15,4 @@ desc='Persistent/Functional/Immutable data structures'
 size='503473'
 url='https://github.com/tobgu/pyrsistent'
 dep=('')
+depend='python-six'

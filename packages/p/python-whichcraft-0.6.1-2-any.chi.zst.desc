@@ -15,3 +15,4 @@ desc='This package provides cross-platform cross-python shutil.which functionali
 size='21101'
 url='https://github.com/cookiecutter/whichcraft'
 dep=('')
+depend='python'

@@ -15,3 +15,6 @@ desc='A highly capable, feature-rich programming language'
 size='60399087'
 url='https://www.perl.org'
 dep=('')
+depend='gdbm>=1.17'
+depend='db'
+depend='glibc'

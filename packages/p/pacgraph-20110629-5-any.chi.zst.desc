@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='pacgraph'
+version='20110629'
+build='5'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Draws a graph of installed packages to PNG/SVG/GUI/console. Good for finding bloat.'
+size='47100'
+url='http://kmkeen.com/pacgraph/'
+dep=('')
+depend='python'

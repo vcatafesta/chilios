@@ -15,3 +15,5 @@ desc='Python bindings for QScintilla2'
 size='1782567'
 url='https://www.riverbankcomputing.com/software/qscintilla/intro'
 dep=('')
+depend='qscintilla-qt5'
+depend='python-pyqt5'

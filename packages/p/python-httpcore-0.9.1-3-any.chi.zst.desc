@@ -15,3 +15,6 @@ desc='A minimal HTTP client'
 size='364366'
 url='https://github.com/encode/httpcore'
 dep=('')
+depend='python-h11'
+depend='python-h2'
+depend='python-sniffio'

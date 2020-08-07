@@ -15,3 +15,4 @@ desc='Charset Information for MIME'
 size='54505'
 url='https://metacpan.org/release/MIME-Charset'
 dep=('')
+depend='perl'

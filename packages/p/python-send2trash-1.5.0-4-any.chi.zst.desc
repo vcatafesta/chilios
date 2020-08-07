@@ -15,3 +15,4 @@ desc='Send file to trash natively'
 size='42209'
 url='https://github.com/hsoft/send2trash'
 dep=('')
+depend='python'

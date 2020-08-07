@@ -15,3 +15,4 @@ desc='Associate user-defined magic to variables from Perl.'
 size='78855'
 url='https://search.cpan.org/dist/Variable-Magic'
 dep=('')
+depend='perl'

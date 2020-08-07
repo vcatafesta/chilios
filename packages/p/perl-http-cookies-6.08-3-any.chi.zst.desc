@@ -15,3 +15,6 @@ desc='HTTP cookie jars'
 size='44709'
 url='https://search.cpan.org/dist/HTTP-Cookies'
 dep=('')
+depend='perl'
+depend='perl-http-date'
+depend='perl-http-message'

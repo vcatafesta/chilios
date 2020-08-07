@@ -15,3 +15,6 @@ desc='Nearly transparent SSL encapsulation for IO::Socket::INET'
 size='405557'
 url='https://search.cpan.org/dist/IO-Socket-SSL/'
 dep=('')
+depend='perl-net-ssleay'
+depend='perl'
+depend='perl-uri'

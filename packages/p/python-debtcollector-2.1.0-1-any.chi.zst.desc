@@ -15,3 +15,7 @@ desc='A collection of Python deprecation patterns and strategies that help you c
 size='166153'
 url='https://docs.openstack.org/developer/debtcollector'
 dep=('')
+depend='python-six'
+depend='python-pbr'
+depend='python-babel'
+depend='python-wrapt'

@@ -15,3 +15,4 @@ desc='Recursive copy of nested objects.'
 size='21518'
 url='https://search.cpan.org/~RDF/Clone'
 dep=('')
+depend='perl'

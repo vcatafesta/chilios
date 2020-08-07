@@ -15,3 +15,7 @@ desc='Localization support for DateTime.pm'
 size='7535616'
 url='http://search.cpan.org/dist/DateTime-Locale'
 dep=('')
+depend='perl-params-validate'
+depend='perl-list-moreutils'
+depend='perl-file-sharedir'
+depend='perl-file-sharedir-install'

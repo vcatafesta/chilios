@@ -15,3 +15,4 @@ desc='Guess the media type of a file or a URL'
 size='58689'
 url='https://metacpan.org/release/LWP-MediaTypes'
 dep=('')
+depend='perl'

@@ -15,3 +15,4 @@ desc='Discover and load entry points from installed packages.'
 size='12299'
 url='https://github.com/takluyver/entrypoints'
 dep=('')
+depend='python'

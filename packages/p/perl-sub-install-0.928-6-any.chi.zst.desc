@@ -15,3 +15,4 @@ desc='Install subroutines into packages easily'
 size='15403'
 url='https://metacpan.org/release/Sub-Install'
 dep=('')
+depend='perl'

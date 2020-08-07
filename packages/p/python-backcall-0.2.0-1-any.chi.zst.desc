@@ -15,3 +15,4 @@ desc='Backwards compatible callback APIs'
 size='77064'
 url='https://github.com/takluyver/backcall'
 dep=('')
+depend='python'

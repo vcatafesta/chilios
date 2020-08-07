@@ -15,3 +15,4 @@ desc='Protocol Buffers implementation in C'
 size='317675'
 url='https://github.com/protobuf-c/protobuf-c'
 dep=('')
+depend='protobuf'

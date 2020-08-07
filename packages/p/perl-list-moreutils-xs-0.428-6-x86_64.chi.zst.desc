@@ -15,3 +15,4 @@ desc='Provide the stuff missing in List::Util'
 size='134486'
 url='https://search.cpan.org/dist/List-MoreUtils-XS'
 dep=('')
+depend='perl'

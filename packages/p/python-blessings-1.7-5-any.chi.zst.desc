@@ -15,3 +15,4 @@ desc='A thin, practical wrapper around terminal coloring, styling, and positioni
 size='82620'
 url='https://github.com/erikrose/blessings'
 dep=('')
+depend='python'

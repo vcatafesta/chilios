@@ -15,3 +15,4 @@ desc='Log4j implementation for Perl'
 size='824832'
 url='https://metacpan.org/release/Log-Log4perl'
 dep=('')
+depend='perl'

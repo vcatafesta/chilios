@@ -15,3 +15,4 @@ desc='An ISO 8601 date/time/duration parser and formatter'
 size='277049'
 url='https://github.com/gweis/isodate/'
 dep=('')
+depend='python-six'

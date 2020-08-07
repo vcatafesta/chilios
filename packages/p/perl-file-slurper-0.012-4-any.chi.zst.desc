@@ -15,3 +15,4 @@ desc='A simple, sane and efficient module to slurp a file'
 size='8898'
 url='https://metacpan.org/release/File-Slurper'
 dep=('')
+depend='perl'

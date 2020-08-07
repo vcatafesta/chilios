@@ -15,3 +15,5 @@ desc='Pure-python selinux shim module for use in virtualenvs'
 size='14923'
 url='https://github.com/pycontribs/selinux'
 dep=('')
+depend='python-distro'
+depend='python-setuptools'

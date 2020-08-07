@@ -15,3 +15,4 @@ desc='File system based database that uses python pickles'
 size='23131'
 url='https://github.com/pickleshare/pickleshare'
 dep=('')
+depend='python'

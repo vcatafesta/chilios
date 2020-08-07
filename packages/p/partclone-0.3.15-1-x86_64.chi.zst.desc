@@ -15,3 +15,6 @@ desc='Utilities to save and restore used blocks on a partition'
 size='2012477'
 url='https://partclone.org'
 dep=('')
+depend='progsreiserfs'
+depend='ntfs-3g'
+depend='nilfs-utils'

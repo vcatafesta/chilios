@@ -15,3 +15,5 @@ desc='File transport adapter for Requests'
 size='10416'
 url='https://github.com/dashea/requests-file'
 dep=('')
+depend='python-six'
+depend='python-requests'

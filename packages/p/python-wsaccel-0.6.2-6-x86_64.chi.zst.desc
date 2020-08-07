@@ -15,3 +15,4 @@ desc='Accelerator for ws4py and AutobahnPython'
 size='138811'
 url='https://github.com/methane/wsaccel'
 dep=('')
+depend='python'

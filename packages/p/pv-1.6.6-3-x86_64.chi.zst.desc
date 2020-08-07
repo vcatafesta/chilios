@@ -15,3 +15,4 @@ desc='A terminal-based tool for monitoring the progress of data through a pipeli
 size='97760'
 url='https://www.ivarch.com/programs/pv.shtml'
 dep=('')
+depend='glibc'

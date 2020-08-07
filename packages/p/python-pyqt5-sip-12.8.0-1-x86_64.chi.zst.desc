@@ -15,3 +15,4 @@ desc='The sip module support for PyQt5'
 size='156362'
 url='https://riverbankcomputing.com/software/pyqt/intro'
 dep=('')
+depend='python'

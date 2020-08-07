@@ -15,3 +15,5 @@ desc='WebDav server implementation using libsoup (RFC 4918)'
 size='178530'
 url='https://wiki.gnome.org/phodav'
 dep=('')
+depend='avahi'
+depend='libsoup'

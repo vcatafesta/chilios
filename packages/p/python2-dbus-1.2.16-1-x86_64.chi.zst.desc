@@ -15,3 +15,7 @@ desc='Python2 bindings for DBUS'
 size='599632'
 url='https://www.freedesktop.org/wiki/Software/DBusBindings'
 dep=('')
+depend='dbus'
+depend='glib2'
+depend='python-dbus-common'
+depend='python2'

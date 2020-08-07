@@ -15,3 +15,7 @@ desc='a pacman .files metadata explorer'
 size='54922'
 url='https://github.com/falconindy/pkgfile'
 dep=('')
+depend='libarchive'
+depend='curl'
+depend='pcre'
+depend='pacman'

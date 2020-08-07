@@ -15,3 +15,4 @@ desc='Python implementation of the SCRAM protocol'
 size='40968'
 url='https://github.com/tlocke/scramp'
 dep=('')
+depend='python'

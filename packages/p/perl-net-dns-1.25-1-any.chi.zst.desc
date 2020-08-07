@@ -15,3 +15,5 @@ desc='Perl Module: Interface to the DNS resolver'
 size='806379'
 url='https://search.cpan.org/dist/Net-DNS/'
 dep=('')
+depend='perl-digest-hmac'
+depend='perl-net-ip'

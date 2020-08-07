@@ -15,3 +15,4 @@ desc='Retrieve names of code references'
 size='23004'
 url='https://search.mcpan.org/dist/Sub-Identify'
 dep=('')
+depend='perl'

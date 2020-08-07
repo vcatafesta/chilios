@@ -15,3 +15,4 @@ desc='Archive OpenPGP keys on paper'
 size='33773'
 url='https://www.jabberwocky.com/software/paperkey/'
 dep=('')
+depend='glibc'

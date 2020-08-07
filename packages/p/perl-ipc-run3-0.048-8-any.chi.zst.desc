@@ -15,3 +15,4 @@ desc='run a subprocess with input/ouput redirection'
 size='55725'
 url='https://search.cpan.org/dist/IPC-Run3'
 dep=('')
+depend='perl'
