@@ -15,3 +15,4 @@ desc='A rewrite of NASM to allow for multiple syntax supported (NASM, TASM, GAS,
 size='4592160'
 url='https://www.tortall.net/projects/yasm/'
 dep=('')
+depend='glibc'

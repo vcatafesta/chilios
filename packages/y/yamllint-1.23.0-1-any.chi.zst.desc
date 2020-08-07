@@ -15,3 +15,6 @@ desc='Linter for YAML files'
 size='289252'
 url='https://github.com/adrienverge/yamllint'
 dep=('')
+depend='python-pathspec'
+depend='python-setuptools'
+depend='python-yaml'

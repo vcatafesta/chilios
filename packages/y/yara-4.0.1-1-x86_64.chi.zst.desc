@@ -15,3 +15,5 @@ desc='Tool aimed at helping malware researchers to identify and classify malware
 size='766056'
 url='https://github.com/VirusTotal/yara'
 dep=('')
+depend='openssl'
+depend='file'

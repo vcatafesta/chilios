@@ -15,3 +15,5 @@ desc='YAML parser and emitter in C++, written around the YAML 1.2 spec'
 size='516703'
 url='https://github.com/jbeder/yaml-cpp'
 dep=('')
+depend='gcc-libs'
+depend='glibc'
