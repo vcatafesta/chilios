@@ -15,3 +15,6 @@ desc='A library to parse XMP metadata'
 size='1673854'
 url='https://libopenraw.freedesktop.org/wiki/Exempi'
 dep=('')
+depend='gcc-libs'
+depend='expat'
+depend='zlib'

@@ -15,3 +15,5 @@ desc='Ext2/3/4 filesystem utilities'
 size='4993187'
 url='http://e2fsprogs.sourceforge.net'
 dep=('')
+depend='sh'
+depend='libutil-linux'

@@ -15,3 +15,4 @@ desc='A tool for automating interactive applications'
 size='425221'
 url='https://www.nist.gov/el/msid/expect.cfm'
 dep=('')
+depend='tcl'

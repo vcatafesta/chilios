@@ -15,3 +15,5 @@ desc='Linux user-space application to modify the EFI Boot Manager'
 size='79939'
 url='https://github.com/rhinstaller/efibootmgr'
 dep=('')
+depend='glibc'
+depend='efivar'

@@ -15,3 +15,5 @@ desc='EGLStream-based Wayland external platform'
 size='66486'
 url='https://github.com/NVIDIA/egl-wayland'
 dep=('')
+depend='wayland'
+depend='eglexternalplatform'

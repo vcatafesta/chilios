@@ -15,3 +15,6 @@ desc='Application library for Xfce'
 size='3854308'
 url='https://www.xfce.org/'
 dep=('')
+depend='libxfce4ui'
+depend='perl-uri'
+depend='hicolor-icon-theme'

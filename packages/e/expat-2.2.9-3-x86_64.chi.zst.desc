@@ -15,3 +15,4 @@ desc='An XML parser library'
 size='320923'
 url='https://libexpat.github.io/'
 dep=('')
+depend='glibc'

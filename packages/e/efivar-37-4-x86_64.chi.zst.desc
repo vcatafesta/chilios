@@ -15,3 +15,4 @@ desc='Tools and libraries to work with EFI variables'
 size='373633'
 url='https://github.com/rhboot/efivar'
 dep=('')
+depend='glibc'

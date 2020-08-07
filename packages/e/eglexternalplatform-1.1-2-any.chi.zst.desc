@@ -15,3 +15,4 @@ desc='EGL External Platform interface'
 size='17746'
 url='https://github.com/NVIDIA/eglexternalplatform'
 dep=('')
+depend='libegl'

@@ -15,3 +15,5 @@ desc='An AST-based pattern checker for JavaScript'
 size='10413076'
 url='https://eslint.org'
 dep=('')
+depend='nodejs'
+depend='acorn'

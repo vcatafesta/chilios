@@ -15,3 +15,6 @@ desc='Ethernet bridge filtering utilities'
 size='423029'
 url='http://ebtables.sourceforge.net/'
 dep=('')
+depend='perl'
+depend='bash'
+depend='iptables'

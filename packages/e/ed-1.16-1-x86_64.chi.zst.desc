@@ -15,3 +15,5 @@ desc='A POSIX-compliant line-oriented text editor'
 size='77153'
 url='https://www.gnu.org/software/ed/ed.html'
 dep=('')
+depend='glibc'
+depend='sh'

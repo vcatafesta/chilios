@@ -15,3 +15,5 @@ desc='Utilities for exFAT file system'
 size='281600'
 url='https://github.com/relan/exfat'
 dep=('')
+depend='glibc'
+depend='fuse2'

@@ -15,3 +15,4 @@ desc='A wrapper library for generic spell checking'
 size='208797'
 url='https://abiword.github.io/enchant/'
 dep=('')
+depend='glib2'

@@ -15,3 +15,4 @@ desc='Charset analyser and converter'
 size='329211'
 url='https://cihar.com/software/enca/'
 dep=('')
+depend='recode'

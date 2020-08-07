@@ -15,3 +15,7 @@ desc='Lightweight PDF document viewer'
 size='398336'
 url='http://freecode.com/projects/epdfview'
 dep=('')
+depend='poppler-glib'
+depend='desktop-file-utils'
+depend='hicolor-icon-theme'
+depend='gtk2'
