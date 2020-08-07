@@ -15,3 +15,4 @@ desc='GLib bindings for the Telepathy D-Bus protocol'
 size='25327637'
 url='https://telepathy.freedesktop.org'
 dep=('')
+depend='dbus-glib'

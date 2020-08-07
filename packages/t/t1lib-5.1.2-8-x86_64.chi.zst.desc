@@ -15,3 +15,4 @@ desc='Library for generating character- and string-glyphs from Adobe Type 1 font
 size='1225912'
 url='https://www.ibiblio.org/pub/Linux/libs/graphics/!INDEX.html'
 dep=('')
+depend='libxaw'

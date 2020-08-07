@@ -15,3 +15,6 @@ desc='Automatic management of removeable devices in Thunar'
 size='689152'
 url='https://docs.xfce.org/xfce/thunar/thunar-volman'
 dep=('')
+depend='thunar'
+depend='libxfce4ui'
+depend='hicolor-icon-theme'

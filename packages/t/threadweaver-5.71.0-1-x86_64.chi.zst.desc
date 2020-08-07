@@ -15,3 +15,4 @@ desc='High-level multithreading framework'
 size='911647'
 url='https://community.kde.org/Frameworks'
 dep=('')
+depend='qt5-base'

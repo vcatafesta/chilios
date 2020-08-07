@@ -15,3 +15,7 @@ desc='A toolkit to convert between various different translation formats, help p
 size='8483853'
 url='https://toolkit.translatehouse.org/'
 dep=('')
+depend='bash'
+depend='python-lxml'
+depend='python-six'
+depend='python-diff-match-patch'

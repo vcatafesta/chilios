@@ -15,3 +15,4 @@ desc='Trivial Database similar to GDBM but allows simultaneous commits'
 size='240532'
 url='https://tdb.samba.org/'
 dep=('')
+depend='glibc'

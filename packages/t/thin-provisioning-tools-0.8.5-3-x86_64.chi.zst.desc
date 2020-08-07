@@ -15,3 +15,6 @@ desc='Suite of tools for manipulating the metadata of the dm-thin device-mapper 
 size='1432748'
 url='https://github.com/jthornber/thin-provisioning-tools'
 dep=('')
+depend='expat'
+depend='gcc-libs'
+depend='libaio'

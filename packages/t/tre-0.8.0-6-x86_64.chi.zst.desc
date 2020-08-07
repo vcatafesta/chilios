@@ -15,3 +15,4 @@ desc='POSIX compliant regexp matching library. Includes agrep for approximate gr
 size='169485'
 url='https://laurikari.net/tre'
 dep=('')
+depend='glibc'

@@ -15,3 +15,5 @@ desc='Adds special features for media files to the Thunar File Manager'
 size='270403'
 url='https://docs.xfce.org/xfce/thunar/media-tags'
 dep=('')
+depend='taglib'
+depend='thunar'

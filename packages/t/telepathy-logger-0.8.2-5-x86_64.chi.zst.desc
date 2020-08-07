@@ -15,3 +15,7 @@ desc='Telepathy framework logging daemon'
 size='563166'
 url='http://telepathy.freedesktop.org/wiki/Logger'
 dep=('')
+depend='telepathy-glib'
+depend='sqlite'
+depend='libxml2'
+depend='dconf'

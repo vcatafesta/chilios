@@ -15,3 +15,5 @@ desc='An optimized MPEG Audio Layer 2 (MP2) encoder'
 size='248055'
 url='http://www.twolame.org/'
 dep=('')
+depend='glibc'
+depend='libsndfile'

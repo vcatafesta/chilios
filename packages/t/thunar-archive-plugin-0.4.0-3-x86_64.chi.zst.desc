@@ -15,3 +15,5 @@ desc='Create and extract archives in Thunar'
 size='153169'
 url='https://docs.xfce.org/xfce/thunar/archive'
 dep=('')
+depend='thunar'
+depend='hicolor-icon-theme'

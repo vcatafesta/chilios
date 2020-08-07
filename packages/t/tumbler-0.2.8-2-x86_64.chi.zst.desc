@@ -15,3 +15,4 @@ desc='D-Bus service for applications to request thumbnails'
 size='846235'
 url='https://www.xfce.org/'
 dep=('')
+depend='gdk-pixbuf2'

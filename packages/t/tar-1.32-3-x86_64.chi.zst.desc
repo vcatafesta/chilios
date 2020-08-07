@@ -15,3 +15,6 @@ desc='Utility used to store, backup, and transport files'
 size='2966652'
 url='https://www.gnu.org/software/tar/'
 dep=('')
+depend='glibc'
+depend='acl'
+depend='attr'

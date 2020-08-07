@@ -15,3 +15,6 @@ desc='An online encrypted snapshotted backup service'
 size='980482'
 url='https://www.tarsnap.com/'
 dep=('')
+depend='bzip2'
+depend='openssl'
+depend='xz'

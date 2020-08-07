@@ -15,3 +15,4 @@ desc='The Tcl scripting language'
 size='6957618'
 url='http://tcl.sourceforge.net/'
 dep=('')
+depend='zlib'

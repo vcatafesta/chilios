@@ -15,3 +15,6 @@ desc='Library that eases the development of GtkSourceView-based text editors and
 size='1502169'
 url='https://wiki.gnome.org/Projects/Tepl'
 dep=('')
+depend='amtk'
+depend='gtksourceview4'
+depend='uchardet'

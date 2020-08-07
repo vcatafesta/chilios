@@ -15,3 +15,4 @@ desc='Touchscreen Access Library'
 size='494533'
 url='https://github.com/kergoth/tslib'
 dep=('')
+depend='glibc'

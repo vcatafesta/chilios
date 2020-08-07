@@ -15,3 +15,7 @@ desc='GNU documentation system for on-line information and printed output'
 size='8938183'
 url='https://www.gnu.org/software/texinfo/'
 dep=('')
+depend='ncurses'
+depend='gzip'
+depend='perl'
+depend='sh'

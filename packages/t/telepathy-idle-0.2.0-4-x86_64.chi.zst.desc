@@ -15,3 +15,4 @@ desc='An IRC connection manager for Telepathy'
 size='176961'
 url='https://telepathy.freedesktop.org'
 dep=('')
+depend='telepathy-glib'

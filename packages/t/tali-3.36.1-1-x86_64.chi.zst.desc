@@ -15,3 +15,5 @@ desc='Beat the odds in a poker-style dice game'
 size='3045750'
 url='https://wiki.gnome.org/Apps/Tali'
 dep=('')
+depend='gtk3'
+depend='librsvg'

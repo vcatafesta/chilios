@@ -15,3 +15,6 @@ desc='Powerful command-line packet analyzer'
 size='1074234'
 url='https://www.tcpdump.org/'
 dep=('')
+depend='libpcap'
+depend='libcap-ng'
+depend='openssl'

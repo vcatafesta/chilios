@@ -15,3 +15,4 @@ desc='A directory listing program displaying a depth indented list of files'
 size='94661'
 url='http://mama.indstate.edu/users/ice/tree/'
 dep=('')
+depend='glibc'

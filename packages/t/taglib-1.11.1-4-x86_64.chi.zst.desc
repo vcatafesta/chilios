@@ -15,3 +15,4 @@ desc='A Library for reading and editing the meta-data of several popular audio f
 size='1698206'
 url='https://taglib.github.io/'
 dep=('')
+depend='zlib'

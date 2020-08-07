@@ -15,3 +15,6 @@ desc='Simple GObject-based library to parse and save a host of playlist formats'
 size='887053'
 url='https://gitlab.gnome.org/GNOME/totem-pl-parser'
 dep=('')
+depend='libarchive'
+depend='libquvi'
+depend='libxml2'

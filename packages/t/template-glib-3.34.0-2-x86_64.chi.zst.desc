@@ -15,3 +15,5 @@ desc='A templating library for GLib'
 size='456617'
 url='https://gitlab.gnome.org/GNOME/template-glib'
 dep=('')
+depend='glib2'
+depend='gobject-introspection-runtime'
