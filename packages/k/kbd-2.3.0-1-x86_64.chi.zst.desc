@@ -15,3 +15,5 @@ desc='Keytable files and keyboard utilities'
 size='2941676'
 url='http://www.kbd-project.org'
 dep=('')
+depend='glibc'
+depend='pam'

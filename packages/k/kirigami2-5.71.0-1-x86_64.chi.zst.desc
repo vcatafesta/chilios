@@ -15,3 +15,6 @@ desc='A QtQuick based components set'
 size='1511230'
 url='https://community.kde.org/Frameworks'
 dep=('')
+depend='qt5-quickcontrols'
+depend='qt5-quickcontrols2'
+depend='qt5-graphicaleffects'

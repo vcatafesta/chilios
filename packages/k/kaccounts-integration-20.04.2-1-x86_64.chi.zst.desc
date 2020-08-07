@@ -15,3 +15,7 @@ desc='Small system to administer web accounts for the sites and services across 
 size='368189'
 url='https://www.kde.org/applications/internet/'
 dep=('')
+depend='kcmutils'
+depend='signon-kwallet-extension'
+depend='signon-plugin-oauth2'
+depend='signon-ui'

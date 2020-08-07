@@ -15,3 +15,4 @@ desc='Models for Qt Model/View system'
 size='1615190'
 url='https://community.kde.org/Frameworks'
 dep=('')
+depend='qt5-base'

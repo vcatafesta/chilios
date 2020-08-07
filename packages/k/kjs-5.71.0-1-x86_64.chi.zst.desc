@@ -15,3 +15,4 @@ desc='Support for JS scripting in applications'
 size='1706700'
 url='https://community.kde.org/Frameworks'
 dep=('')
+depend='qt5-base'

@@ -15,3 +15,6 @@ desc='The Kerberos network authentication system'
 size='4714960'
 url='https://web.mit.edu/kerberos/'
 dep=('')
+depend='e2fsprogs'
+depend='libldap'
+depend='keyutils'

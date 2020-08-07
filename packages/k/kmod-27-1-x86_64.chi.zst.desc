@@ -15,3 +15,7 @@ desc='Linux kernel module management tools and library'
 size='292976'
 url='https://git.kernel.org/?p=utils/kernel/kmod/kmod.git;a=summary'
 dep=('')
+depend='glibc'
+depend='zlib'
+depend='openssl'
+depend='xz'

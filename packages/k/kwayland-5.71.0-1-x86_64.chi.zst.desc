@@ -15,3 +15,4 @@ desc='Qt-style Client and Server library wrapper for the Wayland libraries'
 size='7349824'
 url='https://www.kde.org'
 dep=('')
+depend='qt5-wayland'
