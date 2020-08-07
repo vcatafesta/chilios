@@ -15,3 +15,6 @@ desc='QML based X11 and Wayland display manager'
 size='4907020'
 url='https://github.com/sddm/sddm'
 dep=('')
+depend='qt5-declarative'
+depend='xorg-xauth'
+depend='xorg-server'

@@ -15,3 +15,4 @@ desc='A lightweight C library for loading and wrapping LV2 plugin UIs'
 size='172315'
 url='https://drobilla.net/software/suil/'
 dep=('')
+depend='glibc'

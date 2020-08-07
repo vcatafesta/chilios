@@ -15,3 +15,4 @@ desc='Tools for maintaining centralized SGML catalogs.'
 size='191508'
 url='https://www.docbook.org/xml/'
 dep=('')
+depend='sh'

@@ -15,3 +15,5 @@ desc='Clear the screen by removing groups of colored and shaped tiles'
 size='1497963'
 url='https://wiki.gnome.org/Apps/Swell%20Foop'
 dep=('')
+depend='clutter-gtk'
+depend='librsvg'

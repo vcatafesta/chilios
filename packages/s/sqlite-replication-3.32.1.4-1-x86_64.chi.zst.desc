@@ -15,3 +15,5 @@ desc='Replication Enabled SQL Database Engine in a C Library'
 size='1926152'
 url='https://github.com/canonical/sqlite'
 dep=('')
+depend='readline'
+depend='zlib'

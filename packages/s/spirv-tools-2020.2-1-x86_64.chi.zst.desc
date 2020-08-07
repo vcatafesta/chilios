@@ -15,3 +15,4 @@ desc='API and commands for processing SPIR-V modules'
 size='6074829'
 url='https://www.khronos.org/vulkan/'
 dep=('')
+depend='gcc-libs'

@@ -15,3 +15,7 @@ desc='A library for portable low-level access to a video framebuffer, audio outp
 size='1064856'
 url='https://www.libsdl.org'
 dep=('')
+depend='glibc'
+depend='libxext'
+depend='libxrender'
+depend='libx11'

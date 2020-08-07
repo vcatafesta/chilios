@@ -15,3 +15,5 @@ desc='A C library that implements an SQL database engine'
 size='9625527'
 url='https://www.sqlite.org/'
 dep=('')
+depend='readline'
+depend='zlib'

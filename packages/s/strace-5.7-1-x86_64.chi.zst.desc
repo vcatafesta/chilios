@@ -15,3 +15,5 @@ desc='A diagnostic, debugging and instructional userspace tracer'
 size='1676396'
 url='https://strace.io/'
 dep=('')
+depend='perl'
+depend='libunwind'

@@ -15,3 +15,4 @@ desc='A DSP library for telephony'
 size='1689016'
 url='https://www.soft-switch.org/'
 dep=('')
+depend='libtiff'

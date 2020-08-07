@@ -15,3 +15,6 @@ desc='Tool for creating supermin appliances'
 size='2293359'
 url='http://people.redhat.com/~rjones/supermin/'
 dep=('')
+depend='e2fsprogs'
+depend='pacman'
+depend='pacman-contrib'

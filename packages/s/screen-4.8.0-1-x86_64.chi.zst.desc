@@ -15,3 +15,5 @@ desc='Full-screen window manager that multiplexes a physical terminal'
 size='875953'
 url='https://www.gnu.org/software/screen/'
 dep=('')
+depend='ncurses'
+depend='pam'

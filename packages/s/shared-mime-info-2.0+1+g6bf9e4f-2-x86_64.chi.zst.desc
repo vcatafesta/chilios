@@ -15,3 +15,5 @@ desc='Freedesktop.org Shared MIME Info'
 size='4530538'
 url='https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/'
 dep=('')
+depend='libxml2'
+depend='glib2'

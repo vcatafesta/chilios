@@ -15,3 +15,4 @@ desc='Secure Reliable Transport library'
 size='6936820'
 url='https://www.srtalliance.org/'
 dep=('')
+depend='openssl'

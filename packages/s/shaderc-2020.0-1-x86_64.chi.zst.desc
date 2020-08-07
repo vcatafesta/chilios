@@ -15,3 +15,7 @@ desc='Collection of tools, libraries and tests for shader compilation'
 size='670263'
 url='https://github.com/google/shaderc'
 dep=('')
+depend='glibc'
+depend='gcc-libs'
+depend='glslang'
+depend='spirv-tools'

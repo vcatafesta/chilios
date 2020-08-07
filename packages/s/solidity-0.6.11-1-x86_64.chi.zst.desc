@@ -15,3 +15,5 @@ desc='Contract-Oriented Programming Language'
 size='23046624'
 url='https://github.com/ethereum/solidity'
 dep=('')
+depend='cvc4'
+depend='z3'

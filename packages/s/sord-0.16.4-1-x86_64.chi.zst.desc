@@ -15,3 +15,6 @@ desc='A lightweight C library for storing RDF data in memory'
 size='123292'
 url='https://drobilla.net/software/sord/'
 dep=('')
+depend='glibc'
+depend='libserd-0.so=0-64'
+depend='pcre'

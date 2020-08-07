@@ -15,3 +15,7 @@ desc='A tool for real-time spatial audio reproduction'
 size='12207343'
 url='http://spatialaudio.net/ssr/'
 dep=('')
+depend='fftw'
+depend='glu'
+depend='jack'
+depend='qt5-base'

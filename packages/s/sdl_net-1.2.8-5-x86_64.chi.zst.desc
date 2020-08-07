@@ -15,3 +15,4 @@ desc='A small sample cross-platform networking library'
 size='41675'
 url='https://www.libsdl.org/projects/SDL_net/'
 dep=('')
+depend='sdl'

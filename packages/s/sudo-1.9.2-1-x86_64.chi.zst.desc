@@ -15,3 +15,7 @@ desc='Give certain users the ability to run some commands as root'
 size='4454537'
 url='https://www.sudo.ws/sudo/'
 dep=('')
+depend='glibc'
+depend='libgcrypt'
+depend='pam'
+depend='libldap'

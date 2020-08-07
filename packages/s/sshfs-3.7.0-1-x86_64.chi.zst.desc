@@ -15,3 +15,6 @@ desc='FUSE client based on the SSH File Transfer Protocol'
 size='96955'
 url='https://github.com/libfuse/sshfs'
 dep=('')
+depend='fuse3'
+depend='glib2'
+depend='openssh'

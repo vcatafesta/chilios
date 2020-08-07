@@ -15,3 +15,6 @@ desc='Kernel based performance profiler'
 size='2512487'
 url='https://wiki.gnome.org/Apps/Sysprof'
 dep=('')
+depend='gtk3'
+depend='polkit'
+depend='libdazzle'

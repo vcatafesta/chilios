@@ -15,3 +15,6 @@ desc='Makes so-called shell archives out of many files'
 size='1337446'
 url='https://www.gnu.org/software/sharutils/'
 dep=('')
+depend='perl'
+depend='gettext'
+depend='texinfo'

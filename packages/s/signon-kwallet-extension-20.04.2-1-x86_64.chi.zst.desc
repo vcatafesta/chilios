@@ -15,3 +15,5 @@ desc='KWallet integration for signon framework'
 size='34728'
 url='https://kde.org'
 dep=('')
+depend='signond'
+depend='kwallet'

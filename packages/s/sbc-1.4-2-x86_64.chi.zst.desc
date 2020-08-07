@@ -15,3 +15,4 @@ desc='Bluetooth Subband Codec (SBC) library'
 size='220020'
 url='http://www.bluez.org/'
 dep=('')
+depend='glibc'

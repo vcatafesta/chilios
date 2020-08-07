@@ -15,3 +15,6 @@ desc='File system and media management forensic analysis tools'
 size='17533409'
 url='https://www.sleuthkit.org/sleuthkit'
 dep=('')
+depend='perl'
+depend='libewf'
+depend='sqlite'

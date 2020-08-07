@@ -15,3 +15,5 @@ desc='A free codec for free speech'
 size='651087'
 url='https://speex.org/'
 dep=('')
+depend='libogg'
+depend='speexdsp'

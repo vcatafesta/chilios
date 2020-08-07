@@ -15,3 +15,8 @@ desc='A simple library to load images of various formats as SDL surfaces'
 size='65822'
 url='https://www.libsdl.org/projects/SDL_image/'
 dep=('')
+depend='sdl>=1.2.13'
+depend='libpng'
+depend='libjpeg>=7'
+depend='libtiff'
+depend='zlib'

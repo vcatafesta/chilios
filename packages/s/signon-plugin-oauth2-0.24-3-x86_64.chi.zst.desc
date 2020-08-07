@@ -15,3 +15,4 @@ desc='OAuth 2 plugin for signon'
 size='230087'
 url='https://gitlab.com/accounts-sso/signon-plugin-oauth2'
 dep=('')
+depend='signond'

@@ -15,3 +15,5 @@ desc='A fast compressor/decompressor library'
 size='75251'
 url='https://google.github.io/snappy/'
 dep=('')
+depend='glibc'
+depend='gcc-libs'

@@ -15,3 +15,5 @@ desc='A D-Bus service which performs user authentication on behalf of its client
 size='1341908'
 url='https://gitlab.com/accounts-sso/signond/'
 dep=('')
+depend='qt5-base'
+depend='libproxy'

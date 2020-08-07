@@ -15,3 +15,4 @@ desc='Relay server for Syncthing'
 size='13761006'
 url='https://syncthing.net/'
 dep=('')
+depend='glibc'

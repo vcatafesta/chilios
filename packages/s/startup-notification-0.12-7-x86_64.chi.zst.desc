@@ -15,3 +15,5 @@ desc='Monitor and display application startup'
 size='62359'
 url='https://www.freedesktop.org'
 dep=('')
+depend='libx11'
+depend='xcb-util'

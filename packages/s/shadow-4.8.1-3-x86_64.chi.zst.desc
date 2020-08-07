@@ -15,3 +15,8 @@ desc='Password and account management tool suite with support for shadow files a
 size='3914448'
 url='https://github.com/shadow-maint/shadow'
 dep=('')
+depend='pam'
+depend='acl'
+depend='audit'
+depend='libaudit.so=1-64'
+depend='libcap-ng'

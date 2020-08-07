@@ -15,3 +15,4 @@ desc='Lightweight C library for RDF syntax supporting reading/ writing Turtle an
 size='185810'
 url='https://drobilla.net/software/serd/'
 dep=('')
+depend='glibc'

@@ -15,3 +15,4 @@ desc='DSP library derived from Speex'
 size='561943'
 url='https://www.speex.org/'
 dep=('')
+depend='glibc'
