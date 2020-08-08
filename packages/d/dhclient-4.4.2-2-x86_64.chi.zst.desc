@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dhclient'
+version='4.4.2'
+build='2'
+license='custom:isc-dhcp'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A standalone DHCP client from the dhcp package'
+size='3009310'
+url='https://www.isc.org/dhcp/'
+dep=('')
+depend='glibc'
+depend='bash'
+depend='iproute2'
+depend='run-parts'
