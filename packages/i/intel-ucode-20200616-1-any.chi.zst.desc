@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='intel'
+version='ucode'
+build='20200616'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Microcode update files for Intel CPUs'
+size='3162765'
+url='https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files'
+dep=('')

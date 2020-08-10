@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='amd'
+version='ucode'
+build='20200721.2b823fc'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Microcode update image for AMD CPUs'
+size='44718'
+url='https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary'
+dep=('')
