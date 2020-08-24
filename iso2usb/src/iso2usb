@@ -1,5 +1,5 @@
 #!/bin/bash
-# USO2USB - Copy iso to pendrive
+# USO2USB - write iso to pendrive
 # Copyright (c) 2019 - 2019, Vilmar Catafesta <vcatafesta@gmail.com>
 # All rights reserved.
 #
@@ -202,6 +202,8 @@ function sh_main()
 		esac
 	done
 }
-
+colddir=$PWD
+cd /opt/iso2usb/
 sh_initvar
 sh_main
+cd $colddir
