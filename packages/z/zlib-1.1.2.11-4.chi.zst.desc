@@ -4,7 +4,7 @@
 ######################################################################
 maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
 pkgname='zlib'
-version='1#003A1.2.11'
+version='1:1.2.11'
 build='4'
 license='custom'
 lfs_version='8.4'
