@@ -1,0 +1,25 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ruby'
+version='2.7.1'
+build='3'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An object-oriented language for quick and easy programming'
+size='13988946'
+url='https://www.ruby-lang.org/en/'
+dep=('')
+depend='gdbm'
+depend='openssl'
+depend='libffi'
+depend='libyaml'
+depend='gmp'
+depend='zlib'
+depend='rubygems'
+depend='ruby-irb'

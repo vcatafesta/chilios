@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ruby'
+version='stomp'
+build='1.4.8'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Ruby client for the Stomp messaging protocol'
+size='646520'
+url='https://github.com/stompgem/stomp'
+dep=('')
+depend='ruby'
