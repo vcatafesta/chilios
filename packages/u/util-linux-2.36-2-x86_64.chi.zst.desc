@@ -1,0 +1,30 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='util'
+version='linux'
+build='2.36'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Miscellaneous system utilities for Linux'
+size='13824779'
+url='https://github.com/karelzak/util-linux'
+dep=('')
+depend='pam'
+depend='shadow'
+depend='coreutils'
+depend='systemd-libs'
+depend='libsystemd.so=0-64'
+depend='libudev.so=1-64'
+depend='libcap-ng'
+depend='libxcrypt'
+depend='libcrypt.so=2-64'
+depend='libutil-linux'
+depend='libmagic.so=1-64'
+depend='libncursesw.so=6-64'
+depend='libreadline.so=8-64'

@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='xxhash'
+version='0.8.0'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Extremely fast non-cryptographic hash algorithm'
+size='297743'
+url='https://cyan4973.github.io/xxHash/'
+dep=('')

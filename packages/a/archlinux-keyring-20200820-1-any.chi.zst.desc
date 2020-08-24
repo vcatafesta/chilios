@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='archlinux'
+version='keyring'
+build='20200820'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Arch Linux PGP keyring'
+size='1354218'
+url='https://projects.archlinux.org/archlinux-keyring.git/'
+dep=('')

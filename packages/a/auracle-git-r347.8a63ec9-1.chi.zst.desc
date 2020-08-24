@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='auracle'
+version='git'
+build='r347.8a63ec9'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='auracle-git-r347.8a63ec9'
+size=''
+url='http://www.linuxfromscratch.org/lfs/view/systemd/'
+dep=('')

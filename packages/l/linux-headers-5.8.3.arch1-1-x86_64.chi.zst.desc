@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='linux'
+version='headers'
+build='5.8.3.arch1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Headers and scripts for building modules for the Linux kernel'
+size='128555099'
+url='https://git.archlinux.org/linux.git/log/?h=v5.8.3-arch1'
+dep=('')
