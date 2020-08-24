@@ -1,0 +1,26 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='firefox'
+version='developer'
+build='edition'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Developer Edition of the popular Firefox web browser'
+size='216812731'
+url='https://www.mozilla.org/firefox/channel/#developer'
+dep=('')
+depend='gtk3'
+depend='libxt'
+depend='startup-notification'
+depend='mime-types'
+depend='dbus-glib'
+depend='ffmpeg'
+depend='ttf-font'
+depend='libpulse'
+depend='nss'

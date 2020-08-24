@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='firefox'
+version='developer'
+build='edition'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Portuguese (Brazilian) language pack for Firefox Developer Edition'
+size='569389'
+url='https://www.mozilla.com/'
+dep=('')
+depend='firefox-developer-edition>=80.0b8'

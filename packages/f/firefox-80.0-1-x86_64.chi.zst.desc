@@ -1,0 +1,25 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='firefox'
+version='80.0'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Standalone web browser from mozilla.org'
+size='215451541'
+url='https://www.mozilla.org/firefox/'
+dep=('')
+depend='gtk3'
+depend='libxt'
+depend='mime-types'
+depend='dbus-glib'
+depend='ffmpeg'
+depend='nss'
+depend='ttf-font'
+depend='libpulse'
