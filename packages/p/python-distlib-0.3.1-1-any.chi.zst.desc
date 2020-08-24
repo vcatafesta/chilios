@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='distlib'
+build='0.3.1'
+license='PSF'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Low-level components of distutils2/packaging'
+size='1306034'
+url='https://bitbucket.org/pypa/distlib'
+dep=('')
+depend='python'

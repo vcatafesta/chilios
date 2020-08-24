@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='backports.functools_lru_cache'
+build='1.6.1'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Backport of functools.lru_cache from Python 3.3'
+size='23990'
+url='https://github.com/jaraco/backports.functools_lru_cache'
+dep=('')
+depend='python2-backports'

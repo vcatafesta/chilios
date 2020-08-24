@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='contextlib2'
+build='0.6.0.post1'
+license='PSF'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Backport of the standard library's contextlib module to earlier Python versions'
+size='56951'
+url='https://github.com/jazzband/contextlib2'
+dep=('')
+depend='python'

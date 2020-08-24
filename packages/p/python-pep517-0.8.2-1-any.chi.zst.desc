@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pep517'
+build='0.8.2'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Wrappers to build Python packages using PEP 517 hooks'
+size='122978'
+url='https://github.com/takluyver/pep517'
+dep=('')
+depend='python-toml'

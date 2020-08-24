@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='pathlib2'
+build='2.3.5'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Object-oriented filesystem paths'
+size='185247'
+url='https://pypi.python.org/pypi/pathlib2'
+dep=('')
+depend='python2-six'
+depend='python2-scandir'

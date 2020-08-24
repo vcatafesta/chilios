@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='mock'
+build='3.0.5'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Mocking and Patching Library for Testing'
+size='249473'
+url='http://www.voidspace.org.uk/python/mock/'
+dep=('')
+depend='python2'
+depend='python2-six'
+depend='python2-pbr'
+depend='python2-funcsigs'

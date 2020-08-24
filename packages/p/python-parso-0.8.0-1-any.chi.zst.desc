@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='parso'
+build='0.8.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python parser that supports error recovery and round-trip parsing for different Python versions'
+size='721346'
+url='https://github.com/davidhalter/parso'
+dep=('')
+depend='python'

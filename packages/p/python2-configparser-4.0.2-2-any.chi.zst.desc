@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='configparser'
+build='4.0.2'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='This library brings the updated configparser from Python 3.5 to Python 2.6-3.5.'
+size='219450'
+url='https://bitbucket.org/ambv/configparser'
+dep=('')
+depend='python2-backports'

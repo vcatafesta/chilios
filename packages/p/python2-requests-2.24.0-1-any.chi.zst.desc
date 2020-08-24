@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='requests'
+build='2.24.0'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python HTTP for Humans'
+size='519042'
+url='http://python-requests.org'
+dep=('')
+depend='python2-urllib3'
+depend='python2-chardet'
+depend='python2-idna'

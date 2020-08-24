@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='webencodings'
+build='0.5.1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='This is a Python implementation of the WHATWG Encoding standard.'
+size='64557'
+url='https://github.com/gsnedders/python-webencodings'
+dep=('')
+depend='python2'

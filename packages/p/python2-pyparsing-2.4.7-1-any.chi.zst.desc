@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='pyparsing'
+build='2.4.7'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='General parsing module for Python'
+size='825443'
+url='https://github.com/pyparsing/pyparsing/'
+dep=('')
+depend='python2'

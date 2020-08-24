@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='pbr'
+build='5.4.5'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python Build Reasonableness'
+size='756627'
+url='https://pypi.python.org/pypi/pbr'
+dep=('')
+depend='python2-setuptools'

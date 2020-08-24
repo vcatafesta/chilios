@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='cheroot'
+build='8.4.4'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Highly-optimized, pure-python HTTP server'
+size='749750'
+url='https://github.com/cherrypy/cheroot'
+dep=('')
+depend='python-six'
+depend='python-jaraco'

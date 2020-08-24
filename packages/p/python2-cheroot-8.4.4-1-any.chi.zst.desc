@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='cheroot'
+build='8.4.4'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Highly-optimized, pure-python HTTP server'
+size='834758'
+url='https://github.com/cherrypy/cheroot'
+dep=('')
+depend='python2-six'
+depend='python2-backports.functools_lru_cache'
+depend='python2-backports.unittest_mock'

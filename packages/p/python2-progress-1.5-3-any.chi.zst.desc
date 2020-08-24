@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='progress'
+build='1.5'
+license='ISC'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Easy to use progress bars for Python'
+size='45681'
+url='https://github.com/verigak/progress'
+dep=('')
+depend='python2'

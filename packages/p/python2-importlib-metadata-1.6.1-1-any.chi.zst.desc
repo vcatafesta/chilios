@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='importlib'
+build='metadata'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Read metadata from Python packages'
+size='226095'
+url='https://importlib-metadata.readthedocs.io'
+dep=('')
+depend='python2-zipp'
+depend='python2-configparser'
+depend='python2-contextlib2'
+depend='python2-pathlib2'

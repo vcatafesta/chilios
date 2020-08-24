@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='backports'
+build='1.0'
+license='PSF'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Namespace package required for backports collection'
+size='277'
+url='https://pypi.python.org/pypi/backports'
+dep=('')
+depend='python2'

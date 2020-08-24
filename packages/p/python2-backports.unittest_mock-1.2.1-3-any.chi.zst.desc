@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='backports.unittest_mock'
+build='1.2.1'
+license='PSF'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Makes the “mock” module available as “unittest.mock”'
+size='5655'
+url='https://github.com/jaraco/backports.unittest_mock'
+dep=('')
+depend='python2-backports'
+depend='python2-mock'

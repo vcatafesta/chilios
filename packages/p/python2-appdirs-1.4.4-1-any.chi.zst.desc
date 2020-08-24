@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='appdirs'
+build='1.4.4'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='An enhanced Interactive Python shell.'
+size='82653'
+url='https://github.com/ActiveState/appdirs'
+dep=('')
+depend='python2'

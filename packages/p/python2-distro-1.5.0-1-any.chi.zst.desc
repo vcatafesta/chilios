@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='distro'
+build='1.5.0'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Linux OS platform information API'
+size='159437'
+url='https://github.com/nir0s/distro'
+dep=('')
+depend='python2'
+depend='python2-setuptools'

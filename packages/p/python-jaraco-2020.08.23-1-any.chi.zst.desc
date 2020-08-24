@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='jaraco'
+build='2020.08.23'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A gaggle of idiosyncratic and questionable wrappers for the stdlib.'
+size='237079'
+url='https://github.com/jaraco?page=1&tab=repositories&utf8=%E2%9C%93&q=jaraco'
+dep=('')
+depend='python-six'
+depend='python-pytz'
+depend='python-more-itertools'

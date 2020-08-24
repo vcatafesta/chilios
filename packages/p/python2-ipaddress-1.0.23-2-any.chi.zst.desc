@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='ipaddress'
+build='1.0.23'
+license='custom:PSF'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='IPv4/IPv6 manipulation library'
+size='234727'
+url='https://github.com/phihag/ipaddress'
+dep=('')
+depend='python2'

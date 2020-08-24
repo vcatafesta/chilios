@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='cachecontrol'
+build='0.12.6'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='httplib2 caching for requests'
+size='107801'
+url='https://github.com/ionrock/cachecontrol'
+dep=('')
+depend='python-msgpack'
+depend='python-requests'

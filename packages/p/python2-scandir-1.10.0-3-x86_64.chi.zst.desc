@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='scandir'
+build='1.10.0'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A better directory iterator and faster os.walk()'
+size='99372'
+url='https://github.com/benhoyt/scandir'
+dep=('')
+depend='python2'

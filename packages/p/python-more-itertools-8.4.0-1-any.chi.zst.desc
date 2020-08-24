@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='more'
+build='itertools'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='More routines for operating on iterables, beyond itertools'
+size='268810'
+url='https://github.com/erikrose/more-itertools'
+dep=('')
+depend='python'

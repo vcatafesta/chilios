@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='html5lib'
+build='1.1'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='A Python HTML parser/tokenizer based on the WHATWG HTML5 spec'
+size='1228396'
+url='https://github.com/html5lib'
+dep=('')
+depend='python-six'
+depend='python-webencodings'

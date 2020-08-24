@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='curtsies'
+build='0.3.4'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Curses-like terminal wrapper with a display based on compositing 2d arrays of text'
+size='202543'
+url='https://pypi.python.org/pypi/curtsies'
+dep=('')
+depend='python-blessings'
+depend='python-wcwidth'

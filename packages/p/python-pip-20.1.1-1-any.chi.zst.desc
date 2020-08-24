@@ -1,0 +1,33 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python'
+version='pip'
+build='20.1.1'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='The PyPA recommended tool for installing Python packages'
+size='1512970'
+url='https://pip.pypa.io/'
+dep=('')
+depend='python-appdirs'
+depend='python-cachecontrol'
+depend='python-colorama'
+depend='python-contextlib2'
+depend='python-distlib'
+depend='python-distro'
+depend='python-html5lib'
+depend='python-packaging'
+depend='python-pep517'
+depend='python-progress'
+depend='python-requests'
+depend='python-retrying'
+depend='python-resolvelib'
+depend='python-setuptools'
+depend='python-six'
+depend='python-toml'

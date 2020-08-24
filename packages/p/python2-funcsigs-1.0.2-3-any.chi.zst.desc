@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='funcsigs'
+build='1.0.2'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Python function signatures from PEP362'
+size='92681'
+url='https://pypi.python.org/pypi/funcsigs/'
+dep=('')
+depend='python2'

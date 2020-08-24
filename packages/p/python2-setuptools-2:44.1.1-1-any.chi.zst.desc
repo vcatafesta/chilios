@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='python2'
+version='setuptools'
+build='2:44.1.1'
+license='PSF'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Easily download, build, install, upgrade, and uninstall Python packages'
+size='1835250'
+url='https://pypi.org/project/setuptools/'
+dep=('')
+depend='python2-appdirs'
+depend='python2-packaging'
+depend='python2-ordered-set'
