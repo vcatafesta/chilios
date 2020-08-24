@@ -1,2 +1,2 @@
-# chilios
-ChiliOS software updater
+# installer
+fetch - search, install, create, remove, upgrade packages in ChiliOS
