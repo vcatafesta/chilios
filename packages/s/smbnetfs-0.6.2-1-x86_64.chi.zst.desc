@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='smbnetfs'
+version='0.6.2'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='small C program that mounts Microsoft network neighborhood in single directory.'
+size='201580'
+url='http://smbnetfs.sourceforge.net/'
+dep=('')
+depend='fuse2'
+depend='smbclient'
