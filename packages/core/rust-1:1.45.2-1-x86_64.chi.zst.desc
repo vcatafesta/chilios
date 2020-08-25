@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='rust'
+version='1:1.45.2'
+build='1'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Systems programming language focused on safety, speed and concurrency'
+size='416590028'
+url='https://www.rust-lang.org/'
+dep=('')
+depend='gcc-libs'
+depend='llvm-libs'
+depend='curl'
+depend='libssh2'
