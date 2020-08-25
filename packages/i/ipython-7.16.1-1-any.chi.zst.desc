@@ -1,0 +1,27 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ipython'
+version='7.16.1'
+build='1'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='An enhanced Interactive Python shell.'
+size='6222078'
+url='https://ipython.org'
+dep=('')
+depend='python'
+depend='python-traitlets'
+depend='python-pexpect'
+depend='sqlite'
+depend='python-setuptools'
+depend='python-pickleshare'
+depend='python-prompt_toolkit'
+depend='python-jedi'
+depend='python-pygments'
+depend='python-backcall'

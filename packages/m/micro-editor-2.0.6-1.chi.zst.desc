@@ -1,0 +1,17 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='micro'
+version='editor'
+build='2.0.6'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='micro-editor-2.0.6'
+size=''
+url='http://www.linuxfromscratch.org/lfs/view/systemd/'
+dep=('')
