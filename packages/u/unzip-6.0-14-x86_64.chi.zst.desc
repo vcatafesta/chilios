@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='unzip'
+version='6.0'
+build='14'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='For extracting and viewing files in .zip archives'
+size='322668'
+url='https://www.info-zip.org/UnZip.html'
+dep=('')
+depend='bzip2'
+depend='bash'

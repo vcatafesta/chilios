@@ -1,0 +1,23 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='google'
+version='chrome'
+build='85.0.4183.83'
+license='custom:chrome'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='The popular and trusted web browser by Google (Stable Channel)'
+size='236386691'
+url='https://www.google.com/chrome'
+dep=('')
+depend='alsa-lib'
+depend='gtk3'
+depend='libcups'
+depend='libxss'
+depend='libxtst'
+depend='nss'

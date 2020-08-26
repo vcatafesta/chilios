@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='yay'
+version='10.0.4'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Yet another yogurt. Pacman wrapper and AUR helper written in go.'
+size='8285685'
+url='https://github.com/Jguer/yay'
+dep=('')
+depend='libalpm.so>=12'
+depend='sudo'
+depend='git'

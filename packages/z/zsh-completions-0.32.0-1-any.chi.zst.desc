@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='zsh'
+version='completions'
+build='0.32.0'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='Additional completion definitions for Zsh'
+size='1184546'
+url='https://github.com/zsh-users/zsh-completions'
+dep=('')
+depend='zsh'

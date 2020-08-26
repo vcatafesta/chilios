@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='auracle'
+version='git'
+build='r361.22e40de'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A flexible client for the AUR'
+size='920248'
+url='https://github.com/falconindy/auracle.git'
+dep=('')
+depend='pacman'
+depend='libcurl.so=4-64'
+depend='libsystemd.so=0-64'
