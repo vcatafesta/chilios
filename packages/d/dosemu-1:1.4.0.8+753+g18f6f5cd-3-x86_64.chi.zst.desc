@@ -1,0 +1,23 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dosemu'
+version='1:1.4.0.8+753+g18f6f5cd'
+build='3'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='DOS emulator'
+size='5669769'
+url='http://www.dosemu.org/'
+dep=('')
+depend='gpm'
+depend='slang'
+depend='sdl'
+depend='libxxf86vm'
+depend='libsndfile'
+depend='alsa-lib'
