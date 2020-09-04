@@ -1,0 +1,23 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='systemd'
+version='libs'
+build='246.4'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='systemd client libraries'
+size='1785848'
+url='https://www.github.com/systemd/systemd'
+dep=('')
+depend='glibc'
+depend='libcap'
+depend='libgcrypt'
+depend='lz4'
+depend='xz'
+depend='zstd'
