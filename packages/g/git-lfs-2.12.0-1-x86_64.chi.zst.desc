@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='git'
+version='lfs'
+build='2.12.0'
+license='MIT'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Git extension for versioning large files'
+size='13305098'
+url='https://git-lfs.github.com'
+dep=('')
+depend='git'
