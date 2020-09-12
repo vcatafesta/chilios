@@ -1,0 +1,31 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='ghostscript'
+version='9.53.0'
+build='1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An interpreter for the PostScript language'
+size='51408337'
+url='https://www.ghostscript.com/'
+dep=('')
+depend='libxt'
+depend='libcups'
+depend='fontconfig'
+depend='zlib'
+depend='libpng'
+depend='libjpeg'
+depend='jbig2dec'
+depend='libtiff'
+depend='lcms2'
+depend='dbus'
+depend='libpaper'
+depend='ijs'
+depend='openjpeg2'
+depend='libidn'

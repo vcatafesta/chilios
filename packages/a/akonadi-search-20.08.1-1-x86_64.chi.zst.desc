@@ -1,0 +1,22 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='akonadi'
+version='search'
+build='20.08.1'
+license='FDL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Libraries and daemons to implement searching in Akonadi'
+size='1019231'
+url='https://kontact.kde.org'
+dep=('')
+depend='xapian-core'
+depend='akonadi-mime'
+depend='kcontacts'
+depend='kcalendarcore'
+depend='krunner'

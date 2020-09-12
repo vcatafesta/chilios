@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='containerd'
+version='1.4.0'
+build='3'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An open and reliable container runtime'
+size='122706386'
+url='https://containerd.io/'
+dep=('')
+depend='runc'

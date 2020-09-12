@@ -1,0 +1,25 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gst'
+version='plugins'
+build='bad'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Multimedia graph framework - bad'
+size='8597289'
+url='https://gstreamer.freedesktop.org/'
+dep=('')
+depend='gst-plugins-base-libs'
+depend='orc'
+depend='libdrm'
+depend='libx11'
+depend='libgudev'
+depend='libusb'
+depend='libvdpau'
+depend='libxkbcommon-x11'

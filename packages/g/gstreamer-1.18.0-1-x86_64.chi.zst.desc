@@ -1,0 +1,23 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gstreamer'
+version='1.18.0'
+build='1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Multimedia graph framework - core'
+size='10439948'
+url='https://gstreamer.freedesktop.org/'
+dep=('')
+depend='libxml2'
+depend='glib2'
+depend='libunwind'
+depend='libcap'
+depend='libelf'
+depend='python'

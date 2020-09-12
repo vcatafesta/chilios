@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='jbig2dec'
+version='0.19'
+build='1'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Decoder implementation of the JBIG2 image compression format'
+size='160614'
+url='https://jbig2dec.com/'
+dep=('')
+depend='libpng'

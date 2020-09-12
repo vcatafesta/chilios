@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='akonadi'
+version='mime'
+build='20.08.1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Libraries and daemons to implement basic email handling'
+size='841559'
+url='https://kontact.kde.org'
+dep=('')
+depend='libakonadi'
+depend='kmime'

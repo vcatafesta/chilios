@@ -1,0 +1,28 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gst'
+version='plugins'
+build='base'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Multimedia graph framework - base plugins'
+size='998760'
+url='https://gstreamer.freedesktop.org/'
+dep=('')
+depend='gst-plugins-base-libs=1.18.0'
+depend='alsa-lib'
+depend='cdparanoia'
+depend='libvisual'
+depend='libvorbis'
+depend='libtheora'
+depend='pango'
+depend='opus'
+depend='graphene'
+depend='libpng'
+depend='libjpeg'

@@ -1,0 +1,21 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='qt5'
+version='multimedia'
+build='5.15.1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Classes for audio, video, radio and camera functionality'
+size='3685203'
+url='https://www.qt.io'
+dep=('')
+depend='qt5-base'
+depend='gst-plugins-base'
+depend='libpulse'
+depend='openal'

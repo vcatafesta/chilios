@@ -1,0 +1,22 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='accountsservice'
+version='0.6.55'
+build='3'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='D-Bus interface for user account query and manipulation'
+size='1063709'
+url='https://gitlab.freedesktop.org/accountsservice/accountsservice'
+dep=('')
+depend='glib2'
+depend='polkit'
+depend='systemd'
+depend='shadow'
+depend='libxcrypt'

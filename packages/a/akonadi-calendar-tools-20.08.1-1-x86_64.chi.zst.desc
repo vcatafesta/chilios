@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='akonadi'
+version='calendar'
+build='tools'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='CLI tools to manage akonadi calendars'
+size='1385284'
+url='https://kontact.kde.org'
+dep=('')
+depend='calendarsupport'

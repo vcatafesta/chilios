@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='orc'
+version='0.4.32'
+build='1'
+license='custom:BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Optimized Inner Loop Runtime Compiler'
+size='1132368'
+url='https://gitlab.freedesktop.org/gstreamer/orc'
+dep=('')
+depend='glibc'

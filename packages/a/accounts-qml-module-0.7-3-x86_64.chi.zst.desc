@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='accounts'
+version='qml'
+build='module'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Expose the Online Accounts API to QML applications'
+size='209690'
+url='https://gitlab.com/accounts-sso/accounts-qml-module'
+dep=('')
+depend='signond'
+depend='libaccounts-qt'
+depend='qt5-declarative'

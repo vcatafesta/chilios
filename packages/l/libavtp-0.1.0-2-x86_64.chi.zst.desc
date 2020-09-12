@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='libavtp'
+version='0.1.0'
+build='2'
+license='BSD'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Open source implementation of Audio Video Transport Protocol'
+size='40650'
+url='https://github.com/Avnu/libavtp'
+dep=('')
+depend='glibc'

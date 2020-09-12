@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='meson'
+version='0.55.3'
+build='1'
+license='Apache'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='any'
+distro='chili'
+desc='High productivity build system'
+size='6376698'
+url='https://mesonbuild.com/'
+dep=('')
+depend='python-setuptools'
+depend='ninja'

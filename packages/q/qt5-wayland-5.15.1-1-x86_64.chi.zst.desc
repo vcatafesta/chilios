@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='qt5'
+version='wayland'
+build='5.15.1'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Provides APIs for Wayland'
+size='6538240'
+url='https://www.qt.io'
+dep=('')
+depend='qt5-declarative'
+depend='libxcomposite'

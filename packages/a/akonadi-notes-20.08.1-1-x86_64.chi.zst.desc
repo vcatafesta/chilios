@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='akonadi'
+version='notes'
+build='20.08.1'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Libraries and daemons to implement management of notes in Akonadi'
+size='96228'
+url='https://kontact.kde.org'
+dep=('')
+depend='kmime'

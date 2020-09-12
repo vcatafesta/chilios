@@ -1,0 +1,23 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='akregator'
+version='20.08.1'
+build='1'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A Feed Reader by KDE'
+size='6038820'
+url='https://kontact.kde.org'
+dep=('')
+depend='kontactinterface'
+depend='messagelib'
+depend='knotifyconfig'
+depend='ktexteditor'
+depend='syndication'
+depend='kuserfeedback'

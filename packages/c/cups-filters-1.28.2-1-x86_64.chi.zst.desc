@@ -1,0 +1,25 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='cups'
+version='filters'
+build='1.28.2'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='OpenPrinting CUPS Filters'
+size='3184939'
+url='https://wiki.linuxfoundation.org/openprinting/cups-filters'
+dep=('')
+depend='lcms2'
+depend='poppler'
+depend='qpdf'
+depend='imagemagick'
+depend='liblouis'
+depend='ijs'
+depend='libcups>=2.2.6-2'
+depend='systemd'

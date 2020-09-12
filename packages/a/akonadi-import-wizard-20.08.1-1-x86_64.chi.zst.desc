@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='akonadi'
+version='import'
+build='wizard'
+license='GPL2'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Import data from other mail clients to KMail'
+size='2089113'
+url='https://kontact.kde.org'
+dep=('')
+depend='mailcommon'

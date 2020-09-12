@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='akonadi'
+version='20.08.1'
+build='2'
+license='LGPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='PIM layer, which provides an asynchronous API to access all kind of PIM data'
+size='2914096'
+url='https://kontact.kde.org'
+dep=('')
+depend='libakonadi'
+depend='mariadb'

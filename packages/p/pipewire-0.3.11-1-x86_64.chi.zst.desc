@@ -1,0 +1,30 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='pipewire'
+version='0.3.11'
+build='1'
+license='LGPL2.1'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Server and user space API to deal with multimedia pipelines'
+size='5420603'
+url='https://pipewire.org'
+dep=('')
+depend='gstreamer'
+depend='gst-plugins-base'
+depend='sbc'
+depend='rtkit'
+depend='vulkan-icd-loader'
+depend='bluez-libs'
+depend='libdbus-1.so=3-64'
+depend='libsndfile.so=1-64'
+depend='libudev.so=1-64'
+depend='libasound.so=2-64'
+depend='libsystemd.so=0-64'
+depend='libglib-2.0.so=0-64'
+depend='libgobject-2.0.so=0-64'
