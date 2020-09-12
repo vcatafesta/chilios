@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gcc'
+version='go'
+build='10.2.0'
+license='custom'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Go front-end for GCC'
+size='171310929'
+url='https://gcc.gnu.org'
+dep=('')
+depend='gcc=10.2.0-1'

@@ -1,0 +1,18 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='gnugo'
+version='3.8'
+build='7'
+license='GPL3'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='Program that plays the game of Go'
+size='8064009'
+url='https://www.gnu.org/software/gnugo/'
+dep=('')
+depend='ncurses'

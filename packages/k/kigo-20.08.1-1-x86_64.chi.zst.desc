@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='kigo'
+version='20.08.1'
+build='1'
+license='FDL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='An open-source implementation of the popular Go game'
+size='6337440'
+url='https://kde.org/applications/games/kigo/'
+dep=('')
+depend='libkdegames'
+depend='gnugo'
+depend='hicolor-icon-theme'

@@ -1,0 +1,20 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='dragon'
+version='20.08.1'
+build='1'
+license='GPL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A multimedia player where the focus is on simplicity, instead of features'
+size='2456155'
+url='https://kde.org/applications/multimedia/dragonplayer'
+dep=('')
+depend='hicolor-icon-theme'
+depend='kparts'
+depend='phonon-qt5'

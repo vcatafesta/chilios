@@ -1,0 +1,19 @@
+######################################################################
+# Generated with fetch
+# Generated with alienpkg
+######################################################################
+maintainer='Vilmar Catafesta <vcatafesta@gmail.com>'
+pkgname='kgoldrunner'
+version='20.08.1'
+build='1'
+license='FDL'
+lfs_version='8.4'
+lfs_init='SYSTEMD'
+arch='x86_64'
+distro='chili'
+desc='A game of action and puzzle solving'
+size='17479271'
+url='https://kde.org/applications/games/kgoldrunner/'
+dep=('')
+depend='libkdegames'
+depend='hicolor-icon-theme'
